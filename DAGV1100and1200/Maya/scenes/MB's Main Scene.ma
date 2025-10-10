@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: MB's Main Scene.ma
-//Last modified: Thu, Oct 09, 2025 07:35:00 PM
+//Last modified: Thu, Oct 09, 2025 08:08:55 PM
 //Codeset: 1252
 file -rdi 1 -ns "Matthew_s_Table" -rfn "Matthew_s_TableRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Matthew's Table.ma";
@@ -58,26 +58,25 @@ requires maya "2026";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.5.3";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "E6EEFCF9-4FC2-B438-C174-5BA87806B683";
+fileInfo "UUID" "4BAE46BC-4E0B-153B-5C5C-53B889D2DE13";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "465FD68B-42A5-DE39-6EE6-FF840CF48797";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -20.290172258924706 12.929062157064962 -20.807756508828728 ;
-	setAttr ".r" -type "double3" 1060.7999999955075 -2646.7999999991393 0 ;
+	setAttr ".t" -type "double3" -24.837159807648934 32.391576288666002 -32.429527858846328 ;
+	setAttr ".r" -type "double3" 1046.9999999956376 -2658.7999999986187 0 ;
 	setAttr ".rpt" -type "double3" 1.3592913684404301e-17 2.6745049588076354e-18 5.2582474181746316e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "306654EC-467A-10A0-B0C0-E99110289BF6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 30.013726623491987;
+	setAttr ".coi" 51.237606922844151;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1008,20 +1007,20 @@ createNode mesh -n "wallShape2" -p "wall2";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "06A11EAF-4E1C-3A32-601E-EC909BEFED08";
+	rename -uid "F51756C9-4E57-64AC-4095-1698049E1DB8";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "33DE1CA7-4FBD-63BC-8EDE-AA8359A114E0";
+	rename -uid "C299F1F4-4A71-50B2-C124-ED89C9DF8E25";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "85D3A998-4FF0-FB36-BB00-85B7E643B1AE";
+	rename -uid "5F42E27A-492C-4D65-49AD-67AADCFC1E60";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "DE8E1DF0-47A6-3850-E8ED-738F49A02C4B";
+	rename -uid "83F3F570-4AD5-0245-DE43-018C2046F1C6";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "00F307DE-4B02-26D2-936B-5998FF6D8357";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "557D0904-4265-0E09-25EE-4E8C6338A287";
+	rename -uid "62DCC07F-4F74-18CD-8E2F-46846171EA60";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "D0FB863A-475A-1747-404B-E197923D002D";
 	setAttr ".g" yes;
@@ -1138,7 +1137,7 @@ createNode reference -n "Matthew_s_BookshelfRN";
 		"Matthew_s_BookshelfRN" 0
 		"Matthew_s_BookshelfRN" 1
 		2 "|Matthew_s_Bookshelf:bookshelf|Matthew_s_Bookshelf:shelf" "translate" 
-		" -type \"double3\" 0 0 0";
+		" -type \"double3\" 5.80122987248511812 0.0068508735073056215 -1.15630521990642698";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Matthew_s_DresserRN";
