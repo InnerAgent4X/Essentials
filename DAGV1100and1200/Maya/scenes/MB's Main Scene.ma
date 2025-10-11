@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: MB's Main Scene.ma
-//Last modified: Thu, Oct 09, 2025 08:08:55 PM
+//Last modified: Fri, Oct 10, 2025 06:27:12 PM
 //Codeset: 1252
 file -rdi 1 -ns "Matthew_s_Table" -rfn "Matthew_s_TableRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Matthew's Table.ma";
@@ -64,23 +64,23 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "4BAE46BC-4E0B-153B-5C5C-53B889D2DE13";
+fileInfo "UUID" "1C2F74D7-4845-86C5-2E23-C9B58DA1AE08";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "465FD68B-42A5-DE39-6EE6-FF840CF48797";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -24.837159807648934 32.391576288666002 -32.429527858846328 ;
-	setAttr ".r" -type "double3" 1046.9999999956376 -2658.7999999986187 0 ;
+	setAttr ".t" -type "double3" -26.340065302211801 10.164108541840182 -10.124815942941895 ;
+	setAttr ".r" -type "double3" 1066.1999999953755 -2637.199999997646 0 ;
 	setAttr ".rpt" -type "double3" 1.3592913684404301e-17 2.6745049588076354e-18 5.2582474181746316e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "306654EC-467A-10A0-B0C0-E99110289BF6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 51.237606922844151;
+	setAttr ".coi" 30.066370178594962;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.18482426442734637 2.193429849525268 -4.6589168762318929 ;
+	setAttr ".tp" -type "double3" -1.7901061582665418 2.9390187934939069 5.5249548507077328 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "663F92CE-4816-F2D5-455C-589FAF87FF96";
@@ -1007,20 +1007,20 @@ createNode mesh -n "wallShape2" -p "wall2";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "F51756C9-4E57-64AC-4095-1698049E1DB8";
+	rename -uid "867F703F-4035-4F4C-368F-988CBC2F547A";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "C299F1F4-4A71-50B2-C124-ED89C9DF8E25";
+	rename -uid "01951F72-45FE-68BF-53B7-DBBC50A543CE";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "5F42E27A-492C-4D65-49AD-67AADCFC1E60";
+	rename -uid "BEB0DCBF-479C-FDD7-C19E-E5A481227702";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "83F3F570-4AD5-0245-DE43-018C2046F1C6";
+	rename -uid "B4D5AFBA-4B43-6B51-27C1-9287F1A7DC9F";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "00F307DE-4B02-26D2-936B-5998FF6D8357";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "62DCC07F-4F74-18CD-8E2F-46846171EA60";
+	rename -uid "7E7534E0-4500-84F2-D9CA-C18AE3D413ED";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "D0FB863A-475A-1747-404B-E197923D002D";
 	setAttr ".g" yes;
@@ -1132,6 +1132,7 @@ createNode reference -n "Matthew_s_BedRN";
 lockNode -l 1 ;
 createNode reference -n "Matthew_s_BookshelfRN";
 	rename -uid "1A505E10-4D25-D552-D25C-D28D467BF320";
+	setAttr ".fn[0]" -type "string" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Matthew's Bookshelf.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Matthew_s_BookshelfRN"
 		"Matthew_s_BookshelfRN" 0
@@ -1142,6 +1143,7 @@ createNode reference -n "Matthew_s_BookshelfRN";
 lockNode -l 1 ;
 createNode reference -n "Matthew_s_DresserRN";
 	rename -uid "5174EC3A-4027-67D8-4762-F4A9900E925F";
+	setAttr ".fn[0]" -type "string" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Matthew's Dresser.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Matthew_s_DresserRN"
 		"Matthew_s_DresserRN" 0
@@ -1151,9 +1153,14 @@ createNode reference -n "Matthew_s_DresserRN";
 lockNode -l 1 ;
 createNode reference -n "Matthew_s_VaseRN";
 	rename -uid "23550B1A-4E06-2D57-E719-1999E1B16B00";
+	setAttr ".fn[0]" -type "string" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Matthew's Vase.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Matthew_s_VaseRN"
-		"Matthew_s_VaseRN" 0;
+		"Matthew_s_VaseRN" 0
+		"Matthew_s_VaseRN" 2
+		2 "|Matthew_s_Vase:vase" "translate" " -type \"double3\" -1.7793299961190201 2.56971461334864326 5.505752618346893"
+		
+		2 "|Matthew_s_Vase:vase|Matthew_s_Vase:vaseShape" "uvPivot" " -type \"double2\" 0.43926224112510681 0.24298802018165588";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Matthew_s_FrameRN";
@@ -1258,6 +1265,10 @@ createNode reference -n "_UNKNOWN_REF_NODE_";
 		2 ":openPBR_shader1" "baseColor" " -type \"float3\" 0.40000001000000002 0.40000001000000002 0.40000001000000002"
 		
 		2 ":openPBR_shader1" "specularRoughness" " 0.5";
+createNode reference -n "sharedReferenceNode";
+	rename -uid "B63AC2E6-41A7-868A-32B1-C2A60FE9D52C";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"sharedReferenceNode";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -1276,7 +1287,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
-	setAttr -s 6 ".r";
+	setAttr -s 7 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -1289,6 +1300,7 @@ select -ne :initialShadingGroup;
 	setAttr -s 48 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
+select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
@@ -1328,8 +1340,11 @@ connectAttr "_UNKNOWN_REF_NODE_.ur" "Matthew_s_TableRN.ur";
 connectAttr "_UNKNOWN_REF_NODE_.ur" "Matthew_s_ChairRN.ur";
 connectAttr "_UNKNOWN_REF_NODE_.ur" "Matthew_s_BedRN.ur";
 connectAttr "_UNKNOWN_REF_NODE_.ur" "Matthew_s_BookshelfRN.ur";
+connectAttr "sharedReferenceNode.sr" "Matthew_s_BookshelfRN.sr";
 connectAttr "_UNKNOWN_REF_NODE_.ur" "Matthew_s_DresserRN.ur";
+connectAttr "sharedReferenceNode.sr" "Matthew_s_DresserRN.sr";
 connectAttr "_UNKNOWN_REF_NODE_.ur" "Matthew_s_VaseRN.ur";
+connectAttr "sharedReferenceNode.sr" "Matthew_s_VaseRN.sr";
 connectAttr "_UNKNOWN_REF_NODE_.ur" "Matthew_s_FrameRN.ur";
 connectAttr "_UNKNOWN_REF_NODE_.ur" "Matthew_s_BooksRN.ur";
 connectAttr "_UNKNOWN_REF_NODE_.ur" "Matthew_s_Book_with_bookendRN.ur";
