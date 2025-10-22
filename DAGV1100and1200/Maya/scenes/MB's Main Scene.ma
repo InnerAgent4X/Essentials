@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: MB's Main Scene.ma
-//Last modified: Fri, Oct 10, 2025 06:27:12 PM
+//Last modified: Tue, Oct 21, 2025 10:46:51 PM
 //Codeset: 1252
 file -rdi 1 -ns "Matthew_s_Table" -rfn "Matthew_s_TableRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/Matthew's Table.ma";
@@ -63,20 +63,20 @@ fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
-fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "1C2F74D7-4845-86C5-2E23-C9B58DA1AE08";
+fileInfo "osv" "Windows 11 Pro v2009 (Build: 26200)";
+fileInfo "UUID" "9A9B0555-4758-0412-AAE2-AC853EEDF01A";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "465FD68B-42A5-DE39-6EE6-FF840CF48797";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -26.340065302211801 10.164108541840182 -10.124815942941895 ;
-	setAttr ".r" -type "double3" 1066.1999999953755 -2637.199999997646 0 ;
+	setAttr ".t" -type "double3" -20.91444577299108 11.54144855182626 -9.4448602642247224 ;
+	setAttr ".r" -type "double3" 1058.9999999951262 -2635.1999999969889 0 ;
 	setAttr ".rpt" -type "double3" 1.3592913684404301e-17 2.6745049588076354e-18 5.2582474181746316e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "306654EC-467A-10A0-B0C0-E99110289BF6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 30.066370178594962;
+	setAttr ".coi" 26.303513987583258;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1007,20 +1007,20 @@ createNode mesh -n "wallShape2" -p "wall2";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "867F703F-4035-4F4C-368F-988CBC2F547A";
+	rename -uid "A5B0DD3B-4E21-D393-41A9-B899041DA847";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "01951F72-45FE-68BF-53B7-DBBC50A543CE";
+	rename -uid "5ECB63E8-4D52-4DD7-8E0A-6C8F484D5EBE";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "BEB0DCBF-479C-FDD7-C19E-E5A481227702";
+	rename -uid "9F7A0A05-45C0-4EC4-C3A7-C88907565171";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "B4D5AFBA-4B43-6B51-27C1-9287F1A7DC9F";
+	rename -uid "1870664B-43CD-1E40-EA2D-1083107B015E";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "00F307DE-4B02-26D2-936B-5998FF6D8357";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7E7534E0-4500-84F2-D9CA-C18AE3D413ED";
+	rename -uid "5B883E5F-4BE7-683A-976B-7FA659A01D6B";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "D0FB863A-475A-1747-404B-E197923D002D";
 	setAttr ".g" yes;
@@ -1217,7 +1217,7 @@ createNode reference -n "Matthew_s_RoombaRN";
 		"Matthew_s_RoombaRN"
 		"Matthew_s_RoombaRN" 0
 		"Matthew_s_RoombaRN" 10
-		2 "|Matthew_s_Roomba:Base_Station" "translate" " -type \"double3\" 6.01067178313761907 -0.11365238119951038 -5.67529152329702047"
+		2 "|Matthew_s_Roomba:Base_Station" "translate" " -type \"double3\" 6.01067178313761907 -0.11365238119951038 -4.60775751048730964"
 		
 		2 "|Matthew_s_Roomba:Base_Station" "rotate" " -type \"double3\" 0 -89.36238848219049657 0"
 		
@@ -1227,7 +1227,7 @@ createNode reference -n "Matthew_s_RoombaRN";
 		" 1"
 		2 "|Matthew_s_Roomba:Base_Station|Matthew_s_Roomba:Base_StationShape" "displaySmoothMesh" 
 		" 0"
-		2 "|Matthew_s_Roomba:Vacuum1" "translate" " -type \"double3\" 5.96906112461294835 -0.10893419974564045 -5.58815576425571514"
+		2 "|Matthew_s_Roomba:Vacuum1" "translate" " -type \"double3\" 5.96906112461294835 -0.10893419974564045 -4.64758980775835351"
 		
 		2 "|Matthew_s_Roomba:Vacuum1" "rotate" " -type \"double3\" 0 -89.36238848219049657 0"
 		
@@ -1287,7 +1287,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
-	setAttr -s 7 ".r";
+	setAttr -s 14 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -1295,12 +1295,11 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 97 ".dsm";
+	setAttr -s 63 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 48 ".gn";
+	setAttr -s 16 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
-select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
