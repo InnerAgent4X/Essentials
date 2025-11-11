@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Scene2_Main.ma
-//Last modified: Thu, Nov 06, 2025 10:14:36 PM
+//Last modified: Fri, Nov 07, 2025 02:21:54 PM
 //Codeset: 1252
 file -rdi 1 -ns "WhiteBoard" -rfn "WhiteBoardRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/WhiteBoard.ma";
@@ -19,18 +19,18 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26200)";
-fileInfo "UUID" "3BF4C03D-4324-49AB-9DE5-6EAEF5899722";
+fileInfo "UUID" "0A78D385-4346-46A1-7543-02AC3FDD5CEC";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "FE24B060-412A-5BCE-4C72-39BAA6310D82";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 26.172073434026586 8.7163505028629427 6.7228710938958036 ;
-	setAttr ".r" -type "double3" -12.338352729627195 81.80000000000156 1.1149752714379343e-14 ;
+	setAttr ".t" -type "double3" 10.701753024492934 7.9229440278319627 12.875535190948588 ;
+	setAttr ".r" -type "double3" -12.938352729639666 62.599999999997706 -3.4556238253752407e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "CF0D175A-4A3D-1EB1-673D-B48E2A10E5FE";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 30.431140481492704;
+	setAttr ".coi" 17.825811666573202;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -448,15 +448,15 @@ createNode mesh -n "pCubeShape11" -p "pCube11";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "08B5E782-4B69-2048-D877-C4BD380606FB";
+	rename -uid "416B7552-4594-B21B-C7DF-89A3B988DC26";
 	setAttr -s 5 ".lnk";
 	setAttr -s 5 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "6B03B5AA-4415-FA47-EEEC-F199C6EB99E4";
+	rename -uid "114E8C71-412D-2FCB-8D82-659456107BAD";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "66C88C4D-4715-CEDA-F364-73A81448445A";
+	rename -uid "A5A9D8B7-4337-A661-391B-CC844588E2AA";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "BC79044E-4705-F922-08D6-289E54C548F4";
+	rename -uid "85015EAE-4B4D-A844-1438-D092AE84CEBF";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
@@ -464,7 +464,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "3180E96F-4C3E-C74A-048B-7EB35403CC31";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "388C9633-440E-8A69-3842-74ADBD29AABA";
+	rename -uid "2CE82C53-45FE-7767-D374-9B8350B53E7A";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "23E0D17C-49EB-B760-A9DF-DA9C4FD4BE5E";
 	setAttr ".g" yes;
@@ -623,7 +623,7 @@ createNode reference -n "PowerBreakerRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"PowerBreakerRN"
 		"PowerBreakerRN" 0
-		"PowerBreakerRN" 11
+		"PowerBreakerRN" 13
 		2 "|PowerBreaker:pCube1" "translate" " -type \"double3\" -7.60123710276878928 3.36196034317929104 3.81596109616995527"
 		
 		2 "|PowerBreaker:pCube1" "translateX" " -av"
@@ -631,7 +631,9 @@ createNode reference -n "PowerBreakerRN";
 		2 "|PowerBreaker:pCube1" "translateZ" " -av"
 		2 "|PowerBreaker:pCube1" "rotate" " -type \"double3\" 0 179.63624455955846315 0"
 		
+		2 "|PowerBreaker:pCube1" "rotateX" " -av"
 		2 "|PowerBreaker:pCube1" "rotateY" " -av"
+		2 "|PowerBreaker:pCube1" "rotateZ" " -av"
 		2 "|PowerBreaker:pCube1" "scale" " -type \"double3\" 0.89810313153196519 0.89810313153196519 0.89810313153196519"
 		
 		2 "|PowerBreaker:pCube1" "scaleX" " -av"
