@@ -2101,7 +2101,7 @@ MonoBehaviour:
   nameIdObj: {fileID: 0}
   holdTime: 0.1
   triggerEnterMatches:
-  - nameIdObj: {fileID: 11400000, guid: e0f62576719d0644b95a76f76e2df6bb, type: 2}
+  - nameIdObj: {fileID: 11400000, guid: f7b05ed2186414f76b7648e4d51b4ad5, type: 2}
     canRepeat: 0
     repeatTime: 0
     workEvent:
