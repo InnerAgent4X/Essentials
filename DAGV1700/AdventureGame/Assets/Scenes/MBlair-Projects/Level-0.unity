@@ -1280,6 +1280,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodenKey
       objectReference: {fileID: 0}
+    - target: {fileID: 8896526545153800646, guid: fba96642ee37b9a4c9ba5804cafd35fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2599,6 +2603,10 @@ PrefabInstance:
     - target: {fileID: 3303232639823987493, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
       propertyPath: m_Name
       value: WoodenChest
+      objectReference: {fileID: 0}
+    - target: {fileID: 3303232639823987493, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7374971418154264811, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
       propertyPath: m_Sprite
@@ -9589,6 +9597,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoldChest
       objectReference: {fileID: 0}
+    - target: {fileID: 3303232639823987493, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9809,6 +9821,10 @@ PrefabInstance:
     - target: {fileID: 8896526545153800646, guid: fba96642ee37b9a4c9ba5804cafd35fb, type: 3}
       propertyPath: m_Name
       value: GoldKey
+      objectReference: {fileID: 0}
+    - target: {fileID: 8896526545153800646, guid: fba96642ee37b9a4c9ba5804cafd35fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
