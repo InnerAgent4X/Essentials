@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 3386994801660878520}
   - component: {fileID: 5948104136752832391}
   - component: {fileID: 695727029303559454}
+  - component: {fileID: 4934693815862206489}
   m_Layer: 13
-  m_Name: GoldKeySprite
+  m_Name: WoodenKeySprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 96eab1fbdbfe0984ea2461fe730dc2e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: de12810e69fb2d24dba1f46b88a9a2e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,7 +106,7 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls: []
-  nameIdObj: {fileID: 11400000, guid: b8843bd6f3cbbde4fb50f3e977099b00, type: 2}
+  nameIdObj: {fileID: 11400000, guid: fde8b57f7aa789d41b8f84d3c4f5528d, type: 2}
 --- !u!95 &5948104136752832391
 Animator:
   serializedVersion: 7
@@ -149,6 +150,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.68, y: 1.16, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4934693815862206489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177665278376199985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f686339384b344575acee270e4dc6bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  nameIdObj: {fileID: 11400000, guid: b8843bd6f3cbbde4fb50f3e977099b00, type: 2}
 --- !u!1 &8896526545153800646
 GameObject:
   m_ObjectHideFlags: 0
