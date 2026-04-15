@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public SimpleCharacterController player_controller;
+    public MBs_CharacterController player_controller;
     public CharacterController character_controller;
     public FlipTransformBehaviour flip;
     public ItemFollow camera_follow;
@@ -58,5 +58,16 @@ public class GameManager : MonoBehaviour
         
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void ToNextLevel()
+    {
+        StartCoroutine(Next_Level());
+    }
+    IEnumerator Next_Level()
+    {
+        yield return new WaitForSeconds(2f);
+        int Current_Level = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(Current_Level + 1 );
     }
 }

@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MBlair-Projects/Level-0.unity
     guid: 2b969bfe75f2e9c489ffe53545422e18
+  - enabled: 1
+    path: Assets/Scenes/MBlair-Projects/Level-1.unity
+    guid: b4bd03dc08ba842409e68f866eb7c3b8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
