@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!198 &43553250 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1115145140002740709, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+  m_PrefabInstance: {fileID: 1349237780}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &44169098 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6234648777864407175, guid: ba596b7902307478191228a9d0d50272, type: 3}
@@ -1217,6 +1222,11 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   triggerExitMatches: []
+--- !u!198 &302923543 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1115145140002740709, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+  m_PrefabInstance: {fileID: 5073680447812240246}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &325994955 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8896526545153800646, guid: fba96642ee37b9a4c9ba5804cafd35fb, type: 3}
@@ -1478,6 +1488,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3386994801660878520, guid: fba96642ee37b9a4c9ba5804cafd35fb, type: 3}
+      propertyPath: nameIdObj
+      value: 
+      objectReference: {fileID: 11400000, guid: b8843bd6f3cbbde4fb50f3e977099b00, type: 2}
     - target: {fileID: 5796098603405878635, guid: fba96642ee37b9a4c9ba5804cafd35fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.84
@@ -1522,7 +1536,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodenKey
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4934693815862206489, guid: fba96642ee37b9a4c9ba5804cafd35fb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3289,6 +3304,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1535045503811524326, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 3fd8fe5bd5491ba47a3b7915c90a9987, type: 2}
+    - target: {fileID: 2533383551434731348, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].nameIdObj
+      value: 
+      objectReference: {fileID: 11400000, guid: b8843bd6f3cbbde4fb50f3e977099b00, type: 2}
+    - target: {fileID: 2533383551434731348, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533383551434731348, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533383551434731348, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[6].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2533383551434731348, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
       propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -3297,6 +3332,38 @@ PrefabInstance:
       propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
       objectReference: {fileID: 1218821831}
+    - target: {fileID: 2533383551434731348, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[6].m_Target
+      value: 
+      objectReference: {fileID: 43553250}
+    - target: {fileID: 2533383551434731348, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533383551434731348, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533383551434731348, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533383551434731348, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[6].m_TargetAssemblyTypeName
+      value: UnityEngine.ParticleSystem, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533383551434731348, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Wooden Chest 2 Opening
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533383551434731348, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533383551434731348, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2837586116542774304, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.261406
@@ -3341,8 +3408,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodenChest
       objectReference: {fileID: 0}
+    - target: {fileID: 7374971418154264811, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86d048c9e2620f74690aa9ea1328dab8, type: 3}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2326490505164891176, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
@@ -15916,6 +15988,14 @@ PrefabInstance:
       propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
       objectReference: {fileID: 1218821831}
+    - target: {fileID: 2533383551434731348, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[6].m_Target
+      value: 
+      objectReference: {fileID: 302923543}
+    - target: {fileID: 2533383551434731348, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
     - target: {fileID: 2837586116542774304, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.408
@@ -15961,7 +16041,8 @@ PrefabInstance:
       value: GoldChest
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2326490505164891176, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a1a9f5b44f632242a6645df6511aa1d, type: 3}
@@ -16130,6 +16211,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 724005863303062592, guid: fba96642ee37b9a4c9ba5804cafd35fb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 96eab1fbdbfe0984ea2461fe730dc2e3, type: 3}
+    - target: {fileID: 1177665278376199985, guid: fba96642ee37b9a4c9ba5804cafd35fb, type: 3}
+      propertyPath: m_Name
+      value: GoldKeySprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934693815862206489, guid: fba96642ee37b9a4c9ba5804cafd35fb, type: 3}
+      propertyPath: nameIdObj
+      value: 
+      objectReference: {fileID: 11400000, guid: fde8b57f7aa789d41b8f84d3c4f5528d, type: 2}
     - target: {fileID: 5796098603405878635, guid: fba96642ee37b9a4c9ba5804cafd35fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.15
