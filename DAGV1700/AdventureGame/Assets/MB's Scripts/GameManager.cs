@@ -66,6 +66,11 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator Next_Level()
     {
+        player_controller.enabled = false;
+        character_controller.enabled = false;
+        flip.enabled = false;
+        player_anim.enabled = false;
+        camera_follow.enabled = false;
         yield return new WaitForSeconds(2f);
         int Current_Level = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(Current_Level + 1 );
