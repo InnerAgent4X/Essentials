@@ -1790,7 +1790,7 @@ GameObject:
   - component: {fileID: 369746987}
   - component: {fileID: 369746990}
   - component: {fileID: 369746989}
-  - component: {fileID: 369746988}
+  - component: {fileID: 369746991}
   m_Layer: 3
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -1814,19 +1814,6 @@ Transform:
   - {fileID: 1243117075}
   m_Father: {fileID: 1907369215}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &369746988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369746986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b58e542e4e133483ca34f3afb817f460, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 0}
 --- !u!95 &369746989
 Animator:
   serializedVersion: 7
@@ -1904,6 +1891,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &369746991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369746986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e70f6d2a118c2141a31cd0f6292e59c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
 --- !u!1 &417311382
 GameObject:
   m_ObjectHideFlags: 0

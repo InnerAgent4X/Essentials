@@ -91,6 +91,13 @@ public class GameManager : MonoBehaviour
         camera_follow.enabled = false;
         yield return new WaitForSeconds(2f);
         int Current_Level = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(Current_Level + 1 );
+
+        if (Current_Level == SceneManager.sceneCountInBuildSettings - 1)
+        {
+            SceneManager.LoadScene(0);
+            yield break;
+        }
+        else SceneManager.LoadScene(Current_Level + 1);
+
     }
 }
