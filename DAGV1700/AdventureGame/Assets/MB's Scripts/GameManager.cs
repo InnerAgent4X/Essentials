@@ -13,11 +13,29 @@ public class GameManager : MonoBehaviour
     public Animator player_anim;
     public CameraShake camera_shake;
     public Image fade_img;
+    public AudioSource dmg_sound;
 
+    private float prev_health;
     private bool startGameOver = false;
+
+    void Start()
+    {
+        prev_health = player_health.value;
+    }
 
     void Update()
     {
+        if (player_health.value == 1f)
+        {
+            prev_health = player_health.value;
+        }
+
+        if (player_health.value < prev_health)
+        {
+            dmg_sound.Play();
+            prev_health = player_health.value;
+        }
+
         if (player_health.value <= 0 && !startGameOver)
         {
             startGameOver = true;
