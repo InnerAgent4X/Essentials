@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public CameraShake camera_shake;
     public Image fade_img;
     public AudioSource dmg_sound;
+    public IntData player_score;
 
     private float prev_health;
     private bool startGameOver = false;
@@ -80,6 +81,8 @@ public class GameManager : MonoBehaviour
 
     public void ToNextLevel()
     {
+        int totalScore = PlayerPrefs.GetInt("TotalScore", 0) + player_score.Value;
+        PlayerPrefs.SetInt("TotalScore", totalScore);
         StartCoroutine(Next_Level());
     }
     IEnumerator Next_Level()
