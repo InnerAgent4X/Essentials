@@ -1,83 +1,85 @@
 //Maya ASCII 2027 scene
-//Name: Ball_With_Legs.ma
-//Last modified: Wed, Sep 16, 2026 05:38:32 PM
+//Name: Weight_Anticipation.ma
+//Last modified: Wed, Sep 16, 2026 06:34:41 PM
 //Codeset: 1252
 requires maya "2027";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.6.1.1";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202604221258-70da84b25e";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26200)";
-fileInfo "UUID" "6CD5E616-4D0C-DDC3-DE6E-3D926A14EDFD";
+fileInfo "UUID" "2CF37879-4AB1-D702-6D15-DBAE831221F2";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
-	rename -uid "EF1B54D9-43B5-9DE4-074B-0C9A29315814";
+	rename -uid "ED078CDD-4A3A-12C6-F97F-87A1D2B57B87";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 11.898756759560451 4.078863410345452 2.516240345933471 ;
-	setAttr ".r" -type "double3" 350.06164727001772 76.599999999927491 0 ;
+	setAttr ".t" -type "double3" 12.90596239119729 3.4673044591289202 -7.6154535009211557 ;
+	setAttr ".r" -type "double3" -5.7383527295723722 114.59999999998004 0 ;
 createNode camera -s -n "perspShape" -p "persp";
-	rename -uid "2A0995EA-4B96-07CD-4345-558C26B88B71";
+	rename -uid "7E336A72-466A-F239-CE33-6B984198D958";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 12.376852017460351;
+	setAttr ".coi" 14.447190462120551;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0 2.0187295072079388 -0.32044151377094798 ;
+	setAttr ".tp" -type "double3" -1.6653345369377348e-16 2.0047935752884776 -4.5076600536904614 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
-	rename -uid "A76E9836-4C77-0B68-3EC6-0CA3EDE899F9";
+	rename -uid "C7715010-4A30-3D36-B92E-11869D768183";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 100.1 0 ;
-	setAttr ".r" -type "double3" -89.999999999999986 0 0 ;
+	setAttr ".t" -type "double3" 0 1000.1 0 ;
+	setAttr ".r" -type "double3" -90 0 0 ;
 createNode camera -s -n "topShape" -p "top";
-	rename -uid "D54A2AAF-4CBF-A1AF-40E5-A6B3EE0D2C1E";
+	rename -uid "E8F69ED3-4DF5-6C20-B78D-10A60898FA40";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 100.1;
+	setAttr ".coi" 1000.1;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
 	setAttr ".hc" -type "string" "viewSet -t %camera";
 	setAttr ".o" yes;
+	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "front";
-	rename -uid "CE27FF19-4C6D-548C-8B21-3A838A2FCC9D";
+	rename -uid "42D85BF6-4A83-F728-C332-71BC886D5EA3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 0 100.1 ;
+	setAttr ".t" -type "double3" 0 0 1000.1 ;
 createNode camera -s -n "frontShape" -p "front";
-	rename -uid "71B20566-44D0-93F4-6408-DCAF15276C9A";
+	rename -uid "F0B3A9E2-4C18-4D12-EDA7-33AC16D43F38";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 100.1;
+	setAttr ".coi" 1000.1;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
+	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "side";
-	rename -uid "50CF578D-4D0E-8CD3-FE02-C7842F38DC9C";
+	rename -uid "40E1B638-4591-9035-48D9-8D97FE1A93DB";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 100.1 1.4169887918674466 -0.31949407265558272 ;
-	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
+	setAttr ".t" -type "double3" 1000.1 2.1474395379077809 -1.0878476606506526 ;
+	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
-	rename -uid "4DACC4A0-4B56-DD24-695C-448D06076831";
+	rename -uid "EA6E6463-4D56-681B-755F-B4820A22E48F";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 100.1;
-	setAttr ".ow" 15.597245804632227;
+	setAttr ".coi" 1000.1;
+	setAttr ".ow" 18.606433364635183;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-createNode transform -n "AniM_walker_Main";
-	rename -uid "2306DDF0-497D-164B-8A9A-698C65F4F26E";
+	setAttr ".ai_translator" -type "string" "orthographic";
+createNode transform -n "Ultimate_Walker_v1_0_1:AniM_walker_Main";
+	rename -uid "2C1B464A-4A9B-51BE-E0B2-A6AE2D40E3CA";
 	setAttr -l on -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -88,8 +90,8 @@ createNode transform -n "AniM_walker_Main";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode transform -n "CTRL_Root" -p "AniM_walker_Main";
-	rename -uid "903F2CB0-4338-5079-7A0F-1EB060ABCDB4";
+createNode transform -n "Ultimate_Walker_v1_0_1:CTRL_Root" -p "Ultimate_Walker_v1_0_1:AniM_walker_Main";
+	rename -uid "8A565900-4ECD-298D-8293-8EA8AFDFAB0E";
 	addAttr -ci true -sn "Global_Scale" -ln "Global_Scale" -dv 1 -min 0.1 -max 100 
 		-at "double";
 	addAttr -ci true -sn "Version" -ln "Version" -nn "Version" -min 0 -max 0 -en "1.01" 
@@ -111,8 +113,8 @@ createNode transform -n "CTRL_Root" -p "AniM_walker_Main";
 	setAttr ".sp" -type "double3" -1.7763568394002501e-15 -1.7763568394002499e-15 -8.8817841970012602e-16 ;
 	setAttr -cb on ".Global_Scale";
 	setAttr -l on -cb on ".Version";
-createNode nurbsCurve -n "CTRL_RootShape" -p "CTRL_Root";
-	rename -uid "CAB3E4A2-48B1-C1CD-5397-4CAC7067A41F";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:CTRL_RootShape" -p "Ultimate_Walker_v1_0_1:CTRL_Root";
+	rename -uid "E934C4CF-4964-F5EA-9A8B-BBA870F454AB";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
 		3 22 1 no 3
@@ -144,8 +146,8 @@ createNode nurbsCurve -n "CTRL_RootShape" -p "CTRL_Root";
 		2.0659039339781429 -2.2350796622334949e-15 1.6889815122751055
 		2.3978903315277118 -2.3087954507178729e-15 1.6889815122751055
 		;
-createNode transform -n "Rig_Leg_grp" -p "AniM_walker_Main";
-	rename -uid "859BC44C-4247-8ECF-09FD-6BB49A3C4414";
+createNode transform -n "Ultimate_Walker_v1_0_1:Rig_Leg_grp" -p "Ultimate_Walker_v1_0_1:AniM_walker_Main";
+	rename -uid "ED3F2473-44CA-C24F-9532-AB9CFBA16E39";
 	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -156,8 +158,8 @@ createNode transform -n "Rig_Leg_grp" -p "AniM_walker_Main";
 	setAttr -k off ".sx";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
-createNode transform -n "walker_lf_leg_rig_grp" -p "Rig_Leg_grp";
-	rename -uid "659CE9C4-4275-6AEF-0EEC-769948C99ADA";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp" -p "Ultimate_Walker_v1_0_1:Rig_Leg_grp";
+	rename -uid "AE1DFE70-41EF-F277-4A17-F0A3B1A83F19";
 	setAttr -l on -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -168,18 +170,19 @@ createNode transform -n "walker_lf_leg_rig_grp" -p "Rig_Leg_grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode transform -n "walker_lf_reverseFoot_rig_grp" -p "walker_lf_leg_rig_grp";
-	rename -uid "553BD85C-487C-2F8E-6DC4-0B8FE121C641";
-createNode joint -n "walker_lf_heel_rev_rig_jnt" -p "walker_lf_reverseFoot_rig_grp";
-	rename -uid "AED0B10C-4979-B58B-12FB-4BA21690FDD8";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "4642BA31-4AAD-34B5-33DF-A3AE09A3F6C5";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_heel_rev_rig_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp";
+	rename -uid "2F8CE6A8-4B7E-A8FA-2CAB-138413ADB0F6";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
 	setAttr ".t" -type "double3" 0.58301609754639938 1.5390000728584829e-09 -0.25085057272848399 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 -89.999999999999986 0 ;
-createNode joint -n "walker_lf_toe_rev_rig_jnt" -p "walker_lf_heel_rev_rig_jnt";
-	rename -uid "2515BCD2-405B-16D8-0DC5-48B793C49316";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_toe_rev_rig_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_heel_rev_rig_jnt";
+	rename -uid "7467410F-47A1-59AB-3404-E4892962814C";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
 	setAttr ".t" -type "double3" 1.1719712546574839 0 3.3306690738754696e-16 ;
@@ -187,8 +190,8 @@ createNode joint -n "walker_lf_toe_rev_rig_jnt" -p "walker_lf_heel_rev_rig_jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 89.999999999999986 0 ;
 	setAttr ".radi" 0.5;
-createNode joint -n "walker_lf_ball_rev_rig_jnt" -p "walker_lf_toe_rev_rig_jnt";
-	rename -uid "DE3BFBEC-4230-A044-296E-82BBE5170529";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_ball_rev_rig_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_toe_rev_rig_jnt";
+	rename -uid "36375986-4C2A-0FDF-6A2B-AE9CE8DB2E47";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
 	setAttr ".t" -type "double3" -2.2204460492503131e-16 -1.4536119660842215e-16 -0.55929725629999982 ;
@@ -196,8 +199,8 @@ createNode joint -n "walker_lf_ball_rev_rig_jnt" -p "walker_lf_toe_rev_rig_jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 180 -89.999999999999986 0 ;
 	setAttr ".radi" 0.72241122832793025;
-createNode joint -n "walker_lf_ankle_rev_rig_jnt" -p "walker_lf_ball_rev_rig_jnt";
-	rename -uid "09A3ED05-44DD-E5FF-69FC-068D1CAC5DF8";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_ball_rev_rig_jnt";
+	rename -uid "F1206B5B-406F-2FFD-7670-82A75CE18204";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
@@ -207,23 +210,23 @@ createNode joint -n "walker_lf_ankle_rev_rig_jnt" -p "walker_lf_ball_rev_rig_jnt
 	setAttr ".jo" -type "double3" 2.7234061534348701e-15 2.3456687885621215e-15 48.050499189664151 ;
 	setAttr ".radi" 0.73729004431155587;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode joint -n "walker_lf__ik_jnt" -p "walker_lf_toe_rev_rig_jnt";
-	rename -uid "C4E81E52-45B3-3076-3AAD-29A550A5465B";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf__ik_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_toe_rev_rig_jnt";
+	rename -uid "A139B18B-4FF9-B08F-EB97-9EBE7AEFEB9F";
 	setAttr ".t" -type "double3" 0 -1.4536119619483184e-16 -0.55929725629999971 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 180 -89.999999999999986 0 ;
 	setAttr ".radi" 0.72241122832793025;
-createNode joint -n "walker_lf_ball_ik_jnt" -p "walker_lf__ik_jnt";
-	rename -uid "E0C06A7B-4482-5740-0AA2-ED8CE8984D44";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_ball_ik_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf__ik_jnt";
+	rename -uid "642E9893-494A-2294-D9DA-19941B6F53D5";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
 	setAttr ".t" -type "double3" 1.1102230246251565e-16 2.0679515313825692e-25 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.72241122832793025;
-createNode joint -n "walker_lf_toe_ik_jnt" -p "walker_lf_ball_ik_jnt";
-	rename -uid "B6E440C8-459D-1522-AFC0-DFA6647C9A49";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_toe_ik_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_ball_ik_jnt";
+	rename -uid "90FDD272-4C53-F70C-7214-92A526C457C7";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
 	setAttr ".t" -type "double3" 0.55929725629999938 -1.4536119660842215e-16 1.1102230246251565e-16 ;
@@ -231,9 +234,9 @@ createNode joint -n "walker_lf_toe_ik_jnt" -p "walker_lf_ball_ik_jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 180 -89.999999999999972 0 ;
 	setAttr ".radi" 0.5;
-createNode parentConstraint -n "walker_lf_reverseFoot_rig_grp_parentConstraint1" 
-		-p "walker_lf_reverseFoot_rig_grp";
-	rename -uid "95A56E63-4784-C1ED-1D08-AE9D53F7735A";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp";
+	rename -uid "C7D1BDE7-49BE-C133-CFF4-1A8E10533004";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_heel_ik_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -249,12 +252,12 @@ createNode parentConstraint -n "walker_lf_reverseFoot_rig_grp_parentConstraint1"
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -0.58301609754639938 -1.5390000728584829e-09 
 		0.25085057272848399 ;
-	setAttr ".lr" -type "double3" 34.582895839832034 0 0 ;
+	setAttr ".lr" -type "double3" 7.6589224633112067 0 0 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_legFK_Grp" -p "walker_lf_leg_rig_grp";
-	rename -uid "44C30B60-456A-A25C-FF64-249AA5D2AF26";
-createNode joint -n "walker_lf_upLeg_fk_jnt" -p "walker_lf_legFK_Grp";
-	rename -uid "5F589241-4936-E029-27E6-85ACC1F39EAE";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp" -p "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "16FFEE76-4968-773A-2DDD-63AC217AAC88";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp";
+	rename -uid "F1F936B5-4B20-5042-ED74-D6B89464846E";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 18;
@@ -263,8 +266,8 @@ createNode joint -n "walker_lf_upLeg_fk_jnt" -p "walker_lf_legFK_Grp";
 	setAttr ".jo" -type "double3" 0 0 -179.73734255356067 ;
 	setAttr ".radi" 0.89313380820640498;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode joint -n "walker_lf_knee_fk_jnt" -p "walker_lf_upLeg_fk_jnt";
-	rename -uid "30A635D9-455E-7508-565A-E7BE9A95D782";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt";
+	rename -uid "FA6D74D8-4494-EFA2-EA07-6DB225074F48";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 18;
 	setAttr ".t" -type "double3" 0.98861312866210938 1.3433698597964394e-14 1.1102230246251565e-16 ;
@@ -272,8 +275,8 @@ createNode joint -n "walker_lf_knee_fk_jnt" -p "walker_lf_upLeg_fk_jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 4.4814151967256262 ;
 	setAttr ".radi" 0.84979013353145527;
-createNode joint -n "walker_lf_ankle_fk_jnt" -p "walker_lf_knee_fk_jnt";
-	rename -uid "1F618D2B-467B-EB1F-11F5-8B932D76A08B";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt";
+	rename -uid "0EA30789-4236-3C6A-4D32-6B9019D19E32";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 18;
@@ -283,8 +286,8 @@ createNode joint -n "walker_lf_ankle_fk_jnt" -p "walker_lf_knee_fk_jnt";
 	setAttr ".jo" -type "double3" 0 0 -46.43091730301424 ;
 	setAttr ".radi" 0.73729004431155587;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode joint -n "walker_lf_ball_fk_jnt" -p "walker_lf_ankle_fk_jnt";
-	rename -uid "9AE63B88-4E31-A2F7-9816-D3B7F9B24FC3";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt";
+	rename -uid "0F02FAA9-45CE-4E96-E461-808B8A700628";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 18;
 	setAttr ".t" -type "double3" 0.59671299748895001 -5.5511151231257827e-17 -2.2204460492503131e-16 ;
@@ -292,15 +295,16 @@ createNode joint -n "walker_lf_ball_fk_jnt" -p "walker_lf_ankle_fk_jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -48.050499189664158 ;
 	setAttr ".radi" 0.72241122832793025;
-createNode joint -n "walker_lf_toe_fk_jnt" -p "walker_lf_ball_fk_jnt";
-	rename -uid "8BADB1D0-4DB3-01E0-91D2-A685B810C704";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_toe_fk_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt";
+	rename -uid "138F8C24-4691-5A04-E127-118B0C40A91C";
 	setAttr ".t" -type "double3" 0.5592972562999996 -5.2219492896697226e-17 2.2204460492503131e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -180 -89.999999999999986 0 ;
 	setAttr ".radi" 0.5;
-createNode orientConstraint -n "walker_lf_ballCtrl_fk_or_cons" -p "walker_lf_ball_fk_jnt";
-	rename -uid "806C56EF-4F8D-5E0C-88AB-9B8E7EC03B1D";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_ballCtrl_fk_or_cons" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt";
+	rename -uid "6ED91033-4747-F606-8CA4-2BABF15C0652";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_ball_fk_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -314,10 +318,11 @@ createNode orientConstraint -n "walker_lf_ballCtrl_fk_or_cons" -p "walker_lf_bal
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 0 3.8166656177562201e-14 ;
+	setAttr ".lr" -type "double3" 0 0 2.5444437451708134e-14 ;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "walker_lf_ankleCtrl_fk_or_cons" -p "walker_lf_ankle_fk_jnt";
-	rename -uid "E2BFFBF0-440E-1728-AEC2-709D1FEF2C76";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_ankleCtrl_fk_or_cons" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt";
+	rename -uid "BC8A85DB-4605-DEA3-7FCC-1E8897712BDF";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_ankle_fk_ctrlW0" -dv 1 -min 0 
 		-at "double";
 	setAttr -k on ".nds";
@@ -332,11 +337,12 @@ createNode orientConstraint -n "walker_lf_ankleCtrl_fk_or_cons" -p "walker_lf_an
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 0 3.8166656177562201e-14 ;
+	setAttr ".lr" -type "double3" 0 0 3.1805546814635168e-14 ;
 	setAttr ".rsrr" -type "double3" 0 0 1.9083328088781101e-14 ;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "walker_lf_kneeCtrl_fk_or_cons" -p "walker_lf_knee_fk_jnt";
-	rename -uid "3FA2EBA1-432C-0596-7B40-928447C87E68";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_kneeCtrl_fk_or_cons" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt";
+	rename -uid "4FB32DFF-4AA8-A981-3463-CC918DCA1388";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_knee_fk_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -353,8 +359,9 @@ createNode orientConstraint -n "walker_lf_kneeCtrl_fk_or_cons" -p "walker_lf_kne
 	setAttr ".lr" -type "double3" 0 0 -7.9513867036587919e-15 ;
 	setAttr ".rsrr" -type "double3" 0 0 -1.4312496066585827e-14 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "walker_lf_upLeg_fk_jnt_parentConstraint1" -p "walker_lf_upLeg_fk_jnt";
-	rename -uid "E9CD820A-4177-F452-2F0F-32AF56B80731";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt";
+	rename -uid "D2525EFC-4DCB-C860-9481-CCB1F935318F";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_upLeg_fk_ctrlW0" -dv 1 -min 0 
 		-at "double";
 	setAttr -k on ".nds";
@@ -373,8 +380,9 @@ createNode parentConstraint -n "walker_lf_upLeg_fk_jnt_parentConstraint1" -p "wa
 	setAttr ".rst" -type "double3" -0.72869950102630954 0.035533216670092176 0.58301609754639927 ;
 	setAttr ".rsrr" -type "double3" 0 0 2.5444437451708128e-14 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "walker_lf_legFK_Grp_parentConstraint1" -p "walker_lf_legFK_Grp";
-	rename -uid "20654552-4E13-2B85-C6FD-C9B651C3311D";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp";
+	rename -uid "2A8A9CB8-4EFB-6DF7-1B64-6096F0EBDA26";
 	addAttr -ci true -k true -sn "w0" -ln "walker_hip_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -396,13 +404,15 @@ createNode parentConstraint -n "walker_lf_legFK_Grp_parentConstraint1" -p "walke
 	setAttr ".rst" -type "double3" -5.7142390883069934e-32 3.037865615999999 -0.0072083119257999829 ;
 	setAttr ".rsrr" -type "double3" 90.000000000000014 0.2626561504866004 90 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_ball_fk_ctrl_frzGrp" -p "walker_lf_leg_rig_grp";
-	rename -uid "9CA9B4F8-47F8-04FE-7692-76A2459A7D76";
-createNode transform -n "walker_lf_ball_fk_ctrl_frzGrp" -p "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp";
-	rename -uid "B65A6649-4FF0-FF4A-338E-5EB859DC7491";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "1C09BA81-4C03-9348-C081-6BA1432C85A1";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp" -p
+		 "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp";
+	rename -uid "B12F1E72-455E-D8E0-E2F5-02BFD74B6A20";
 	setAttr ".r" -type "double3" -4.7044035846079415e-46 0 0 ;
-createNode transform -n "walker_lf_ball_fk_ctrl" -p "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp|walker_lf_ball_fk_ctrl_frzGrp";
-	rename -uid "04AC7E28-4E8A-759F-4C91-9098A0047AA2";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl" -p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp";
+	rename -uid "5AEC40A9-4980-53C1-6411-9F8C7A963E1C";
 	setAttr -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -412,8 +422,8 @@ createNode transform -n "walker_lf_ball_fk_ctrl" -p "|AniM_walker_Main|Rig_Leg_g
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "walker_lf_ball_fk_ctrlShape" -p "walker_lf_ball_fk_ctrl";
-	rename -uid "2F9A2FD2-4EDA-91AF-1B70-ED981160805E";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrlShape" -p "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl";
+	rename -uid "D79C262B-4214-2F51-B62B-6593C3B1F191";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 6;
@@ -468,9 +478,9 @@ createNode nurbsCurve -n "walker_lf_ball_fk_ctrlShape" -p "walker_lf_ball_fk_ctr
 		-3.330669771402477e-17 -0.23303152663811169 -0.23303154234502349
 		-1.7965911271019249e-16 -9.3069570751478986e-16 -0.32955635652766929
 		;
-createNode pointConstraint -n "walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1" -p
-		 "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp|walker_lf_ball_fk_ctrl_frzGrp";
-	rename -uid "4B858B03-4197-DAC7-98CB-CCB523F7FEC6";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1" 
+		-p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp";
+	rename -uid "A08D7E24-41C8-B880-F93B-5F827FF9CA17";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_ball_fk_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -486,9 +496,9 @@ createNode pointConstraint -n "walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1" -
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 5.5511151231257827e-17 2.0679515313825692e-25 0 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1" 
-		-p "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp";
-	rename -uid "8BD1B880-49D3-797D-7942-21B59851B0C0";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1" 
+		-p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp";
+	rename -uid "A79AAEB5-49B5-6AB6-B2DE-B5ABBABAAAE3";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_ankle_fk_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -510,14 +520,16 @@ createNode parentConstraint -n "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1"
 	setAttr ".rst" -type "double3" 0.58301609754639927 1.5390003715864964e-09 0.36182342562900016 ;
 	setAttr ".rsrr" -type "double3" 180 -89.999999999999986 0 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_ankle_fk_ctrl_frzGrp" -p "walker_lf_leg_rig_grp";
-	rename -uid "CE221F89-4DC0-DE34-D21C-BFB18407F3B4";
-createNode transform -n "walker_lf_ankle_fk_ctrl_frzGrp" -p "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp";
-	rename -uid "65395053-4E2C-090F-F226-8B963A19BB4C";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "5E88B102-45D0-A216-1EFF-30B15CC78D30";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp" 
+		-p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp";
+	rename -uid "D2E9668A-459C-7677-E095-DAB8B2D3F271";
 	setAttr ".r" -type "double3" -1.2722218725854061e-14 1.4124500153760508e-30 -3.1805546814635168e-15 ;
 	setAttr ".s" -type "double3" 1 0.99999999999999978 1 ;
-createNode transform -n "walker_lf_ankle_fk_ctrl" -p "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp|walker_lf_ankle_fk_ctrl_frzGrp";
-	rename -uid "8785648A-4868-6F6F-7085-F5BB43DF8487";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl" -p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp";
+	rename -uid "1A819FF4-4805-26C6-B510-6088EEDFC911";
 	setAttr -k off ".v";
 	setAttr ".t" -type "double3" 0 5.5511151231257827e-17 -1.1102230246251565e-16 ;
 	setAttr -l on -k off ".tx";
@@ -527,8 +539,9 @@ createNode transform -n "walker_lf_ankle_fk_ctrl" -p "|AniM_walker_Main|Rig_Leg_
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "walker_lf_ankle_fk_ctrlShape" -p "walker_lf_ankle_fk_ctrl";
-	rename -uid "45960A32-4444-6492-4EDB-09A833CB7B3A";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrlShape" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl";
+	rename -uid "9EECBE3C-43DE-16F9-613C-B6A4CB1547EE";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 6;
@@ -583,9 +596,9 @@ createNode nurbsCurve -n "walker_lf_ankle_fk_ctrlShape" -p "walker_lf_ankle_fk_c
 		-4.4012375498978253e-24 -0.14703761967327184 -0.14703762958397773
 		-9.2345066225811836e-17 -5.872479292710659e-16 -0.20794260292203556
 		;
-createNode pointConstraint -n "walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1" -p
-		 "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp|walker_lf_ankle_fk_ctrl_frzGrp";
-	rename -uid "9A9DBDCF-442F-1978-2089-48AAEF54EE5A";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1" 
+		-p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp";
+	rename -uid "2817600B-4723-0345-B6E7-F7BFAC180FBB";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_ankle_fk_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -601,9 +614,9 @@ createNode pointConstraint -n "walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1" 
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 5.5511151231257827e-17 5.5511151231257827e-17 1.1102230246251565e-16 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1" 
-		-p "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp";
-	rename -uid "C7C38A11-478A-4EE4-E5B2-9FA2E530632B";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1" 
+		-p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp";
+	rename -uid "9FA3F98F-47DC-0E7A-60E5-7784DA6BA953";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_knee_fk_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -625,14 +638,16 @@ createNode parentConstraint -n "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1
 	setAttr ".rst" -type "double3" 0.58301609754639927 0.4437959209500002 -0.037064507613399883 ;
 	setAttr ".rsrr" -type "double3" -90.000000000000028 -41.949500810335842 -89.999999999999972 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_knee_fk_ctrl_frzGrp" -p "walker_lf_leg_rig_grp";
-	rename -uid "0DF40B30-45E0-42F4-79D2-C1A46A9AAA48";
-createNode transform -n "walker_lf_knee_fk_ctrl_frzGrp" -p "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp";
-	rename -uid "43829E74-4679-7CD6-C50B-48BDA4895F7C";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "C8D8DC7E-45CD-86B2-557C-A1899D90AC1C";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp" -p
+		 "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp";
+	rename -uid "34A8318A-4DEA-8850-9A50-EDBA3E4C3AAF";
 	setAttr ".r" -type "double3" 0 -8.8278125961003194e-32 0 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999989 1 ;
-createNode transform -n "walker_lf_knee_fk_ctrl" -p "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp|walker_lf_knee_fk_ctrl_frzGrp";
-	rename -uid "B2F9C536-4D80-90B0-8615-43BE1A12F67A";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl" -p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp";
+	rename -uid "9DA630DA-4FBE-8E4C-A94B-20B10226B50E";
 	setAttr -k off ".v";
 	setAttr ".t" -type "double3" -2.2204460492503131e-16 -1.3877787807814457e-17 -1.1102230246251565e-16 ;
 	setAttr -l on -k off ".tx";
@@ -644,8 +659,8 @@ createNode transform -n "walker_lf_knee_fk_ctrl" -p "|AniM_walker_Main|Rig_Leg_g
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "walker_lf_knee_fk_ctrlShape" -p "walker_lf_knee_fk_ctrl";
-	rename -uid "DE7BAECD-44D3-2020-0757-8A891574EF82";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrlShape" -p "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl";
+	rename -uid "77D92AB9-4CA2-BF2A-E645-91A05579ABAE";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 6;
@@ -700,9 +715,9 @@ createNode nurbsCurve -n "walker_lf_knee_fk_ctrlShape" -p "walker_lf_knee_fk_ctr
 		-4.7164879380395188e-24 -0.15756958142003299 -0.15756959204061965
 		-9.8959527934002621e-17 -6.2931112874811685e-16 -0.22283704656416783
 		;
-createNode pointConstraint -n "walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1" -p
-		 "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp|walker_lf_knee_fk_ctrl_frzGrp";
-	rename -uid "14BA9208-4D03-28E1-FB99-E69F08E4AE5E";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1" 
+		-p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp";
+	rename -uid "D713F53E-47D6-821C-8381-CD98BDBE68EC";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_knee_fk_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -718,9 +733,9 @@ createNode pointConstraint -n "walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1" -
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 0 -1.3877787807814457e-17 -1.1102230246251565e-16 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1" 
-		-p "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp";
-	rename -uid "AE96503F-4136-281C-4EF3-7F8BF9E8FE9D";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1" 
+		-p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp";
+	rename -uid "FA3E7E36-4493-5038-A839-E6972986FB47";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_upLeg_fk_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -742,11 +757,12 @@ createNode parentConstraint -n "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1"
 	setAttr ".rst" -type "double3" 0.58301609754639971 1.3207235344300012 0.031665012228999992 ;
 	setAttr ".rsrr" -type "double3" -90.000000000000014 4.4814164926783455 -90.000000000000014 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_upLegupJntFkCtrl_grp" -p "walker_lf_leg_rig_grp";
-	rename -uid "26CE94CE-4042-B03A-E982-38812906E53C";
-createNode parentConstraint -n "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1" 
-		-p "walker_lf_upLegupJntFkCtrl_grp";
-	rename -uid "F38BD76B-45AC-E354-67E0-2EAB4A41D386";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "7B22B8B3-4836-94D3-A1A6-B886DE1FB2A4";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp";
+	rename -uid "8EB2F0A0-4570-C064-BD80-A8944EE6A803";
 	addAttr -ci true -k true -sn "w0" -ln "walker_hip_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -767,10 +783,11 @@ createNode parentConstraint -n "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1
 	setAttr ".rst" -type "double3" 0.58301609754639938 2.3093366630999994 0.031665034590100033 ;
 	setAttr ".rsrr" -type "double3" -90.000000000000014 1.2959527384941561e-06 -90.000000000000014 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_upLeg_fk_ctrl_frzGrp" -p "walker_lf_leg_rig_grp";
-	rename -uid "3282491D-4FEE-36B0-BD98-FFBAA9519D89";
-createNode transform -n "walker_lf_upLeg_fk_ctrl" -p "walker_lf_upLeg_fk_ctrl_frzGrp";
-	rename -uid "3160DC1A-4B0C-ED41-6ACC-64A6E3645B1C";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "3DB8BD59-4255-8159-EAFE-5682F2F6E95F";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl" -p "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp";
+	rename -uid "B1C1188B-4D20-ABD5-8B4F-F688787E36E3";
 	addAttr -ci true -sn "align" -ln "align" -min 0 -max 1 -at "bool";
 	setAttr -k off ".v";
 	setAttr ".t" -type "double3" 0 0 -1.1102230246251565e-16 ;
@@ -784,8 +801,9 @@ createNode transform -n "walker_lf_upLeg_fk_ctrl" -p "walker_lf_upLeg_fk_ctrl_fr
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
 	setAttr -l on ".align";
-createNode nurbsCurve -n "walker_lf_upLeg_fk_ctrlShape" -p "walker_lf_upLeg_fk_ctrl";
-	rename -uid "3146A54B-488A-7C10-FB0E-5A8A9FDD1FB8";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrlShape" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl";
+	rename -uid "85AFD63B-4B8D-952C-F8FE-AC938D30E8D5";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 6;
@@ -840,9 +858,9 @@ createNode nurbsCurve -n "walker_lf_upLeg_fk_ctrlShape" -p "walker_lf_upLeg_fk_c
 		-7.7407145338260733e-24 -0.25860368314830112 -0.25860370057884058
 		-1.6241268254772842e-16 -1.0328273660044583e-15 -0.36572084830109713
 		;
-createNode pointConstraint -n "walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1" -p
-		 "walker_lf_upLeg_fk_ctrl_frzGrp";
-	rename -uid "51C23FB4-4E0D-23B7-CAF3-6C9F2D5F8EE8";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp";
+	rename -uid "D71BA198-4DE1-906C-1066-84B857902110";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_upLegupJntFkCtrl_grpW0" -dv 1 
 		-min 0 -at "double";
 	setAttr -k on ".nds";
@@ -859,9 +877,9 @@ createNode pointConstraint -n "walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1" 
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 0.58301609754639938 2.3093366630999994 0.031665034590100033 ;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1" 
-		-p "walker_lf_upLeg_fk_ctrl_frzGrp";
-	rename -uid "1C96663A-4550-F640-09DE-A09DCC98FCBD";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp";
+	rename -uid "5A329358-4696-2D7E-2401-96A506F771F9";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_upLegupJntFkCtrl_grpW0" -dv 1 
 		-min 0 -at "double";
 	setAttr -k on ".nds";
@@ -879,32 +897,32 @@ createNode orientConstraint -n "walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1
 	setAttr ".lr" -type "double3" 270 1.2959527384941565e-06 -90.000000000000014 ;
 	setAttr ".rsrr" -type "double3" -90.000000000000014 1.2959527448552662e-06 -90.000000000000014 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_legIK_Grp" -p "walker_lf_leg_rig_grp";
-	rename -uid "C6F259D5-429F-9BFA-E1B8-539468FC9239";
-createNode joint -n "walker_lf_upLeg_ik_jnt" -p "walker_lf_legIK_Grp";
-	rename -uid "32D7D814-4272-3487-2794-D2A021AC4201";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp" -p "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "C148531E-4A44-6F27-EFB9-A7935D55FFAC";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp";
+	rename -uid "5A087977-4249-9F0A-507B-BE851FEAB705";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
 	setAttr ".t" -type "double3" -0.72869950102630909 0.035533216670092169 0.58301609754639938 ;
-	setAttr ".r" -type "double3" 2.2490865725328325e-08 6.9304901147161846e-08 35.961333064932255 ;
+	setAttr ".r" -type "double3" -7.3834636971893346 -2.4979254620085967 -7.6913809805553912 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -179.73734255356067 ;
 	setAttr ".radi" 0.89313380820640498;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode joint -n "walker_lf_knee_ik_jnt" -p "walker_lf_upLeg_ik_jnt";
-	rename -uid "52FAD390-4D1C-9865-23E5-1FBAFF4C0D9F";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_knee_ik_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt";
+	rename -uid "12CFB22B-42B7-9886-4E41-F098FB188AE6";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
 	setAttr ".t" -type "double3" 0.98861312866210938 1.3433698597964394e-14 1.1102230246251565e-16 ;
-	setAttr ".r" -type "double3" -1.1305374773089928e-15 -2.0864693661874699e-14 -4.4785588119402373 ;
+	setAttr ".r" -type "double3" 8.9483022854322164e-15 1.6512054162254932e-13 35.448181822082276 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 4.4814151967256262 ;
 	setAttr ".radi" 0.84979013353145527;
-createNode joint -n "walker_lf_ankle_ik_jnt" -p "walker_lf_knee_ik_jnt";
-	rename -uid "DA25FAF0-4B70-4565-7705-F681EE4F7128";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_ankle_ik_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_knee_ik_jnt";
+	rename -uid "0E05DF57-4C73-4167-8858-31979D594EBD";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
@@ -914,12 +932,13 @@ createNode joint -n "walker_lf_ankle_ik_jnt" -p "walker_lf_knee_ik_jnt";
 	setAttr ".jo" -type "double3" 0 0 -46.43091730301424 ;
 	setAttr ".radi" 0.73729004431155587;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode ikEffector -n "effector2" -p "walker_lf_knee_ik_jnt";
-	rename -uid "9428B0B5-4630-30B2-ED9C-52B4E2BDA1A3";
+createNode ikEffector -n "Ultimate_Walker_v1_0_1:effector2" -p "Ultimate_Walker_v1_0_1:walker_lf_knee_ik_jnt";
+	rename -uid "EEB115BD-4BC3-1889-C849-2DBEFDABA2BA";
 	setAttr ".v" no;
 	setAttr ".hd" yes;
-createNode parentConstraint -n "walker_lf_legIK_Grp_parentConstraint1" -p "walker_lf_legIK_Grp";
-	rename -uid "7568E835-42A5-F98E-3D8A-C8AB064BF52B";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp";
+	rename -uid "BADB408D-4DCE-E9DF-D385-B98578F4808F";
 	addAttr -ci true -k true -sn "w0" -ln "walker_hip_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -941,12 +960,13 @@ createNode parentConstraint -n "walker_lf_legIK_Grp_parentConstraint1" -p "walke
 	setAttr ".rst" -type "double3" -5.7142390883069934e-32 3.037865615999999 -0.0072083119257999829 ;
 	setAttr ".rsrr" -type "double3" 90.000000000000014 0.2626561504866004 90 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_heel_ik_ctrl_frzGrp" -p "walker_lf_leg_rig_grp";
-	rename -uid "7E29039D-4041-A24D-6CF1-8897E76702A4";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl_frzGrp" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "833C89B0-4032-896E-1910-4AB3AD8BE519";
 	setAttr ".t" -type "double3" 0.58301609754639938 1.5390000728584829e-09 -0.25085057272848399 ;
 	setAttr ".r" -type "double3" -1.4033418597069752e-14 0 0 ;
-createNode transform -n "walker_lf_heel_ik_ctrl" -p "walker_lf_heel_ik_ctrl_frzGrp";
-	rename -uid "2EEA5DD3-4B95-F78A-E91A-65B7CA689CEA";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl" -p "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl_frzGrp";
+	rename -uid "A843DCF9-4EB9-3E30-6506-14A344F2B798";
 	addAttr -ci true -sn "stretchyLeg" -ln "stretchyLeg" -min 0 -max 1 -at "double";
 	addAttr -ci true -sn "maxStretch" -ln "maxStretch" -dv 3 -min 1 -max 10 -at "double";
 	addAttr -ci true -sn "stretchValue" -ln "stretchValue" -at "double";
@@ -980,8 +1000,8 @@ createNode transform -n "walker_lf_heel_ik_ctrl" -p "walker_lf_heel_ik_ctrl_frzG
 	setAttr -k on ".toeTwist";
 	setAttr -l on ".toeRaise";
 	setAttr -l on ".ballRaise";
-createNode nurbsCurve -n "walker_lf_heel_ik_ctrlShape" -p "walker_lf_heel_ik_ctrl";
-	rename -uid "387286D4-4051-12E1-C51B-5BB5A631B5B5";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrlShape" -p "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl";
+	rename -uid "26335F12-4095-B1C9-50BD-2697950E9748";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 6;
@@ -1007,12 +1027,13 @@ createNode nurbsCurve -n "walker_lf_heel_ik_ctrlShape" -p "walker_lf_heel_ik_ctr
 		0.22065825970000003 0.18069724915367422 -0.44131651940000016
 		-9.6452791435125698e-09 0.18069724915367422 -0.22065825970000014
 		;
-createNode ikHandle -n "walker_lf_leg_ikHandle" -p "walker_lf_leg_rig_grp";
-	rename -uid "2E42D180-4D76-E979-8B59-37A7F54240EA";
+createNode ikHandle -n "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle" -p "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "4CB5A753-4DD8-A072-CDE8-49A22D7AB8C9";
 	setAttr ".v" no;
 	setAttr ".roc" yes;
-createNode parentConstraint -n "walker_lf_leg_ikHandle_parentConstraint1" -p "walker_lf_leg_ikHandle";
-	rename -uid "6AA1576A-49AF-85A7-42CB-D5B2D9690AE8";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle";
+	rename -uid "D81BCE97-4301-0B51-CF7D-838229A3926B";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_ankle_rev_rig_jntW0" -dv 1 -min 
 		0 -at "double";
 	setAttr -k on ".nds";
@@ -1030,12 +1051,13 @@ createNode parentConstraint -n "walker_lf_leg_ikHandle_parentConstraint1" -p "wa
 	setAttr ".tg[0].tot" -type "double3" -8.8817841970012523e-16 -1.3877787807814457e-15 
 		-2.2657908882450783e-09 ;
 	setAttr ".tg[0].tor" -type "double3" 131.94950081033585 -89.999999999999972 0 ;
-	setAttr ".lr" -type "double3" 34.582895839832034 2.3090168150400702e-14 -5.2771853725351506e-14 ;
+	setAttr ".lr" -type "double3" 7.6589224633112165 1.565722241604908e-15 -1.1863597550980656e-13 ;
 	setAttr ".rst" -type "double3" 0.58301609528060849 0.44379592095000125 -0.037064507613399862 ;
 	setAttr ".rsrr" -type "double3" 4.4979835663949419e-15 -1.2722218725854065e-14 -2.9506627130509603e-14 ;
 	setAttr -k on ".w0";
-createNode poleVectorConstraint -n "walker_lf_knee_pv_cons" -p "walker_lf_leg_ikHandle";
-	rename -uid "347D5F8B-41C5-A702-8BC4-C4AA4060B0D5";
+createNode poleVectorConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_cons" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle";
+	rename -uid "996253F3-43B9-1D10-7A79-59B17FFCCE52";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_knee_pv_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1051,8 +1073,8 @@ createNode poleVectorConstraint -n "walker_lf_knee_pv_cons" -p "walker_lf_leg_ik
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -4.6399439845856705e-11 -1.0250105450106359 0.98794286378955498 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_foot_ctrl" -p "walker_lf_leg_rig_grp";
-	rename -uid "A27F4305-473B-B052-B383-50AF6A2F4102";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl" -p "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "63A5693A-4385-675B-9173-57ADECFC1767";
 	addAttr -ci true -sn "ikFkBlend" -ln "ikFkBlend" -dv 1 -min 0 -max 1 -at "double";
 	addAttr -ci true -sn "ikVis" -ln "ikVis" -min 0 -max 1 -at "bool";
 	addAttr -ci true -sn "fkVis" -ln "fkVis" -min 0 -max 1 -at "bool";
@@ -1074,8 +1096,8 @@ createNode transform -n "walker_lf_foot_ctrl" -p "walker_lf_leg_rig_grp";
 	setAttr -l on ".legStretch";
 	setAttr -l on ".kneeStretch";
 	setAttr -l on ".ankleStretch";
-createNode nurbsCurve -n "walker_lf_foot_ctrlShape" -p "walker_lf_foot_ctrl";
-	rename -uid "6DFCF7A7-438A-688B-8EB1-B1B7697B7487";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrlShape" -p "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl";
+	rename -uid "377E6930-4E67-9E8B-D0BF-EE821B4EED21";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 6;
@@ -1089,8 +1111,9 @@ createNode nurbsCurve -n "walker_lf_foot_ctrlShape" -p "walker_lf_foot_ctrl";
 		-0.45896918017600002 -1.47617603182389e-16 0.73435068828160033
 		0.45896918017600002 5.6205657410421576e-17 0.73435068828160033
 		;
-createNode parentConstraint -n "walker_lf_foot_ctrl_parentConstraint1" -p "walker_lf_foot_ctrl";
-	rename -uid "1107734E-47CA-672F-4771-4E840947AB7A";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl";
+	rename -uid "893FAF5A-4490-7CC1-09B4-3A874B48747C";
 	addAttr -ci true -sn "w0" -ln "walker_lf_ankle_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -1106,17 +1129,18 @@ createNode parentConstraint -n "walker_lf_foot_ctrl_parentConstraint1" -p "walke
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.5005290901854984 0.10701257906109451 1.1102230246251565e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 131.94950081033585 -89.999999999999986 0 ;
-	setAttr ".lr" -type "double3" 34.582895839832027 8.3657851719587683e-15 1.5928695397727294e-14 ;
+	setAttr ".lr" -type "double3" 7.658922463311213 8.4711023268506617e-15 -3.1309694119762527e-14 ;
 	setAttr ".rst" -type "double3" 0.58301609754639949 -1.1102230246251565e-16 0.21793792913450968 ;
 	setAttr ".rsrr" -type "double3" -6.3611093629270335e-15 -1.2722218725854067e-14 
 		7.0622500768802555e-31 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "walker_lf_knee_pv_ctrl_frzGrp" -p "walker_lf_leg_rig_grp";
-	rename -uid "0E2DB424-43C5-AC0E-3379-2386C84C37CC";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_frzGrp" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "D776283D-455F-14A4-AC78-ACA3710CF874";
 	setAttr ".t" -type "double3" 0.58301609750000005 1.284326118089363 1.019607898379655 ;
-createNode transform -n "walker_lf_knee_line_loc" -p "walker_lf_knee_pv_ctrl_frzGrp";
-	rename -uid "5C3504D3-47BD-06F2-FF4E-8CB399A45C24";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc" -p "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_frzGrp";
+	rename -uid "260DF18A-411B-A27D-C810-DE8E2EF40C1F";
 	setAttr -l on -k off ".v" no;
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -1127,8 +1151,8 @@ createNode transform -n "walker_lf_knee_line_loc" -p "walker_lf_knee_pv_ctrl_frz
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode locator -n "walker_lf_knee_line_locShape" -p "walker_lf_knee_line_loc";
-	rename -uid "D37BE958-40CD-F8FC-576C-589C390C2C81";
+createNode locator -n "Ultimate_Walker_v1_0_1:walker_lf_knee_line_locShape" -p "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc";
+	rename -uid "6EB10854-489D-0221-E5AA-E89F900B917F";
 	setAttr -k off ".v";
 	setAttr -l on -cb off ".lpx";
 	setAttr -l on -cb off ".lpy";
@@ -1136,8 +1160,9 @@ createNode locator -n "walker_lf_knee_line_locShape" -p "walker_lf_knee_line_loc
 	setAttr -l on -cb off ".lsx";
 	setAttr -l on -cb off ".lsy";
 	setAttr -l on -cb off ".lsz";
-createNode pointConstraint -n "walker_lf_knee_line_loc_pointConstraint1" -p "walker_lf_knee_line_loc";
-	rename -uid "FC602515-4421-B3DD-D30D-99ABF47AC183";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc";
+	rename -uid "40A25077-469A-4DE4-6CED-A9BA9D05234C";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_knee_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -1156,18 +1181,22 @@ createNode pointConstraint -n "walker_lf_knee_line_loc_pointConstraint1" -p "wal
 	setAttr -l on -k off ".oz";
 	setAttr ".rst" -type "double3" 4.6399550868159167e-11 0.036397416340637534 -0.98794288615065506 ;
 	setAttr -k on ".w0";
-createNode transform -n "abRTLine_walker_lf_knee_line_loc" -p "walker_lf_knee_line_loc";
-	rename -uid "F89932DD-4561-D9F4-1903-E4850BE0A05F";
-createNode annotationShape -n "abRTLine_walker_lf_knee_line_locShape" -p "abRTLine_walker_lf_knee_line_loc";
-	rename -uid "84AE6E84-48EA-0942-CDE5-3A9DF8BF5B4F";
+createNode transform -n "Ultimate_Walker_v1_0_1:abRTLine_walker_lf_knee_line_loc" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc";
+	rename -uid "A9A4C574-44E9-2E69-FB09-BF9C4AB4BB49";
+createNode annotationShape -n "Ultimate_Walker_v1_0_1:abRTLine_walker_lf_knee_line_locShape" 
+		-p "Ultimate_Walker_v1_0_1:abRTLine_walker_lf_knee_line_loc";
+	rename -uid "1A27267C-4132-64A8-E0A2-859DACF35B30";
 	setAttr -k off ".v";
 	setAttr ".ovdt" 2;
 	setAttr ".ove" yes;
 	setAttr ".txt" -type "string" "";
-createNode transform -n "walker_lf_legPvCtrlGrp_space_grp" -p "walker_lf_knee_pv_ctrl_frzGrp";
-	rename -uid "06B90318-42B3-63F7-C335-F6872D314A65";
-createNode parentConstraint -n "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon" -p "walker_lf_legPvCtrlGrp_space_grp";
-	rename -uid "CA8CF3FC-4520-D3BA-B043-79839C62DFA4";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_space_grp" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_frzGrp";
+	rename -uid "07FF6D6A-4F29-5BC0-0457-87AD99198385";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_space_grp";
+	rename -uid "AB81AA9D-45D8-EBE8-52BF-D19C7C6DA8E2";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lfLegIkCtrl_space_switch_grpW0" -dv 
 		1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -1186,8 +1215,8 @@ createNode parentConstraint -n "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon" -p 
 		0.25085057272848399 ;
 	setAttr ".rst" -type "double3" -0.58301609750000005 -1.284326118089363 -1.019607898379655 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_knee_pv_ctrl" -p "walker_lf_legPvCtrlGrp_space_grp";
-	rename -uid "A4C181B4-460D-ABCB-DB33-A3908B277F4E";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl" -p "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_space_grp";
+	rename -uid "CF45876D-4A83-7D0A-8A12-B7864DC6725D";
 	addAttr -ci true -sn "snapKnee" -ln "snapKnee" -min 0 -max 1 -at "double";
 	addAttr -ci true -sn "________SPACES___" -ln "________SPACES___" -min 0 -max 1 -at "bool";
 	addAttr -ci true -k true -sn "lfLegIkCtrl" -ln "lfLegIkCtrl" -min 0 -max 1 -at "double";
@@ -1203,8 +1232,8 @@ createNode transform -n "walker_lf_knee_pv_ctrl" -p "walker_lf_legPvCtrlGrp_spac
 	setAttr -l on ".snapKnee";
 	setAttr -l on ".________SPACES___";
 	setAttr -k on ".lfLegIkCtrl";
-createNode nurbsCurve -n "walker_lf_knee_pv_ctrlShape" -p "walker_lf_knee_pv_ctrl";
-	rename -uid "572EE81B-4F1D-E6F3-A550-CFBE9CBD95A7";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrlShape" -p "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl";
+	rename -uid "D1EC4535-43E4-9E1D-76FC-70BDB6FEB666";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 6;
@@ -1259,15 +1288,17 @@ createNode nurbsCurve -n "walker_lf_knee_pv_ctrlShape" -p "walker_lf_knee_pv_ctr
 		0.52060452183049266 1.3467376979655679 1.0196078997913203
 		0.58301609749999983 1.3725894178219149 1.019607900376051
 		;
-createNode transform -n "walker_lf_knee_pv_ctrl_annLoc" -p "walker_lf_knee_pv_ctrl";
-	rename -uid "D2E479EF-45C4-B1A5-A088-A6BC60045D48";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl";
+	rename -uid "22E0B37D-4D21-19E3-5DF0-F7AAE3528CC8";
 	setAttr ".v" no;
-createNode locator -n "walker_lf_knee_pv_ctrl_annLocShape" -p "walker_lf_knee_pv_ctrl_annLoc";
-	rename -uid "1D4CCFF9-4F78-6F9B-2894-78AC82436A11";
+createNode locator -n "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLocShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc";
+	rename -uid "E11C7B8B-4011-AEF0-FAF5-B2A6B942F816";
 	setAttr -k off ".v";
-createNode pointConstraint -n "walker_lf_knee_pv_ctrl_annLoc_pointConstraint1" -p
-		 "walker_lf_knee_pv_ctrl_annLoc";
-	rename -uid "2F6ACB8A-4090-7CBE-CDF6-3EA598ACC4D2";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc";
+	rename -uid "739372F2-4991-FA6C-EA40-6296CFA0FBBB";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_knee_pv_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1283,21 +1314,24 @@ createNode pointConstraint -n "walker_lf_knee_pv_ctrl_annLoc_pointConstraint1" -
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 0.58301609750000005 1.284326118089363 1.019607898379655 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_legStrDist_dist" -p "walker_lf_leg_rig_grp";
-	rename -uid "EB999C7F-4A5E-68A9-BA2F-B3AAAF0E737D";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist" -p "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "D7D2C8B6-4962-0A31-E951-778E137DE26A";
 	setAttr ".v" no;
-createNode distanceDimShape -n "walker_lf_legStrDist_distShape" -p "walker_lf_legStrDist_dist";
-	rename -uid "87E6CEAD-4CAC-9D58-0C6D-A7BE8C425E78";
+createNode distanceDimShape -n "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_distShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist";
+	rename -uid "10C3E9F2-44CB-B6D1-BF47-45A486216474";
 	setAttr -k off ".v";
-createNode transform -n "walker_lf_legStrDist_dist_sp" -p "walker_lf_leg_rig_grp";
-	rename -uid "B54F93D8-473E-F775-1866-50AB1231BAFC";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp" -p "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "6872889A-40FE-255B-FC8F-AB8267F8096F";
 	setAttr ".v" no;
 	setAttr ".r" -type "double3" -90.000000000000014 1.2959527384941561e-06 -90.000000000000014 ;
-createNode locator -n "walker_lf_legStrDist_dist_spShape" -p "walker_lf_legStrDist_dist_sp";
-	rename -uid "B6CC90DA-4FB4-0B90-8E87-F3A123E19CDA";
+createNode locator -n "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_spShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp";
+	rename -uid "68D264A6-45F7-63BD-A790-0D89DDEAA068";
 	setAttr -k off ".v";
-createNode pointConstraint -n "walker_lf_legStrDist_dist_sp_pointConstraint1" -p "walker_lf_legStrDist_dist_sp";
-	rename -uid "3B2CEF66-43C6-02B6-2B76-77A8F5E46D0D";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp";
+	rename -uid "78DB6E3B-4D3A-02CC-E325-849EB2C1307B";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_upLeg_ik_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1313,15 +1347,17 @@ createNode pointConstraint -n "walker_lf_legStrDist_dist_sp_pointConstraint1" -p
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 0.58301609754639949 2.309336663099999 0.031665034590100019 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_legStrDist_dist_ep" -p "walker_lf_leg_rig_grp";
-	rename -uid "59C8A071-4D84-C2B0-BA51-BA83FFA27E8E";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep" -p "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "8983F85A-4FB3-95C8-A45A-CAA98E215C1B";
 	setAttr ".v" no;
 	setAttr ".r" -type "double3" -90.000000000000028 -41.949500810335849 -90 ;
-createNode locator -n "walker_lf_legStrDist_dist_epShape" -p "walker_lf_legStrDist_dist_ep";
-	rename -uid "4EFD6C9F-4932-90F0-37BE-DC9716F4F6D6";
+createNode locator -n "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_epShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep";
+	rename -uid "A2C6C2D0-458C-BCEC-8FE9-F0A2DEA2796A";
 	setAttr -k off ".v";
-createNode pointConstraint -n "walker_lf_legStrDist_dist_ep_pointConstraint1" -p "walker_lf_legStrDist_dist_ep";
-	rename -uid "1FC3BABE-410B-25B5-D965-A289514B6B9D";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep";
+	rename -uid "FE944AD4-4C53-AD4A-7D09-A487EE8A2C38";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_ankle_rev_rig_jntW0" -dv 1 -min 
 		0 -at "double";
 	setAttr -k on ".nds";
@@ -1338,22 +1374,25 @@ createNode pointConstraint -n "walker_lf_legStrDist_dist_ep_pointConstraint1" -p
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 0.58301609754639938 0.44379592094999964 -0.037064507613400299 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_upLegPvCtrl_dist" -p "walker_lf_leg_rig_grp";
-	rename -uid "BCAEC7B7-4C0C-A1E2-5064-BA8D2F9771A3";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist" -p "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "5562DCAA-43AB-2770-38A5-E6AF566E3B5D";
 	setAttr ".v" no;
-createNode distanceDimShape -n "walker_lf_upLegPvCtrl_distShape" -p "walker_lf_upLegPvCtrl_dist";
-	rename -uid "3F426005-4A22-252E-3FEB-4484E96CE5CB";
+createNode distanceDimShape -n "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_distShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist";
+	rename -uid "5400273D-4AFC-5ADE-D427-FD8539C97627";
 	setAttr -k off ".v";
-createNode transform -n "walker_lf_upLegPvCtrl_dist_sp" -p "walker_lf_leg_rig_grp";
-	rename -uid "EA06B154-437D-7F44-3A45-76BB2AE614CE";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "44F16D2B-42CD-C228-E0DA-72B1D4A5B590";
 	setAttr ".v" no;
 	setAttr ".r" -type "double3" -90.000000000000014 1.2959527384941561e-06 -90.000000000000014 ;
-createNode locator -n "walker_lf_upLegPvCtrl_dist_spShape" -p "walker_lf_upLegPvCtrl_dist_sp";
-	rename -uid "1B889FC5-46B5-637B-5E02-08985C8C8240";
+createNode locator -n "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_spShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp";
+	rename -uid "5476ACC1-4671-8EE0-03A9-7CB7F760938B";
 	setAttr -k off ".v";
-createNode pointConstraint -n "walker_lf_upLegPvCtrl_dist_sp_pointConstraint1" -p
-		 "walker_lf_upLegPvCtrl_dist_sp";
-	rename -uid "E52DB105-4D0C-9B5E-AED2-29A65BD438F2";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp";
+	rename -uid "D63548A6-4751-D454-D50F-2585099F9D51";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_upLeg_ik_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1369,15 +1408,17 @@ createNode pointConstraint -n "walker_lf_upLegPvCtrl_dist_sp_pointConstraint1" -
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 0.58301609754639949 2.309336663099999 0.031665034590100019 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_upLegPvCtrl_dist_ep" -p "walker_lf_leg_rig_grp";
-	rename -uid "58882A36-4BF4-5782-573B-759A10385198";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "1383E01B-42DA-8AF4-039A-058B6C650D3B";
 	setAttr ".v" no;
-createNode locator -n "walker_lf_upLegPvCtrl_dist_epShape" -p "walker_lf_upLegPvCtrl_dist_ep";
-	rename -uid "2F7B2786-436A-BF84-D488-5396AC0B887F";
+createNode locator -n "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_epShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep";
+	rename -uid "FA26C39A-4F7B-9397-63DE-049BC813499E";
 	setAttr -k off ".v";
-createNode pointConstraint -n "walker_lf_upLegPvCtrl_dist_ep_pointConstraint1" -p
-		 "walker_lf_upLegPvCtrl_dist_ep";
-	rename -uid "B162CB64-4977-2113-41AC-01A65F103F4B";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep";
+	rename -uid "DD99A07D-4585-2F98-672E-16A5D5CBE9BF";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_knee_pv_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1393,21 +1434,24 @@ createNode pointConstraint -n "walker_lf_upLegPvCtrl_dist_ep_pointConstraint1" -
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 0.58301609750000005 1.284326118089363 1.019607898379655 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_legPvIkCtrl_dist" -p "walker_lf_leg_rig_grp";
-	rename -uid "C0473BAB-4BBC-77EA-9916-E89F23FFE916";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist" -p "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "6784DC21-4908-F821-3A87-F08D853894C3";
 	setAttr ".v" no;
-createNode distanceDimShape -n "walker_lf_legPvIkCtrl_distShape" -p "walker_lf_legPvIkCtrl_dist";
-	rename -uid "ECE4707D-4BE9-3A5F-74CE-7D9BA65A16F5";
+createNode distanceDimShape -n "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_distShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist";
+	rename -uid "CB11E785-4005-A731-C410-BEA317C587DB";
 	setAttr -k off ".v";
-createNode transform -n "walker_lf_legPvIkCtrl_dist_sp" -p "walker_lf_leg_rig_grp";
-	rename -uid "2CC958F9-41EC-F819-E9B1-5F99CAC97721";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "FF52C4C5-4923-2E9F-A79D-1BB26F5DFD04";
 	setAttr ".v" no;
-createNode locator -n "walker_lf_legPvIkCtrl_dist_spShape" -p "walker_lf_legPvIkCtrl_dist_sp";
-	rename -uid "28ECEEBA-4493-C512-69EC-25A066F3913C";
+createNode locator -n "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_spShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp";
+	rename -uid "47637127-4FF4-60F7-6600-98977545037A";
 	setAttr -k off ".v";
-createNode pointConstraint -n "walker_lf_legPvIkCtrl_dist_sp_pointConstraint1" -p
-		 "walker_lf_legPvIkCtrl_dist_sp";
-	rename -uid "1ED6495C-4B0D-73AB-88F6-9D97FB0E6DE3";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp";
+	rename -uid "867F744E-419E-51A7-88ED-80880C8EA924";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_knee_pv_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1423,16 +1467,18 @@ createNode pointConstraint -n "walker_lf_legPvIkCtrl_dist_sp_pointConstraint1" -
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 0.58301609750000005 1.284326118089363 1.019607898379655 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_legPvIkCtrl_dist_ep" -p "walker_lf_leg_rig_grp";
-	rename -uid "E019E4FE-43E1-2D17-5AB1-EB8F387905BE";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "973D3114-4A6E-D1B9-E996-F4BDB9E0DE31";
 	setAttr ".v" no;
 	setAttr ".r" -type "double3" -90.000000000000057 -41.949500810335849 -90 ;
-createNode locator -n "walker_lf_legPvIkCtrl_dist_epShape" -p "walker_lf_legPvIkCtrl_dist_ep";
-	rename -uid "924A1280-4986-F932-EE4F-0583A504B77D";
+createNode locator -n "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_epShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep";
+	rename -uid "D740404B-47D9-88B2-A007-F382EAEF2AEB";
 	setAttr -k off ".v";
-createNode pointConstraint -n "walker_lf_legPvIkCtrl_dist_ep_pointConstraint1" -p
-		 "walker_lf_legPvIkCtrl_dist_ep";
-	rename -uid "6FCC57DA-42D3-AB3E-3A54-F085B0ADB125";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep";
+	rename -uid "7C9A9AA1-4119-02E7-8EC7-928B53F99DED";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_ankle_rev_rig_jntW0" -dv 1 -min 
 		0 -at "double";
 	setAttr -k on ".nds";
@@ -1449,10 +1495,12 @@ createNode pointConstraint -n "walker_lf_legPvIkCtrl_dist_ep_pointConstraint1" -
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 0.58301609754639938 0.44379592094999964 -0.037064507613400299 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_lf_legIkCtrl_space_grp" -p "walker_lf_leg_rig_grp";
-	rename -uid "E5DBC44B-47FC-E2E3-371B-11A25D48326B";
-createNode joint -n "walker_lf_ankleBallReader_UpLeg_jnt" -p "walker_lf_leg_rig_grp";
-	rename -uid "2186D5C3-45F2-9C24-4ED4-D1AB24E6D0F0";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lf_legIkCtrl_space_grp" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "662E3872-4A08-807F-3924-57A3A6CEDBF1";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp";
+	rename -uid "5FAF7F00-4072-0B4A-1412-118541A9DE0A";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	setAttr ".v" no;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -1460,15 +1508,17 @@ createNode joint -n "walker_lf_ankleBallReader_UpLeg_jnt" -p "walker_lf_leg_rig_
 	setAttr ".jo" -type "double3" -90.000000000000014 1.2959527343942223e-06 -90.000000000000014 ;
 	setAttr ".radi" 0.89313380820640498;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode joint -n "walker_lf_ankleBallReader_Knee_jnt" -p "walker_lf_ankleBallReader_UpLeg_jnt";
-	rename -uid "A5AA84D3-44A8-A73A-EE40-6E94BC11ED0C";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Knee_jnt" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt";
+	rename -uid "BB887BDF-42B6-1091-06BA-F5ACE0658331";
 	setAttr ".t" -type "double3" 0.98861312866210982 1.33434929772136e-14 2.2204460492503131e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -3.2108760981450505e-15 -5.5475610538460531e-15 4.4814151967256217 ;
 	setAttr ".radi" 0.84979013353145527;
-createNode joint -n "walker_lf_ankleBallReader_Ankle_jnt" -p "walker_lf_ankleBallReader_Knee_jnt";
-	rename -uid "03465D85-46C9-21FB-FA8B-4AACE95B9C5D";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ankle_jnt" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Knee_jnt";
+	rename -uid "B5525289-4A4B-A4D2-020B-C6A55F3CEC87";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	setAttr ".t" -type "double3" 0.87961685657501221 2.3176647101497139e-08 1.1102230246251565e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -1476,15 +1526,17 @@ createNode joint -n "walker_lf_ankleBallReader_Ankle_jnt" -p "walker_lf_ankleBal
 	setAttr ".jo" -type "double3" 1.806423215222262e-15 -6.1499588723254717e-15 -46.430915793352327 ;
 	setAttr ".radi" 0.73729004431155587;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode joint -n "walker_lf_ankleBallReader_Ball_jnt" -p "walker_lf_ankleBallReader_Ankle_jnt";
-	rename -uid "FE507041-4548-6146-4A56-15BAA20D7B35";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ball_jnt" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ankle_jnt";
+	rename -uid "95AA6411-4C3C-F453-4146-1EADE5C444C4";
 	setAttr ".t" -type "double3" 0.59671299748895035 -1.5722534829620827e-08 -1.1102230246251565e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 5.7814848620852735e-15 -2.7675967468667723e-15 -48.050500699326079 ;
 	setAttr ".radi" 0.72241122832793025;
-createNode orientConstraint -n "walker_lf_ankleReader_ball_or_cons" -p "walker_lf_ankleBallReader_Ball_jnt";
-	rename -uid "6A77CFAA-448D-6C3C-7513-BA99B4891BC3";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ball_or_cons" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ball_jnt";
+	rename -uid "A8E277A7-41D2-B6F7-7BC0-DEA1F1C8A6B9";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_ball_ik_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1501,8 +1553,9 @@ createNode orientConstraint -n "walker_lf_ankleReader_ball_or_cons" -p "walker_l
 	setAttr ".lr" -type "double3" 0 0 1.5096619203867924e-06 ;
 	setAttr ".rsrr" -type "double3" 0 0 1.5096619203867924e-06 ;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "walker_lf_ankleReader_ankle_or_cons" -p "walker_lf_ankleBallReader_Ankle_jnt";
-	rename -uid "686109CB-4F5F-22A2-EA46-189D873923CC";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ankle_or_cons" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ankle_jnt";
+	rename -uid "66DFE2CF-400D-C3E6-2155-BCB7D5D14824";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_ankle_rev_rig_jntW0" -dv 1 -min 
 		0 -at "double";
 	setAttr -k on ".nds";
@@ -1520,8 +1573,9 @@ createNode orientConstraint -n "walker_lf_ankleReader_ankle_or_cons" -p "walker_
 	setAttr ".lr" -type "double3" 0 0 -4.5289856593826293e-06 ;
 	setAttr ".rsrr" -type "double3" 0 0 -4.5289856593826293e-06 ;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "walker_lf_ankleReader_knee_or_cons" -p "walker_lf_ankleBallReader_Knee_jnt";
-	rename -uid "4549E286-4CAB-8767-1649-4FAD52FF99EF";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_knee_or_cons" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Knee_jnt";
+	rename -uid "69A907CE-47FD-B9C3-E1DC-BB95008BB48D";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_knee_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1538,9 +1592,9 @@ createNode orientConstraint -n "walker_lf_ankleReader_knee_or_cons" -p "walker_l
 	setAttr ".lr" -type "double3" 0 0 3.0193237755722144e-06 ;
 	setAttr ".rsrr" -type "double3" 0 0 3.0193237755722144e-06 ;
 	setAttr -k on ".w0";
-createNode pointConstraint -n "walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1" 
-		-p "walker_lf_ankleBallReader_UpLeg_jnt";
-	rename -uid "C296FCC3-4AA0-A38E-0488-A6A239454A7A";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt";
+	rename -uid "C9DFEF2C-4C0B-37D2-7B2F-3CB16052D3AA";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_upLeg_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1556,9 +1610,9 @@ createNode pointConstraint -n "walker_lf_ankleBallReader_UpLeg_jnt_pointConstrai
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 0.58301609754639949 2.309336663099999 0.031665034590100005 ;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1" 
-		-p "walker_lf_ankleBallReader_UpLeg_jnt";
-	rename -uid "29F3B3EE-460A-484C-8317-EDB13F9F7B92";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt";
+	rename -uid "BAC321B3-4304-33DC-E6DE-FF8088AC13AF";
 	addAttr -ci true -k true -sn "w0" -ln "walker_lf_upLeg_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1575,8 +1629,8 @@ createNode orientConstraint -n "walker_lf_ankleBallReader_UpLeg_jnt_orientConstr
 	setAttr ".lr" -type "double3" -3.180554681463516e-15 6.361109362927032e-15 -3.180554681463516e-15 ;
 	setAttr ".rsrr" -type "double3" -3.180554681463516e-15 6.361109362927032e-15 -3.180554681463516e-15 ;
 	setAttr -k on ".w0";
-createNode geometryVarGroup -n "walker_charVars" -p "Rig_Leg_grp";
-	rename -uid "49447AED-4A63-CA0C-E708-4A92416A874D";
+createNode geometryVarGroup -n "Ultimate_Walker_v1_0_1:walker_charVars" -p "Ultimate_Walker_v1_0_1:Rig_Leg_grp";
+	rename -uid "F1A25948-41BE-3254-1411-3393B1867373";
 	addAttr -ci true -sn "versionNum" -ln "versionNum" -at "float";
 	addAttr -ci true -sn "leftLegRigGrp" -ln "leftLegRigGrp" -dt "string";
 	addAttr -ci true -sn "leftLegJnts" -ln "leftLegJnts" -dt "string";
@@ -1607,8 +1661,9 @@ createNode geometryVarGroup -n "walker_charVars" -p "Rig_Leg_grp";
 	setAttr ".spineRigGrp" -type "string" "walker_spine_rig_grp";
 	setAttr ".spineTrans" -type "string" "walker_root_ctrl";
 	setAttr ".spineNodes" -type "string" "walker_spine_crvInfo,walker_scaleAdjustedArcLen_multDiv,walker_hipRootSpaceRev_plsMns,walker_midRootSpaceRev_plsMns,walker_hiRootSpaceRev_plsMns,walker_spineRefStr_plsMns,walker_spineJntRatio0_multDiv,walker_spineJntRatio1_multDiv,walker_spineArcLen0_multDiv,walker_spineArcLen1_multDiv,walker_spineStrAmt_multDiv";
-createNode transform -n "walker_lfLegIkCtrl_space_switch_grp" -p "Rig_Leg_grp";
-	rename -uid "8E867509-40A3-BFCA-8B35-78AEB6B15B77";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp" 
+		-p "Ultimate_Walker_v1_0_1:Rig_Leg_grp";
+	rename -uid "660B575C-4860-467D-25D9-57B6CE471A93";
 	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -1619,8 +1674,9 @@ createNode transform -n "walker_lfLegIkCtrl_space_switch_grp" -p "Rig_Leg_grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode parentConstraint -n "walker_lfLegIkCtrlSpace_par_cons" -p "walker_lfLegIkCtrl_space_switch_grp";
-	rename -uid "699621BF-45B6-9335-4CD5-949B9B96FF2B";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons" 
+		-p "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp";
+	rename -uid "B58952FF-4B54-C2FD-2E79-64899B339675";
 	addAttr -ci true -sn "w0" -ln "walker_lf_heel_ik_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -1634,12 +1690,12 @@ createNode parentConstraint -n "walker_lfLegIkCtrlSpace_par_cons" -p "walker_lfL
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 34.582895839832034 0 0 ;
+	setAttr ".lr" -type "double3" 7.6589224633112067 0 0 ;
 	setAttr ".rst" -type "double3" 0.58301609754639938 1.5390000728584829e-09 -0.25085057272848399 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "walker_rt_leg_rig_grp" -p "Rig_Leg_grp";
-	rename -uid "56A52BE8-4F9B-B864-3A4F-EC8AB4A32A80";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp" -p "Ultimate_Walker_v1_0_1:Rig_Leg_grp";
+	rename -uid "14BE9CE7-42CE-B761-0975-A69AFE3B93E2";
 	setAttr -l on -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -1650,18 +1706,19 @@ createNode transform -n "walker_rt_leg_rig_grp" -p "Rig_Leg_grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode transform -n "walker_rt_reverseFoot_rig_grp" -p "walker_rt_leg_rig_grp";
-	rename -uid "D70ED575-44B6-ED1E-2000-99A3261E9471";
-createNode joint -n "walker_rt_heel_rev_rig_jnt" -p "walker_rt_reverseFoot_rig_grp";
-	rename -uid "B6367245-4830-CEBF-4B97-61A9D04908AD";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "DF986B3F-44F8-942C-C3B7-64A643C32FE6";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_heel_rev_rig_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp";
+	rename -uid "2A60BED8-4A19-3ED9-1A7C-A0BB08AE93AD";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
 	setAttr ".t" -type "double3" -0.58301609754639927 1.5390000728584829e-09 -0.25085057272848399 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 -89.999995231115363 0 ;
-createNode joint -n "walker_rt_toe_rev_rig_jnt" -p "walker_rt_heel_rev_rig_jnt";
-	rename -uid "ABC5478E-444D-51E1-F9EC-ABBC7EB6CBCB";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_toe_rev_rig_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_heel_rev_rig_jnt";
+	rename -uid "2171F6E4-4442-8FC4-25D9-9F8F4BC45B35";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
 	setAttr ".t" -type "double3" 1.1719715727284878 -7.285848297795272e-17 3.9968028886505635e-15 ;
@@ -1669,8 +1726,8 @@ createNode joint -n "walker_rt_toe_rev_rig_jnt" -p "walker_rt_heel_rev_rig_jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -180 89.999995231115363 8.4849425910024574e-24 ;
 	setAttr ".radi" 0.5;
-createNode joint -n "walker_rt_ball_rev_rig_jnt" -p "walker_rt_toe_rev_rig_jnt";
-	rename -uid "0EAE9DFD-4E8D-368D-B068-07A5F0A8B63B";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_ball_rev_rig_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_toe_rev_rig_jnt";
+	rename -uid "B9B4118C-4721-D645-5964-4688ECA6C3BC";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
 	setAttr ".t" -type "double3" -1.1102230246251565e-16 8.5485812754784027e-17 0.55929799999999985 ;
@@ -1678,8 +1735,8 @@ createNode joint -n "walker_rt_ball_rev_rig_jnt" -p "walker_rt_toe_rev_rig_jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -180 -89.999999999999986 0 ;
 	setAttr ".radi" 0.72241122832793025;
-createNode joint -n "walker_rt_ankle_rev_rig_jnt" -p "walker_rt_ball_rev_rig_jnt";
-	rename -uid "D4A7C38B-4664-4997-3F3C-9AA33C089302";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_ball_rev_rig_jnt";
+	rename -uid "A6347B1A-4386-07A8-E6FF-4A8C08867FA4";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
@@ -1689,23 +1746,23 @@ createNode joint -n "walker_rt_ankle_rev_rig_jnt" -p "walker_rt_ball_rev_rig_jnt
 	setAttr ".jo" -type "double3" 1.6200494549742942e-14 1.4663310587348521e-14 48.050499189664137 ;
 	setAttr ".radi" 0.73729004431155587;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode joint -n "walker_rt__ik_jnt" -p "walker_rt_toe_rev_rig_jnt";
-	rename -uid "90C1A10C-43D1-0800-B38D-17BF660799EF";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt__ik_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_toe_rev_rig_jnt";
+	rename -uid "C86A0AB1-44A7-850E-A1EF-A0852D320B05";
 	setAttr ".t" -type "double3" -1.1102230246251565e-16 8.5485812754784027e-17 0.55929799999999985 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -180 -89.999999999999986 0 ;
 	setAttr ".radi" 0.72241122832793025;
-createNode joint -n "walker_rt_ball_ik_jnt" -p "walker_rt__ik_jnt";
-	rename -uid "3980E648-4BD5-B849-4F27-50B12D4E0386";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_ball_ik_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt__ik_jnt";
+	rename -uid "22FE161B-4909-C5A1-44C3-57A8228DA494";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
 	setAttr ".t" -type "double3" -5.5511151231257827e-17 -2.0679515313825692e-25 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".radi" 0.72241122832793025;
-createNode joint -n "walker_rt_toe_ik_jnt" -p "walker_rt_ball_ik_jnt";
-	rename -uid "A8BE4817-4093-1DBD-4338-A0B95DFE78CF";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_toe_ik_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_ball_ik_jnt";
+	rename -uid "16149F7F-4BC9-E070-D306-35A114539EA6";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
 	setAttr ".t" -type "double3" -0.55929799999999974 8.5485812754784027e-17 2.2204460492503131e-16 ;
@@ -1713,9 +1770,9 @@ createNode joint -n "walker_rt_toe_ik_jnt" -p "walker_rt_ball_ik_jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -180 -89.999999999999943 0 ;
 	setAttr ".radi" 0.5;
-createNode parentConstraint -n "walker_rt_reverseFoot_rig_grp_parentConstraint1" 
-		-p "walker_rt_reverseFoot_rig_grp";
-	rename -uid "36558260-4BC0-844B-525C-6498C02B40EC";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp";
+	rename -uid "BFC29585-4436-72D2-E41C-8AB4CA2EC407";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_heel_ik_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1731,12 +1788,12 @@ createNode parentConstraint -n "walker_rt_reverseFoot_rig_grp_parentConstraint1"
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.58301609754639927 -1.5390000728584829e-09 
 		0.25085057272848399 ;
-	setAttr ".lr" -type "double3" -36.686072385829888 0 0 ;
+	setAttr ".lr" -type "double3" 3.3832854785742046 0 0 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_legFK_Grp" -p "walker_rt_leg_rig_grp";
-	rename -uid "D96F87D5-4102-1589-4344-92A884C9BFD3";
-createNode joint -n "walker_rt_upLeg_fk_jnt" -p "walker_rt_legFK_Grp";
-	rename -uid "0B374D24-4502-25D8-4643-0AA1CCBF2A31";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp" -p "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "DB14DB3D-4E3D-8D6A-6559-56BB47C785C6";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp";
+	rename -uid "9A0AA2ED-4CC2-4365-1085-16AB31679C61";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 18;
@@ -1745,8 +1802,8 @@ createNode joint -n "walker_rt_upLeg_fk_jnt" -p "walker_rt_legFK_Grp";
 	setAttr ".jo" -type "double3" 0 0 0.26265744643934014 ;
 	setAttr ".radi" 0.89313380820640498;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode joint -n "walker_rt_knee_fk_jnt" -p "walker_rt_upLeg_fk_jnt";
-	rename -uid "658B8938-42B4-109D-14DC-E780E3A765C7";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt";
+	rename -uid "2A950160-48AB-4223-12A9-68B36D4546E5";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 18;
 	setAttr ".t" -type "double3" -0.98861998319625854 2.236124210797108e-08 4.4408920985006262e-16 ;
@@ -1754,8 +1811,8 @@ createNode joint -n "walker_rt_knee_fk_jnt" -p "walker_rt_upLeg_fk_jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 4.4814151967255551 ;
 	setAttr ".radi" 0.84979013353145527;
-createNode joint -n "walker_rt_ankle_fk_jnt" -p "walker_rt_knee_fk_jnt";
-	rename -uid "F4884B3F-4784-BC54-D0BE-6F9699687EBF";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt";
+	rename -uid "72D6253D-4C36-6EA1-1E22-02B6099C71B5";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 18;
@@ -1765,8 +1822,8 @@ createNode joint -n "walker_rt_ankle_fk_jnt" -p "walker_rt_knee_fk_jnt";
 	setAttr ".jo" -type "double3" 0 0 -46.430917303014155 ;
 	setAttr ".radi" 0.73729004431155587;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode joint -n "walker_rt_ball_fk_jnt" -p "walker_rt_ankle_fk_jnt";
-	rename -uid "2BD5361E-4229-A12C-B0AB-7B92120FD65A";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt";
+	rename -uid "4C7D60CB-41C0-6639-72F1-A1AF72DCF670";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 18;
 	setAttr ".t" -type "double3" -0.59671276666927886 -3.7506020700295295e-07 -2.2204460492503131e-16 ;
@@ -1774,15 +1831,16 @@ createNode joint -n "walker_rt_ball_fk_jnt" -p "walker_rt_ankle_fk_jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -48.050499189664158 ;
 	setAttr ".radi" 0.72241122832793025;
-createNode joint -n "walker_rt_toe_fk_jnt" -p "walker_rt_ball_fk_jnt";
-	rename -uid "C418D7F7-434C-281F-256C-C9A7A1A35AD0";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_toe_fk_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt";
+	rename -uid "2C5D3E29-43B4-2F1D-F500-E3A096CAD8EC";
 	setAttr ".t" -type "double3" -0.55929799999999985 3.8247611433048484e-18 1.1102230246251565e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -179.99999999999997 -89.999999999999986 0 ;
 	setAttr ".radi" 0.5;
-createNode orientConstraint -n "walker_rt_ballCtrl_fk_or_cons" -p "walker_rt_ball_fk_jnt";
-	rename -uid "EBDD86F2-45F1-AD0B-EF7D-2895FB88FB13";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_ballCtrl_fk_or_cons" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt";
+	rename -uid "673F7CC1-4733-29AF-2779-47AF44EE0E76";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_ball_fk_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1799,8 +1857,9 @@ createNode orientConstraint -n "walker_rt_ballCtrl_fk_or_cons" -p "walker_rt_bal
 	setAttr ".lr" -type "double3" 0 0 1.2722218725854067e-14 ;
 	setAttr ".rsrr" -type "double3" 0 0 6.3611093629270335e-15 ;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "walker_rt_ankleCtrl_fk_or_cons" -p "walker_rt_ankle_fk_jnt";
-	rename -uid "C13970D9-49B9-D639-E9D4-4DA8274D9AA1";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_ankleCtrl_fk_or_cons" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt";
+	rename -uid "4B39D701-4B9C-FC5A-BADC-A79CCD201AFB";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_ankle_fk_ctrlW0" -dv 1 -min 0 
 		-at "double";
 	setAttr -k on ".nds";
@@ -1816,8 +1875,9 @@ createNode orientConstraint -n "walker_rt_ankleCtrl_fk_or_cons" -p "walker_rt_an
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "walker_rt_kneeCtrl_fk_or_cons" -p "walker_rt_knee_fk_jnt";
-	rename -uid "3C06F13E-4DF3-F6A1-0771-A6B3F68AD29F";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_kneeCtrl_fk_or_cons" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt";
+	rename -uid "7D70B80E-492B-9B69-CC75-C994F449C440";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_knee_fk_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1834,8 +1894,9 @@ createNode orientConstraint -n "walker_rt_kneeCtrl_fk_or_cons" -p "walker_rt_kne
 	setAttr ".lr" -type "double3" 0 0 -1.113194138512231e-14 ;
 	setAttr ".rsrr" -type "double3" 0 0 -8.7465253740246687e-15 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "walker_rt_upLeg_fk_jnt_parentConstraint1" -p "walker_rt_upLeg_fk_jnt";
-	rename -uid "409A0170-4535-9624-CEC3-1CAFE9BE66C3";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt";
+	rename -uid "873B7161-4C4F-0230-76E4-C5B588257D57";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_upLeg_fk_ctrlW0" -dv 1 -min 0 
 		-at "double";
 	setAttr -k on ".nds";
@@ -1854,8 +1915,9 @@ createNode parentConstraint -n "walker_rt_upLeg_fk_jnt_parentConstraint1" -p "wa
 	setAttr ".rst" -type "double3" -0.72869616400280179 0.035533197377367563 -0.583016 ;
 	setAttr ".rsrr" -type "double3" 0 0 5.1684013573782151e-15 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "walker_rt_legFK_Grp_parentConstraint1" -p "walker_rt_legFK_Grp";
-	rename -uid "E7A6BD8A-40A2-2349-B605-F28B187E7114";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp";
+	rename -uid "733CC14A-477B-4B2A-1B41-4AA3666693F2";
 	addAttr -ci true -k true -sn "w0" -ln "walker_hip_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1877,12 +1939,14 @@ createNode parentConstraint -n "walker_rt_legFK_Grp_parentConstraint1" -p "walke
 	setAttr ".rst" -type "double3" -5.7142390883069934e-32 3.037865615999999 -0.0072083119257999829 ;
 	setAttr ".rsrr" -type "double3" 90.000000000000014 0.2626561504866004 90 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_ball_fk_ctrl_frzGrp" -p "walker_rt_leg_rig_grp";
-	rename -uid "781E4BB5-405B-AA76-9926-7C934A2AE32D";
-createNode transform -n "walker_rt_ball_fk_ctrl_frzGrp" -p "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp";
-	rename -uid "C82ABB6E-4E16-581E-2A50-B9B638C8522E";
-createNode transform -n "walker_rt_ball_fk_ctrl" -p "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp|walker_rt_ball_fk_ctrl_frzGrp";
-	rename -uid "8FE9D4C7-46BB-964A-3AD3-E4A63F3E96C7";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "B06F85A4-44B9-131A-462F-E9BF242D9B6B";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp" -p
+		 "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp";
+	rename -uid "6559D2BA-47DA-6729-6DDF-1A96F86F6066";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl" -p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp";
+	rename -uid "DCC09DCC-4172-81EC-174F-DE961A83D56A";
 	setAttr -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -1891,8 +1955,8 @@ createNode transform -n "walker_rt_ball_fk_ctrl" -p "|AniM_walker_Main|Rig_Leg_g
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "walker_rt_ball_fk_ctrlShape" -p "walker_rt_ball_fk_ctrl";
-	rename -uid "A12315D5-4FF8-B300-6FCB-1BBA81AD2541";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrlShape" -p "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl";
+	rename -uid "042BC215-41F6-8CA3-C675-30A90F6DD3C2";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
@@ -1947,9 +2011,9 @@ createNode nurbsCurve -n "walker_rt_ball_fk_ctrlShape" -p "walker_rt_ball_fk_ctr
 		3.3306683763484657e-17 -0.23303152663811169 -0.23303154234502349
 		-1.1304573123268304e-16 -9.3069570751478986e-16 -0.32955635652766929
 		;
-createNode pointConstraint -n "walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1" -p
-		 "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp|walker_rt_ball_fk_ctrl_frzGrp";
-	rename -uid "6DF78B73-4D1A-D68E-8E48-45B4F407F3DF";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1" 
+		-p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp";
+	rename -uid "E06CB89A-4395-8806-E378-2B86AF35F0A6";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_ball_fk_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1965,9 +2029,9 @@ createNode pointConstraint -n "walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1" -
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -5.5511151231257827e-17 -2.0679515313825692e-25 0 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1" 
-		-p "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp";
-	rename -uid "B6331CE7-48D2-A552-B4D9-D19A129CC6B7";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1" 
+		-p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp";
+	rename -uid "9E30A3C0-4345-4125-86B7-D99213B049AC";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_ankle_fk_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1988,12 +2052,14 @@ createNode parentConstraint -n "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1"
 	setAttr ".rst" -type "double3" -0.583016 1.5390003160753452e-09 0.36182300000000012 ;
 	setAttr ".rsrr" -type "double3" 4.497983566394945e-15 89.999999999999986 0 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_ankle_fk_ctrl_frzGrp" -p "walker_rt_leg_rig_grp";
-	rename -uid "E9539F84-4D08-0881-66A0-AEB5EA72AE2E";
-createNode transform -n "walker_rt_ankle_fk_ctrl_frzGrp" -p "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp";
-	rename -uid "FFC4E15A-4D39-CBCE-AA62-2A8BA6F3BC8E";
-createNode transform -n "walker_rt_ankle_fk_ctrl" -p "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp|walker_rt_ankle_fk_ctrl_frzGrp";
-	rename -uid "9DA9918D-4096-BE23-B774-179D244B4559";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "C688E79F-407D-EFCA-E74A-B585B71A9CA4";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp" 
+		-p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp";
+	rename -uid "A5E6E7B9-4B60-80F7-23D9-9DB42CA720EA";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl" -p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp";
+	rename -uid "A6E41F26-4D17-677E-54B7-77856C83A7D6";
 	setAttr -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -2002,8 +2068,9 @@ createNode transform -n "walker_rt_ankle_fk_ctrl" -p "|AniM_walker_Main|Rig_Leg_
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "walker_rt_ankle_fk_ctrlShape" -p "walker_rt_ankle_fk_ctrl";
-	rename -uid "92B5A695-4FD4-ECA5-D0C0-81AC613B7A3F";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrlShape" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl";
+	rename -uid "41ABE827-4FE7-876D-4F05-F4999444E3AB";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
@@ -2058,9 +2125,9 @@ createNode nurbsCurve -n "walker_rt_ankle_fk_ctrlShape" -p "walker_rt_ankle_fk_c
 		-4.4012375498978253e-24 -0.14703761967327184 -0.14703762958397773
 		-9.2345066225811836e-17 -5.872479292710659e-16 -0.20794260292203556
 		;
-createNode pointConstraint -n "walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1" -p
-		 "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp|walker_rt_ankle_fk_ctrl_frzGrp";
-	rename -uid "363CE219-4926-8B7E-889A-28BF6B9B688B";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1" 
+		-p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp";
+	rename -uid "4D80BD9B-4177-83C9-C333-B488E39B963F";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_ankle_fk_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -2076,9 +2143,9 @@ createNode pointConstraint -n "walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1" 
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 0 0 -1.1102230246251565e-16 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1" 
-		-p "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp";
-	rename -uid "098D1059-45E5-5CBE-A43A-2496F6C6E4F5";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1" 
+		-p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp";
+	rename -uid "BB399584-4028-2246-4379-E7BB736B9346";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_knee_fk_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -2100,12 +2167,14 @@ createNode parentConstraint -n "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1
 	setAttr ".rst" -type "double3" -0.58301599999999987 0.4437960000000003 -0.037064500000000007 ;
 	setAttr ".rsrr" -type "double3" 90.000000000000028 41.94950081033587 90.000000000000028 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_knee_fk_ctrl_frzGrp" -p "walker_rt_leg_rig_grp";
-	rename -uid "FB361A81-42A0-FABD-4018-3D84B6993D8C";
-createNode transform -n "walker_rt_knee_fk_ctrl_frzGrp" -p "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp";
-	rename -uid "84764346-4F79-864F-8E2D-90AB8E78263E";
-createNode transform -n "walker_rt_knee_fk_ctrl" -p "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp|walker_rt_knee_fk_ctrl_frzGrp";
-	rename -uid "B78F6476-48B9-2041-A667-609BF2732F9D";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "06CDF9CE-4B3C-84F0-6389-5EB089596619";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp" -p
+		 "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp";
+	rename -uid "A81C7332-49AC-C0C3-6FDA-70B7D99A506B";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl" -p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp";
+	rename -uid "CADFA10F-4B56-015C-4B3F-E687E1184D26";
 	setAttr -k off ".v";
 	setAttr ".t" -type "double3" 0 1.3877787807814457e-17 0 ;
 	setAttr -l on -k off ".tx";
@@ -2115,8 +2184,8 @@ createNode transform -n "walker_rt_knee_fk_ctrl" -p "|AniM_walker_Main|Rig_Leg_g
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "walker_rt_knee_fk_ctrlShape" -p "walker_rt_knee_fk_ctrl";
-	rename -uid "1A364A96-4145-7664-AA02-2BBD05F4D07C";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrlShape" -p "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl";
+	rename -uid "0529CA80-432F-EB42-81FD-388BC121CC7C";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
@@ -2171,9 +2240,9 @@ createNode nurbsCurve -n "walker_rt_knee_fk_ctrlShape" -p "walker_rt_knee_fk_ctr
 		-4.7164879380395188e-24 -0.15756958142003299 -0.15756959204061965
 		-9.8959527934002621e-17 -6.2931112874811685e-16 -0.22283704656416783
 		;
-createNode pointConstraint -n "walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1" -p
-		 "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp|walker_rt_knee_fk_ctrl_frzGrp";
-	rename -uid "CE549D42-4318-41DB-7D75-53A30BAD8A55";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1" 
+		-p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp";
+	rename -uid "50FAD08E-49A1-80A0-436E-40925AD919D7";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_knee_fk_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -2189,9 +2258,9 @@ createNode pointConstraint -n "walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1" -
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 0 1.3877787807814457e-17 1.1102230246251565e-16 ;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1" 
-		-p "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp";
-	rename -uid "84B648A1-49DF-FEB0-F7B3-DBAF18C89567";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1" 
+		-p "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp";
+	rename -uid "B87D9BE9-4FEE-A27C-9EAC-7B85DB7C9A5B";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_upLeg_fk_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -2213,11 +2282,12 @@ createNode parentConstraint -n "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1"
 	setAttr ".rst" -type "double3" -0.58301599999999965 1.3207199999999997 0.031665000000000006 ;
 	setAttr ".rsrr" -type "double3" 90.000000000000014 -4.4814164926782825 89.999999999999986 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_upLegupJntFkCtrl_grp" -p "walker_rt_leg_rig_grp";
-	rename -uid "C3224C30-40BA-F7DB-67D1-A59C9BF07603";
-createNode parentConstraint -n "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1" 
-		-p "walker_rt_upLegupJntFkCtrl_grp";
-	rename -uid "ED809CDA-4C7D-8735-F36B-E98FAB462303";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "28FD9DA2-47A6-A57A-523A-3F9167C9BF00";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp";
+	rename -uid "74800350-4E20-9B33-B3C1-0580282A312A";
 	addAttr -ci true -k true -sn "w0" -ln "walker_hip_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -2238,10 +2308,11 @@ createNode parentConstraint -n "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1
 	setAttr ".rst" -type "double3" -0.5830160000000002 2.3093400000000019 0.031665000000000013 ;
 	setAttr ".rsrr" -type "double3" 90.000000000000014 -1.2959527512163752e-06 90 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_upLeg_fk_ctrl_frzGrp" -p "walker_rt_leg_rig_grp";
-	rename -uid "29F46734-4279-7944-C5A3-82AAB2DDED5F";
-createNode transform -n "walker_rt_upLeg_fk_ctrl" -p "walker_rt_upLeg_fk_ctrl_frzGrp";
-	rename -uid "3800B51F-47AE-57FE-91F5-E5BA2DDA284B";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "DF1D74D6-4B0F-C71E-D411-15B037602924";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl" -p "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp";
+	rename -uid "8037B791-421F-AE7F-38E5-ED8D2602FE70";
 	addAttr -ci true -sn "align" -ln "align" -min 0 -max 1 -at "bool";
 	setAttr -k off ".v";
 	setAttr ".t" -type "double3" 0 -6.9388939039072284e-18 0 ;
@@ -2254,8 +2325,9 @@ createNode transform -n "walker_rt_upLeg_fk_ctrl" -p "walker_rt_upLeg_fk_ctrl_fr
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
 	setAttr -l on ".align";
-createNode nurbsCurve -n "walker_rt_upLeg_fk_ctrlShape" -p "walker_rt_upLeg_fk_ctrl";
-	rename -uid "10CE660C-4BFF-BCC0-BE00-EEBF45E6BF8D";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrlShape" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl";
+	rename -uid "525062F7-493F-9BF7-4835-08A6D5814C38";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
@@ -2310,9 +2382,9 @@ createNode nurbsCurve -n "walker_rt_upLeg_fk_ctrlShape" -p "walker_rt_upLeg_fk_c
 		-7.7407145338260733e-24 -0.25860368314830112 -0.25860370057884069
 		-1.6241268254772842e-16 -1.0328273660044583e-15 -0.36572084830109725
 		;
-createNode pointConstraint -n "walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1" -p
-		 "walker_rt_upLeg_fk_ctrl_frzGrp";
-	rename -uid "2235E222-4DF8-B220-9F30-FD9790ABB7A9";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp";
+	rename -uid "B4BFAF74-464E-4341-55D5-CCBC056217CF";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_upLegupJntFkCtrl_grpW0" -dv 1 
 		-min 0 -at "double";
 	setAttr -k on ".nds";
@@ -2329,9 +2401,9 @@ createNode pointConstraint -n "walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1" 
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -0.5830160000000002 2.3093400000000019 0.031665000000000013 ;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1" 
-		-p "walker_rt_upLeg_fk_ctrl_frzGrp";
-	rename -uid "8BF82878-43FB-4027-4A7A-8EA45CB37A37";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp";
+	rename -uid "D0DF84FF-4A96-513E-F512-81B67F3F54D7";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_upLegupJntFkCtrl_grpW0" -dv 1 
 		-min 0 -at "double";
 	setAttr -k on ".nds";
@@ -2349,32 +2421,32 @@ createNode orientConstraint -n "walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1
 	setAttr ".lr" -type "double3" 90.000000000000014 -1.2959527575774844e-06 90 ;
 	setAttr ".rsrr" -type "double3" 90.000000000000014 -1.2959527575774848e-06 89.999999999999986 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_legIK_Grp" -p "walker_rt_leg_rig_grp";
-	rename -uid "3AF235B7-4FF0-39BA-998A-7393E89DE3F9";
-createNode joint -n "walker_rt_upLeg_ik_jnt" -p "walker_rt_legIK_Grp";
-	rename -uid "1256FB0A-4A03-8ACF-3BB0-97B3982CC25D";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp" -p "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "49E7F5BC-4C50-824E-25B5-4D9C5F5ED28E";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp";
+	rename -uid "964ACDC0-4F5F-D5E5-0725-54B089318BC3";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
 	setAttr ".t" -type "double3" -0.72869616400280179 0.03553319737736757 -0.583016 ;
-	setAttr ".r" -type "double3" 6.1583301674560837e-15 -3.5922062851909914e-14 -30.897468821399073 ;
+	setAttr ".r" -type "double3" -7.8863052643048146 -3.0887542341289307 -18.36007114059781 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 0.26265744643934014 ;
 	setAttr ".radi" 0.89313380820640498;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode joint -n "walker_rt_knee_ik_jnt" -p "walker_rt_upLeg_ik_jnt";
-	rename -uid "72421A94-4EFC-7E81-2E64-AD9D695F836F";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_knee_ik_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt";
+	rename -uid "54452112-4F88-A85C-24E4-1F913643508A";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
 	setAttr ".t" -type "double3" -0.98861998319625854 2.236124210797108e-08 4.4408920985006262e-16 ;
-	setAttr ".r" -type "double3" 1.1305347950879317e-15 4.017463768553683e-14 -4.4785771796088074 ;
+	setAttr ".r" -type "double3" -1.0419626936677506e-14 -3.7024606953763318e-13 41.277016494788015 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 4.4814151967255551 ;
 	setAttr ".radi" 0.84979013353145527;
-createNode joint -n "walker_rt_ankle_ik_jnt" -p "walker_rt_knee_ik_jnt";
-	rename -uid "767F2E42-4D4C-EC8A-6CBB-4D9E2F0035CA";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_ankle_ik_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_knee_ik_jnt";
+	rename -uid "39812ECD-408A-34A8-F706-C2B5AC54ECE6";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 28;
@@ -2384,12 +2456,13 @@ createNode joint -n "walker_rt_ankle_ik_jnt" -p "walker_rt_knee_ik_jnt";
 	setAttr ".jo" -type "double3" 0 0 -46.430917303014155 ;
 	setAttr ".radi" 0.73729004431155587;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode ikEffector -n "effector3" -p "walker_rt_knee_ik_jnt";
-	rename -uid "A2F1D802-4B29-A8D8-7992-1E86B0177B42";
+createNode ikEffector -n "Ultimate_Walker_v1_0_1:effector3" -p "Ultimate_Walker_v1_0_1:walker_rt_knee_ik_jnt";
+	rename -uid "01CA95FD-49A1-7484-B0C2-A18813CF9805";
 	setAttr ".v" no;
 	setAttr ".hd" yes;
-createNode parentConstraint -n "walker_rt_legIK_Grp_parentConstraint1" -p "walker_rt_legIK_Grp";
-	rename -uid "F20F55A8-457B-4CA1-F559-11B0E907EAD3";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp";
+	rename -uid "D03E52F8-4C66-685D-C856-F7B3D94B5638";
 	addAttr -ci true -k true -sn "w0" -ln "walker_hip_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -2411,12 +2484,13 @@ createNode parentConstraint -n "walker_rt_legIK_Grp_parentConstraint1" -p "walke
 	setAttr ".rst" -type "double3" -5.7142390883069934e-32 3.037865615999999 -0.0072083119257999829 ;
 	setAttr ".rsrr" -type "double3" 90.000000000000014 0.2626561504866004 90 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_heel_ik_ctrl_frzGrp" -p "walker_rt_leg_rig_grp";
-	rename -uid "3AF43D24-49E1-5E83-7BF4-7C91EE835913";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl_frzGrp" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "6E59FD77-46D9-3944-4C53-F7A46B69D1AB";
 	setAttr ".t" -type "double3" -0.58301609754639927 1.5390000728584829e-09 -0.25085057272848399 ;
 	setAttr ".r" -type "double3" -7.0167092985348649e-15 -1.842772815317326e-14 -3.2461146750243012e-14 ;
-createNode transform -n "walker_rt_heel_ik_ctrl" -p "walker_rt_heel_ik_ctrl_frzGrp";
-	rename -uid "4FF4DD3A-4D2B-5BB8-FECB-79B5CBA67FDE";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl" -p "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl_frzGrp";
+	rename -uid "C50A9C26-4C2E-CF66-8FE3-6887671A1E97";
 	addAttr -ci true -sn "stretchyLeg" -ln "stretchyLeg" -min 0 -max 1 -at "double";
 	addAttr -ci true -sn "maxStretch" -ln "maxStretch" -dv 3 -min 1 -max 10 -at "double";
 	addAttr -ci true -sn "stretchValue" -ln "stretchValue" -at "double";
@@ -2450,8 +2524,8 @@ createNode transform -n "walker_rt_heel_ik_ctrl" -p "walker_rt_heel_ik_ctrl_frzG
 	setAttr -k on ".toeTwist";
 	setAttr -l on ".toeRaise";
 	setAttr -l on ".ballRaise";
-createNode nurbsCurve -n "walker_rt_heel_ik_ctrlShape" -p "walker_rt_heel_ik_ctrl";
-	rename -uid "A1D0B5E9-44DA-FC70-815E-A2959C107467";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrlShape" -p "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl";
+	rename -uid "6CAFA84C-4930-755E-8D46-6593BAFD5034";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
@@ -2477,12 +2551,13 @@ createNode nurbsCurve -n "walker_rt_heel_ik_ctrlShape" -p "walker_rt_heel_ik_ctr
 		0.22065825970000014 0.1806972491536743 -0.44131651940000016
 		-9.6452790324902674e-09 0.1806972491536743 -0.22065825970000014
 		;
-createNode ikHandle -n "walker_rt_leg_ikHandle" -p "walker_rt_leg_rig_grp";
-	rename -uid "FFE01342-48FE-7585-66CD-2A894BE4987D";
+createNode ikHandle -n "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle" -p "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "589F9F79-4944-B19E-BED2-2C95B4205F2D";
 	setAttr ".v" no;
 	setAttr ".roc" yes;
-createNode parentConstraint -n "walker_rt_leg_ikHandle_parentConstraint1" -p "walker_rt_leg_ikHandle";
-	rename -uid "805FB9CB-4FFF-6AB6-EF03-F184B714D5B7";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle";
+	rename -uid "9BB5B22B-4EC7-1DAE-8CEB-4881B470AF32";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_ankle_rev_rig_jntW0" -dv 1 -min 
 		0 -at "double";
 	setAttr -k on ".nds";
@@ -2500,12 +2575,13 @@ createNode parentConstraint -n "walker_rt_leg_ikHandle_parentConstraint1" -p "wa
 	setAttr ".tg[0].tot" -type "double3" 2.2204460492503131e-16 2.2204460492503131e-16 
 		0 ;
 	setAttr ".tg[0].tor" -type "double3" -48.050499189664144 -89.999999999999972 0 ;
-	setAttr ".lr" -type "double3" -36.686072385829895 -2.6059469539991917e-15 -2.5851781348168515e-14 ;
+	setAttr ".lr" -type "double3" 3.3832854785742077 -6.9205168366208816e-15 2.1633720338954956e-13 ;
 	setAttr ".rst" -type "double3" -0.58301599999999987 0.4437960000000003 -0.037064499999999986 ;
 	setAttr ".rsrr" -type "double3" -8.9959671327898916e-15 1.4124500153760511e-30 1.7991934265579777e-14 ;
 	setAttr -k on ".w0";
-createNode poleVectorConstraint -n "walker_rt_knee_pv_cons" -p "walker_rt_leg_ikHandle";
-	rename -uid "71C82790-4BE5-D274-CEB3-189B30AB3231";
+createNode poleVectorConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_cons" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle";
+	rename -uid "415403C9-46BD-CD0A-0372-26877D05F1E8";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_knee_pv_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -2521,8 +2597,8 @@ createNode poleVectorConstraint -n "walker_rt_knee_pv_cons" -p "walker_rt_leg_ik
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 1.1102230246251565e-16 -1.0250175830930657 0.98794975598204693 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_foot_ctrl" -p "walker_rt_leg_rig_grp";
-	rename -uid "462ADB3D-497F-9D7E-5DCA-738B158DCC1C";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl" -p "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "DE50990A-4114-CDDE-2C1F-4988BE226540";
 	addAttr -ci true -sn "ikFkBlend" -ln "ikFkBlend" -dv 1 -min 0 -max 1 -at "double";
 	addAttr -ci true -sn "ikVis" -ln "ikVis" -min 0 -max 1 -at "bool";
 	addAttr -ci true -sn "fkVis" -ln "fkVis" -min 0 -max 1 -at "bool";
@@ -2544,8 +2620,8 @@ createNode transform -n "walker_rt_foot_ctrl" -p "walker_rt_leg_rig_grp";
 	setAttr -l on ".legStretch";
 	setAttr -l on ".kneeStretch";
 	setAttr -l on ".ankleStretch";
-createNode nurbsCurve -n "walker_rt_foot_ctrlShape" -p "walker_rt_foot_ctrl";
-	rename -uid "A30C92C7-4B0D-4E0F-C8D5-5DB575DFDBE3";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrlShape" -p "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl";
+	rename -uid "03469317-4DC1-0277-5A88-099AF4ED0EFF";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
@@ -2559,8 +2635,9 @@ createNode nurbsCurve -n "walker_rt_foot_ctrlShape" -p "walker_rt_foot_ctrl";
 		-0.45896918017600002 -1.47617603182389e-16 0.73435068828160011
 		0.45896918017600002 5.6205657410421576e-17 0.73435068828160011
 		;
-createNode parentConstraint -n "walker_rt_foot_ctrl_parentConstraint1" -p "walker_rt_foot_ctrl";
-	rename -uid "6656ACA3-4B7C-230D-341C-4A81B483819A";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl";
+	rename -uid "C07D74AD-4B41-EE93-7D44-F5B22EA95981";
 	addAttr -ci true -sn "w0" -ln "walker_rt_ankle_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -2576,16 +2653,17 @@ createNode parentConstraint -n "walker_rt_foot_ctrl_parentConstraint1" -p "walke
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -0.50052922893737428 -0.1070125429422942 -4.8773199590179672e-08 ;
 	setAttr ".tg[0].tor" -type "double3" -48.050499189664123 -89.999999999999986 0 ;
-	setAttr ".lr" -type "double3" -36.686072385829846 3.9214063748888722e-14 7.1033733632318301e-15 ;
+	setAttr ".lr" -type "double3" 3.3832854785742086 -1.3280022447126324e-14 1.869944555478463e-14 ;
 	setAttr ".rst" -type "double3" -0.58301604877319946 5.5511151231257827e-17 0.21793805636290958 ;
 	setAttr ".rsrr" -type "double3" 1.9083328088781101e-14 1.9083328088781101e-14 6.3611093629270367e-15 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "walker_rt_knee_pv_ctrl_frzGrp" -p "walker_rt_leg_rig_grp";
-	rename -uid "7AC59814-4229-491D-BB16-F19345058D23";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_frzGrp" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "C3E42EA5-4388-343A-F434-C8BFBA4FAC16";
 	setAttr ".t" -type "double3" -0.583016 1.2843224169069354 1.019614755982047 ;
-createNode transform -n "walker_rt_knee_line_loc" -p "walker_rt_knee_pv_ctrl_frzGrp";
-	rename -uid "9A9C1771-4139-E868-4C5D-06A86FCF5639";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc" -p "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_frzGrp";
+	rename -uid "E2E46981-40D1-4B6A-0E85-52AAD75B0A39";
 	setAttr -l on -k off ".v" no;
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -2596,8 +2674,8 @@ createNode transform -n "walker_rt_knee_line_loc" -p "walker_rt_knee_pv_ctrl_frz
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode locator -n "walker_rt_knee_line_locShape" -p "walker_rt_knee_line_loc";
-	rename -uid "DDEB27E4-430F-A5FF-99D7-86A295283D31";
+createNode locator -n "Ultimate_Walker_v1_0_1:walker_rt_knee_line_locShape" -p "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc";
+	rename -uid "99997D2D-412E-CAA9-BCC6-3F921084492A";
 	setAttr -k off ".v";
 	setAttr -l on -cb off ".lpx";
 	setAttr -l on -cb off ".lpy";
@@ -2605,8 +2683,9 @@ createNode locator -n "walker_rt_knee_line_locShape" -p "walker_rt_knee_line_loc
 	setAttr -l on -cb off ".lsx";
 	setAttr -l on -cb off ".lsy";
 	setAttr -l on -cb off ".lsz";
-createNode pointConstraint -n "walker_rt_knee_line_loc_pointConstraint1" -p "walker_rt_knee_line_loc";
-	rename -uid "42B44960-42D0-5A5B-C159-3E87C7251F9E";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc";
+	rename -uid "9B73FDA6-4168-2253-9438-90AFAEDD434B";
 	addAttr -ci true -sn "w0" -ln "walker_rt_knee_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -2625,18 +2704,22 @@ createNode pointConstraint -n "walker_rt_knee_line_loc_pointConstraint1" -p "wal
 	setAttr -l on -k off ".oz";
 	setAttr ".rst" -type "double3" 2.2204460492503131e-16 0.03639758309306429 -0.98794975598204693 ;
 	setAttr -l on ".w0";
-createNode transform -n "abRTLine_walker_rt_knee_line_loc" -p "walker_rt_knee_line_loc";
-	rename -uid "DAEC3691-4F84-E6FF-0A0C-DD9474B990BD";
-createNode annotationShape -n "abRTLine_walker_rt_knee_line_locShape" -p "abRTLine_walker_rt_knee_line_loc";
-	rename -uid "88B709B0-410D-2786-8ACF-D495D13337DA";
+createNode transform -n "Ultimate_Walker_v1_0_1:abRTLine_walker_rt_knee_line_loc" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc";
+	rename -uid "2BF5D883-411D-BA4D-5C06-5491E5891712";
+createNode annotationShape -n "Ultimate_Walker_v1_0_1:abRTLine_walker_rt_knee_line_locShape" 
+		-p "Ultimate_Walker_v1_0_1:abRTLine_walker_rt_knee_line_loc";
+	rename -uid "DBB95056-4F12-C4BF-D549-3893B772B306";
 	setAttr -k off ".v";
 	setAttr ".ovdt" 2;
 	setAttr ".ove" yes;
 	setAttr ".txt" -type "string" "";
-createNode transform -n "walker_rt_legPvCtrlGrp_space_grp" -p "walker_rt_knee_pv_ctrl_frzGrp";
-	rename -uid "22D316B7-4748-6B6D-8FA3-B9AEA73E8083";
-createNode parentConstraint -n "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon" -p "walker_rt_legPvCtrlGrp_space_grp";
-	rename -uid "3F2C9B4B-4AF4-FDC4-0CDE-C585E507ED58";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_space_grp" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_frzGrp";
+	rename -uid "B92DFD29-40A6-8EA3-1458-5BAA9EF52F37";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_space_grp";
+	rename -uid "47107EFA-44D4-EC18-365C-CCB8977DED0C";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rtLegIkCtrl_space_switch_grpW0" -dv 
 		1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -2655,8 +2738,8 @@ createNode parentConstraint -n "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon" -p 
 		0.25085057272848399 ;
 	setAttr ".rst" -type "double3" 0.583016 -1.2843224169069354 -1.019614755982047 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_knee_pv_ctrl" -p "walker_rt_legPvCtrlGrp_space_grp";
-	rename -uid "FB1AEC89-4A73-C403-0F68-888545FA33AC";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl" -p "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_space_grp";
+	rename -uid "76D82D87-4A59-FB8C-B48D-CDB425340586";
 	addAttr -ci true -sn "snapKnee" -ln "snapKnee" -min 0 -max 1 -at "double";
 	addAttr -ci true -sn "________SPACES___" -ln "________SPACES___" -min 0 -max 1 -at "bool";
 	addAttr -ci true -k true -sn "rtLegIkCtrl" -ln "rtLegIkCtrl" -min 0 -max 1 -at "double";
@@ -2672,8 +2755,8 @@ createNode transform -n "walker_rt_knee_pv_ctrl" -p "walker_rt_legPvCtrlGrp_spac
 	setAttr -l on ".snapKnee";
 	setAttr -l on ".________SPACES___";
 	setAttr -k on ".rtLegIkCtrl";
-createNode nurbsCurve -n "walker_rt_knee_pv_ctrlShape" -p "walker_rt_knee_pv_ctrl";
-	rename -uid "6A7122DC-480E-688B-2591-ACBF09676685";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrlShape" -p "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl";
+	rename -uid "550CFDBB-4EAC-5D76-56F3-2AAE6DC95C6E";
 	setAttr -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
@@ -2728,15 +2811,17 @@ createNode nurbsCurve -n "walker_rt_knee_pv_ctrlShape" -p "walker_rt_knee_pv_ctr
 		-0.64542757566950748 1.2219108370307306 1.0196147545703818
 		-0.58301600000000031 1.1960591171743835 1.019614753985651
 		;
-createNode transform -n "walker_rt_knee_pv_ctrl_annLoc" -p "walker_rt_knee_pv_ctrl";
-	rename -uid "67F28405-44D9-5FF4-2027-C79D9FCBEF29";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl";
+	rename -uid "2DD65B92-4C32-53D9-0169-769294F982B9";
 	setAttr ".v" no;
-createNode locator -n "walker_rt_knee_pv_ctrl_annLocShape" -p "walker_rt_knee_pv_ctrl_annLoc";
-	rename -uid "195BB407-41FB-9543-EAC6-2D8AA2226143";
+createNode locator -n "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLocShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc";
+	rename -uid "5B2B296D-4908-B57F-4AF8-62BFA1E68913";
 	setAttr -k off ".v";
-createNode pointConstraint -n "walker_rt_knee_pv_ctrl_annLoc_pointConstraint1" -p
-		 "walker_rt_knee_pv_ctrl_annLoc";
-	rename -uid "66BB97A2-4E63-87FD-B520-86ACE7948C50";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc";
+	rename -uid "9CDDEC04-4A40-97FB-8584-3AADC86DFD76";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_knee_pv_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -2752,21 +2837,24 @@ createNode pointConstraint -n "walker_rt_knee_pv_ctrl_annLoc_pointConstraint1" -
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -0.583016 1.2843224169069354 1.019614755982047 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_legStrDist_dist" -p "walker_rt_leg_rig_grp";
-	rename -uid "FF17EC13-4843-B07B-04AE-D49ED9DFA704";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist" -p "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "AA8D1005-4462-FBD1-F9A0-18B6C810F572";
 	setAttr ".v" no;
-createNode distanceDimShape -n "walker_rt_legStrDist_distShape" -p "walker_rt_legStrDist_dist";
-	rename -uid "AFC21265-4B77-D6E2-7A6A-929D79B91D20";
+createNode distanceDimShape -n "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_distShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist";
+	rename -uid "5FED874B-471B-3059-09E0-9F9FF11C4C1C";
 	setAttr -k off ".v";
-createNode transform -n "walker_rt_legStrDist_dist_sp" -p "walker_rt_leg_rig_grp";
-	rename -uid "C763E741-45C5-6135-EBC7-A8890990819E";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp" -p "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "2896C65E-4D3D-F5B8-7526-25AA1A8F0F7E";
 	setAttr ".v" no;
 	setAttr ".r" -type "double3" 90.000000000000014 -1.2959527384941561e-06 89.999999999999986 ;
-createNode locator -n "walker_rt_legStrDist_dist_spShape" -p "walker_rt_legStrDist_dist_sp";
-	rename -uid "71356877-457F-3C04-8064-D282F2954DFD";
+createNode locator -n "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_spShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp";
+	rename -uid "79A7966A-49AF-15AA-A28E-28B7E71B2F6A";
 	setAttr -k off ".v";
-createNode pointConstraint -n "walker_rt_legStrDist_dist_sp_pointConstraint1" -p "walker_rt_legStrDist_dist_sp";
-	rename -uid "F27D8096-4294-771B-97D3-A5898EA9FB00";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp";
+	rename -uid "7B73FA83-4985-C6B8-5F7F-F88837BF2745";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_upLeg_ik_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -2782,15 +2870,17 @@ createNode pointConstraint -n "walker_rt_legStrDist_dist_sp_pointConstraint1" -p
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -0.58301600000000009 2.3093400000000011 0.031665000000000006 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_legStrDist_dist_ep" -p "walker_rt_leg_rig_grp";
-	rename -uid "905F14FA-44F5-D1E2-FF4C-089705CFD48F";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep" -p "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "E1899F9F-4BA3-7792-752E-D38208EA4DB5";
 	setAttr ".v" no;
 	setAttr ".r" -type "double3" 90 41.94950081033587 90 ;
-createNode locator -n "walker_rt_legStrDist_dist_epShape" -p "walker_rt_legStrDist_dist_ep";
-	rename -uid "13DB401B-4481-AA41-678C-EF9D64F6AB24";
+createNode locator -n "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_epShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep";
+	rename -uid "63AE1B44-4B61-9C55-668E-A39C7CCAA339";
 	setAttr -k off ".v";
-createNode pointConstraint -n "walker_rt_legStrDist_dist_ep_pointConstraint1" -p "walker_rt_legStrDist_dist_ep";
-	rename -uid "C5CEEFE1-4DA5-D78D-F700-4AA7EE599DC7";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep";
+	rename -uid "32E830A6-47FB-D006-12DB-2E8A0AAD9BD0";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_ankle_rev_rig_jntW0" -dv 1 -min 
 		0 -at "double";
 	setAttr -k on ".nds";
@@ -2807,22 +2897,25 @@ createNode pointConstraint -n "walker_rt_legStrDist_dist_ep_pointConstraint1" -p
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -0.58301599999999987 0.44379599999999997 -0.0370645 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_upLegPvCtrl_dist" -p "walker_rt_leg_rig_grp";
-	rename -uid "4A5A4653-46C7-A39E-C78C-B891A63AC748";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist" -p "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "575DF7CE-48F5-3E20-8E55-8090D70BDE73";
 	setAttr ".v" no;
-createNode distanceDimShape -n "walker_rt_upLegPvCtrl_distShape" -p "walker_rt_upLegPvCtrl_dist";
-	rename -uid "39D0497F-4201-4930-12ED-64B9D91FDA4A";
+createNode distanceDimShape -n "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_distShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist";
+	rename -uid "AFC71350-4705-855C-C77B-238024DA7510";
 	setAttr -k off ".v";
-createNode transform -n "walker_rt_upLegPvCtrl_dist_sp" -p "walker_rt_leg_rig_grp";
-	rename -uid "239D95DB-454B-1D96-C0C0-2C940A1D90B5";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "5AB4C7AA-4D6D-2E17-408A-B0ADD91E9B55";
 	setAttr ".v" no;
 	setAttr ".r" -type "double3" 90.000000000000014 -1.2959527384941561e-06 89.999999999999986 ;
-createNode locator -n "walker_rt_upLegPvCtrl_dist_spShape" -p "walker_rt_upLegPvCtrl_dist_sp";
-	rename -uid "9B724BD0-479C-B0DD-AFEB-1BA3BAB3F81C";
+createNode locator -n "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_spShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp";
+	rename -uid "848DC7E5-4B13-0E41-0641-EEA62CC77424";
 	setAttr -k off ".v";
-createNode pointConstraint -n "walker_rt_upLegPvCtrl_dist_sp_pointConstraint1" -p
-		 "walker_rt_upLegPvCtrl_dist_sp";
-	rename -uid "8910B54B-44D1-2E18-9ABF-5DBA0853A43E";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp";
+	rename -uid "D0BBC66D-4137-E4A3-EA66-65AE308A9B05";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_upLeg_ik_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -2838,15 +2931,17 @@ createNode pointConstraint -n "walker_rt_upLegPvCtrl_dist_sp_pointConstraint1" -
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -0.58301600000000009 2.3093400000000011 0.031665000000000006 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_upLegPvCtrl_dist_ep" -p "walker_rt_leg_rig_grp";
-	rename -uid "1B8393C8-4312-D699-1CB6-45A345E57074";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "F22937F9-420D-7977-18DD-5BBDB98C78A9";
 	setAttr ".v" no;
-createNode locator -n "walker_rt_upLegPvCtrl_dist_epShape" -p "walker_rt_upLegPvCtrl_dist_ep";
-	rename -uid "EADC371B-4450-845E-9347-9C9D06CA4C3A";
+createNode locator -n "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_epShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep";
+	rename -uid "6DAC6705-4371-74BF-90DB-01858A6B8091";
 	setAttr -k off ".v";
-createNode pointConstraint -n "walker_rt_upLegPvCtrl_dist_ep_pointConstraint1" -p
-		 "walker_rt_upLegPvCtrl_dist_ep";
-	rename -uid "B40507F4-4031-C84A-A444-DFB22EAF5B91";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep";
+	rename -uid "8B903695-4EEF-4FFD-E924-DCAABD371545";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_knee_pv_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -2862,21 +2957,24 @@ createNode pointConstraint -n "walker_rt_upLegPvCtrl_dist_ep_pointConstraint1" -
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -0.583016 1.2843224169069354 1.019614755982047 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_legPvIkCtrl_dist" -p "walker_rt_leg_rig_grp";
-	rename -uid "C1DDCA06-41CF-30E0-974A-EB88F8CE3FE5";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist" -p "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "1F5C7A0D-466D-1C7A-2496-1EBE98597EF3";
 	setAttr ".v" no;
-createNode distanceDimShape -n "walker_rt_legPvIkCtrl_distShape" -p "walker_rt_legPvIkCtrl_dist";
-	rename -uid "A0E28646-4D55-C2DF-CD33-B6A5B6B0F7FC";
+createNode distanceDimShape -n "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_distShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist";
+	rename -uid "DC7D66E8-4E1A-D68B-9F63-D197BBA17112";
 	setAttr -k off ".v";
-createNode transform -n "walker_rt_legPvIkCtrl_dist_sp" -p "walker_rt_leg_rig_grp";
-	rename -uid "87FB2800-4166-3F65-7A91-7583C096A792";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "7B9EE41F-4EE5-C4C6-4840-F684460A2204";
 	setAttr ".v" no;
-createNode locator -n "walker_rt_legPvIkCtrl_dist_spShape" -p "walker_rt_legPvIkCtrl_dist_sp";
-	rename -uid "1C5E476F-4ABC-42C4-54FC-9E94B82B769E";
+createNode locator -n "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_spShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp";
+	rename -uid "C01E086E-4A6E-CFFC-C7F6-4BA321ED6915";
 	setAttr -k off ".v";
-createNode pointConstraint -n "walker_rt_legPvIkCtrl_dist_sp_pointConstraint1" -p
-		 "walker_rt_legPvIkCtrl_dist_sp";
-	rename -uid "4EF97086-4B50-F51D-0594-ACBE48E7DC81";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp";
+	rename -uid "8EC49DF0-48EB-32FB-F35E-52AA300A9BA6";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_knee_pv_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -2892,16 +2990,18 @@ createNode pointConstraint -n "walker_rt_legPvIkCtrl_dist_sp_pointConstraint1" -
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -0.583016 1.2843224169069354 1.019614755982047 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_legPvIkCtrl_dist_ep" -p "walker_rt_leg_rig_grp";
-	rename -uid "9DF03A08-43D5-69B7-8591-32967DE23D6A";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "94BB2351-42D3-741A-1CB4-9A8635887BC2";
 	setAttr ".v" no;
 	setAttr ".r" -type "double3" 89.999999999999986 41.94950081033587 89.999999999999986 ;
-createNode locator -n "walker_rt_legPvIkCtrl_dist_epShape" -p "walker_rt_legPvIkCtrl_dist_ep";
-	rename -uid "D9042102-4270-D202-80D1-9183005630AD";
+createNode locator -n "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_epShape" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep";
+	rename -uid "80CB84DE-46D6-EA0B-9CA3-E580A31EBE0B";
 	setAttr -k off ".v";
-createNode pointConstraint -n "walker_rt_legPvIkCtrl_dist_ep_pointConstraint1" -p
-		 "walker_rt_legPvIkCtrl_dist_ep";
-	rename -uid "5E41979A-4C3F-7B0D-0E09-FF9A2232BC30";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep";
+	rename -uid "AD583029-4434-7EA6-E60D-34B8D41AF0D4";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_ankle_rev_rig_jntW0" -dv 1 -min 
 		0 -at "double";
 	setAttr -k on ".nds";
@@ -2918,10 +3018,12 @@ createNode pointConstraint -n "walker_rt_legPvIkCtrl_dist_ep_pointConstraint1" -
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -0.58301599999999987 0.44379599999999997 -0.0370645 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rt_legIkCtrl_space_grp" -p "walker_rt_leg_rig_grp";
-	rename -uid "C779A6BA-4108-C1B7-3258-CBB4A650FCC5";
-createNode joint -n "walker_rt_ankleBallReader_UpLeg_jnt" -p "walker_rt_leg_rig_grp";
-	rename -uid "969AD6F8-4EF4-F902-EC69-83997D047453";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rt_legIkCtrl_space_grp" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "15EED104-445C-BE4E-4A1E-9EB0140AFAAE";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp";
+	rename -uid "9A280F33-467D-7827-D2E0-C584BFC663A6";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	setAttr ".v" no;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -2929,15 +3031,17 @@ createNode joint -n "walker_rt_ankleBallReader_UpLeg_jnt" -p "walker_rt_leg_rig_
 	setAttr ".jo" -type "double3" 90.000000000000014 -1.2959527397117122e-06 90 ;
 	setAttr ".radi" 0.89313380820640498;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode joint -n "walker_rt_ankleBallReader_Knee_jnt" -p "walker_rt_ankleBallReader_UpLeg_jnt";
-	rename -uid "B1A970FB-4762-6639-920E-EDA5797E87D7";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Knee_jnt" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt";
+	rename -uid "F9926859-4489-32D5-7595-D584F52B60EA";
 	setAttr ".t" -type "double3" -0.98861998319625899 2.2361242198176701e-08 5.5511151231257827e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 3.2108760981450434e-15 5.5475610538460562e-15 4.4814151967255436 ;
 	setAttr ".radi" 0.84979013353145527;
-createNode joint -n "walker_rt_ankleBallReader_Ankle_jnt" -p "walker_rt_ankleBallReader_Knee_jnt";
-	rename -uid "F222A9A0-41C3-7219-2332-D5BAD30512E2";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ankle_jnt" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Knee_jnt";
+	rename -uid "933C3684-4C06-7F6F-F824-EFB006C8A240";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	setAttr ".t" -type "double3" -0.879613220691563 5.2571121257616316e-07 2.2204460492503131e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -2945,15 +3049,17 @@ createNode joint -n "walker_rt_ankleBallReader_Ankle_jnt" -p "walker_rt_ankleBal
 	setAttr ".jo" -type "double3" -1.8064345619603667e-15 6.1499555394444726e-15 -46.430968649021253 ;
 	setAttr ".radi" 0.73729004431155587;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode joint -n "walker_rt_ankleBallReader_Ball_jnt" -p "walker_rt_ankleBallReader_Ankle_jnt";
-	rename -uid "8311DC59-497A-30CF-661C-81A272787F36";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ball_jnt" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ankle_jnt";
+	rename -uid "C5B9D2C5-4ADC-3592-3F06-0186CF2070F1";
 	setAttr ".t" -type "double3" -0.59671276666870299 -9.0980845918187114e-07 -1.1102230246251565e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -5.7814848620852687e-15 2.7675967468667755e-15 -48.050447843657054 ;
 	setAttr ".radi" 0.72241122832793025;
-createNode orientConstraint -n "walker_rt_ankleReader_ball_or_cons" -p "walker_rt_ankleBallReader_Ball_jnt";
-	rename -uid "287A0ECE-4D25-B58B-5CD6-E3B9EF0B2DB6";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ball_or_cons" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ball_jnt";
+	rename -uid "054F88E4-4BCF-2968-A5D9-96A03614CD86";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_ball_ik_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -2970,8 +3076,9 @@ createNode orientConstraint -n "walker_rt_ankleReader_ball_or_cons" -p "walker_r
 	setAttr ".lr" -type "double3" 0 0 -5.1346007103148303e-05 ;
 	setAttr ".rsrr" -type "double3" 0 0 -5.1346007103148303e-05 ;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "walker_rt_ankleReader_ankle_or_cons" -p "walker_rt_ankleBallReader_Ankle_jnt";
-	rename -uid "8A6BDAC7-4D19-2D73-6681-7194C5E98406";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ankle_or_cons" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ankle_jnt";
+	rename -uid "1D4E6682-4B9C-A52E-C536-7BA535C6D119";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_ankle_rev_rig_jntW0" -dv 1 -min 
 		0 -at "double";
 	setAttr -k on ".nds";
@@ -2989,8 +3096,9 @@ createNode orientConstraint -n "walker_rt_ankleReader_ankle_or_cons" -p "walker_
 	setAttr ".lr" -type "double3" 0 0 0.00015403802128404167 ;
 	setAttr ".rsrr" -type "double3" 0 0 0.00015403802128404167 ;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "walker_rt_ankleReader_knee_or_cons" -p "walker_rt_ankleBallReader_Knee_jnt";
-	rename -uid "5FFCF6E8-4789-4432-3AD7-969FD4FC8797";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_knee_or_cons" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Knee_jnt";
+	rename -uid "D0CE22B4-4DE3-088A-E525-87AF20B1A139";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_knee_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -3007,9 +3115,9 @@ createNode orientConstraint -n "walker_rt_ankleReader_knee_or_cons" -p "walker_r
 	setAttr ".lr" -type "double3" 0 0 -0.00010269201417132079 ;
 	setAttr ".rsrr" -type "double3" 0 0 -0.00010269201417132079 ;
 	setAttr -k on ".w0";
-createNode pointConstraint -n "walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1" 
-		-p "walker_rt_ankleBallReader_UpLeg_jnt";
-	rename -uid "8F2EC474-437D-5EFB-857A-AA90C9816FE7";
+createNode pointConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt";
+	rename -uid "B4E1068F-4A41-A0B9-3F4B-D7A4164182B0";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_upLeg_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -3025,9 +3133,9 @@ createNode pointConstraint -n "walker_rt_ankleBallReader_UpLeg_jnt_pointConstrai
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -0.58301600000000009 2.3093400000000006 0.031665 ;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1" 
-		-p "walker_rt_ankleBallReader_UpLeg_jnt";
-	rename -uid "373342FC-4732-7AA3-7356-0DBB4BE91CA5";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt";
+	rename -uid "442E37A8-4E8A-CA31-4CA2-7B8990520CC0";
 	addAttr -ci true -k true -sn "w0" -ln "walker_rt_upLeg_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -3044,8 +3152,9 @@ createNode orientConstraint -n "walker_rt_ankleBallReader_UpLeg_jnt_orientConstr
 	setAttr ".lr" -type "double3" 6.3611093629270335e-15 -6.3611093629270335e-15 -6.3611093629270335e-15 ;
 	setAttr ".rsrr" -type "double3" 6.3611093629270335e-15 -6.3611093629270335e-15 -6.3611093629270335e-15 ;
 	setAttr -k on ".w0";
-createNode transform -n "walker_rtLegIkCtrl_space_switch_grp" -p "Rig_Leg_grp";
-	rename -uid "AEBF609A-4854-DB2D-D178-F2B0EFACC6A9";
+createNode transform -n "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp" 
+		-p "Ultimate_Walker_v1_0_1:Rig_Leg_grp";
+	rename -uid "A0A71798-4D29-51D3-06FB-0E93E89F1201";
 	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -3056,8 +3165,9 @@ createNode transform -n "walker_rtLegIkCtrl_space_switch_grp" -p "Rig_Leg_grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode parentConstraint -n "walker_rtLegIkCtrlSpace_par_cons" -p "walker_rtLegIkCtrl_space_switch_grp";
-	rename -uid "EBA31369-45EF-03B0-D24E-3AA06FC762A5";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons" 
+		-p "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp";
+	rename -uid "635EC21C-421B-CCC7-BBEA-739D3236A877";
 	addAttr -ci true -sn "w0" -ln "walker_rt_heel_ik_ctrlW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -3071,12 +3181,13 @@ createNode parentConstraint -n "walker_rtLegIkCtrlSpace_par_cons" -p "walker_rtL
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -36.686072385829888 0 0 ;
+	setAttr ".lr" -type "double3" 3.3832854785742046 0 0 ;
 	setAttr ".rst" -type "double3" -0.58301609754639927 1.5390000728584829e-09 -0.25085057272848399 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode parentConstraint -n "Rig_Leg_grp_parentConstraint1" -p "Rig_Leg_grp";
-	rename -uid "1FA0001F-49B7-F4A9-6D53-FD95D6EDE4EA";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:Rig_Leg_grp";
+	rename -uid "E4FEBE64-4F61-92BE-698D-5A94AE1C40E3";
 	addAttr -ci true -sn "w0" -ln "CTRL_RootW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -3097,8 +3208,8 @@ createNode parentConstraint -n "Rig_Leg_grp_parentConstraint1" -p "Rig_Leg_grp";
 	setAttr ".rsrr" -type "double3" 0 360 0 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "Skeleton_grp" -p "AniM_walker_Main";
-	rename -uid "1E26563D-482F-E4A2-0CFF-529D685D3E65";
+createNode transform -n "Ultimate_Walker_v1_0_1:Skeleton_grp" -p "Ultimate_Walker_v1_0_1:AniM_walker_Main";
+	rename -uid "63F70EB6-4685-8C86-EACF-60B5988EEDC9";
 	setAttr -l on -k off ".v" no;
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -3109,8 +3220,8 @@ createNode transform -n "Skeleton_grp" -p "AniM_walker_Main";
 	setAttr -k off ".sx";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
-createNode joint -n "walker_hip_jnt" -p "Skeleton_grp";
-	rename -uid "798BAB1F-4ACF-583B-22D2-EAA7A7833CFF";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_hip_jnt" -p "Ultimate_Walker_v1_0_1:Skeleton_grp";
+	rename -uid "71217A0F-4AB6-D8B6-3555-21A4DAA4FF01";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr -l on -k off ".v";
 	setAttr ".uoc" 1;
@@ -3128,8 +3239,8 @@ createNode joint -n "walker_hip_jnt" -p "Skeleton_grp";
 	setAttr ".jo" -type "double3" 90.000000000000014 0.2626561504866004 90 ;
 	setAttr ".bps" -type "matrix" 0 0.99998949250653002 -0.004584198570391885 0 1.6653345369377353e-16 0.0045841985703917176 0.99998949250653002 0
 		 1.0000000000000002 -1.6653345369377353e-16 -2.2204460492503131e-16 0 -1.1097812077883228e-31 3.0378656159999986 -0.0072083119258000115 1;
-createNode joint -n "walker_lf_upLeg_jnt" -p "walker_hip_jnt";
-	rename -uid "411984A7-408E-1FF9-4C02-ACBDCBFC6C8A";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt" -p "Ultimate_Walker_v1_0_1:walker_hip_jnt";
+	rename -uid "1AA7AA79-40E3-E5B9-7E04-3C875F2F7905";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr -l on -k off ".v";
@@ -3153,8 +3264,8 @@ createNode joint -n "walker_lf_upLeg_jnt" -p "walker_hip_jnt";
 		 0.58301609754639971 2.309336663099999 0.031665034590099977 1;
 	setAttr ".radi" 0.89313380820640498;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode joint -n "walker_lf_knee_jnt" -p "walker_lf_upLeg_jnt";
-	rename -uid "5C36B135-460B-4938-0133-AD8F61329EC5";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt";
+	rename -uid "14645E4E-4B0E-9B43-87DF-D3BED8DB0724";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr -l on -k off ".v";
 	setAttr ".uoc" 1;
@@ -3176,8 +3287,8 @@ createNode joint -n "walker_lf_knee_jnt" -p "walker_lf_upLeg_jnt";
 		 -1.6596291998557162e-16 0.078135800595745097 -0.99694272486701208 0 1.0000000000000002 -1.6653345369377353e-16 -2.2204460492503131e-16 0
 		 0.58301609754639994 1.3207235344378894 0.031665012228999971 1;
 	setAttr -l on -cb off ".radi" 0.84979013353145527;
-createNode joint -n "walker_lf_ankle_jnt" -p "walker_lf_knee_jnt";
-	rename -uid "B9FE058E-4E51-E35F-7EC4-C39368CE5DE1";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt";
+	rename -uid "FA4E3603-4C91-03F9-888A-14A4CB948ED4";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr -l on -k off ".v";
@@ -3201,8 +3312,8 @@ createNode joint -n "walker_lf_ankle_jnt" -p "walker_lf_knee_jnt";
 		 0.58301609754639983 0.44379590860504092 -0.037064555077001494 1;
 	setAttr -l on -cb off ".radi" 0.73729004431155587;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode joint -n "walker_lf_ball_jnt" -p "walker_lf_ankle_jnt";
-	rename -uid "546144C5-48AC-F58E-3DAB-F393434F0A68";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt";
+	rename -uid "3374723F-49E1-8246-3C8C-34AAC8079409";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr -l on -k off ".v";
 	setAttr ".uoc" 1;
@@ -3224,8 +3335,8 @@ createNode joint -n "walker_lf_ball_jnt" -p "walker_lf_ankle_jnt";
 		 -7.6342242034533623e-19 -1.0000000000000004 6.106226635438361e-16 0 1.0000000000000002 -1.6653345369377353e-16 -2.2204460492503131e-16 0
 		 0.58301609754639971 -1.0805958683413053e-08 0.36182337816539878 1;
 	setAttr -l on -cb off ".radi" 0.72241122832793025;
-createNode joint -n "walker_lf_toe_jnt" -p "walker_lf_ball_jnt";
-	rename -uid "32FE370A-4F13-696B-6379-9792A5851BC0";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_lf_toe_jnt" -p "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt";
+	rename -uid "C8B87E65-4727-EC4F-AC44-0481D135D88C";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr -l on -k off ".v";
 	setAttr ".uoc" 1;
@@ -3247,8 +3358,9 @@ createNode joint -n "walker_lf_toe_jnt" -p "walker_lf_ball_jnt";
 		 7.6342242034531967e-19 1.0000000000000004 -4.8815798362910075e-16 0 -2.775575060054664e-16 2.6611337870406959e-16 1.0000000000000007 0
 		 0.58301609754639994 -1.0805958413862918e-08 0.9211206344653986 1;
 	setAttr -l on -cb off ".radi" 0.5;
-createNode orientConstraint -n "walker_lf_toe_ikFkCons" -p "walker_lf_toe_jnt";
-	rename -uid "65077C2D-4A9A-1873-E274-EB8B39B4ADEF";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_toe_ikFkCons" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_toe_jnt";
+	rename -uid "7B1CEE5E-4870-D029-01E8-65923645251A";
 	addAttr -ci true -sn "w0" -ln "walker_lf_toe_ik_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -3269,8 +3381,9 @@ createNode orientConstraint -n "walker_lf_toe_ikFkCons" -p "walker_lf_toe_jnt";
 	setAttr ".rsrr" -type "double3" -1.4033418597069752e-14 -1.2722218725854067e-14 
 		1.4557242869091942e-31 ;
 	setAttr -l on -k off ".int";
-createNode orientConstraint -n "walker_lf_ball_ikFkCons" -p "walker_lf_ball_jnt";
-	rename -uid "6DFF1AC6-451E-C6CE-4265-5EA4774128FA";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt";
+	rename -uid "26FA1784-4ED2-AF62-9BDC-A78C63D18A6E";
 	addAttr -ci true -sn "w0" -ln "walker_lf_ball_ik_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -ci true -sn "w1" -ln "walker_lf_ball_fk_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
@@ -3286,13 +3399,14 @@ createNode orientConstraint -n "walker_lf_ball_ikFkCons" -p "walker_lf_ball_jnt"
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0 0 -32.999999999999986 ;
+	setAttr ".lr" -type "double3" 0 0 1.2722218725854067e-14 ;
 	setAttr -l on -k off ".ox";
 	setAttr -l on -k off ".oy";
 	setAttr -l on -k off ".oz";
 	setAttr -l on -k off ".int" 2;
-createNode orientConstraint -n "walker_lf_ankle_ikFkCons" -p "walker_lf_ankle_jnt";
-	rename -uid "B57269F5-4B4C-44C7-B8E2-1E968D1A9D8A";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt";
+	rename -uid "EF977FE3-4A39-28DC-E555-2C80CB382451";
 	addAttr -ci true -sn "w0" -ln "walker_lf_ankle_rev_rig_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -ci true -sn "w1" -ln "walker_lf_ankle_fk_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
@@ -3308,14 +3422,15 @@ createNode orientConstraint -n "walker_lf_ankle_ikFkCons" -p "walker_lf_ankle_jn
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0 0 3.1001215868400163 ;
+	setAttr ".lr" -type "double3" 9.3034056942623611 -1.4653314670164683 -0.97424718683469547 ;
 	setAttr -l on -k off ".ox";
 	setAttr -l on -k off ".oy";
 	setAttr -l on -k off ".oz";
 	setAttr ".rsrr" -type "double3" 0 0 -1.5096618822201364e-06 ;
 	setAttr -l on -k off ".int" 2;
-createNode orientConstraint -n "walker_lf_knee_ikFkCons" -p "walker_lf_knee_jnt";
-	rename -uid "80496127-472D-9700-F8AE-A9B0B2D798C0";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons" -p
+		 "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt";
+	rename -uid "C808A2BF-4C4D-5CAC-98A1-F39C4C4CAF71";
 	addAttr -ci true -sn "w0" -ln "walker_lf_knee_ik_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -ci true -sn "w1" -ln "walker_lf_knee_fk_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
@@ -3331,14 +3446,15 @@ createNode orientConstraint -n "walker_lf_knee_ikFkCons" -p "walker_lf_knee_jnt"
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0 0 -4.4785588119402373 ;
+	setAttr ".lr" -type "double3" 0 0 99.530549742539549 ;
 	setAttr -l on -k off ".ox";
 	setAttr -l on -k off ".oy";
 	setAttr -l on -k off ".oz";
 	setAttr ".rsrr" -type "double3" 0 0 1.5096618854006907e-06 ;
 	setAttr -l on -k off ".int" 2;
-createNode orientConstraint -n "walker_lf_upLeg_ikFkCons" -p "walker_lf_upLeg_jnt";
-	rename -uid "4D44C699-4DA9-1B42-9224-2F9E66203281";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons" 
+		-p "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt";
+	rename -uid "B311285D-45B0-F754-B291-F99194197F26";
 	addAttr -ci true -sn "w0" -ln "walker_lf_upLeg_ik_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -ci true -sn "w1" -ln "walker_lf_upLeg_fk_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
@@ -3354,13 +3470,13 @@ createNode orientConstraint -n "walker_lf_upLeg_ikFkCons" -p "walker_lf_upLeg_jn
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0 0 35.961333064932255 ;
+	setAttr ".lr" -type "double3" -6.3649727479096727 -6.9547177613298823 -86.659098031677615 ;
 	setAttr -l on -k off ".ox";
 	setAttr -l on -k off ".oy";
 	setAttr -l on -k off ".oz";
 	setAttr -l on -k off ".int" 2;
-createNode joint -n "walker_rt_upLeg_jnt" -p "walker_hip_jnt";
-	rename -uid "2B280D83-4E82-EB9C-6954-3E8A6E5D99F4";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt" -p "Ultimate_Walker_v1_0_1:walker_hip_jnt";
+	rename -uid "B664C354-4617-0F82-D8C8-93AAC190264A";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr -l on -k off ".v";
@@ -3384,8 +3500,8 @@ createNode joint -n "walker_rt_upLeg_jnt" -p "walker_hip_jnt";
 		 -0.58301600000000009 2.3093400000000006 0.031664999999999971 1;
 	setAttr ".radi" 0.89313380820640498;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode joint -n "walker_rt_knee_jnt" -p "walker_rt_upLeg_jnt";
-	rename -uid "20078B84-4857-916D-A1C4-1CA862BFED7F";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt";
+	rename -uid "14596955-4CE2-904C-DB37-DE9657900F5D";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr -l on -k off ".v";
 	setAttr ".uoc" 1;
@@ -3407,8 +3523,8 @@ createNode joint -n "walker_rt_knee_jnt" -p "walker_rt_upLeg_jnt";
 		 1.6596294539709651e-16 -0.078133961214794198 0.99694286902755114 0 1.0000000000000002 -1.6653345369377353e-16 -2.2204460492503131e-16 0
 		 -0.58301599999999965 1.3207200168037416 0.031665000000000353 1;
 	setAttr -l on -cb off ".radi" 0.84979013353145527;
-createNode joint -n "walker_rt_ankle_jnt" -p "walker_rt_knee_jnt";
-	rename -uid "A3D3AF7C-43ED-4979-9E16-E58C0107F472";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt";
+	rename -uid "2D22CCE3-43A1-A68E-917E-F8A91CB53DE1";
 	addAttr -ci true -h true -sn "createRot" -ln "createRot" -dt "float3";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr -l on -k off ".v";
@@ -3432,8 +3548,8 @@ createNode joint -n "walker_rt_ankle_jnt" -p "walker_rt_knee_jnt";
 		 -0.58301599999999965 0.44379590944768343 -0.037062927027090679 1;
 	setAttr -l on -cb off ".radi" 0.73729004431155587;
 	setAttr ".createRot" -type "float3" 0 0 0 ;
-createNode joint -n "walker_rt_ball_jnt" -p "walker_rt_ankle_jnt";
-	rename -uid "D07BB6BA-4706-1887-9867-E88EE21DA253";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt";
+	rename -uid "F6757940-44BF-2B77-1D62-A7AD114CD320";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr -l on -k off ".v";
 	setAttr ".uoc" 1;
@@ -3455,8 +3571,8 @@ createNode joint -n "walker_rt_ball_jnt" -p "walker_rt_ankle_jnt";
 		 7.6342242034533623e-19 0.99999999999999989 -6.106226635438361e-16 0 1.0000000000000002 -1.6653345369377353e-16 -2.2204460492503131e-16 0
 		 -0.58301599999999965 -8.901331649546762e-08 0.36182457297290943 1;
 	setAttr -l on -cb off ".radi" 0.72241122832793025;
-createNode joint -n "walker_rt_toe_jnt" -p "walker_rt_ball_jnt";
-	rename -uid "794B79CB-4A7F-1337-0D20-52A985E6AFCB";
+createNode joint -n "Ultimate_Walker_v1_0_1:walker_rt_toe_jnt" -p "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt";
+	rename -uid "61198386-4D90-45BC-E74A-C09D68447EB7";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr -l on -k off ".v";
 	setAttr ".uoc" 1;
@@ -3478,8 +3594,9 @@ createNode joint -n "walker_rt_toe_jnt" -p "walker_rt_ball_jnt";
 		 -7.6342242211950482e-19 -1 -1.0652379319050904e-11 0 -6.1062091369465094e-16 1.0652490341353368e-11 -1 0
 		 -0.58301599999999953 -8.9022791253391467e-08 0.92112257295884059 1;
 	setAttr -l on -cb off ".radi" 0.5;
-createNode orientConstraint -n "walker_rt_toe_ikFkCons" -p "walker_rt_toe_jnt";
-	rename -uid "5219A94F-4FA1-2688-8810-858818F2C8F6";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_toe_ikFkCons" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_toe_jnt";
+	rename -uid "91276242-4E98-B93C-CBF1-2FB863F13D76";
 	addAttr -ci true -sn "w0" -ln "walker_rt_toe_ik_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -3500,8 +3617,9 @@ createNode orientConstraint -n "walker_rt_toe_ikFkCons" -p "walker_rt_toe_jnt";
 	setAttr ".rsrr" -type "double3" -2.5444437451708131e-14 -2.5444437451708134e-14 
 		1.6949400184512609e-29 ;
 	setAttr -l on -k off ".int";
-createNode orientConstraint -n "walker_rt_ball_ikFkCons" -p "walker_rt_ball_jnt";
-	rename -uid "7483B613-4C57-C2AB-A7EC-CD9ECBABE0BD";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt";
+	rename -uid "1ADF156E-41B2-C0B2-F8CE-7AA0D5C513B2";
 	addAttr -ci true -sn "w0" -ln "walker_rt_ball_ik_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -ci true -sn "w1" -ln "walker_rt_ball_fk_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
@@ -3517,14 +3635,15 @@ createNode orientConstraint -n "walker_rt_ball_ikFkCons" -p "walker_rt_ball_jnt"
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0 0 1.9083328088781101e-14 ;
+	setAttr ".lr" -type "double3" 0 0 3.1805546814635168e-14 ;
 	setAttr -l on -k off ".ox";
 	setAttr -l on -k off ".oy";
 	setAttr -l on -k off ".oz";
 	setAttr ".rsrr" -type "double3" 0 0 6.361109362927032e-15 ;
 	setAttr -l on -k off ".int" 2;
-createNode orientConstraint -n "walker_rt_ankle_ikFkCons" -p "walker_rt_ankle_jnt";
-	rename -uid "AA3D9A5B-44BD-0D87-A111-AC8FB54F26D9";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt";
+	rename -uid "3ED718CE-46F8-A61D-001A-75A777C9FCA5";
 	addAttr -ci true -sn "w0" -ln "walker_rt_ankle_rev_rig_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -ci true -sn "w1" -ln "walker_rt_ankle_fk_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
@@ -3540,14 +3659,15 @@ createNode orientConstraint -n "walker_rt_ankle_ikFkCons" -p "walker_rt_ankle_jn
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0 0 -1.3100263861716206 ;
+	setAttr ".lr" -type "double3" 8.3222879395860119 0.24714213656785969 32.72831871750936 ;
 	setAttr -l on -k off ".ox";
 	setAttr -l on -k off ".oy";
 	setAttr -l on -k off ".oz";
 	setAttr ".rsrr" -type "double3" 0 0 5.1346007090426085e-05 ;
 	setAttr -l on -k off ".int" 2;
-createNode orientConstraint -n "walker_rt_knee_ikFkCons" -p "walker_rt_knee_jnt";
-	rename -uid "8F7271B8-4F73-1BC0-95B8-51B0963E7769";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons" -p
+		 "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt";
+	rename -uid "7C7366A2-4A85-1F46-2DA3-A989BF261916";
 	addAttr -ci true -sn "w0" -ln "walker_rt_knee_ik_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -ci true -sn "w1" -ln "walker_rt_knee_fk_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
@@ -3563,14 +3683,15 @@ createNode orientConstraint -n "walker_rt_knee_ikFkCons" -p "walker_rt_knee_jnt"
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0 0 -4.4785771770583356 ;
+	setAttr ".lr" -type "double3" 0 0 18.204612178099126 ;
 	setAttr -l on -k off ".ox";
 	setAttr -l on -k off ".oy";
 	setAttr -l on -k off ".oz";
 	setAttr ".rsrr" -type "double3" 0 0 -5.1346007084860089e-05 ;
 	setAttr -l on -k off ".int" 2;
-createNode orientConstraint -n "walker_rt_upLeg_ikFkCons" -p "walker_rt_upLeg_jnt";
-	rename -uid "FCA5738C-480A-0064-61C6-7DA6678F3B8D";
+createNode orientConstraint -n "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons" 
+		-p "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt";
+	rename -uid "C58204C2-4149-2819-23C5-999A74BDCC2B";
 	addAttr -ci true -sn "w0" -ln "walker_rt_upLeg_ik_jntW0" -dv 1 -min 0 -at "double";
 	addAttr -ci true -sn "w1" -ln "walker_rt_upLeg_fk_jntW1" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
@@ -3586,14 +3707,15 @@ createNode orientConstraint -n "walker_rt_upLeg_ikFkCons" -p "walker_rt_upLeg_jn
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0 0 -30.897468822599912 ;
+	setAttr ".lr" -type "double3" -8.1838768412511484 -1.5366740074839853 -43.451378915517495 ;
 	setAttr -l on -k off ".ox";
 	setAttr -l on -k off ".oy";
 	setAttr -l on -k off ".oz";
 	setAttr ".rsrr" -type "double3" 0 0 9.9392333795734899e-17 ;
 	setAttr -l on -k off ".int" 2;
-createNode parentConstraint -n "walker_hip_jnt_parentConstraint1" -p "walker_hip_jnt";
-	rename -uid "76BE01E0-4736-7A06-6F31-5493C25421CB";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:walker_hip_jnt";
+	rename -uid "A9B7F6B9-488A-6F7B-0B3A-4B8B409C3C9C";
 	addAttr -ci true -sn "w0" -ln "CTRL_MainW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -3615,8 +3737,8 @@ createNode parentConstraint -n "walker_hip_jnt_parentConstraint1" -p "walker_hip
 	setAttr ".rsrr" -type "double3" 3.1805546814635168e-15 2.2263882770244611e-14 3.1805546814635168e-15 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "Body_Rig_Grp" -p "AniM_walker_Main";
-	rename -uid "48AD0721-4430-2861-F9E1-9D97D22A8E8D";
+createNode transform -n "Ultimate_Walker_v1_0_1:Body_Rig_Grp" -p "Ultimate_Walker_v1_0_1:AniM_walker_Main";
+	rename -uid "91017813-490F-ED0E-F0FC-2087B1AB38C5";
 	setAttr -l on -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -3627,8 +3749,8 @@ createNode transform -n "Body_Rig_Grp" -p "AniM_walker_Main";
 	setAttr -k off ".sx";
 	setAttr -k off ".sz";
 	setAttr -k off ".sy";
-createNode transform -n "Mesh_Flex_Grp" -p "Body_Rig_Grp";
-	rename -uid "5677262C-4DB7-5286-8F73-83A449A72F7F";
+createNode transform -n "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp" -p "Ultimate_Walker_v1_0_1:Body_Rig_Grp";
+	rename -uid "4BBBF5ED-4ED0-8E23-39D7-699B03C35B13";
 	setAttr -l on -k off ".v";
 	setAttr ".ove" yes;
 	setAttr -k off ".tx";
@@ -3640,8 +3762,8 @@ createNode transform -n "Mesh_Flex_Grp" -p "Body_Rig_Grp";
 	setAttr -k off ".sy";
 	setAttr -k off ".sx";
 	setAttr -k off ".sz";
-createNode nurbsSurface -n "Mesh_Flex_GrpShapeOrig" -p "Mesh_Flex_Grp";
-	rename -uid "D5333670-434F-DEA9-F8F9-42B11C431946";
+createNode nurbsSurface -n "Ultimate_Walker_v1_0_1:Mesh_Flex_GrpShapeOrig" -p "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp";
+	rename -uid "BF41DA74-452F-758C-D626-089F99178BA7";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".ove" yes;
@@ -3736,8 +3858,8 @@ createNode nurbsSurface -n "Mesh_Flex_GrpShapeOrig" -p "Mesh_Flex_Grp";
 		1.7399673366363372e-16 2 -1.6804838495427943e-17
 		
 		;
-createNode transform -n "Extras_Grp" -p "Mesh_Flex_Grp";
-	rename -uid "B69AE10C-4849-E043-8E38-1CBDE8C99082";
+createNode transform -n "Ultimate_Walker_v1_0_1:Extras_Grp" -p "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp";
+	rename -uid "134752C1-4908-958D-0BA7-B591F8DA7412";
 	setAttr -l on -k off ".v" no;
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -3748,8 +3870,8 @@ createNode transform -n "Extras_Grp" -p "Mesh_Flex_Grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode parentConstraint -n "ballTypes_pConst" -p "Extras_Grp";
-	rename -uid "9CCBC222-47E2-DE06-AA7A-2A8E2D394594";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:ballTypes_pConst" -p "Ultimate_Walker_v1_0_1:Extras_Grp";
+	rename -uid "E40AB2AB-4E67-C38A-71F2-1C99D9FB2A0B";
 	addAttr -ci true -sn "w0" -ln "joint1W0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -l on -k off ".v" no;
@@ -3765,8 +3887,8 @@ createNode parentConstraint -n "ballTypes_pConst" -p "Extras_Grp";
 	setAttr ".erp" yes;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "ballTypes_olcek" -p "Extras_Grp";
-	rename -uid "832D81DA-461E-A36E-4F0B-B39627AEBE6D";
+createNode transform -n "Ultimate_Walker_v1_0_1:ballTypes_olcek" -p "Ultimate_Walker_v1_0_1:Extras_Grp";
+	rename -uid "612BB970-4B58-5232-C265-6C99777535B3";
 	setAttr -l on -k off ".v" no;
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -3777,11 +3899,11 @@ createNode transform -n "ballTypes_olcek" -p "Extras_Grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode distanceDimShape -n "ballTypes_olcekShape" -p "ballTypes_olcek";
-	rename -uid "59CE6EC1-4C89-B3DE-E457-029B731E4741";
+createNode distanceDimShape -n "Ultimate_Walker_v1_0_1:ballTypes_olcekShape" -p "Ultimate_Walker_v1_0_1:ballTypes_olcek";
+	rename -uid "FE046613-49EE-8D9D-86E2-85A8B559688D";
 	setAttr -k off ".v";
-createNode transform -n "Loc_kuyruk" -p "Mesh_Flex_Grp";
-	rename -uid "94F0DE16-4BEA-67E8-4A62-77B35933AA54";
+createNode transform -n "Ultimate_Walker_v1_0_1:Loc_kuyruk" -p "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp";
+	rename -uid "040D0F51-42C0-9418-953A-2BA1599FC9A1";
 	setAttr -l on -k off ".v" no;
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -3794,8 +3916,8 @@ createNode transform -n "Loc_kuyruk" -p "Mesh_Flex_Grp";
 	setAttr -l on -k off ".sz";
 	setAttr ".rp" -type "double3" 0 1 0.97778891662075229 ;
 	setAttr ".sp" -type "double3" 0 1 0.97778891662075229 ;
-createNode locator -n "Loc_kuyrukShape" -p "Loc_kuyruk";
-	rename -uid "9F4BD856-488F-2444-8385-DB851ED6742F";
+createNode locator -n "Ultimate_Walker_v1_0_1:Loc_kuyrukShape" -p "Ultimate_Walker_v1_0_1:Loc_kuyruk";
+	rename -uid "87227CBF-44BA-FF0B-6E84-20B0BBAB6589";
 	setAttr -k off ".v";
 	setAttr ".lp" -type "double3" 0 1 0.97778891662075229 ;
 	setAttr -l on -cb off ".lpx";
@@ -3804,8 +3926,8 @@ createNode locator -n "Loc_kuyrukShape" -p "Loc_kuyruk";
 	setAttr -l on -cb off ".lsx";
 	setAttr -l on -cb off ".lsy";
 	setAttr -l on -cb off ".lsz";
-createNode transform -n "Mesh_body_Grp" -p "Mesh_Flex_Grp";
-	rename -uid "BB15F98A-4365-EE6A-F80B-40A61CB4E092";
+createNode transform -n "Ultimate_Walker_v1_0_1:Mesh_body_Grp" -p "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp";
+	rename -uid "B3599308-4F03-636A-CC3D-3D965C8D58B9";
 	setAttr -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -3816,8 +3938,8 @@ createNode transform -n "Mesh_body_Grp" -p "Mesh_Flex_Grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode transform -n "simple_body" -p "Mesh_body_Grp";
-	rename -uid "72612B01-43BA-D385-DBC9-49AFC03F0A22";
+createNode transform -n "Ultimate_Walker_v1_0_1:simple_body" -p "Ultimate_Walker_v1_0_1:Mesh_body_Grp";
+	rename -uid "5978522E-4DD3-110F-374F-F187638840BA";
 	setAttr -l on -k off ".v";
 	setAttr ".t" -type "double3" 0 1 0 ;
 	setAttr -l on -k off ".tx";
@@ -3829,8 +3951,8 @@ createNode transform -n "simple_body" -p "Mesh_body_Grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode mesh -n "simple_bodyShape" -p "simple_body";
-	rename -uid "751B1244-43DC-18F0-0E5B-1494C5349B4A";
+createNode mesh -n "Ultimate_Walker_v1_0_1:simple_bodyShape" -p "Ultimate_Walker_v1_0_1:simple_body";
+	rename -uid "5BDF4AE6-4F3B-673B-FD7E-459063F72808";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -7731,8 +7853,8 @@ createNode mesh -n "simple_bodyShape" -p "simple_body";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode transform -n "simple_body_line" -p "Mesh_body_Grp";
-	rename -uid "388D3550-45CC-4A7D-F38A-C8BD21E17740";
+createNode transform -n "Ultimate_Walker_v1_0_1:simple_body_line" -p "Ultimate_Walker_v1_0_1:Mesh_body_Grp";
+	rename -uid "A6AEFA45-4392-7B24-5527-55B8F58BB716";
 	setAttr -l on -k off ".v";
 	setAttr ".t" -type "double3" 0 1 0 ;
 	setAttr -l on -k off ".tx";
@@ -7745,8 +7867,8 @@ createNode transform -n "simple_body_line" -p "Mesh_body_Grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode mesh -n "simple_body_lineShape" -p "simple_body_line";
-	rename -uid "B64B5259-4BEC-08CD-B5FD-3FA451E22043";
+createNode mesh -n "Ultimate_Walker_v1_0_1:simple_body_lineShape" -p "Ultimate_Walker_v1_0_1:simple_body_line";
+	rename -uid "0D1D4101-488B-3A0B-C4A8-609F2E7DBDD4";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -8331,8 +8453,8 @@ createNode mesh -n "simple_body_lineShape" -p "simple_body_line";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode transform -n "CNT_Grp" -p "Body_Rig_Grp";
-	rename -uid "F1993B98-4910-27E5-61F1-AC933EA14BCF";
+createNode transform -n "Ultimate_Walker_v1_0_1:CNT_Grp" -p "Ultimate_Walker_v1_0_1:Body_Rig_Grp";
+	rename -uid "C0641760-4E87-6B0E-4246-FDBB90FDA85B";
 	setAttr -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -8343,8 +8465,8 @@ createNode transform -n "CNT_Grp" -p "Body_Rig_Grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode transform -n "CTRL_Top_Grp" -p "CNT_Grp";
-	rename -uid "110364B4-48AB-C796-E1EE-FA92803A1082";
+createNode transform -n "Ultimate_Walker_v1_0_1:CTRL_Top_Grp" -p "Ultimate_Walker_v1_0_1:CNT_Grp";
+	rename -uid "966C6EE3-442F-6914-1B74-608C10D536FC";
 	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -8357,8 +8479,8 @@ createNode transform -n "CTRL_Top_Grp" -p "CNT_Grp";
 	setAttr -l on -k off ".sz";
 	setAttr ".rp" -type "double3" 0 2 1.1102230246251565e-16 ;
 	setAttr ".sp" -type "double3" 0 2 1.1102230246251565e-16 ;
-createNode transform -n "CTRL_Top" -p "CTRL_Top_Grp";
-	rename -uid "1F2EE7AB-47B6-0A76-B005-26AAE45BEA5D";
+createNode transform -n "Ultimate_Walker_v1_0_1:CTRL_Top" -p "Ultimate_Walker_v1_0_1:CTRL_Top_Grp";
+	rename -uid "F9D24F81-4499-EE7D-0511-339E1BC8FA0A";
 	setAttr -l on -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 18;
@@ -8380,8 +8502,8 @@ createNode transform -n "CTRL_Top" -p "CTRL_Top_Grp";
 	setAttr ".xtxe" yes;
 	setAttr ".xtye" yes;
 	setAttr ".xtze" yes;
-createNode nurbsCurve -n "CTRL_TopShape" -p "CTRL_Top";
-	rename -uid "000CB661-47A3-ACED-38FF-7795474632BF";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:CTRL_TopShape" -p "Ultimate_Walker_v1_0_1:CTRL_Top";
+	rename -uid "889191EF-44FF-3086-566A-F5A07B1DEBC4";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
 		3 8 2 no 3
@@ -8399,8 +8521,8 @@ createNode nurbsCurve -n "CTRL_TopShape" -p "CTRL_Top";
 		-9.8438512587641054e-17 2 -0.86281406178522024
 		-0.61010167399143678 2 -0.61010167399143844
 		;
-createNode transform -n "locator2" -p "CTRL_Top";
-	rename -uid "2CA4F700-4F5A-99BC-8A11-E7BA03BCAC71";
+createNode transform -n "Ultimate_Walker_v1_0_1:locator2" -p "Ultimate_Walker_v1_0_1:CTRL_Top";
+	rename -uid "933F13FA-4901-54D4-A83D-68A8D8C55EEF";
 	setAttr -l on -k off ".v" no;
 	setAttr ".t" -type "double3" 0 2 0 ;
 	setAttr -l on -k off ".tx";
@@ -8412,8 +8534,8 @@ createNode transform -n "locator2" -p "CTRL_Top";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode locator -n "locator_Top" -p "locator2";
-	rename -uid "ABD17245-4065-C6CD-6C22-04B615F71177";
+createNode locator -n "Ultimate_Walker_v1_0_1:locator_Top" -p "Ultimate_Walker_v1_0_1:locator2";
+	rename -uid "21055904-4A33-158A-F8CC-FBB8C0CABD17";
 	setAttr -k off ".v";
 	setAttr -l on -cb off ".lpx";
 	setAttr -l on -cb off ".lpy";
@@ -8421,8 +8543,8 @@ createNode locator -n "locator_Top" -p "locator2";
 	setAttr -l on -cb off ".lsx";
 	setAttr -l on -cb off ".lsy";
 	setAttr -l on -cb off ".lsz";
-createNode ikHandle -n "ikHandle1" -p "CTRL_Top";
-	rename -uid "CC5CDAB0-4E5A-70CB-45C6-A1BB8F267FB1";
+createNode ikHandle -n "Ultimate_Walker_v1_0_1:ikHandle1" -p "Ultimate_Walker_v1_0_1:CTRL_Top";
+	rename -uid "DEF19C3E-40AD-50A7-59FA-C99822D172C9";
 	setAttr -l on -k off ".v" no;
 	setAttr ".t" -type "double3" 0 2 0 ;
 	setAttr -l on -k off ".tx";
@@ -8444,8 +8566,8 @@ createNode ikHandle -n "ikHandle1" -p "CTRL_Top";
 	setAttr ".roc" yes;
 	setAttr -l on -k off ".ikb";
 	setAttr ".sio" yes;
-createNode parentConstraint -n "CTRL_Top_Grp_pConst" -p "CTRL_Top_Grp";
-	rename -uid "8213FDB9-4FB5-691C-6EA5-86ACC42392F1";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst" -p "Ultimate_Walker_v1_0_1:CTRL_Top_Grp";
+	rename -uid "99A7A81E-409E-374E-10C1-40A597D5D3D7";
 	addAttr -ci true -sn "w0" -ln "CTRL_MainW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -8462,8 +8584,8 @@ createNode parentConstraint -n "CTRL_Top_Grp_pConst" -p "CTRL_Top_Grp";
 	setAttr ".tg[0].tot" -type "double3" 0 1 1.1102230246251565e-16 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "CTRL_Bottom_Grp" -p "CNT_Grp";
-	rename -uid "DFCBFE78-4177-461C-B9A1-04BF5CE6EBA4";
+createNode transform -n "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp" -p "Ultimate_Walker_v1_0_1:CNT_Grp";
+	rename -uid "5B55CFF6-4008-17C5-ADE3-86BC797B7C97";
 	setAttr -av ".v" yes;
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -8474,8 +8596,8 @@ createNode transform -n "CTRL_Bottom_Grp" -p "CNT_Grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode transform -n "CTRL_Bottom" -p "CTRL_Bottom_Grp";
-	rename -uid "72D1D40A-4A01-FEBF-EA5A-76B1974405B6";
+createNode transform -n "Ultimate_Walker_v1_0_1:CTRL_Bottom" -p "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp";
+	rename -uid "8DCF1B43-4697-A055-6830-63A25CCE44D0";
 	setAttr -l on -k off ".v" no;
 	setAttr ".ovdt" 2;
 	setAttr ".ove" yes;
@@ -8497,8 +8619,8 @@ createNode transform -n "CTRL_Bottom" -p "CTRL_Bottom_Grp";
 	setAttr ".xtxe" yes;
 	setAttr ".xtye" yes;
 	setAttr ".xtze" yes;
-createNode nurbsCurve -n "CTRL_BottomShape" -p "CTRL_Bottom";
-	rename -uid "734ED4D8-4118-7B5F-1D62-12BEF87058F5";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:CTRL_BottomShape" -p "Ultimate_Walker_v1_0_1:CTRL_Bottom";
+	rename -uid "19A7071D-4C41-0D4E-E7A8-BC8A943139DC";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
 		3 8 2 no 3
@@ -8516,8 +8638,8 @@ createNode nurbsCurve -n "CTRL_BottomShape" -p "CTRL_Bottom";
 		-1.2752766817132807e-16 5.0891311625554901e-17 -1.1177806579202205
 		-0.79039028309454684 3.5985591553907646e-17 -0.79039028309454895
 		;
-createNode joint -n "Jnt_main" -p "CTRL_Bottom";
-	rename -uid "1A34E0B8-40BE-B220-134D-FDB192116DB3";
+createNode joint -n "Ultimate_Walker_v1_0_1:Jnt_main" -p "Ultimate_Walker_v1_0_1:CTRL_Bottom";
+	rename -uid "5239323E-4AF0-CAC4-AB34-45A611B79BCC";
 	setAttr -l on -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovv" no;
@@ -8534,8 +8656,8 @@ createNode joint -n "Jnt_main" -p "CTRL_Bottom";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "yxz";
 	setAttr -cb off ".radi" 0.55172413793103448;
-createNode joint -n "joint2" -p "Jnt_main";
-	rename -uid "5F41B997-48FF-BF2F-4B46-A5880C7B081C";
+createNode joint -n "Ultimate_Walker_v1_0_1:joint2" -p "Ultimate_Walker_v1_0_1:Jnt_main";
+	rename -uid "227617A9-4254-FB51-ADFC-9D9D5DA0BE29";
 	setAttr -l on -k off ".v";
 	setAttr -k off ".ty";
 	setAttr -l on -k off ".tx";
@@ -8549,8 +8671,8 @@ createNode joint -n "joint2" -p "Jnt_main";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr -cb off ".radi" 0.55172413793103448;
-createNode ikEffector -n "effector1" -p "Jnt_main";
-	rename -uid "2826B08F-4B51-01AA-E26D-D7B173C93289";
+createNode ikEffector -n "Ultimate_Walker_v1_0_1:effector1" -p "Ultimate_Walker_v1_0_1:Jnt_main";
+	rename -uid "738B71E4-4209-425D-AD0E-5C80D7E98223";
 	setAttr -l on -k off ".v" no;
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -8562,8 +8684,8 @@ createNode ikEffector -n "effector1" -p "Jnt_main";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
 	setAttr -l on -k off ".hd" yes;
-createNode transform -n "locator1" -p "CTRL_Bottom";
-	rename -uid "D9AD2F42-4BA2-A4E2-B29D-BE86144206FA";
+createNode transform -n "Ultimate_Walker_v1_0_1:locator1" -p "Ultimate_Walker_v1_0_1:CTRL_Bottom";
+	rename -uid "B4134E06-4D01-BC3E-4814-EAAA103C038A";
 	setAttr -l on -k off ".v" no;
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -8574,8 +8696,8 @@ createNode transform -n "locator1" -p "CTRL_Bottom";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode locator -n "locator_Bottom" -p "locator1";
-	rename -uid "4DC62782-4489-068C-CC53-54B278D6D95D";
+createNode locator -n "Ultimate_Walker_v1_0_1:locator_Bottom" -p "Ultimate_Walker_v1_0_1:locator1";
+	rename -uid "7FA54C53-49E4-C0D6-92F6-B5BFA26E8F58";
 	setAttr -k off ".v";
 	setAttr -l on -cb off ".lpx";
 	setAttr -l on -cb off ".lpy";
@@ -8583,8 +8705,9 @@ createNode locator -n "locator_Bottom" -p "locator1";
 	setAttr -l on -cb off ".lsx";
 	setAttr -l on -cb off ".lsy";
 	setAttr -l on -cb off ".lsz";
-createNode parentConstraint -n "CTRL_Bottom_Grp_pConst" -p "CTRL_Bottom_Grp";
-	rename -uid "A1ED48D1-4BB1-65E7-BA48-E79728906B50";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst" -p
+		 "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp";
+	rename -uid "2BB51F9E-4185-B3BF-CB45-548C577C1A13";
 	addAttr -ci true -sn "w0" -ln "CTRL_MainW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -8601,8 +8724,8 @@ createNode parentConstraint -n "CTRL_Bottom_Grp_pConst" -p "CTRL_Bottom_Grp";
 	setAttr ".tg[0].tot" -type "double3" 0 -1 0 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "CTRL_Main_Grp" -p "CNT_Grp";
-	rename -uid "4C1A58A4-4102-9DC7-A9A5-F8ABAAA6F13F";
+createNode transform -n "Ultimate_Walker_v1_0_1:CTRL_Main_Grp" -p "Ultimate_Walker_v1_0_1:CNT_Grp";
+	rename -uid "5FA59980-40EE-9CE3-15F9-03BB0B61B5C1";
 	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -8613,8 +8736,8 @@ createNode transform -n "CTRL_Main_Grp" -p "CNT_Grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode transform -n "CTRL_Main" -p "CTRL_Main_Grp";
-	rename -uid "804B3B23-4B1C-4C68-80F1-30A647315B1A";
+createNode transform -n "Ultimate_Walker_v1_0_1:CTRL_Main" -p "Ultimate_Walker_v1_0_1:CTRL_Main_Grp";
+	rename -uid "23F96F03-481A-0E88-80F3-7F8A72936797";
 	setAttr -l on -k off ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 17;
@@ -8622,9 +8745,10 @@ createNode transform -n "CTRL_Main" -p "CTRL_Main_Grp";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
 	setAttr ".rp" -type "double3" 0 3.0378656168134381 0 ;
+	setAttr ".rpt" -type "double3" 0 -3.6391245919475956e-15 -2.7755575615628914e-17 ;
 	setAttr ".sp" -type "double3" 0 3.0378656168134381 0 ;
-createNode nurbsCurve -n "CTRL_MainShape" -p "CTRL_Main";
-	rename -uid "64597E8B-4482-61FB-02FE-0DA5CF8D3C82";
+createNode nurbsCurve -n "Ultimate_Walker_v1_0_1:CTRL_MainShape" -p "Ultimate_Walker_v1_0_1:CTRL_Main";
+	rename -uid "A6EE4661-4591-7A51-93C2-E284D3D111C2";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
 		3 8 2 no 3
@@ -8642,8 +8766,8 @@ createNode nurbsCurve -n "CTRL_MainShape" -p "CTRL_Main";
 		-1.8330086279573731e-16 3.0378656168134381 -1.6066329915003381
 		-1.1360610831679177 3.0378656168134381 -1.1360610831679177
 		;
-createNode parentConstraint -n "CTRL_Main_Grp_pConst" -p "CTRL_Main_Grp";
-	rename -uid "CC3DD9B4-466B-FF02-6C42-BBB906CF7CE6";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst" -p "Ultimate_Walker_v1_0_1:CTRL_Main_Grp";
+	rename -uid "B8D7B97B-4599-2D27-621E-549932D82F72";
 	addAttr -ci true -sn "w0" -ln "AniM_ballW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -8660,8 +8784,8 @@ createNode parentConstraint -n "CTRL_Main_Grp_pConst" -p "CTRL_Main_Grp";
 	setAttr ".tg[0].tot" -type "double3" 0 1.7763568394002503e-15 8.8817841970012563e-16 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "JNT_Grp" -p "CNT_Grp";
-	rename -uid "FFA0AAA2-41B4-4ED0-2B86-0DBAD2B35757";
+createNode transform -n "Ultimate_Walker_v1_0_1:JNT_Grp" -p "Ultimate_Walker_v1_0_1:CNT_Grp";
+	rename -uid "E6914A1B-40C9-C494-33A2-548D4D3854DC";
 	setAttr -l on -k off ".v" no;
 	setAttr ".ovdt" 2;
 	setAttr ".ove" yes;
@@ -8674,8 +8798,8 @@ createNode transform -n "JNT_Grp" -p "CNT_Grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode joint -n "JNT_kuyruk_01" -p "JNT_Grp";
-	rename -uid "7DF4C7B5-4411-54E2-FB43-179318134D88";
+createNode joint -n "Ultimate_Walker_v1_0_1:JNT_kuyruk_01" -p "Ultimate_Walker_v1_0_1:JNT_Grp";
+	rename -uid "2CB5C100-4EFE-C08D-15F2-758F94C3910D";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr -l on -k off ".v";
 	setAttr ".uoc" 1;
@@ -8695,8 +8819,8 @@ createNode joint -n "JNT_kuyruk_01" -p "JNT_Grp";
 	setAttr ".bps" -type "matrix" 1.7763568394002505e-15 0 1.0000000000000002 0 0 1 0 0
 		 -1.0000000000000002 0 1.7763568394002505e-15 0 0 1 1 1;
 	setAttr -l on -cb off ".radi" 0.50000000000000011;
-createNode joint -n "JNT_kuyruk_02" -p "JNT_kuyruk_01";
-	rename -uid "F361FDAC-4D89-6093-82F6-3F94EC0C5E11";
+createNode joint -n "Ultimate_Walker_v1_0_1:JNT_kuyruk_02" -p "Ultimate_Walker_v1_0_1:JNT_kuyruk_01";
+	rename -uid "DA6345B1-4EB3-83D2-046E-E6A24C212187";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr -l on -k off ".v";
 	setAttr ".uoc" 1;
@@ -8716,8 +8840,8 @@ createNode joint -n "JNT_kuyruk_02" -p "JNT_kuyruk_01";
 	setAttr ".bps" -type "matrix" 1.7763568394002505e-15 0 1.0000000000000002 0 0 1 0 0
 		 -1.0000000000000002 0 1.7763568394002505e-15 0 -1.9721522630525295e-31 1 1.7255770013869025 1;
 	setAttr -l on -cb off ".radi" 0.5;
-createNode joint -n "JNT_kuyruk_03" -p "JNT_kuyruk_02";
-	rename -uid "FD219BB2-4BC4-C298-565E-28AC6CB851AF";
+createNode joint -n "Ultimate_Walker_v1_0_1:JNT_kuyruk_03" -p "Ultimate_Walker_v1_0_1:JNT_kuyruk_02";
+	rename -uid "8300145E-484E-14DA-8437-B59D893A024F";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr -l on -k off ".v";
 	setAttr ".uoc" 1;
@@ -8737,8 +8861,8 @@ createNode joint -n "JNT_kuyruk_03" -p "JNT_kuyruk_02";
 	setAttr ".bps" -type "matrix" 1.7763568394002505e-15 0 1.0000000000000002 0 0 1 0 0
 		 -1.0000000000000002 0 1.7763568394002505e-15 0 -1.9721522630525295e-31 1.0000000000000002 2.6612591110869595 1;
 	setAttr -l on -cb off ".radi" 0.50000000000000011;
-createNode joint -n "JNT_kuyruk_04" -p "JNT_kuyruk_03";
-	rename -uid "FC00CBF7-4088-F9E3-4B9A-2EB6580E94DA";
+createNode joint -n "Ultimate_Walker_v1_0_1:JNT_kuyruk_04" -p "Ultimate_Walker_v1_0_1:JNT_kuyruk_03";
+	rename -uid "8384ABE0-4A4E-5C00-A311-9D9DE3093FAE";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr -l on -k off ".v";
 	setAttr ".uoc" 1;
@@ -8759,8 +8883,8 @@ createNode joint -n "JNT_kuyruk_04" -p "JNT_kuyruk_03";
 	setAttr ".bps" -type "matrix" 1.0000000000000004 0 0 0 0 1 0 0 0 0 1.0000000000000004 0
 		 3.9443045261050599e-31 1 3.1853067228673688 1;
 	setAttr -l on -cb off ".radi" 0.50000000000000011;
-createNode joint -n "JNT_kuyruk_05" -p "JNT_kuyruk_04";
-	rename -uid "D072ABA0-4135-ED83-FF39-748ED23ADC4F";
+createNode joint -n "Ultimate_Walker_v1_0_1:JNT_kuyruk_05" -p "Ultimate_Walker_v1_0_1:JNT_kuyruk_04";
+	rename -uid "06EE7FC6-4C69-E39F-D373-F5A4812CFBC2";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr -l on -k off ".v";
 	setAttr ".uoc" 1;
@@ -8781,8 +8905,8 @@ createNode joint -n "JNT_kuyruk_05" -p "JNT_kuyruk_04";
 	setAttr ".bps" -type "matrix" 1.0000000000000004 0 0 0 0 1 0 0 0 0 1.0000000000000004 0
 		 7.3090614572344687e-32 1 4.0000000000000027 1;
 	setAttr -l on -cb off ".radi" 0.5;
-createNode transform -n "Mesh_Grp" -p "AniM_walker_Main";
-	rename -uid "0AB396AF-4DB9-9C7F-2514-AB8620A77C84";
+createNode transform -n "Ultimate_Walker_v1_0_1:Mesh_Grp" -p "Ultimate_Walker_v1_0_1:AniM_walker_Main";
+	rename -uid "88BECF59-40D9-8FC4-7B0C-588EDCBF2E3E";
 	setAttr -l on -k off ".v";
 	setAttr ".ove" yes;
 	setAttr -l on -k off ".tx";
@@ -8796,8 +8920,8 @@ createNode transform -n "Mesh_Grp" -p "AniM_walker_Main";
 	setAttr -l on -k off ".sz";
 	setAttr ".rp" -type "double3" 0.58301591873168945 1.3207235336303711 0.12797071039676666 ;
 	setAttr ".sp" -type "double3" 0.58301591873168945 1.3207235336303711 0.12797071039676666 ;
-createNode transform -n "leg_binded_grp" -p "Mesh_Grp";
-	rename -uid "461AAD9F-49E9-CB58-1BB7-9BAE4C1E1398";
+createNode transform -n "Ultimate_Walker_v1_0_1:leg_binded_grp" -p "Ultimate_Walker_v1_0_1:Mesh_Grp";
+	rename -uid "65F7407A-4D9A-4011-D78F-5E8C4DEEE2C9";
 	setAttr -l on -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -8808,8 +8932,8 @@ createNode transform -n "leg_binded_grp" -p "Mesh_Grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode transform -n "R_leg_Grp" -p "leg_binded_grp";
-	rename -uid "A8407286-44EF-9650-87C7-1C85E155B927";
+createNode transform -n "Ultimate_Walker_v1_0_1:R_leg_Grp" -p "Ultimate_Walker_v1_0_1:leg_binded_grp";
+	rename -uid "D14AC0FD-4481-DF05-687B-98911B84DBEF";
 	setAttr -l on -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -8820,8 +8944,8 @@ createNode transform -n "R_leg_Grp" -p "leg_binded_grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode transform -n "R_upperleg" -p "R_leg_Grp";
-	rename -uid "6553F25F-45F3-87F1-18DD-5AB46AF724A4";
+createNode transform -n "Ultimate_Walker_v1_0_1:R_upperleg" -p "Ultimate_Walker_v1_0_1:R_leg_Grp";
+	rename -uid "3C5B9B60-4476-53F7-1203-45B2B6AB99A3";
 	setAttr -l on -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -8834,8 +8958,8 @@ createNode transform -n "R_upperleg" -p "R_leg_Grp";
 	setAttr -l on -k off ".sz";
 	setAttr ".rp" -type "double3" -0.58301600000000009 2.3093400000000006 0.031664999999999971 ;
 	setAttr ".sp" -type "double3" -0.58301600000000009 2.3093400000000006 0.031664999999999971 ;
-createNode mesh -n "R_upperlegShape" -p "R_upperleg";
-	rename -uid "18AE05F1-4062-4C15-577E-488651778E1A";
+createNode mesh -n "Ultimate_Walker_v1_0_1:R_upperlegShape" -p "Ultimate_Walker_v1_0_1:R_upperleg";
+	rename -uid "13E32A56-445C-C782-984B-0986C3277FA0";
 	setAttr -k off ".v";
 	setAttr -s 4 ".iog[0].og";
 	setAttr ".vir" yes;
@@ -8850,8 +8974,8 @@ createNode mesh -n "R_upperlegShape" -p "R_upperleg";
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
 	setAttr ".vcs" 2;
-createNode mesh -n "polySurfaceShape2" -p "R_upperleg";
-	rename -uid "0A8604B6-468B-16ED-BFC8-4EABEA82056C";
+createNode mesh -n "Ultimate_Walker_v1_0_1:polySurfaceShape2" -p "Ultimate_Walker_v1_0_1:R_upperleg";
+	rename -uid "595C667A-4C1D-66FE-43F7-94BE3A1CA403";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -9311,8 +9435,8 @@ createNode mesh -n "polySurfaceShape2" -p "R_upperleg";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode mesh -n "polySurfaceShape5" -p "R_upperleg";
-	rename -uid "309D0856-4AFE-EF8C-9B71-EC9263F3F59D";
+createNode mesh -n "Ultimate_Walker_v1_0_1:polySurfaceShape5" -p "Ultimate_Walker_v1_0_1:R_upperleg";
+	rename -uid "641CAC82-42D9-3856-2248-BFB3764E15E7";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -10081,8 +10205,8 @@ createNode mesh -n "polySurfaceShape5" -p "R_upperleg";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode mesh -n "polySurfaceShape11" -p "R_upperleg";
-	rename -uid "41806BE3-435A-30C3-AFCD-22AE09CE6952";
+createNode mesh -n "Ultimate_Walker_v1_0_1:polySurfaceShape11" -p "Ultimate_Walker_v1_0_1:R_upperleg";
+	rename -uid "2A6852EE-4602-8884-BE6F-CAAF7CF20887";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -10949,8 +11073,8 @@ createNode mesh -n "polySurfaceShape11" -p "R_upperleg";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode mesh -n "R_upperlegShapeOrig" -p "R_upperleg";
-	rename -uid "63A20FD5-4FEA-8E83-DC52-64A7A0016BFF";
+createNode mesh -n "Ultimate_Walker_v1_0_1:R_upperlegShapeOrig" -p "Ultimate_Walker_v1_0_1:R_upperleg";
+	rename -uid "BB416DFE-4A49-8AF9-3987-839DA689AFED";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -12214,8 +12338,8 @@ createNode mesh -n "R_upperlegShapeOrig" -p "R_upperleg";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".vnm" 0;
 	setAttr ".vcs" 2;
-createNode transform -n "R_leg" -p "R_leg_Grp";
-	rename -uid "11538A9B-408C-1E57-7E32-E4B0B79D3BD0";
+createNode transform -n "Ultimate_Walker_v1_0_1:R_leg" -p "Ultimate_Walker_v1_0_1:R_leg_Grp";
+	rename -uid "2302CDF0-48DD-BA90-9D60-4C9BA798B255";
 	setAttr -l on -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -12231,8 +12355,8 @@ createNode transform -n "R_leg" -p "R_leg_Grp";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".hdl" -type "double3" 0.0093106031417844338 3.6485576629638672 0.00035119056701615747 ;
-createNode mesh -n "R_legShape" -p "R_leg";
-	rename -uid "4AA59BD2-41FD-26A2-2544-E8AC4718F801";
+createNode mesh -n "Ultimate_Walker_v1_0_1:R_legShape" -p "Ultimate_Walker_v1_0_1:R_leg";
+	rename -uid "34913A4C-467D-83F7-2EE8-3E9D3E71B3EB";
 	setAttr -k off ".v";
 	setAttr -s 4 ".iog[0].og";
 	setAttr ".vir" yes;
@@ -12249,8 +12373,8 @@ createNode mesh -n "R_legShape" -p "R_leg";
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
 	setAttr ".vcs" 2;
-createNode mesh -n "R_legShapeOrig" -p "R_leg";
-	rename -uid "ABBA71B0-4E39-6300-05C7-7990721AE634";
+createNode mesh -n "Ultimate_Walker_v1_0_1:R_legShapeOrig" -p "Ultimate_Walker_v1_0_1:R_leg";
+	rename -uid "37FB9AC1-4887-2F8F-E1C7-70840A7ADE39";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -12479,8 +12603,8 @@ createNode mesh -n "R_legShapeOrig" -p "R_leg";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".vnm" 0;
-createNode mesh -n "polySurfaceShape10" -p "R_leg";
-	rename -uid "7C03DADB-4378-E6BE-A181-CEB46C79A469";
+createNode mesh -n "Ultimate_Walker_v1_0_1:polySurfaceShape10" -p "Ultimate_Walker_v1_0_1:R_leg";
+	rename -uid "8DE7B49B-4E5E-788D-6F11-BA8E30B3FC33";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".ove" yes;
@@ -12774,8 +12898,8 @@ createNode mesh -n "polySurfaceShape10" -p "R_leg";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".vnm" 0;
-createNode mesh -n "R_legShapeOrig1" -p "R_leg";
-	rename -uid "34BA27AC-4142-381A-F85E-52888249D3BF";
+createNode mesh -n "Ultimate_Walker_v1_0_1:R_legShapeOrig1" -p "Ultimate_Walker_v1_0_1:R_leg";
+	rename -uid "59BBD211-453E-762D-7767-E78F847DC1CB";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -13095,8 +13219,8 @@ createNode mesh -n "R_legShapeOrig1" -p "R_leg";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".vnm" 0;
 	setAttr ".vcs" 2;
-createNode transform -n "L_leg_Grp" -p "leg_binded_grp";
-	rename -uid "994C1BE0-4B83-B197-368B-ABABDA711C2B";
+createNode transform -n "Ultimate_Walker_v1_0_1:L_leg_Grp" -p "Ultimate_Walker_v1_0_1:leg_binded_grp";
+	rename -uid "24789195-4E52-186F-885F-0EA82EC5AF09";
 	setAttr -l on -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -13107,8 +13231,8 @@ createNode transform -n "L_leg_Grp" -p "leg_binded_grp";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
 	setAttr -l on -k off ".sz";
-createNode transform -n "L_upperleg" -p "L_leg_Grp";
-	rename -uid "B4969679-4CF5-4A5A-CFAE-6F9E0837D76B";
+createNode transform -n "Ultimate_Walker_v1_0_1:L_upperleg" -p "Ultimate_Walker_v1_0_1:L_leg_Grp";
+	rename -uid "A401B47E-41A8-CAF8-F6C4-2FB141D5E38E";
 	setAttr -l on -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -13121,8 +13245,8 @@ createNode transform -n "L_upperleg" -p "L_leg_Grp";
 	setAttr -l on -k off ".sz";
 	setAttr ".rp" -type "double3" 0.58488165120000024 2.3093400000000006 0.031664999999999971 ;
 	setAttr ".sp" -type "double3" 0.58488165120000024 2.3093400000000006 0.031664999999999971 ;
-createNode mesh -n "L_upperlegShape" -p "L_upperleg";
-	rename -uid "7E424784-41B0-861D-A0FE-BBB94776079A";
+createNode mesh -n "Ultimate_Walker_v1_0_1:L_upperlegShape" -p "Ultimate_Walker_v1_0_1:L_upperleg";
+	rename -uid "97BB3792-4879-44ED-8E7A-D0A3EB4EF2D9";
 	setAttr -k off ".v";
 	setAttr -s 4 ".iog[0].og";
 	setAttr ".vir" yes;
@@ -13138,8 +13262,8 @@ createNode mesh -n "L_upperlegShape" -p "L_upperleg";
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
 	setAttr ".vcs" 2;
-createNode mesh -n "polySurfaceShape2" -p "L_upperleg";
-	rename -uid "C1BF41F6-47B6-6769-E046-098D84DA6ACF";
+createNode mesh -n "Ultimate_Walker_v1_0_1:polySurfaceShape2" -p "Ultimate_Walker_v1_0_1:L_upperleg";
+	rename -uid "2A4266E2-4102-A770-C39E-2DA58C92F833";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -13599,8 +13723,8 @@ createNode mesh -n "polySurfaceShape2" -p "L_upperleg";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode mesh -n "polySurfaceShape5" -p "L_upperleg";
-	rename -uid "7843E7AF-4197-8C09-73E3-AE83F3E1C8E3";
+createNode mesh -n "Ultimate_Walker_v1_0_1:polySurfaceShape5" -p "Ultimate_Walker_v1_0_1:L_upperleg";
+	rename -uid "C321E12A-423E-527E-5022-41B222A51B6D";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -14369,8 +14493,8 @@ createNode mesh -n "polySurfaceShape5" -p "L_upperleg";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode mesh -n "polySurfaceShape11" -p "L_upperleg";
-	rename -uid "5DB98E85-41EF-2D2E-5E58-75B636FBD6F7";
+createNode mesh -n "Ultimate_Walker_v1_0_1:polySurfaceShape11" -p "Ultimate_Walker_v1_0_1:L_upperleg";
+	rename -uid "C0ED2885-4593-98CD-5FEA-D88D130C4234";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -15237,8 +15361,8 @@ createNode mesh -n "polySurfaceShape11" -p "L_upperleg";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode mesh -n "polySurfaceShape12" -p "L_upperleg";
-	rename -uid "C2C69FE4-4519-D1EB-C737-5698A0583FA6";
+createNode mesh -n "Ultimate_Walker_v1_0_1:polySurfaceShape12" -p "Ultimate_Walker_v1_0_1:L_upperleg";
+	rename -uid "A2A63CD1-4506-F735-1507-86AABE5E371E";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -16429,8 +16553,8 @@ createNode mesh -n "polySurfaceShape12" -p "L_upperleg";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode mesh -n "L_upperlegShapeOrig" -p "L_upperleg";
-	rename -uid "6E4A2406-4C51-0E6C-3E90-4DABDCDD2B64";
+createNode mesh -n "Ultimate_Walker_v1_0_1:L_upperlegShapeOrig" -p "Ultimate_Walker_v1_0_1:L_upperleg";
+	rename -uid "A73E717A-4449-9684-4274-9BB78C077C59";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -17878,8 +18002,8 @@ createNode mesh -n "L_upperlegShapeOrig" -p "L_upperleg";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".vnm" 0;
-createNode transform -n "L_leg" -p "L_leg_Grp";
-	rename -uid "0B0BC486-4AA0-64B1-61CC-389541856788";
+createNode transform -n "Ultimate_Walker_v1_0_1:L_leg" -p "Ultimate_Walker_v1_0_1:L_leg_Grp";
+	rename -uid "5B6EC444-48FE-004D-1802-95B91A02DCD3";
 	setAttr -l on -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -17895,8 +18019,8 @@ createNode transform -n "L_leg" -p "L_leg_Grp";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".hdl" -type "double3" 0.0093106031417844338 3.6485576629638672 0.00035119056701615747 ;
-createNode mesh -n "L_legShape" -p "L_leg";
-	rename -uid "A02DCC25-4D90-A5D4-414C-168C03040CAE";
+createNode mesh -n "Ultimate_Walker_v1_0_1:L_legShape" -p "Ultimate_Walker_v1_0_1:L_leg";
+	rename -uid "250C6523-46BA-D4BB-CF12-4AAA76DB60F5";
 	setAttr -k off ".v";
 	setAttr -s 4 ".iog[0].og";
 	setAttr ".vir" yes;
@@ -17912,8 +18036,8 @@ createNode mesh -n "L_legShape" -p "L_leg";
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
 	setAttr ".vcs" 2;
-createNode mesh -n "L_legShapeOrig" -p "L_leg";
-	rename -uid "690F98D8-4C61-681B-0EA6-9DA2237AC903";
+createNode mesh -n "Ultimate_Walker_v1_0_1:L_legShapeOrig" -p "Ultimate_Walker_v1_0_1:L_leg";
+	rename -uid "A2FD7807-4BCC-82A6-B01A-A1848CEE1986";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -18142,8 +18266,8 @@ createNode mesh -n "L_legShapeOrig" -p "L_leg";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".vnm" 0;
-createNode mesh -n "polySurfaceShape10" -p "L_leg";
-	rename -uid "F96B9F22-4DD0-2713-AEF6-97B215F6D9E3";
+createNode mesh -n "Ultimate_Walker_v1_0_1:polySurfaceShape10" -p "Ultimate_Walker_v1_0_1:L_leg";
+	rename -uid "44CE225F-4F92-BC94-AA63-9ABB0E1ABAE6";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".ove" yes;
@@ -18437,8 +18561,8 @@ createNode mesh -n "polySurfaceShape10" -p "L_leg";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 1;
 	setAttr ".vnm" 0;
-createNode mesh -n "L_legShapeOrig1" -p "L_leg";
-	rename -uid "34E84F93-48FC-E977-EBC5-859CEB26D588";
+createNode mesh -n "Ultimate_Walker_v1_0_1:L_legShapeOrig1" -p "Ultimate_Walker_v1_0_1:L_leg";
+	rename -uid "F5B3F23C-41C9-6062-55DF-7CA32923BCDC";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -18798,8 +18922,8 @@ createNode mesh -n "L_legShapeOrig1" -p "L_leg";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".vnm" 0;
-createNode transform -n "leg_scale_Const" -p "Mesh_Grp";
-	rename -uid "B7E1DD41-4376-3D9E-EC27-A5889A83538B";
+createNode transform -n "Ultimate_Walker_v1_0_1:leg_scale_Const" -p "Ultimate_Walker_v1_0_1:Mesh_Grp";
+	rename -uid "F2F95396-4F1A-B9DD-5ED1-A598F11704F4";
 	setAttr -l on -k off ".v";
 	setAttr -l on -k off ".tx";
 	setAttr -l on -k off ".ty";
@@ -18810,8 +18934,8 @@ createNode transform -n "leg_scale_Const" -p "Mesh_Grp";
 	setAttr -k off ".sx";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
-createNode transform -n "R_but" -p "leg_scale_Const";
-	rename -uid "DBD08A36-489F-5AB9-0FF1-D293440C5EE7";
+createNode transform -n "Ultimate_Walker_v1_0_1:R_but" -p "Ultimate_Walker_v1_0_1:leg_scale_Const";
+	rename -uid "45C6E778-4235-74BF-8314-9B82FA4D0BDA";
 	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -18826,8 +18950,8 @@ createNode transform -n "R_but" -p "leg_scale_Const";
 	setAttr ".sp" -type "double3" -0.58301591873168945 2.3093367308369204 0.031665001220400543 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-createNode mesh -n "R_butShape" -p "R_but";
-	rename -uid "1F30D86C-4CED-2319-FAD2-A590F09D588B";
+createNode mesh -n "Ultimate_Walker_v1_0_1:R_butShape" -p "Ultimate_Walker_v1_0_1:R_but";
+	rename -uid "956E0329-44CB-5950-F889-A29EA4968B4A";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -18987,8 +19111,8 @@ createNode mesh -n "R_butShape" -p "R_but";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode mesh -n "R_butShapeOrig" -p "R_but";
-	rename -uid "C91A3E1F-4CB9-2623-7360-57A1E473A63B";
+createNode mesh -n "Ultimate_Walker_v1_0_1:R_butShapeOrig" -p "Ultimate_Walker_v1_0_1:R_but";
+	rename -uid "AC25BE4A-4133-D39A-BF39-24B6E484C1CB";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -19165,8 +19289,9 @@ createNode mesh -n "R_butShapeOrig" -p "R_but";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".vnm" 0;
-createNode parentConstraint -n "R_but_parentConstraint1" -p "R_but";
-	rename -uid "3650B802-4F8F-8F29-BC6B-668CBDB29412";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:R_but_parentConstraint1" -p
+		 "Ultimate_Walker_v1_0_1:R_but";
+	rename -uid "306F3362-447A-E8D1-084F-BDAB08A2EBE0";
 	addAttr -ci true -sn "w0" -ln "walker_rt_upLeg_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -19183,12 +19308,12 @@ createNode parentConstraint -n "R_but_parentConstraint1" -p "R_but";
 	setAttr ".tg[0].tot" -type "double3" -3.269163080243942e-06 1.2204745131194628e-09 
 		8.1268310636595231e-08 ;
 	setAttr ".tg[0].tor" -type "double3" -90.000001295952742 -89.999999999999986 0 ;
-	setAttr ".lr" -type "double3" -30.897468822599912 -179.99999999999997 -2.5444437451708134e-14 ;
+	setAttr ".lr" -type "double3" -47.823460770810854 173.3468041561992 -5.0169111415159744 ;
 	setAttr ".rsrr" -type "double3" 3.1805546814635168e-15 9.5416640443905503e-15 3.1805546814635168e-15 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "L_but" -p "leg_scale_Const";
-	rename -uid "34F3EE19-4789-1374-A0A3-95B014336B58";
+createNode transform -n "Ultimate_Walker_v1_0_1:L_but" -p "Ultimate_Walker_v1_0_1:leg_scale_Const";
+	rename -uid "AF8E12D4-4795-1BD5-A74B-64826604C4D6";
 	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -19203,8 +19328,8 @@ createNode transform -n "L_but" -p "leg_scale_Const";
 	setAttr ".sp" -type "double3" 0.58301591873168945 2.3093367308369204 0.031665001220400543 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-createNode mesh -n "L_butShape" -p "L_but";
-	rename -uid "C7AA4C2D-4EA0-F69B-C1E7-889ACE482E56";
+createNode mesh -n "Ultimate_Walker_v1_0_1:L_butShape" -p "Ultimate_Walker_v1_0_1:L_but";
+	rename -uid "C7EC93FC-4D57-F1F1-B07F-24B8D7C34110";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -19382,8 +19507,8 @@ createNode mesh -n "L_butShape" -p "L_but";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode mesh -n "L_butShapeOrig" -p "L_but";
-	rename -uid "56FB3580-4441-B966-4370-40B9CD36AE22";
+createNode mesh -n "Ultimate_Walker_v1_0_1:L_butShapeOrig" -p "Ultimate_Walker_v1_0_1:L_but";
+	rename -uid "111B73A9-4B2A-3A6B-0CB3-0BB639C835F0";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -19560,8 +19685,9 @@ createNode mesh -n "L_butShapeOrig" -p "L_but";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".vnm" 0;
-createNode parentConstraint -n "L_but_parentConstraint1" -p "L_but";
-	rename -uid "3E7CF141-4865-2197-3059-219BF21A82E2";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:L_but_parentConstraint1" -p
+		 "Ultimate_Walker_v1_0_1:L_but";
+	rename -uid "99112E67-4C5A-B8F1-5305-61855641593D";
 	addAttr -ci true -sn "w0" -ln "walker_lf_upLeg_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -19578,13 +19704,13 @@ createNode parentConstraint -n "L_but_parentConstraint1" -p "L_but";
 	setAttr ".tg[0].tot" -type "double3" -6.7736920961181113e-08 3.3369700981611405e-08 
 		-1.7881471026104379e-07 ;
 	setAttr ".tg[0].tor" -type "double3" 89.999998704047272 -89.999999999999986 0 ;
-	setAttr ".lr" -type "double3" 35.961333064932248 -179.99999999999997 0 ;
+	setAttr ".lr" -type "double3" 88.595235932284027 -6.8409340201079152 -173.51281205788959 ;
 	setAttr ".rst" -type "double3" 0 4.4408920985006262e-16 -1.3877787807814457e-17 ;
 	setAttr ".rsrr" -type "double3" 3.1805546814635152e-15 9.5416640443905503e-15 -2.2263882770244617e-14 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "R_knee" -p "leg_scale_Const";
-	rename -uid "5FCFD70D-4F13-2F1D-3A41-4886F8290A08";
+createNode transform -n "Ultimate_Walker_v1_0_1:R_knee" -p "Ultimate_Walker_v1_0_1:leg_scale_Const";
+	rename -uid "098222C6-442A-F877-E4A9-2DA4AB2E5C51";
 	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -19599,8 +19725,8 @@ createNode transform -n "R_knee" -p "leg_scale_Const";
 	setAttr ".sp" -type "double3" -0.58301583083551289 1.3207236225965968 0.031665001220400543 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-createNode mesh -n "R_kneeShape" -p "R_knee";
-	rename -uid "66DE41D0-4228-7971-DFEB-FE956E49B67D";
+createNode mesh -n "Ultimate_Walker_v1_0_1:R_kneeShape" -p "Ultimate_Walker_v1_0_1:R_knee";
+	rename -uid "0EDFD4B3-4EFA-ACBE-FEDB-CE969E62F438";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -19760,8 +19886,8 @@ createNode mesh -n "R_kneeShape" -p "R_knee";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode mesh -n "R_kneeShapeOrig" -p "R_knee";
-	rename -uid "756659A1-4EB4-9B46-7084-FE9993BE27D1";
+createNode mesh -n "Ultimate_Walker_v1_0_1:R_kneeShapeOrig" -p "Ultimate_Walker_v1_0_1:R_knee";
+	rename -uid "560A2437-43E5-0BFC-A154-7EA8D74B1AFE";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -19919,8 +20045,9 @@ createNode mesh -n "R_kneeShapeOrig" -p "R_knee";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".vnm" 0;
-createNode parentConstraint -n "R_knee_parentConstraint1" -p "R_knee";
-	rename -uid "72D231E8-42DF-EBA0-34BE-1C89F26D8BF8";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:R_knee";
+	rename -uid "4F7F8AB8-454F-FF9D-C2DC-4389A3A948D4";
 	addAttr -ci true -sn "w0" -ln "walker_rt_knee_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -19937,13 +20064,13 @@ createNode parentConstraint -n "R_knee_parentConstraint1" -p "R_knee";
 	setAttr ".tg[0].tot" -type "double3" 3.5948648289263474e-06 -2.8051820984142939e-07 
 		1.6916448664083816e-07 ;
 	setAttr ".tg[0].tor" -type "double3" -94.481313800664168 -89.999999999999986 0 ;
-	setAttr ".lr" -type "double3" -35.375943307644114 -179.99999999999997 -2.5444437451708134e-14 ;
+	setAttr ".lr" -type "double3" -29.618745900697604 173.34680415619923 -5.0169111415159744 ;
 	setAttr ".rst" -type "double3" -1.1102230246251565e-16 0 2.7755575615628914e-17 ;
 	setAttr ".rsrr" -type "double3" 6.3611093629270335e-15 -7.0622500768802538e-31 1.2722218725854067e-14 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "L_knee" -p "leg_scale_Const";
-	rename -uid "046D8394-4B93-733F-4997-78B420672C42";
+createNode transform -n "Ultimate_Walker_v1_0_1:L_knee" -p "Ultimate_Walker_v1_0_1:leg_scale_Const";
+	rename -uid "69B7E124-4197-193E-E490-BF82AEDCA220";
 	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -19958,8 +20085,8 @@ createNode transform -n "L_knee" -p "leg_scale_Const";
 	setAttr ".sp" -type "double3" 0.58301583083551289 1.3207236225965968 0.031665001220400543 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-createNode mesh -n "L_kneeShape" -p "L_knee";
-	rename -uid "4F47079C-4D2C-347A-9C49-69A02F716E77";
+createNode mesh -n "Ultimate_Walker_v1_0_1:L_kneeShape" -p "Ultimate_Walker_v1_0_1:L_knee";
+	rename -uid "3F2627CB-46DB-99F9-1225-A0A974E0B455";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -20118,8 +20245,8 @@ createNode mesh -n "L_kneeShape" -p "L_knee";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode mesh -n "L_kneeShapeOrig" -p "L_knee";
-	rename -uid "9B18B91A-4DF3-19BB-DEC5-B0A0CB2E0A36";
+createNode mesh -n "Ultimate_Walker_v1_0_1:L_kneeShapeOrig" -p "Ultimate_Walker_v1_0_1:L_knee";
+	rename -uid "3880D501-4ED1-668F-94C8-2CB396318762";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -20277,8 +20404,9 @@ createNode mesh -n "L_kneeShapeOrig" -p "L_knee";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".vnm" 0;
-createNode parentConstraint -n "L_knee_parentConstraint1" -p "L_knee";
-	rename -uid "A40D9171-4D90-C235-1085-CA93588A8724";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:L_knee";
+	rename -uid "5B626AD1-4BCE-ACDA-3CB5-61897C4A2226";
 	addAttr -ci true -sn "w0" -ln "walker_lf_knee_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -20295,13 +20423,13 @@ createNode parentConstraint -n "L_knee_parentConstraint1" -p "L_knee";
 	setAttr ".tg[0].tot" -type "double3" -8.7029016437867313e-08 1.786329430208955e-08 
 		-2.6671088704244283e-07 ;
 	setAttr ".tg[0].tor" -type "double3" 85.518580487997866 -89.999999999999986 0 ;
-	setAttr ".lr" -type "double3" 31.48277123366822 -179.99999999999997 0 ;
+	setAttr ".lr" -type "double3" -171.87421734450024 -6.8409340201078992 186.48718794211049 ;
 	setAttr ".rst" -type "double3" 0 2.2204460492503131e-16 6.9388939039072284e-18 ;
 	setAttr ".rsrr" -type "double3" -9.5416640443905519e-15 1.2722218725854065e-14 -1.2722218725854067e-14 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "R_ankle" -p "leg_scale_Const";
-	rename -uid "16EB90F8-4054-8D1F-0CC0-319706265122";
+createNode transform -n "Ultimate_Walker_v1_0_1:R_ankle" -p "Ultimate_Walker_v1_0_1:leg_scale_Const";
+	rename -uid "54D746C7-4B23-4135-B76B-47B586019C47";
 	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -20316,8 +20444,8 @@ createNode transform -n "R_ankle" -p "leg_scale_Const";
 	setAttr ".sp" -type "double3" -0.58301583083551289 0.44379589189397239 -0.037064508546601663 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-createNode mesh -n "R_ankleShape" -p "R_ankle";
-	rename -uid "6E0FA339-4093-084F-6946-79A9BD0C832F";
+createNode mesh -n "Ultimate_Walker_v1_0_1:R_ankleShape" -p "Ultimate_Walker_v1_0_1:R_ankle";
+	rename -uid "4470A705-42E7-F53C-DFF4-118584626144";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -20477,8 +20605,8 @@ createNode mesh -n "R_ankleShape" -p "R_ankle";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode mesh -n "R_ankleShapeOrig" -p "R_ankle";
-	rename -uid "AAA256CF-4BED-C3A0-02DA-F097D15F4E37";
+createNode mesh -n "Ultimate_Walker_v1_0_1:R_ankleShapeOrig" -p "Ultimate_Walker_v1_0_1:R_ankle";
+	rename -uid "2A6F781C-4AAF-3F2B-23E1-78A6228DA6B9";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -20636,8 +20764,9 @@ createNode mesh -n "R_ankleShapeOrig" -p "R_ankle";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".vnm" 0;
-createNode parentConstraint -n "R_ankle_parentConstraint1" -p "R_ankle";
-	rename -uid "8E9EC2F5-4CD6-4EE3-6B0C-9884BEA1D8C5";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:R_ankle";
+	rename -uid "B86A89C7-4102-4261-85E9-1580AB48489F";
 	addAttr -ci true -sn "w0" -ln "walker_rt_ankle_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -20654,13 +20783,13 @@ createNode parentConstraint -n "R_ankle_parentConstraint1" -p "R_ankle";
 	setAttr ".tg[0].tot" -type "double3" 1.0441447320097552e-06 -1.1879580607554452e-06 
 		1.6916448664083816e-07 ;
 	setAttr ".tg[0].tor" -type "double3" -48.050499189664137 -89.999999999999986 0 ;
-	setAttr ".lr" -type "double3" -36.686072385829831 -179.99999999999997 0 ;
+	setAttr ".lr" -type "double3" 3.3832854785741753 180 0 ;
 	setAttr ".rst" -type "double3" -1.1102230246251565e-16 1.1102230246251565e-16 -3.4694469519536142e-17 ;
 	setAttr ".rsrr" -type "double3" -3.180554681463516e-15 3.1805546814635168e-14 3.180554681463516e-15 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "L_ankle" -p "leg_scale_Const";
-	rename -uid "019345CE-40F5-7583-2204-179BCC3632B3";
+createNode transform -n "Ultimate_Walker_v1_0_1:L_ankle" -p "Ultimate_Walker_v1_0_1:leg_scale_Const";
+	rename -uid "51369DDD-4B5B-3570-9BBA-8385D7344178";
 	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -20675,8 +20804,8 @@ createNode transform -n "L_ankle" -p "leg_scale_Const";
 	setAttr ".sp" -type "double3" 0.58301583083551289 0.44379589189397239 -0.037064508546601663 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-createNode mesh -n "L_ankleShape" -p "L_ankle";
-	rename -uid "1D5D5174-425F-AF50-5144-90A4AC5A1F5C";
+createNode mesh -n "Ultimate_Walker_v1_0_1:L_ankleShape" -p "Ultimate_Walker_v1_0_1:L_ankle";
+	rename -uid "F02FE8D0-4227-DB81-1D09-D69A2EE8F196";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -20835,8 +20964,8 @@ createNode mesh -n "L_ankleShape" -p "L_ankle";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode mesh -n "L_ankleShapeOrig" -p "L_ankle";
-	rename -uid "A4ADF874-4F9F-C8F6-ED05-6DB3B82DD9CF";
+createNode mesh -n "Ultimate_Walker_v1_0_1:L_ankleShapeOrig" -p "Ultimate_Walker_v1_0_1:L_ankle";
+	rename -uid "0AB31413-4C8F-9A86-B506-C18AAAA26648";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
 	setAttr ".vir" yes;
@@ -20994,8 +21123,9 @@ createNode mesh -n "L_ankleShapeOrig" -p "L_ankle";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".vnm" 0;
-createNode parentConstraint -n "L_ankle_parentConstraint1" -p "L_ankle";
-	rename -uid "7CF3E6E3-4E3E-2BB7-367C-52A833F7C576";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:L_ankle";
+	rename -uid "A5B1099E-40C3-E434-E4B8-1DA9335BB8D1";
 	addAttr -ci true -sn "w0" -ln "walker_lf_ankle_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -21012,14 +21142,14 @@ createNode parentConstraint -n "L_ankle_parentConstraint1" -p "L_ankle";
 	setAttr ".tg[0].tot" -type "double3" 4.3533020466224315e-08 -2.3435316520714622e-08 
 		-2.6671088682039823e-07 ;
 	setAttr ".tg[0].tor" -type "double3" 131.94950081033585 -89.999999999999986 0 ;
-	setAttr ".lr" -type "double3" 34.582895839832013 -179.99999999999997 0 ;
+	setAttr ".lr" -type "double3" 7.6589224633111908 -180 0 ;
 	setAttr ".rst" -type "double3" 1.1102230246251565e-16 -1.1102230246251565e-16 9.0205620750793969e-17 ;
 	setAttr ".rsrr" -type "double3" -6.3611093629270335e-15 -6.3611093629270335e-15 
 		-6.3611093629270335e-15 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "R_foot" -p "leg_scale_Const";
-	rename -uid "4C077D7D-430F-3FDA-E76F-649CA2FC7E80";
+createNode transform -n "Ultimate_Walker_v1_0_1:R_foot" -p "Ultimate_Walker_v1_0_1:leg_scale_Const";
+	rename -uid "E86522F7-486E-3379-0EB9-A98B770077F5";
 	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -21032,8 +21162,8 @@ createNode transform -n "R_foot" -p "leg_scale_Const";
 	setAttr -l on -k off ".sz";
 	setAttr ".rp" -type "double3" -0.64696378420839995 0.3830704279418965 -0.019844182190017347 ;
 	setAttr ".sp" -type "double3" -0.64696378420840017 0.3830704279418965 -0.019844182190017347 ;
-createNode mesh -n "R_footShape" -p "R_foot";
-	rename -uid "F69B1AC7-470B-05BD-5C56-8AA4757E243F";
+createNode mesh -n "Ultimate_Walker_v1_0_1:R_footShape" -p "Ultimate_Walker_v1_0_1:R_foot";
+	rename -uid "84F4DEA6-4182-34C2-1E82-D7A1CC99E35F";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -22172,8 +22302,9 @@ createNode mesh -n "R_footShape" -p "R_foot";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode parentConstraint -n "R_foot_parentConstraint1" -p "R_foot";
-	rename -uid "48914128-44BC-6CF9-54E4-22943A46793F";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:R_foot";
+	rename -uid "C5F7527E-479F-7F1A-3E54-1199A90B921C";
 	addAttr -ci true -sn "w0" -ln "walker_rt_ankle_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -22190,13 +22321,13 @@ createNode parentConstraint -n "R_foot_parentConstraint1" -p "R_foot";
 	setAttr ".tg[0].tot" -type "double3" -0.056673929651250676 -0.027787316822060731 
 		-0.063947784208400305 ;
 	setAttr ".tg[0].tor" -type "double3" -48.050499189664137 -89.999999999999986 0 ;
-	setAttr ".lr" -type "double3" -36.686072385829831 -179.99999999999997 0 ;
+	setAttr ".lr" -type "double3" 3.3832854785741753 180 0 ;
 	setAttr ".rst" -type "double3" 0 1.6653345369377348e-16 -1.4918621893400541e-16 ;
 	setAttr ".rsrr" -type "double3" -3.180554681463516e-15 3.1805546814635168e-14 3.180554681463516e-15 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "L_foot" -p "leg_scale_Const";
-	rename -uid "3A555D52-4166-B9AE-7106-31A0526925B9";
+createNode transform -n "Ultimate_Walker_v1_0_1:L_foot" -p "Ultimate_Walker_v1_0_1:leg_scale_Const";
+	rename -uid "BF1F5DCE-4782-A693-0B71-0298ED213408";
 	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -22209,8 +22340,8 @@ createNode transform -n "L_foot" -p "leg_scale_Const";
 	setAttr -l on -k off ".sz";
 	setAttr ".rp" -type "double3" 0.64696378420839995 0.3830704279418965 -0.019844182190017347 ;
 	setAttr ".sp" -type "double3" 0.64696378420840017 0.3830704279418965 -0.019844182190017347 ;
-createNode mesh -n "L_footShape" -p "L_foot";
-	rename -uid "BF0DF7CD-4282-AD46-B35A-CFB90A70A6A6";
+createNode mesh -n "Ultimate_Walker_v1_0_1:L_footShape" -p "Ultimate_Walker_v1_0_1:L_foot";
+	rename -uid "F4401463-4FBB-B93D-0237-8F96CB9DCEF0";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -23279,8 +23410,9 @@ createNode mesh -n "L_footShape" -p "L_foot";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode parentConstraint -n "L_foot_parentConstraint1" -p "L_foot";
-	rename -uid "323D34B9-420D-E4FC-D613-B98600A0AD3A";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1" 
+		-p "Ultimate_Walker_v1_0_1:L_foot";
+	rename -uid "3E6810A6-43CF-C6CE-2C90-42B0179A4740";
 	addAttr -ci true -sn "w0" -ln "walker_lf_ankle_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -23296,14 +23428,14 @@ createNode parentConstraint -n "L_foot_parentConstraint1" -p "L_foot";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.056675017329003208 0.027786105428683289 0.063947686662000236 ;
 	setAttr ".tg[0].tor" -type "double3" 131.94950081033585 -89.999999999999986 0 ;
-	setAttr ".lr" -type "double3" 34.582895839832013 -179.99999999999997 0 ;
+	setAttr ".lr" -type "double3" 7.6589224633111908 -180 0 ;
 	setAttr ".rst" -type "double3" 1.1102230246251565e-16 -1.1102230246251565e-16 1.1796119636642288e-16 ;
 	setAttr ".rsrr" -type "double3" -6.3611093629270335e-15 -6.3611093629270335e-15 
 		-6.3611093629270335e-15 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "R_toe" -p "leg_scale_Const";
-	rename -uid "C7B78791-497B-3C4C-90BC-AF90E175DA43";
+createNode transform -n "Ultimate_Walker_v1_0_1:R_toe" -p "Ultimate_Walker_v1_0_1:leg_scale_Const";
+	rename -uid "E555CDA8-4611-1BF3-8B51-E5A80ED32637";
 	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -23316,8 +23448,8 @@ createNode transform -n "R_toe" -p "leg_scale_Const";
 	setAttr -l on -k off ".sz";
 	setAttr ".rp" -type "double3" -0.64696378420839995 0.3830704279418965 -0.019844182190017347 ;
 	setAttr ".sp" -type "double3" -0.64696378420840017 0.3830704279418965 -0.019844182190017347 ;
-createNode mesh -n "R_toeShape" -p "R_toe";
-	rename -uid "4B2B1D18-45C9-E0DB-6B3B-7BB547DA6F32";
+createNode mesh -n "Ultimate_Walker_v1_0_1:R_toeShape" -p "Ultimate_Walker_v1_0_1:R_toe";
+	rename -uid "443B0442-4A7A-DD02-6524-48B52445329C";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -23855,8 +23987,9 @@ createNode mesh -n "R_toeShape" -p "R_toe";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode parentConstraint -n "R_toe_parentConstraint1" -p "R_toe";
-	rename -uid "F26BB904-456A-8D68-ACE5-8EBFA70A692E";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1" -p
+		 "Ultimate_Walker_v1_0_1:R_toe";
+	rename -uid "21C471E8-4D9D-6A62-BE87-8BB477B02EDA";
 	addAttr -ci true -sn "w0" -ln "walker_rt_ball_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -23872,13 +24005,13 @@ createNode parentConstraint -n "R_toe_parentConstraint1" -p "R_toe";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.38166875515358534 0.38307051695448113 -0.063947784208400194 ;
 	setAttr ".tg[0].tor" -type "double3" 9.541664044390555e-15 -89.999999999999986 0 ;
-	setAttr ".lr" -type "double3" -36.686072385829881 -179.99999999999994 2.5444437451708134e-14 ;
+	setAttr ".lr" -type "double3" 3.3832854785741753 -179.99999999999997 0 ;
 	setAttr ".rst" -type "double3" 0 5.5511151231257827e-17 -3.1225022567582528e-17 ;
 	setAttr ".rsrr" -type "double3" -9.541664044390555e-15 4.9298597562684508e-14 -9.541664044390555e-15 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode transform -n "L_toe" -p "leg_scale_Const";
-	rename -uid "6463890D-4B28-A3AF-03C8-9485530951B2";
+createNode transform -n "Ultimate_Walker_v1_0_1:L_toe" -p "Ultimate_Walker_v1_0_1:leg_scale_Const";
+	rename -uid "913F7489-4DEF-8A0F-5C66-308E291BFA86";
 	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -23891,8 +24024,8 @@ createNode transform -n "L_toe" -p "leg_scale_Const";
 	setAttr -l on -k off ".sz";
 	setAttr ".rp" -type "double3" 0.64696378420839995 0.3830704279418965 -0.019844182190017347 ;
 	setAttr ".sp" -type "double3" 0.64696378420840017 0.3830704279418965 -0.019844182190017347 ;
-createNode mesh -n "L_toeShape" -p "L_toe";
-	rename -uid "A46B377B-4797-F811-231C-77A160A6FBAC";
+createNode mesh -n "Ultimate_Walker_v1_0_1:L_toeShape" -p "Ultimate_Walker_v1_0_1:L_toe";
+	rename -uid "D5B8D2BA-4B0D-B073-C383-CB8B74DC1B6E";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -24397,8 +24530,9 @@ createNode mesh -n "L_toeShape" -p "L_toe";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 	setAttr ".vnm" 0;
-createNode parentConstraint -n "L_toe_parentConstraint1" -p "L_toe";
-	rename -uid "754691BB-4A4A-0626-BA64-74B05C75F786";
+createNode parentConstraint -n "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1" -p
+		 "Ultimate_Walker_v1_0_1:L_toe";
+	rename -uid "34C0A39E-458B-7AE5-C266-389DD90B1BE2";
 	addAttr -ci true -sn "w0" -ln "walker_lf_ball_jntW0" -dv 1 -min 0 -at "double";
 	setAttr -l on ".nds";
 	setAttr -k off ".v";
@@ -24414,305 +24548,333 @@ createNode parentConstraint -n "L_toe_parentConstraint1" -p "L_toe";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -0.38166756035541577 -0.38307043874785518 0.063947686662000458 ;
 	setAttr ".tg[0].tor" -type "double3" -179.99999999999997 -89.999999999999986 0 ;
-	setAttr ".lr" -type "double3" 1.5828958398320541 180 0 ;
+	setAttr ".lr" -type "double3" 7.6589224633111908 180 0 ;
 	setAttr ".rst" -type "double3" 2.2204460492503131e-16 0 -3.1225022567582528e-17 ;
 	setAttr ".rsrr" -type "double3" 2.5444437451708128e-14 6.3611093629270335e-15 -9.5416640443905471e-15 ;
 	setAttr -l on -k off ".int";
 	setAttr -l on ".w0";
-createNode unitConversion -n "unitConversion6";
-	rename -uid "41EC3646-4ADA-7B49-82E0-FC8B6AD7549D";
+createNode transform -n "pPlane1";
+	rename -uid "1763849A-4B28-48B2-243E-8C837B246F3E";
+	setAttr ".s" -type "double3" 17.226947670963558 17.226947670963558 17.226947670963558 ;
+createNode mesh -n "pPlaneShape1" -p "pPlane1";
+	rename -uid "CF3812A3-4CCA-7409-93F0-378860CBCD72";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode lightLinker -s -n "lightLinker1";
+	rename -uid "54E48676-4FD5-0F02-F0FA-8F9E9272EA99";
+	setAttr -s 4 ".lnk";
+	setAttr -s 4 ".slnk";
+createNode shapeEditorManager -n "shapeEditorManager";
+	rename -uid "3B7FDC13-4A73-ACA3-0BE0-F585D2AFA036";
+createNode poseInterpolatorManager -n "poseInterpolatorManager";
+	rename -uid "C0415067-4E40-CC0E-E560-76BBF42D3C24";
+createNode displayLayerManager -n "layerManager";
+	rename -uid "5CE10279-4F9D-B192-4867-62A79ED4E008";
+	setAttr -s 2 ".dli[1]"  1;
+	setAttr -s 2 ".dli";
+createNode displayLayer -n "defaultLayer";
+	rename -uid "E0F167EA-4BD7-52A2-4669-C3B2523E123A";
+	setAttr ".ufem" -type "stringArray" 0  ;
+createNode renderLayerManager -n "renderLayerManager";
+	rename -uid "E1B9E23B-41AC-4D73-230B-AD89F1B9732D";
+createNode renderLayer -n "defaultRenderLayer";
+	rename -uid "D1FA8519-4442-7352-96EF-C9B0B1CE853F";
+	setAttr ".g" yes;
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion6";
+	rename -uid "A45E5F0D-4134-F135-D8A8-E294BDC8CDCF";
 	setAttr ".cf" 0.017453292519943295;
-createNode unitConversion -n "unitConversion7";
-	rename -uid "908213FC-4DFD-993E-91C3-64A47A4F951F";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion7";
+	rename -uid "B839FF0D-4652-167E-D7A4-4FAD620E6B61";
 	setAttr ".cf" 0.017453292519943295;
-createNode plusMinusAverage -n "walker_lf_heel_plsMns";
-	rename -uid "A792ECA7-4990-6C82-D482-19A77E43B878";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_lf_heel_plsMns";
+	rename -uid "3780B7AD-4A6A-B827-3C06-5AAE30B35AD3";
 	setAttr ".op" 2;
 	setAttr -s 2 ".i1[0:1]"  0 0;
-createNode clamp -n "walker_lf_heel_clamp";
-	rename -uid "9E9B63D1-4314-FD3D-71B8-6086B9AAA2F0";
+createNode clamp -n "Ultimate_Walker_v1_0_1:walker_lf_heel_clamp";
+	rename -uid "4ABC8888-44DA-668F-6B0E-C8B8EA699365";
 	setAttr ".mn" -type "float3" -50 0 0 ;
-createNode unitConversion -n "unitConversion3";
-	rename -uid "BFC0F06A-44A2-C073-E1D1-9AA57CDAC90B";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion3";
+	rename -uid "1A0A9024-4AC8-AB22-E5DA-DAA6EA63138A";
 	setAttr ".cf" 0.017453292519943295;
-createNode unitConversion -n "unitConversion9";
-	rename -uid "E490B070-4A67-A32C-30B9-98AB7B7D9337";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion9";
+	rename -uid "75453B76-4D20-E8DF-18C9-7D8A203EA986";
 	setAttr ".cf" 0.017453292519943295;
-createNode plusMinusAverage -n "walker_lf_toe2_plsMns";
-	rename -uid "6D610E4A-4DA6-1E03-E37E-4096B163676E";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_lf_toe2_plsMns";
+	rename -uid "B8AB58F6-430F-59F2-CCD7-5793D662E02F";
 	setAttr -s 2 ".i1";
 	setAttr -s 2 ".i1";
-createNode clamp -n "walker_lf_toe_clamp";
-	rename -uid "B34A719A-4CC9-E5BB-FEB5-7B868272D042";
+createNode clamp -n "Ultimate_Walker_v1_0_1:walker_lf_toe_clamp";
+	rename -uid "C1EAE085-4408-03EF-28BE-A0A80A5A805C";
 	setAttr ".mx" -type "float3" 90 0 0 ;
-createNode plusMinusAverage -n "walker_lf_toe_plsMns";
-	rename -uid "1FA4A010-4BE1-BD47-448B-EA9AFECB25C4";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_lf_toe_plsMns";
+	rename -uid "1C04CF51-4AD1-87CB-21C6-0CA8E6E36A41";
 	setAttr ".op" 2;
 	setAttr -s 2 ".i1";
 	setAttr -s 2 ".i1";
-createNode unitConversion -n "unitConversion4";
-	rename -uid "E54F8A5F-4077-27CF-CE04-94ACC33F5ED4";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion4";
+	rename -uid "85647FD9-4B5B-4421-E5CC-08A2F859B562";
 	setAttr ".cf" 0.017453292519943295;
-createNode unitConversion -n "unitConversion8";
-	rename -uid "F3DC7324-4D68-D0E6-0F4F-3BAFE81C143D";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion8";
+	rename -uid "15D2D45D-4B2D-92A2-6312-9195898C9474";
 	setAttr ".cf" 0.017453292519943295;
-createNode plusMinusAverage -n "walker_lf_ball_plsMns";
-	rename -uid "EAC81A5A-4E45-B5C9-D7A2-5A92E629762E";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_lf_ball_plsMns";
+	rename -uid "1A4939E1-4EFC-EB8A-1944-A4A5715AC699";
 	setAttr -s 2 ".i1";
 	setAttr -s 2 ".i1";
-createNode clamp -n "walker_lf_ball_clamp";
-	rename -uid "766ECBD6-4426-EBA5-AAC0-3EBE1CAAE781";
-createNode unitConversion -n "unitConversion2";
-	rename -uid "E11F1B89-4B31-02B5-C339-3FB53DD3B32B";
+createNode clamp -n "Ultimate_Walker_v1_0_1:walker_lf_ball_clamp";
+	rename -uid "B9B923F1-4163-D313-1010-BBB22F937E9E";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion2";
+	rename -uid "292B15FC-4D64-EC13-CA96-B685FA552C98";
 	setAttr ".cf" 0.017453292519943295;
-createNode unitConversion -n "unitConversion5";
-	rename -uid "8CA67FAC-41ED-9503-B6DB-9B925300F5A1";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion5";
+	rename -uid "35EA2084-4CB3-8232-28CF-9E9FF8D4C693";
 	setAttr ".cf" 0.017453292519943295;
-createNode plusMinusAverage -n "walker_lf_legUpStr_plsMns";
-	rename -uid "EBD24B79-4D7D-ADE4-717F-A1A60FDC0694";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_lf_legUpStr_plsMns";
+	rename -uid "488FB80E-40F3-465F-5F23-F892863ED953";
 	setAttr -s 2 ".i1[1]"  0.98861313;
-createNode multiplyDivide -n "walker_lf_legRefStr_multDiv";
-	rename -uid "FBC3B1C8-436C-DBE7-170D-7698C9218FC1";
+createNode multiplyDivide -n "Ultimate_Walker_v1_0_1:walker_lf_legRefStr_multDiv";
+	rename -uid "AEBEA3CE-4695-F5D8-53CA-4EBCD277B452";
 	setAttr ".i2" -type "float3" 0.98861313 0.87961686 1 ;
-createNode plusMinusAverage -n "walker_lf_legTotStrAmt_plsMns";
-	rename -uid "5ABB0A6F-44F6-A99B-13A2-FEB2D753A8CA";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_lf_legTotStrAmt_plsMns";
+	rename -uid "6E52BE2C-4041-6F45-E0FE-02B1E5A24ED5";
 	setAttr -s 2 ".i2";
 	setAttr -s 2 ".i2";
-createNode multiplyDivide -n "walker_lf_legStrAtt_multDiv";
-	rename -uid "021567C7-4077-9C0A-0F13-8FB7FDA73493";
+createNode multiplyDivide -n "Ultimate_Walker_v1_0_1:walker_lf_legStrAtt_multDiv";
+	rename -uid "0D6F82A6-42C1-1300-54BA-D9825CC05B13";
 	setAttr ".op" 2;
 	setAttr ".i2" -type "float3" 10 10 10 ;
-createNode plusMinusAverage -n "walker_lf_legLowStr_plsMns";
-	rename -uid "163664A8-4696-79C0-7E66-CEB0384B118A";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_lf_legLowStr_plsMns";
+	rename -uid "E85A29CE-47CC-E702-FAD7-EAADC7D28E1C";
 	setAttr -s 2 ".i1[1]"  0.87961686;
-createNode condition -n "walker_lf_legFkVis_cond";
-	rename -uid "B5EEF714-4852-0D2F-28C2-D48FDB362A5C";
+createNode condition -n "Ultimate_Walker_v1_0_1:walker_lf_legFkVis_cond";
+	rename -uid "E11BB883-445A-6EC4-7EB0-0D820D463000";
 	setAttr ".op" 4;
 	setAttr ".st" 1;
 	setAttr ".ct" -type "float3" 1 0 0 ;
 	setAttr ".cf" -type "float3" 0 1 1 ;
-createNode plusMinusAverage -n "walker_lf_upLeg_plsMns";
-	rename -uid "0050232C-4F3C-92D7-068C-C394C427C0E9";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_lf_upLeg_plsMns";
+	rename -uid "739AA574-40D5-352C-CF68-F397DADDC959";
 	setAttr ".op" 2;
 	setAttr -s 2 ".i1[0:1]"  1 0;
-createNode blendColors -n "walker_lf_upLegSnapSplice_blend";
-	rename -uid "AE77F227-4CD6-2277-4045-34989AEB5DCB";
-createNode multiplyDivide -n "walker_lf_legStr_multDiv";
-	rename -uid "BD3EB590-459B-BEB9-A7AF-268B338A4C47";
-createNode clamp -n "walker_lf_legStr_clamp";
-	rename -uid "24A12C71-4DB6-63AE-25CB-7CA8B7B7DEA7";
+createNode blendColors -n "Ultimate_Walker_v1_0_1:walker_lf_upLegSnapSplice_blend";
+	rename -uid "E12440A8-4F6D-07A9-054B-BD95775D97AE";
+createNode multiplyDivide -n "Ultimate_Walker_v1_0_1:walker_lf_legStr_multDiv";
+	rename -uid "AE47830B-4718-E481-BBA6-9BA580EB0540";
+createNode clamp -n "Ultimate_Walker_v1_0_1:walker_lf_legStr_clamp";
+	rename -uid "58FD0FED-48B7-F7FC-0976-7493EC1338F9";
 	setAttr ".mn" -type "float3" 1 0 0 ;
-createNode multiplyDivide -n "walker_lf_legStrScalar_multDiv";
-	rename -uid "BDE0B049-4995-86C6-9E34-FF8E23684914";
+createNode multiplyDivide -n "Ultimate_Walker_v1_0_1:walker_lf_legStrScalar_multDiv";
+	rename -uid "D4A02F80-449F-E4E2-2CD5-D8A23F3B4EBA";
 	setAttr ".op" 2;
-createNode multiplyDivide -n "walker_lf_legStrNum_multDiv";
-	rename -uid "1BFCD872-492E-323E-074D-A8947A971233";
-createNode plusMinusAverage -n "walker_lf_legStrDenom_plsMns";
-	rename -uid "76C5069D-4BB6-1AB0-897C-DAB5A06B122F";
+createNode multiplyDivide -n "Ultimate_Walker_v1_0_1:walker_lf_legStrNum_multDiv";
+	rename -uid "91E140BC-44A0-05FE-E3DE-9A9C6482E2DD";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_lf_legStrDenom_plsMns";
+	rename -uid "A71C2298-4429-51E9-4DC5-6BB9AAA75357";
 	setAttr -s 2 ".i1";
 	setAttr -s 2 ".i1";
-createNode blendColors -n "walker_lf_kneeSnapSplice_blend";
-	rename -uid "C61F3763-451A-5058-1D01-1B83C9098B8B";
-createNode condition -n "walker_lf_legIkVis_cond";
-	rename -uid "695F4730-443C-EBA8-D67E-0896FDB2862A";
+createNode blendColors -n "Ultimate_Walker_v1_0_1:walker_lf_kneeSnapSplice_blend";
+	rename -uid "6EB81FA6-4CA3-E40A-F771-D6A86BE49F0B";
+createNode condition -n "Ultimate_Walker_v1_0_1:walker_lf_legIkVis_cond";
+	rename -uid "BED04F3F-4FE3-FFD4-7F93-6897D3C2F6DF";
 	setAttr ".op" 2;
 	setAttr ".ct" -type "float3" 1 0 0 ;
 	setAttr ".cf" -type "float3" 0 1 1 ;
-createNode ikRPsolver -n "ikRPsolver";
-	rename -uid "E5643076-49B8-594D-8EC6-BDBFA7D76605";
-createNode unitConversion -n "unitConversion1";
-	rename -uid "31ABD6BE-4ECE-67AC-AF7F-4EBDD44DA8E1";
+createNode ikRPsolver -n "Ultimate_Walker_v1_0_1:ikRPsolver";
+	rename -uid "3E711984-4F08-9836-DFCA-11A0F7E37D5E";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion1";
+	rename -uid "9D873C6C-4F19-978B-ADD1-4189008BDF6E";
 	setAttr ".cf" 0.017453292519943295;
-createNode blendColors -n "walker_lf_legPvCtrl_blend";
-	rename -uid "1433BC48-42CF-11A0-4E05-CAAD84E153CA";
+createNode blendColors -n "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrl_blend";
+	rename -uid "EC35707C-43F1-FC29-A2CF-E6B747C22E32";
 	setAttr ".c2" -type "float3" 0 0 0 ;
-createNode unitConversion -n "unitConversion15";
-	rename -uid "2BB1098A-411D-DBCA-2490-7CA0929F4E4D";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion15";
+	rename -uid "9966D6FC-4002-FE11-7527-95B2772EA8D3";
 	setAttr ".cf" 0.017453292519943295;
-createNode unitConversion -n "unitConversion16";
-	rename -uid "E23AF3D1-4AE5-DB7D-9048-E6A110FC908D";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion16";
+	rename -uid "EB9776C2-4BA9-1649-031E-28BF712DEEF5";
 	setAttr ".cf" 0.017453292519943295;
-createNode plusMinusAverage -n "walker_rt_heel_plsMns";
-	rename -uid "0904F806-4FC8-0319-E517-06A9F663C3CA";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_rt_heel_plsMns";
+	rename -uid "4FCAAF46-4E07-3787-1083-2E927787A26A";
 	setAttr ".op" 2;
 	setAttr -s 2 ".i1[0:1]"  0 0;
-createNode clamp -n "walker_rt_heel_clamp";
-	rename -uid "7E523896-4B52-6724-7CA2-03B6E64F0AB9";
+createNode clamp -n "Ultimate_Walker_v1_0_1:walker_rt_heel_clamp";
+	rename -uid "83D8B381-4257-8BAB-FA50-28804BB29186";
 	setAttr ".mn" -type "float3" -50 0 0 ;
-createNode unitConversion -n "unitConversion12";
-	rename -uid "ABE1F765-4EAE-E910-F396-0FBB6090A3CC";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion12";
+	rename -uid "E3C3A88E-4DF8-8902-296C-C68FE703A3A4";
 	setAttr ".cf" 0.017453292519943295;
-createNode unitConversion -n "unitConversion18";
-	rename -uid "590EB588-479B-03A6-C69A-B686B1A00BD2";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion18";
+	rename -uid "FF8BCED8-4F01-8662-956B-E5B2DA5FE61F";
 	setAttr ".cf" 0.017453292519943295;
-createNode plusMinusAverage -n "walker_rt_toe2_plsMns";
-	rename -uid "AED53268-4678-D815-CAD2-2DA06C9D1C79";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_rt_toe2_plsMns";
+	rename -uid "ADFC448D-4FD9-D878-8851-67AF48886E25";
 	setAttr -s 2 ".i1";
 	setAttr -s 2 ".i1";
-createNode clamp -n "walker_rt_toe_clamp";
-	rename -uid "E6A76BE8-4DE2-B296-9D39-B680BE6603F3";
+createNode clamp -n "Ultimate_Walker_v1_0_1:walker_rt_toe_clamp";
+	rename -uid "941E78DE-442B-4E5D-DA62-E7A8E0A2FBE5";
 	setAttr ".mx" -type "float3" 90 0 0 ;
-createNode plusMinusAverage -n "walker_rt_toe_plsMns";
-	rename -uid "C0FDEB99-4B92-AC78-E7ED-C383F8E01875";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_rt_toe_plsMns";
+	rename -uid "F97AB319-454F-3A3B-D10D-069AE4F1DA5B";
 	setAttr ".op" 2;
 	setAttr -s 2 ".i1";
 	setAttr -s 2 ".i1";
-createNode unitConversion -n "unitConversion13";
-	rename -uid "1543AA71-42BF-54DB-B4C8-41A1F5F5514C";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion13";
+	rename -uid "5C47E37F-46BC-456E-FBC9-19B6B316FDD6";
 	setAttr ".cf" 0.017453292519943295;
-createNode unitConversion -n "unitConversion17";
-	rename -uid "5B7DA0CC-4F3B-243D-AF83-3C9E00E2251F";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion17";
+	rename -uid "81C630DE-493E-6E87-2E9D-AE8ECF62F63B";
 	setAttr ".cf" 0.017453292519943295;
-createNode plusMinusAverage -n "walker_rt_ball_plsMns";
-	rename -uid "EE458C49-48A0-75E2-72DC-A48196AF8388";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_rt_ball_plsMns";
+	rename -uid "121F4C5B-4FEB-6FC3-5144-61A9DB925C96";
 	setAttr -s 2 ".i1";
 	setAttr -s 2 ".i1";
-createNode clamp -n "walker_rt_ball_clamp";
-	rename -uid "4347041E-486E-6523-C361-839D9168B137";
-createNode unitConversion -n "unitConversion11";
-	rename -uid "B58B7EF9-47E2-3095-1EE8-B6B1AD8AC990";
+createNode clamp -n "Ultimate_Walker_v1_0_1:walker_rt_ball_clamp";
+	rename -uid "D1EFEBFD-4190-A12F-9C1D-439589B868E8";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion11";
+	rename -uid "7A8EE747-4595-0BAD-3530-22858F0E2BD4";
 	setAttr ".cf" 0.017453292519943295;
-createNode unitConversion -n "unitConversion14";
-	rename -uid "B123F9BC-4A1F-5670-52C0-A393E1B93521";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion14";
+	rename -uid "787D05F6-4D85-21B8-EAE2-C58568A76283";
 	setAttr ".cf" 0.017453292519943295;
-createNode plusMinusAverage -n "walker_rt_legUpStr_plsMns";
-	rename -uid "8613BA96-485F-8D2C-9401-CD9AC4E50AD5";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_rt_legUpStr_plsMns";
+	rename -uid "1045CE7C-46D0-0CCA-C40B-B3AD933AB1AE";
 	setAttr -s 2 ".i1[1]"  -0.98861998;
-createNode multiplyDivide -n "walker_rt_legRefStr_multDiv";
-	rename -uid "3B76184D-4AC9-2437-EC8D-96B45B88AEDF";
+createNode multiplyDivide -n "Ultimate_Walker_v1_0_1:walker_rt_legRefStr_multDiv";
+	rename -uid "B6CF1B06-480A-2469-A950-8EAF1D51560D";
 	setAttr ".i2" -type "float3" -0.98861998 -0.87961322 1 ;
-createNode plusMinusAverage -n "walker_rt_legTotStrAmt_plsMns";
-	rename -uid "FCF405B0-454B-62FE-61AD-B49C015C7C6A";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_rt_legTotStrAmt_plsMns";
+	rename -uid "AECA9747-4F53-DBC0-4CEF-5182E0C81C69";
 	setAttr -s 2 ".i2";
 	setAttr -s 2 ".i2";
-createNode multiplyDivide -n "walker_rt_legStrAtt_multDiv";
-	rename -uid "EB3183BC-4310-0295-3132-A382B731F61D";
+createNode multiplyDivide -n "Ultimate_Walker_v1_0_1:walker_rt_legStrAtt_multDiv";
+	rename -uid "AFCD956F-487C-7554-415D-8EBF5B768433";
 	setAttr ".op" 2;
 	setAttr ".i2" -type "float3" 10 10 10 ;
-createNode plusMinusAverage -n "walker_rt_legLowStr_plsMns";
-	rename -uid "6FFCCD84-4253-61AF-B171-7B99DCCDD5A5";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_rt_legLowStr_plsMns";
+	rename -uid "5382D9C6-4041-E54F-1354-E3BDD039AD2B";
 	setAttr -s 2 ".i1[1]"  -0.87961322;
-createNode condition -n "walker_rt_legFkVis_cond";
-	rename -uid "B716CC72-42CF-A512-0940-06876DD47665";
+createNode condition -n "Ultimate_Walker_v1_0_1:walker_rt_legFkVis_cond";
+	rename -uid "96B14031-4A9E-5DCC-C2B5-1A9ED14DD22D";
 	setAttr ".op" 4;
 	setAttr ".st" 1;
 	setAttr ".ct" -type "float3" 1 0 0 ;
 	setAttr ".cf" -type "float3" 0 1 1 ;
-createNode plusMinusAverage -n "walker_rt_upLeg_plsMns";
-	rename -uid "EAB91308-49E6-EBF8-584B-EDACC65CB670";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_rt_upLeg_plsMns";
+	rename -uid "E898215F-4C47-B56A-1855-95974FB7B506";
 	setAttr ".op" 2;
 	setAttr -s 2 ".i1[0:1]"  1 0;
-createNode blendColors -n "walker_rt_upLegSnapSplice_blend";
-	rename -uid "AA96F4A4-429E-0BA3-917A-7C9F1CA93FE2";
-createNode multiplyDivide -n "walker_rt_armPvNegate_multDiv";
-	rename -uid "55D34CD7-4EFB-1A5B-52B3-3184DFAF1E88";
+createNode blendColors -n "Ultimate_Walker_v1_0_1:walker_rt_upLegSnapSplice_blend";
+	rename -uid "61F0D73F-4E6F-B920-0D2B-97A9EF5A5A90";
+createNode multiplyDivide -n "Ultimate_Walker_v1_0_1:walker_rt_armPvNegate_multDiv";
+	rename -uid "D5DE560C-4884-1C62-F949-62A4D2A485B9";
 	setAttr ".i2" -type "float3" -1 -1 0 ;
-createNode multiplyDivide -n "walker_rt_legStr_multDiv";
-	rename -uid "9E6421B0-46B9-CB50-710D-34A0F324DD9D";
-createNode clamp -n "walker_rt_legStr_clamp";
-	rename -uid "27F5DA08-4C72-BB23-6100-20A51DBD048B";
+createNode multiplyDivide -n "Ultimate_Walker_v1_0_1:walker_rt_legStr_multDiv";
+	rename -uid "DB6A00C1-489E-B0BB-C2B2-65B17CA87CFD";
+createNode clamp -n "Ultimate_Walker_v1_0_1:walker_rt_legStr_clamp";
+	rename -uid "56980DD7-404F-E05B-4452-F7A7E5FB07A8";
 	setAttr ".mn" -type "float3" 1 0 0 ;
-createNode multiplyDivide -n "walker_rt_legNegateTx_multDiv";
-	rename -uid "440A6533-4A0A-E4F4-AEA6-B8BAEB2E0F00";
+createNode multiplyDivide -n "Ultimate_Walker_v1_0_1:walker_rt_legNegateTx_multDiv";
+	rename -uid "C2D5320B-4145-29DB-06A8-AC8D0C554393";
 	setAttr ".i2" -type "float3" -1 1 1 ;
-createNode multiplyDivide -n "walker_rt_legStrScalar_multDiv";
-	rename -uid "9BB769BB-487F-86D4-B6AB-519F78919C70";
+createNode multiplyDivide -n "Ultimate_Walker_v1_0_1:walker_rt_legStrScalar_multDiv";
+	rename -uid "D36D58E2-4683-F5D7-FA7E-FABC19C6F874";
 	setAttr ".op" 2;
-createNode multiplyDivide -n "walker_rt_legStrNum_multDiv";
-	rename -uid "79FCE445-4D67-94AD-1A4A-A0BB5258D336";
-createNode plusMinusAverage -n "walker_rt_legStrDenom_plsMns";
-	rename -uid "6008F7B3-49AA-EFCB-7EB2-B5A2901141F4";
+createNode multiplyDivide -n "Ultimate_Walker_v1_0_1:walker_rt_legStrNum_multDiv";
+	rename -uid "CC88C95A-4582-A13C-F90F-44B738A04721";
+createNode plusMinusAverage -n "Ultimate_Walker_v1_0_1:walker_rt_legStrDenom_plsMns";
+	rename -uid "8F58690D-421E-1E28-888A-87B2454159D7";
 	setAttr -s 2 ".i1";
 	setAttr -s 2 ".i1";
-createNode blendColors -n "walker_rt_kneeSnapSplice_blend";
-	rename -uid "12DE3A1E-4FB6-92BE-BD81-9B954FFE5127";
-createNode condition -n "walker_rt_legIkVis_cond";
-	rename -uid "CB4974DD-4BE1-57A6-5A79-288F0F9B90A0";
+createNode blendColors -n "Ultimate_Walker_v1_0_1:walker_rt_kneeSnapSplice_blend";
+	rename -uid "D0D0776B-4447-32D9-3ED8-6BA1EEEC22D4";
+createNode condition -n "Ultimate_Walker_v1_0_1:walker_rt_legIkVis_cond";
+	rename -uid "5EC12B74-4F4B-AFFD-50DA-5389517F0BFB";
 	setAttr ".op" 2;
 	setAttr ".ct" -type "float3" 1 0 0 ;
 	setAttr ".cf" -type "float3" 0 1 1 ;
-createNode unitConversion -n "unitConversion10";
-	rename -uid "38FD0CCE-4BD7-54FD-36DC-B29B22555FC5";
+createNode unitConversion -n "Ultimate_Walker_v1_0_1:unitConversion10";
+	rename -uid "BB8C609F-4D24-6F19-1772-BA9D108E6179";
 	setAttr ".cf" 0.017453292519943295;
-createNode blendColors -n "walker_rt_legPvCtrl_blend";
-	rename -uid "0AC0716B-4D99-229D-0196-89ADDB2C6F87";
+createNode blendColors -n "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrl_blend";
+	rename -uid "9E0E6D67-4853-31FC-20CA-7391B515486E";
 	setAttr ".c2" -type "float3" 0 0 0 ;
-createNode blendColors -n "walker_lf_legTrans_blend";
-	rename -uid "F69662F7-4669-1449-893F-4894758FB8C9";
-createNode reverse -n "walker_lf_legIkFkSwitch_reverse";
-	rename -uid "330C7897-4B8C-D506-C4F2-08997D44017A";
-createNode blendColors -n "walker_rt_legTrans_blend";
-	rename -uid "B05A93A6-476F-F5A7-26E0-4294A30088D6";
-createNode reverse -n "walker_rt_legIkFkSwitch_reverse";
-	rename -uid "300B8615-4BBD-F804-974E-C9818C66DF1A";
-createNode multiplyDivide -n "multiplyDivide1";
-	rename -uid "B5AAA878-41B7-648D-C313-2CB47450ACBD";
+createNode blendColors -n "Ultimate_Walker_v1_0_1:walker_lf_legTrans_blend";
+	rename -uid "C45B872C-41E1-7A84-60C8-2D99E72C41C6";
+createNode reverse -n "Ultimate_Walker_v1_0_1:walker_lf_legIkFkSwitch_reverse";
+	rename -uid "3E08550E-4587-F9E9-5E19-FC8A30525B5F";
+createNode blendColors -n "Ultimate_Walker_v1_0_1:walker_rt_legTrans_blend";
+	rename -uid "D3BB73D3-4EBF-2AB3-2257-C39A71F6E87F";
+createNode reverse -n "Ultimate_Walker_v1_0_1:walker_rt_legIkFkSwitch_reverse";
+	rename -uid "6859F244-41D2-EAA9-5263-299EB90ACAC7";
+createNode multiplyDivide -n "Ultimate_Walker_v1_0_1:multiplyDivide1";
+	rename -uid "92092920-4BA2-6BCE-3E9A-CEA6D4E4A218";
 	setAttr ".op" 2;
-createNode multiplyDivide -n "multiplyDivide2";
-	rename -uid "8288EBE7-4CFA-E229-C153-6C8EE21CF3CD";
+createNode multiplyDivide -n "Ultimate_Walker_v1_0_1:multiplyDivide2";
+	rename -uid "58F17CA0-4783-9118-28BC-97A19E258C90";
 	setAttr ".i2" -type "float3" 2 1 1 ;
-createNode animCurveUU -n "Mesh_body_Grp_visibility";
-	rename -uid "58A40A98-44C7-D3E9-8420-FE9A17B38CCD";
+createNode animCurveUU -n "Ultimate_Walker_v1_0_1:Mesh_body_Grp_visibility";
+	rename -uid "6AB97777-45BB-3438-1D71-ABBAB9046EA9";
 	setAttr ".tan" 9;
 	setAttr -s 3 ".ktv[0:2]"  0 1 1 1 2 0;
 	setAttr -s 3 ".kwl[0:2]" yes yes yes;
-createNode displayLayer -n "L_Objects";
-	rename -uid "D72AB0A4-422E-BF7C-37AB-A2BEEA168A7C";
+createNode displayLayer -n "Ultimate_Walker_v1_0_1:L_Objects";
+	rename -uid "680D3168-4A74-A21B-81CA-E994037F7EA2";
 	setAttr ".dt" 2;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 1;
-createNode displayLayerManager -n "layerManager";
-	rename -uid "EFCB07FD-43A4-24BD-AE42-DB91E389F35A";
-	setAttr ".cdl" 1;
-	setAttr -s 4 ".dli[1:3]"  4 1 2;
-	setAttr -s 2 ".dli";
-createNode materialInfo -n "materialInfo4";
-	rename -uid "0CB7F2E1-49DF-2F99-A5B4-C88D3E44747E";
-createNode shadingEngine -n "Shdr_ball_turuncuSG";
-	rename -uid "A424B785-4CE6-89C8-D77B-93A2C6FFEDAB";
+createNode materialInfo -n "Ultimate_Walker_v1_0_1:materialInfo4";
+	rename -uid "32B9A6DA-4729-8969-AB92-3A8F42502826";
+createNode shadingEngine -n "Ultimate_Walker_v1_0_1:Shdr_ball_turuncuSG";
+	rename -uid "8B8F30D7-4363-0F37-DD27-639DB4846A5A";
 	setAttr ".ihi" 0;
 	setAttr -s 9 ".dsm";
 	setAttr ".ro" yes;
-createNode phong -n "Shdr_ball_turuncu";
-	rename -uid "7FB0D4E3-432C-4260-E39C-6C837AF7E99E";
+createNode phong -n "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu";
+	rename -uid "B0E91AD9-4866-38B8-BB7A-FF9A3AEA6174";
 	setAttr ".dc" 1;
 	setAttr ".c" -type "float3" 1 0.49126482 0 ;
 	setAttr ".sc" -type "float3" 0.65853363 0.65853363 0.65853363 ;
 	setAttr ".rfl" 0.065040647983551025;
 	setAttr ".cp" 9.1707315444946289;
-createNode materialInfo -n "materialInfo9";
-	rename -uid "A3767714-4395-093B-957B-4EA6AA262759";
-createNode shadingEngine -n "Shdr_ball_turuncu2SG";
-	rename -uid "53A03559-442D-E544-A643-5088D7BA58DA";
+createNode materialInfo -n "Ultimate_Walker_v1_0_1:materialInfo9";
+	rename -uid "7453BBC6-4C16-619C-2EDB-0AA92A03F4F1";
+createNode shadingEngine -n "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2SG";
+	rename -uid "F84D9761-41A5-38B4-F71B-168436A43623";
 	setAttr ".ihi" 0;
 	setAttr -s 7 ".dsm";
 	setAttr ".ro" yes;
-createNode phong -n "Shdr_ball_turuncu2";
-	rename -uid "06C12D19-43B1-331D-C0B6-A6B3F57DFD2D";
+createNode phong -n "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2";
+	rename -uid "3D240140-47B0-8ACD-8A79-69808439F66E";
 	setAttr ".dc" 1;
 	setAttr ".c" -type "float3" 0 0 0 ;
 	setAttr ".sc" -type "float3" 0.65853363 0.65853363 0.65853363 ;
 	setAttr ".rfl" 0.065040647983551025;
 	setAttr ".cp" 9.1707315444946289;
-createNode animCurveUU -n "CNT_Grp_visibility";
-	rename -uid "915EE0A3-4E95-2C52-8C14-B3BDF4EF4FA4";
+createNode animCurveUU -n "Ultimate_Walker_v1_0_1:CNT_Grp_visibility";
+	rename -uid "9BB86B53-4BB2-6863-61CB-3EB56070FDF8";
 	setAttr ".tan" 9;
 	setAttr -s 3 ".ktv[0:2]"  0 1 1 0 2 1;
 	setAttr -s 3 ".kwl[0:2]" yes yes yes;
-createNode animCurveUU -n "CTRL_Bottom_Grp_visibility";
-	rename -uid "7E1AC928-41A6-1C17-2FCD-99824F993AC2";
+createNode animCurveUU -n "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_visibility";
+	rename -uid "9DF06837-4EC7-EF98-FE18-CA9356CB0891";
 	setAttr ".tan" 9;
 	setAttr -s 2 ".ktv[0:1]"  0 0 1 1;
 	setAttr -s 2 ".kwl[0:1]" yes yes;
-createNode groupId -n "skinCluster1GroupId";
-	rename -uid "2809D864-49E4-A5B3-AF1F-83B08FC8322F";
+createNode groupId -n "Ultimate_Walker_v1_0_1:skinCluster1GroupId";
+	rename -uid "591CC5EA-474F-A8A1-64D5-6A86C0DA4691";
 	setAttr ".ihi" 0;
-createNode objectSet -n "skinCluster1Set";
-	rename -uid "8FFE7721-4D81-7DAB-F2FD-9193FDEC8C52";
+createNode objectSet -n "Ultimate_Walker_v1_0_1:skinCluster1Set";
+	rename -uid "68744C92-4DAA-2E71-CBEC-95A2580BD419";
 	setAttr ".ihi" 0;
 	setAttr ".vo" yes;
-createNode skinCluster -n "skinCluster1";
-	rename -uid "9501F5D0-4A3C-0CA1-CE3B-12A079767D3C";
+createNode skinCluster -n "Ultimate_Walker_v1_0_1:skinCluster1";
+	rename -uid "EF141460-4999-B4A7-2E51-66BE4C1BBF87";
 	setAttr ".ip[0].gtg" -type "string" "";
 	setAttr ".skm" 1;
 	setAttr -s 480 ".wl";
@@ -27163,8 +27325,8 @@ createNode skinCluster -n "skinCluster1";
 	setAttr ".mi" 3;
 	setAttr ".ucm" yes;
 	setAttr ".nw" 2;
-createNode dagPose -n "bindPose1";
-	rename -uid "1FD1E4F3-495A-D3C7-8EB4-438DB5465ACA";
+createNode dagPose -n "Ultimate_Walker_v1_0_1:bindPose1";
+	rename -uid "D0B2F2CF-43BC-D5A9-7F46-5C8083953B00";
 	setAttr -s 11 ".wm";
 	setAttr ".wm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".wm[1]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
@@ -27238,32 +27400,32 @@ createNode dagPose -n "bindPose1";
 	setAttr -s 19 ".g[0:18]" yes yes no yes yes yes yes no no no yes yes 
 		no no no no no no no;
 	setAttr ".bp" yes;
-createNode groupParts -n "skinCluster1GroupParts";
-	rename -uid "0D20BB7D-4EE9-397E-3E1E-99A37C0E044B";
+createNode groupParts -n "Ultimate_Walker_v1_0_1:skinCluster1GroupParts";
+	rename -uid "023C1C46-4817-3EFB-A17F-6A811CAB475C";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[0:479]";
-createNode tweak -n "tweak1";
-	rename -uid "0FF1B122-412F-1222-A516-AB89A040C384";
-createNode objectSet -n "tweakSet1";
-	rename -uid "2F4FF0CF-4141-B0C2-C83F-1691826B2725";
+createNode tweak -n "Ultimate_Walker_v1_0_1:tweak1";
+	rename -uid "6402955F-45A0-1C5A-5E85-C5965090C8FE";
+createNode objectSet -n "Ultimate_Walker_v1_0_1:tweakSet1";
+	rename -uid "B93EB764-405E-EBD3-AEAB-1EAD7CC99D57";
 	setAttr ".ihi" 0;
 	setAttr ".vo" yes;
-createNode groupId -n "groupId2";
-	rename -uid "95437261-48CB-7F7F-5637-35ADC1F41B7D";
+createNode groupId -n "Ultimate_Walker_v1_0_1:groupId2";
+	rename -uid "B1BBB2A4-486C-3BDD-E5F6-9780DF8F8B5B";
 	setAttr ".ihi" 0;
-createNode groupParts -n "groupParts2";
-	rename -uid "5655385F-41E1-3D1E-CC95-5AB0380E8DD6";
+createNode groupParts -n "Ultimate_Walker_v1_0_1:groupParts2";
+	rename -uid "7D82651A-4CE0-228A-FB6A-DFB4590D55D2";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode groupId -n "skinCluster2GroupId";
-	rename -uid "7B89C619-4A50-4A93-6BF9-D68D6F74BBA7";
+createNode groupId -n "Ultimate_Walker_v1_0_1:skinCluster2GroupId";
+	rename -uid "A7437DF2-4567-C84A-5322-F59518DC7B31";
 	setAttr ".ihi" 0;
-createNode objectSet -n "skinCluster2Set";
-	rename -uid "26F393E4-4FF6-C23E-7BF3-41ABF2C02284";
+createNode objectSet -n "Ultimate_Walker_v1_0_1:skinCluster2Set";
+	rename -uid "8480AABE-4B75-83AA-9EA9-2489402279AE";
 	setAttr ".ihi" 0;
 	setAttr ".vo" yes;
-createNode skinCluster -n "skinCluster2";
-	rename -uid "0394C652-4BC8-FA9F-874A-8997BEDC2FAD";
+createNode skinCluster -n "Ultimate_Walker_v1_0_1:skinCluster2";
+	rename -uid "CAFCFCE8-43E2-DF08-C9D9-9ABB0AFDD590";
 	setAttr ".ip[0].gtg" -type "string" "";
 	setAttr ".skm" 1;
 	setAttr -s 106 ".wl";
@@ -27523,32 +27685,32 @@ createNode skinCluster -n "skinCluster2";
 	setAttr ".mi" 3;
 	setAttr ".ucm" yes;
 	setAttr ".nw" 2;
-createNode groupParts -n "skinCluster2GroupParts";
-	rename -uid "34979D9F-4607-522D-A9E5-549C894E6F32";
+createNode groupParts -n "Ultimate_Walker_v1_0_1:skinCluster2GroupParts";
+	rename -uid "6A22A14F-4425-D716-1F3D-56B3A630B4F7";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[0:105]";
-createNode tweak -n "tweak2";
-	rename -uid "23118E4E-4AE1-EAF3-A728-1982EEAC2D9E";
-createNode objectSet -n "tweakSet2";
-	rename -uid "B7024024-47A0-F325-CCDA-FFA6DB9C76D9";
+createNode tweak -n "Ultimate_Walker_v1_0_1:tweak2";
+	rename -uid "9EC40A1C-473D-B311-35A4-1CA144CDFC9E";
+createNode objectSet -n "Ultimate_Walker_v1_0_1:tweakSet2";
+	rename -uid "7535E959-4921-9E39-DBB6-F59CB82AF26C";
 	setAttr ".ihi" 0;
 	setAttr ".vo" yes;
-createNode groupId -n "groupId4";
-	rename -uid "A49388B9-4530-8E2F-7952-9C9C7E36C536";
+createNode groupId -n "Ultimate_Walker_v1_0_1:groupId4";
+	rename -uid "F46B0BC0-4756-7257-EBF4-9AA652A8CCB9";
 	setAttr ".ihi" 0;
-createNode groupParts -n "groupParts4";
-	rename -uid "E9A5BE4B-4327-C6EC-C099-A8AB9725A7D6";
+createNode groupParts -n "Ultimate_Walker_v1_0_1:groupParts4";
+	rename -uid "6B1CCFC2-4FA5-A583-3767-93B84F421EBA";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode groupId -n "skinCluster3GroupId";
-	rename -uid "FA584181-4CCA-D704-8BBD-BA813D83478E";
+createNode groupId -n "Ultimate_Walker_v1_0_1:skinCluster3GroupId";
+	rename -uid "B4C9352B-4C47-45AF-57D3-82B60CAC3375";
 	setAttr ".ihi" 0;
-createNode objectSet -n "skinCluster3Set";
-	rename -uid "5B436736-49E0-EA77-EC7F-89BE21E81097";
+createNode objectSet -n "Ultimate_Walker_v1_0_1:skinCluster3Set";
+	rename -uid "FA0BDB1B-4976-00D0-173F-4AB7756C9C8B";
 	setAttr ".ihi" 0;
 	setAttr ".vo" yes;
-createNode skinCluster -n "skinCluster3";
-	rename -uid "F0E94AA2-4071-8B79-0CDD-BB9F92F1A61A";
+createNode skinCluster -n "Ultimate_Walker_v1_0_1:skinCluster3";
+	rename -uid "3E5B3E78-408E-A6B5-DBAC-B786FEEB54AD";
 	setAttr ".ip[0].gtg" -type "string" "";
 	setAttr ".skm" 1;
 	setAttr -s 480 ".wl";
@@ -28560,32 +28722,32 @@ createNode skinCluster -n "skinCluster3";
 	setAttr ".mi" 3;
 	setAttr ".ucm" yes;
 	setAttr ".nw" 2;
-createNode groupParts -n "skinCluster3GroupParts";
-	rename -uid "0EB531A5-406C-7D80-C151-0EA5E669C425";
+createNode groupParts -n "Ultimate_Walker_v1_0_1:skinCluster3GroupParts";
+	rename -uid "0B41B44E-4917-0CB4-3F04-8098DCCDBF96";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode tweak -n "tweak3";
-	rename -uid "E1A629E1-4AC2-6BE2-3F59-6989A0EBD27A";
-createNode objectSet -n "tweakSet3";
-	rename -uid "A75738DA-4DB9-C093-92A0-76BE61B19F4E";
+createNode tweak -n "Ultimate_Walker_v1_0_1:tweak3";
+	rename -uid "F47E8EE9-49FB-0097-5618-A6A76FB7B243";
+createNode objectSet -n "Ultimate_Walker_v1_0_1:tweakSet3";
+	rename -uid "D506F934-462D-D1CE-B7A8-32B58781D428";
 	setAttr ".ihi" 0;
 	setAttr ".vo" yes;
-createNode groupId -n "groupId6";
-	rename -uid "A90E28F7-45BA-6727-E78C-F28B6E459A0C";
+createNode groupId -n "Ultimate_Walker_v1_0_1:groupId6";
+	rename -uid "1CA31659-4BC5-C48F-AAAA-65A7B026CF72";
 	setAttr ".ihi" 0;
-createNode groupParts -n "groupParts6";
-	rename -uid "71A647A6-4F7D-8DFF-EEC3-B1ABE774C535";
+createNode groupParts -n "Ultimate_Walker_v1_0_1:groupParts6";
+	rename -uid "EBB10AC3-4B0B-62CF-0945-43BA8C2E20F4";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode groupId -n "skinCluster4GroupId";
-	rename -uid "0B911C37-451E-2ECF-FE45-4987F294476D";
+createNode groupId -n "Ultimate_Walker_v1_0_1:skinCluster4GroupId";
+	rename -uid "B3E4C604-4932-A2B1-EA3B-889965C96D52";
 	setAttr ".ihi" 0;
-createNode objectSet -n "skinCluster4Set";
-	rename -uid "97F8E772-49F2-7EE8-1572-35ACC712041C";
+createNode objectSet -n "Ultimate_Walker_v1_0_1:skinCluster4Set";
+	rename -uid "A862504A-482E-A251-D564-34A6C82D53D4";
 	setAttr ".ihi" 0;
 	setAttr ".vo" yes;
-createNode skinCluster -n "skinCluster4";
-	rename -uid "9ADF776A-4C10-2797-D709-ED87D4CA76E3";
+createNode skinCluster -n "Ultimate_Walker_v1_0_1:skinCluster4";
+	rename -uid "78B649E5-4318-30D9-4D90-8886EEAE1DC1";
 	setAttr ".ip[0].gtg" -type "string" "";
 	setAttr ".skm" 1;
 	setAttr -s 106 ".wl";
@@ -28845,52 +29007,40 @@ createNode skinCluster -n "skinCluster4";
 	setAttr ".mi" 3;
 	setAttr ".ucm" yes;
 	setAttr ".nw" 2;
-createNode groupParts -n "skinCluster4GroupParts";
-	rename -uid "C09F35F3-4191-A842-C24E-4EAEA4033E42";
+createNode groupParts -n "Ultimate_Walker_v1_0_1:skinCluster4GroupParts";
+	rename -uid "D5FBB76D-4C81-6370-AA63-47A9CB0F4D2C";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode tweak -n "tweak4";
-	rename -uid "2D791396-40E3-234C-2300-09A3D5DC6AE2";
-createNode objectSet -n "tweakSet4";
-	rename -uid "216BE71A-4C3C-81BF-90CD-43B73FD6479D";
+createNode tweak -n "Ultimate_Walker_v1_0_1:tweak4";
+	rename -uid "433AD4D9-4633-D8EE-8249-38A1DFEFB059";
+createNode objectSet -n "Ultimate_Walker_v1_0_1:tweakSet4";
+	rename -uid "2A85E450-499E-61E0-9130-668B4F6C0C19";
 	setAttr ".ihi" 0;
 	setAttr ".vo" yes;
-createNode groupId -n "groupId8";
-	rename -uid "82190DBE-4FA4-2183-3B23-E38E32A6ACC8";
+createNode groupId -n "Ultimate_Walker_v1_0_1:groupId8";
+	rename -uid "58666593-41DB-2E23-C97A-D6B50864861D";
 	setAttr ".ihi" 0;
-createNode groupParts -n "groupParts8";
-	rename -uid "C1CE41F8-4986-4E51-4BB9-31B4F55C8763";
+createNode groupParts -n "Ultimate_Walker_v1_0_1:groupParts8";
+	rename -uid "7D2E1D72-4F58-F47E-92AB-BF9C0E6CF016";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode lightLinker -s -n "lightLinker1";
-	rename -uid "79F5A924-47E4-A3B2-E33D-6AB623419151";
-	setAttr -s 4 ".lnk";
-	setAttr -s 4 ".slnk";
-createNode displayLayer -n "defaultLayer";
-	rename -uid "B37AA248-48B0-2FD4-7AF0-72B4A1668A51";
-	setAttr ".ufem" -type "stringArray" 0  ;
-createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "0C92DF73-49DD-564B-C531-DC953F73918B";
-createNode renderLayer -n "defaultRenderLayer";
-	rename -uid "B4E88D9A-46D4-AA40-4856-72A7CE5A6712";
-	setAttr ".g" yes;
-createNode script -n "uiConfigurationScriptNode";
-	rename -uid "375B0F21-4B97-D481-F13B-1AA0DF1716F8";
+createNode script -n "Ultimate_Walker_v1_0_1:uiConfigurationScriptNode";
+	rename -uid "839F5CEC-4CCA-5420-5B55-5E87AFF329AD";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
-		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n"
-		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 313\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n"
+		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n"
 		+ "            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n"
-		+ "            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n"
-		+ "            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1317\n            -height 673\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n"
-		+ "            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n"
-		+ "            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n"
-		+ "            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 1\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n"
+		+ "            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n"
+		+ "            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 313\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n"
+		+ "            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n"
+		+ "            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n"
+		+ "            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 313\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n"
 		+ "            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
-		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1317\n            -height 673\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
 		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n"
 		+ "            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n"
 		+ "            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 1\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n"
@@ -28913,447 +29063,316 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"motionMakerEditorPanel\" (localizedPanelLabel(\"MotionMaker Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"MotionMaker Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
 		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
 		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
-		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.png\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n"
-		+ "\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Side View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera side` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1317\\n    -height 673\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera side` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1317\\n    -height 673\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.png\"\n"
+		+ "\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1317\\n    -height 673\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1317\\n    -height 673\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    -pluginObjects \\\"mayaUsdProxyShapeBaseDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
-createNode script -n "sceneConfigurationScriptNode";
-	rename -uid "18683959-435D-E2F1-A9BF-878A3B6E5A17";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 24 -ast 0 -aet 24 ";
+createNode script -n "Ultimate_Walker_v1_0_1:sceneConfigurationScriptNode";
+	rename -uid "E3021C06-423C-D385-7EFD-D0BB9DE45715";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 38 -ast 1 -aet 75 ";
 	setAttr ".st" 6;
-createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "0E82EEFE-4D42-1EA2-7262-F989D011AC92";
-createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "1F456B2F-4EC0-23E0-C3D3-2AA74B27554F";
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
-	rename -uid "1F42CE63-42BC-1E82-15DF-88BBE4708480";
-	setAttr ".version" -type "string" "5.3.5.2";
+	rename -uid "AB707198-46DF-1F3D-DCBC-D4B580D514DF";
+	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
+	setAttr ".version" -type "string" "5.6.1.1";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
-	rename -uid "F751BFA6-43A5-426F-3B92-B0AD4F4058EF";
+	rename -uid "564F6D7E-4173-B7E3-D63C-DCBE3C4C2AC0";
+	setAttr ".ai_translator" -type "string" "gaussian";
 createNode aiAOVDriver -s -n "defaultArnoldDriver";
-	rename -uid "63A9BCF6-4661-9998-D9F0-24962135DE19";
+	rename -uid "8CF9A932-48FC-C937-31D3-A3AF6D91EFBE";
+	setAttr ".ai_translator" -type "string" "exr";
 createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
-	rename -uid "8C73675F-4CA6-FD0A-051B-A785CEEA6876";
+	rename -uid "75F49F4C-4BCD-2174-00FF-52973EB7BCC1";
 	setAttr ".ai_translator" -type "string" "maya";
 	setAttr ".output_mode" 0;
+createNode polyPlane -n "polyPlane1";
+	rename -uid "C0F86A6A-495E-F6BC-5B0B-928A20FFFE31";
+	setAttr ".cuv" 2;
 createNode animCurveTL -n "CTRL_Main_translateX";
-	rename -uid "5C3E98FA-41ED-EDFD-7BAF-AA984F71273D";
+	rename -uid "6BAFCAEA-4025-C927-67C0-2B8F743A9DC7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 7 0 11 0 17 0 25 0 27 0 37 0;
 createNode animCurveTL -n "CTRL_Main_translateY";
-	rename -uid "76877930-45CC-5B33-6290-EBA249DC379B";
+	rename -uid "9C3E7E2B-4AC3-D221-4964-DD8977674DA3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 -0.21686819723019113 4 -0.074096464110539717
-		 7 0.018567881904618666 10 -0.099216059047690708 13 -0.217 16 -0.099 19 0.019 22 -0.098934098615095459
-		 25 -0.21686819723019113;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 7 -0.96069663537979788 11 0.020535160866335778
+		 17 1.8804669117398369 25 -0.20216022311927961 27 -1.025343950814305 37 -0.045774082083315903;
 createNode animCurveTL -n "CTRL_Main_translateZ";
-	rename -uid "4EE9BDEA-4B33-1FCA-C8C8-FC8D22D7EDF5";
+	rename -uid "1E079D80-47DD-DE15-2CA1-B48906DEF142";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTL -n "walker_lf_heel_ik_ctrl_translateX";
-	rename -uid "5DFDCE72-4139-1144-60F0-CC88B4796205";
+	setAttr -s 7 ".ktv[0:6]"  1 -0.3321915075514732 7 -0.021377890222715079
+		 11 -1.2204054417337997 17 -2.9319863459799556 25 -5.5507207762382889 27 -6.5298600247796479
+		 37 -6.7611266215322141;
+createNode animCurveTL -n "walker_lf_knee_pv_ctrl_translateX";
+	rename -uid "05C54383-4412-1F4E-F58C-DCAD7B253EAE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 -5.9661164718858113e-16 4 -9.8915761253154824e-16
-		 7 -8.7777494826238867e-16 10 -8.5702666292341473e-16 13 -8.362783775844409e-16 16 -9.7400219178956296e-16
-		 19 -8.362783775844409e-16 22 -7.2312039032216264e-16 25 -5.9661164718858113e-16;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTL -n "walker_lf_heel_ik_ctrl_translateY";
-	rename -uid "E235F722-4CFC-BF33-99DD-B69374EF863F";
+	setAttr -s 7 ".ktv[0:6]"  1 4.0681726642684543e-17 7 0.25 17 0.25
+		 21 0.25 25 0.25 27 0.25 37 0.25;
+createNode animCurveTL -n "walker_lf_knee_pv_ctrl_translateY";
+	rename -uid "FBF997B2-4EEE-7072-B653-84BFBF703326";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0.33227283172867161 4 0.83731170367695518
-		 7 1.0883728619520794 10 0.5358382244811275 13 -0.016696412989823883 16 -0.012234361366095898
-		 19 0.019 22 0.23020995684324017 25 0.33227283172867161;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTL -n "walker_lf_heel_ik_ctrl_translateZ";
-	rename -uid "B6AF4535-4768-C93C-360A-368B1121A1CD";
+	setAttr -s 7 ".ktv[0:6]"  1 0 7 -0.82949424034365227 17 1.6673798759209639
+		 21 1.8229080498799324 25 -0.41524725893815262 27 -0.41524725893815262 37 -0.41524725893815262;
+createNode animCurveTL -n "walker_lf_knee_pv_ctrl_translateZ";
+	rename -uid "8013C2B3-4EA2-0FB3-3323-5392D230975D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 -1.2454402154540429 4 -1.1671575171381132
-		 7 -0.82589387916710644 10 0.45786467930395558 13 1.326083129930284 16 0.60572738437133211
-		 19 0 22 -0.84966220427257899 25 -1.2454402154540429;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTL -n "walker_rt_heel_ik_ctrl_translateX";
-	rename -uid "06833414-4661-10D4-A191-44A427DD8C45";
+	setAttr -s 7 ".ktv[0:6]"  1 0.3321915075514732 7 0.021377890222715079
+		 17 3.2904062260518416 21 5.6400786731005974 25 5.909140656310174 27 7.3476874129227836
+		 37 7.3476874129227836;
+createNode animCurveTL -n "walker_rt_knee_pv_ctrl_translateX";
+	rename -uid "CF72F6AF-42A1-77C5-A54C-9CAF06808C60";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 -2.6430604231177204e-16 7 -2.1988292585470515e-16
-		 10 -5.6902216349234475e-16 13 -9.1816140112998414e-16 16 -1.1138518884947171e-15
-		 19 -1.087497770934419e-15 22 -5.4374888546720989e-16 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTL -n "walker_rt_heel_ik_ctrl_translateY";
-	rename -uid "5DC9E985-4FCB-E581-A91F-48A26F2F48CE";
+	setAttr -s 7 ".ktv[0:6]"  1 4.0681726642684543e-17 7 -0.25 17 -0.25
+		 21 -0.25 25 -0.25 27 -0.24999999999999997 37 -0.24999999999999997;
+createNode animCurveTL -n "walker_rt_knee_pv_ctrl_translateY";
+	rename -uid "856B4F02-4679-C21C-E1D9-5C8DC344A24A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 -0.079244201463647301 4 -0.026487112903108734
-		 7 0 10 0.08162366169780709 13 0.24427847130294714 16 0.72457090357197651 19 1.0294592719195623
-		 22 0.4751075352279579 25 -0.079244201463647301;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTL -n "walker_rt_heel_ik_ctrl_translateZ";
-	rename -uid "29BE250F-4FFC-8D8D-769A-F49A47722F15";
+	setAttr -s 7 ".ktv[0:6]"  1 0 7 -0.82949424034365227 17 1.6673798759209639
+		 21 1.8229080498799324 25 -0.41524725893815262 27 -0.41524725893815262 37 -0.41524725893815262;
+createNode animCurveTL -n "walker_rt_knee_pv_ctrl_translateZ";
+	rename -uid "1D655518-4BF5-CD8F-076C-AB9B9D5DC353";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 1.3863677767712796 4 0.57536136668699844
-		 7 0 10 -0.7298908462779774 13 -1.1690469698069612 16 -1.1135626905583622 19 -0.73865156798748299
-		 22 0.53218564333603458 25 1.3863677767712796;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTA -n "walker_lf_heel_ik_ctrl_rotateX";
-	rename -uid "2DD4FB1B-421B-1B90-9D7E-2182DC4B5933";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 34.582895839832034 4 55.332106656588742
-		 7 68.799142523233726 10 15.339138393728295 13 -38.120865735777095 16 -1.8020527260923609
-		 19 0 22 21.428841853207061 25 34.582895839832034;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTA -n "walker_lf_heel_ik_ctrl_rotateY";
-	rename -uid "5979330B-4A71-0124-09CF-EE8FD3B89902";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTA -n "walker_lf_heel_ik_ctrl_rotateZ";
-	rename -uid "79B509FD-4C1C-7272-459B-418106CAA8A1";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTU -n "walker_lf_heel_ik_ctrl_pvControl";
-	rename -uid "242096C5-4362-7BC7-04CC-75B2D5C6C384";
-	setAttr ".tan" 5;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
-	setAttr -s 9 ".kit[0:8]"  9 9 9 9 9 9 9 9 
-		1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[0:8]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 9 ".koy[0:8]"  0 0 0 0 0 0 0 0 0;
-createNode animCurveTU -n "walker_lf_heel_ik_ctrl_footRoll";
-	rename -uid "85251706-4AA0-39A8-8039-4FACDD6897CE";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTU -n "walker_lf_heel_ik_ctrl_footBreak";
-	rename -uid "128BEB42-4EAB-E106-D219-F383B7DF943F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTU -n "walker_lf_heel_ik_ctrl_toeRoll";
-	rename -uid "91FA0927-49D7-C48A-3B8B-47B5DD073E81";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 -33 4 -12.988338192419832 7 0 10 0 13 0
-		 16 0 19 0 22 -19 25 -33;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTU -n "walker_lf_heel_ik_ctrl_legTwist";
-	rename -uid "2F7006DA-4090-0663-42DF-579FC4574379";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTU -n "walker_lf_heel_ik_ctrl_heelTwist";
-	rename -uid "29641903-4AD6-3DFF-ADDD-0B9ACA63EEE7";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTU -n "walker_lf_heel_ik_ctrl_ballTwist";
-	rename -uid "0C999CAB-4CEB-3660-8C3D-4E99C6402BE9";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTU -n "walker_lf_heel_ik_ctrl_toeTwist";
-	rename -uid "FB62F96F-4ADB-FC07-5B98-EC9D8AEDECE7";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTA -n "walker_rt_heel_ik_ctrl_rotateX";
-	rename -uid "A9357B32-472B-6E6C-ED92-129D90F385F0";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 -36.686072385829881 4 -0.94442904129901817
-		 7 0 10 9.0713185071931584 13 24.645769389644926 16 47.51865562324285 19 62.570259428302919
-		 22 12.942093521236549 25 -36.686072385829881;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTA -n "walker_rt_heel_ik_ctrl_rotateY";
-	rename -uid "85564314-451A-1584-6950-3DA273C86B7A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTA -n "walker_rt_heel_ik_ctrl_rotateZ";
-	rename -uid "829D4552-4E00-39C9-E535-85BABBD5AE72";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTU -n "walker_rt_heel_ik_ctrl_pvControl";
-	rename -uid "3B4D8D73-48CF-ABA9-1B27-8EA33554E529";
-	setAttr ".tan" 5;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
-	setAttr -s 9 ".kit[0:8]"  9 9 9 9 9 9 9 9 
-		1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[0:8]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 9 ".koy[0:8]"  0 0 0 0 0 0 0 0 0;
-createNode animCurveTU -n "walker_rt_heel_ik_ctrl_footRoll";
-	rename -uid "F3467E90-435B-79FA-93C5-7CA5B628AFC3";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTU -n "walker_rt_heel_ik_ctrl_footBreak";
-	rename -uid "D72F6FA1-40D2-D6FA-159E-6EBFFA9FAC44";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTU -n "walker_rt_heel_ik_ctrl_toeRoll";
-	rename -uid "BCC0C4FA-4DB5-5A04-A66C-F1B9F77E4074";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 -9 13 -24 16 -12 19 0 22 0
-		 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTU -n "walker_rt_heel_ik_ctrl_legTwist";
-	rename -uid "9DB37577-4C88-9325-DDDC-AC81F2BDEA52";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTU -n "walker_rt_heel_ik_ctrl_heelTwist";
-	rename -uid "E4F9ED49-4607-03A1-0325-81A22C0922B2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTU -n "walker_rt_heel_ik_ctrl_ballTwist";
-	rename -uid "E271DE71-4399-C9CB-60A3-4AADA7A8E96B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode animCurveTU -n "walker_rt_heel_ik_ctrl_toeTwist";
-	rename -uid "81A1CAA1-4EE4-E5DE-72EB-31B2054760AE";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
+	setAttr -s 7 ".ktv[0:6]"  1 0.3321915075514732 7 0.021377890222715079
+		 17 3.2904062260518416 21 5.6400786731005974 25 5.909140656310174 27 7.3476874129227836
+		 37 7.3476874129227836;
 createNode animCurveTA -n "CTRL_Main_rotateX";
-	rename -uid "0B1AC38C-4E60-DCEE-501E-C9A0A2AD3C57";
+	rename -uid "8129646E-411A-C25C-A3D6-01B0FD0F7E11";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 7 -13.407266712176051 11 -13.407266712176051
+		 17 -6.6951870056649776 25 11.130486823621116 27 -11.466359412829084 37 0;
 createNode animCurveTA -n "CTRL_Main_rotateY";
-	rename -uid "2F403C7B-4CD5-EE9C-FAD0-759A78EDE18B";
+	rename -uid "59B7FC17-4E45-EDDD-EAB0-C9A8D42FCF47";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 7 0 11 0 17 0 25 0 27 0 37 0;
 createNode animCurveTA -n "CTRL_Main_rotateZ";
-	rename -uid "372602AC-4404-DBA6-AF40-86A40C3F8C7D";
+	rename -uid "DB4E7897-45E2-AD9F-0FB3-00A535AEB9A5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
-	setAttr -s 9 ".kit[8]"  1;
-	setAttr -s 9 ".kot[8]"  1;
-	setAttr -s 9 ".kix[8]"  1;
-	setAttr -s 9 ".kiy[8]"  0;
-	setAttr -s 9 ".kox[8]"  1;
-	setAttr -s 9 ".koy[8]"  0;
-createNode trackInfoManager -n "trackInfoManager1";
-	rename -uid "FB086090-482F-9A1C-4E60-96962AD78E74";
-createNode UsdDefaultSettings -n "UsdDefaultRenderSettings";
-	rename -uid "24A7DA81-4608-8817-4A18-B59EC077EB15";
-	setAttr ".srl" -type "string" "#usda 1.0\n(\n    renderSettingsPrimPath = \"/Render/SceneRenderSettings\"\n)\n\ndef Scope \"Render\"\n{\n    def RenderSettings \"SceneRenderSettings\"\n    {\n        custom string adskUsd:externalCamera = \"|persp\" (\n            displayName = \"External Camera\"\n        )\n        rel products = </Render/BeautyProduct>\n    }\n\n    def RenderVar \"color\"\n    {\n        uniform string sourceName = \"color\"\n    }\n\n    def RenderProduct \"BeautyProduct\"\n    {\n        rel orderedVars = </Render/color>\n        token productName = \"./default.png\"\n    }\n}\n\n";
-	setAttr ".ssl" -type "string" "#usda 1.0\n\n";
-	setAttr ".asp" -type "string" "UsdDefaultRenderSettings,/Render/SceneRenderSettings";
-lockNode -l 1 ;
+	setAttr -s 7 ".ktv[0:6]"  1 0 7 0 11 0 17 0 25 0 27 0 37 0;
+createNode animCurveTU -n "walker_lf_knee_pv_ctrl_lfLegIkCtrl";
+	rename -uid "DBEB45F7-437A-1354-B62C-0AABE8347D8A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  1 0 7 0 17 0 21 0 25 0 27 0 37 0;
+createNode animCurveTU -n "walker_rt_knee_pv_ctrl_rtLegIkCtrl";
+	rename -uid "83C331A6-4C25-4F29-2F0A-809E51524B52";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  1 0 7 0 17 0 21 0 25 0 27 0 37 0;
+createNode animCurveTL -n "walker_lf_heel_ik_ctrl_translateX";
+	rename -uid "6DD1DBA7-4052-8D94-6163-7AB12EEB7E1D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 1.9735606636021063e-17
+		 12 -7.7563698021376781e-17 17 3.3363120933292348e-16 25 6.7825722831371713e-16 27 6.7825722831371713e-16
+		 37 6.7825722831371713e-16;
+createNode animCurveTL -n "walker_lf_heel_ik_ctrl_translateY";
+	rename -uid "47000CB9-472B-3323-A744-AB8612CCBD57";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0.065563082360414193 9 0.2 10 0.28221567009763571
+		 11 0.4096842654369397 12 0.89050727231048232 17 3.3157406143118346 25 0.40535383681789561
+		 27 0 37 0;
+createNode animCurveTL -n "walker_lf_heel_ik_ctrl_translateZ";
+	rename -uid "B0BC37DA-4744-5501-E3FC-638CA90B8D3C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0.16115345787668556
+		 12 0.48113933270061116 17 2.7243055676560011 25 6.4449564668421973 27 6.4449564668421973
+		 37 6.4449564668421973;
+createNode animCurveTL -n "walker_rt_heel_ik_ctrl_translateX";
+	rename -uid "28ADFFA3-473B-9691-7B38-F9BA65FA5920";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 -1.28798911848003e-17 7 -1.28798911848003e-17
+		 8 -1.28798911848003e-17 9 -1.28798911848003e-17 10 -1.28798911848003e-17 11 6.8557154512207757e-18
+		 12 -8.6752799479965973e-17 17 3.7057697945197291e-16 25 8.0641950577856774e-16 27 8.0641950577856774e-16
+		 37 8.0641950577856774e-16;
+createNode animCurveTL -n "walker_rt_heel_ik_ctrl_translateY";
+	rename -uid "AE9515F7-4445-CF3A-09F5-9A867A59081A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0.065563082360414193 9 0.2 10 0.28221567009763571
+		 11 0.4096842654369397 12 0.87425634769025229 17 3.0963531319387281 25 -0.0025303811168785328
+		 27 0 37 0;
+createNode animCurveTL -n "walker_rt_heel_ik_ctrl_translateZ";
+	rename -uid "D3826CF5-4F14-08B7-BA1D-DB942803AD15";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0.16115345787668556
+		 12 0.54920790197260849 17 3.1311629679982076 25 6.6900872768687014 27 6.6900872768687014
+		 37 6.6900872768687014;
+createNode animCurveTA -n "walker_lf_heel_ik_ctrl_rotateX";
+	rename -uid "345A6C01-4C7B-AB7D-69F6-5FB8C29BDEFC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0.5616426944761308 8 5.5752211603104422
+		 9 20 10 26.251011155968463 11 34.579488483312268 12 59.485208933566 17 28.655336433133137
+		 25 -3.6277981145005147 27 0 37 0;
+createNode animCurveTA -n "walker_lf_heel_ik_ctrl_rotateY";
+	rename -uid "09F22E1D-40B5-0F32-7403-6F8C05A4291B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0 12 0 17 0 25 0
+		 27 0 37 0;
+createNode animCurveTA -n "walker_lf_heel_ik_ctrl_rotateZ";
+	rename -uid "2D28B82E-44EE-CC35-1A64-C6AF6B9A6193";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0 12 0 17 0 25 0
+		 27 0 37 0;
+createNode animCurveTU -n "walker_lf_heel_ik_ctrl_pvControl";
+	rename -uid "8D32308B-4F72-CFDE-7764-19BB91EF33E3";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 8 1 9 1 10 1 11 1 12 1 17 1 25 1
+		 27 1 37 1;
+	setAttr -s 11 ".kot[0:10]"  5 5 5 5 5 5 5 5 
+		5 5 5;
+	setAttr -s 11 ".kox[0:10]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".koy[0:10]"  0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "walker_lf_heel_ik_ctrl_footRoll";
+	rename -uid "F30CD3F9-4635-DA8E-96DA-D08B810268AD";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0 12 0 17 0 25 0
+		 27 0 37 0;
+createNode animCurveTU -n "walker_lf_heel_ik_ctrl_footBreak";
+	rename -uid "CC594085-4502-9024-BA04-E391F2729E6A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0 12 0 17 0 25 0
+		 27 0 37 0;
+createNode animCurveTU -n "walker_lf_heel_ik_ctrl_toeRoll";
+	rename -uid "A6CC9791-4237-79A7-5492-DDAC3A49F5ED";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 -3.9062499999999947 9 -22 10 -24.625000000000011
+		 11 -26 12 -15 17 0 25 0 27 0 37 0;
+createNode animCurveTU -n "walker_lf_heel_ik_ctrl_legTwist";
+	rename -uid "45980854-45CD-0569-5BCE-54A54A739664";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0 12 0 17 0 25 0
+		 27 0 37 0;
+createNode animCurveTU -n "walker_lf_heel_ik_ctrl_heelTwist";
+	rename -uid "7777FBF3-4554-A052-6FF6-A58FCC88855B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0 12 0 17 0 25 0
+		 27 0 37 0;
+createNode animCurveTU -n "walker_lf_heel_ik_ctrl_ballTwist";
+	rename -uid "9FE539D7-4716-7244-63B9-3FBAB1416F05";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0 12 0 17 0 25 0
+		 27 0 37 0;
+createNode animCurveTU -n "walker_lf_heel_ik_ctrl_toeTwist";
+	rename -uid "738E8495-43FD-EE62-52FA-D6B699E516A7";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0 12 0 17 0 25 0
+		 27 0 37 0;
+createNode animCurveTA -n "walker_rt_heel_ik_ctrl_rotateX";
+	rename -uid "901CED70-4E7C-2665-A435-BCA658603E04";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0.5616426944761308 8 5.5752211603104422
+		 9 20.301951623550774 10 26.401986967743852 11 34.579488483312268 12 59.517567839850166
+		 17 28.655336433133137 25 -11.034587700540099 27 0 37 0;
+createNode animCurveTA -n "walker_rt_heel_ik_ctrl_rotateY";
+	rename -uid "47F245AB-4347-EAAE-F66A-10B5FC806B11";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0 12 0 17 0 25 0
+		 27 0 37 0;
+createNode animCurveTA -n "walker_rt_heel_ik_ctrl_rotateZ";
+	rename -uid "93B3B02F-4774-2E54-8197-8FB17F6F8D65";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0 12 0 17 0 25 0
+		 27 0 37 0;
+createNode animCurveTU -n "walker_rt_heel_ik_ctrl_pvControl";
+	rename -uid "7AFD3770-4182-AE10-DA90-38B5627960C5";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 1 7 1 8 1 9 1 10 1 11 1 12 1 17 1 25 1
+		 27 1 37 1;
+	setAttr -s 11 ".kot[0:10]"  5 5 5 5 5 5 5 5 
+		5 5 5;
+	setAttr -s 11 ".kox[0:10]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 11 ".koy[0:10]"  0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "walker_rt_heel_ik_ctrl_footRoll";
+	rename -uid "95AF31C3-46A3-3130-0D41-1AA4FAE13448";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0 12 0 17 0 25 0
+		 27 0 37 0;
+createNode animCurveTU -n "walker_rt_heel_ik_ctrl_footBreak";
+	rename -uid "5219F880-4C6E-22E2-946B-9C9F783D2B45";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0 12 0 17 0 25 0
+		 27 0 37 0;
+createNode animCurveTU -n "walker_rt_heel_ik_ctrl_toeRoll";
+	rename -uid "E2BE5458-4154-892A-0CAF-4D93A6376B89";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 -3.9062499999999947 9 -22 10 -24.625000000000011
+		 11 -26 12 -15 17 0 25 0 27 0 37 0;
+createNode animCurveTU -n "walker_rt_heel_ik_ctrl_legTwist";
+	rename -uid "8BC0CB02-415F-765F-F714-25BD729EC28E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0 12 0 17 0 25 0
+		 27 0 37 0;
+createNode animCurveTU -n "walker_rt_heel_ik_ctrl_heelTwist";
+	rename -uid "52D2EA22-4BE7-79B0-F366-F3B10B95551F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0 12 0 17 0 25 0
+		 27 0 37 0;
+createNode animCurveTU -n "walker_rt_heel_ik_ctrl_ballTwist";
+	rename -uid "2689A1D1-4D6E-D5ED-206B-1B8C9306C4E2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0 12 0 17 0 25 0
+		 27 0 37 0;
+createNode animCurveTU -n "walker_rt_heel_ik_ctrl_toeTwist";
+	rename -uid "07D03B4F-4E50-9F1A-6F39-C1909464DA5A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 11 ".ktv[0:10]"  1 0 7 0 8 0 9 0 10 0 11 0 12 0 17 0 25 0
+		 27 0 37 0;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 0;
+	setAttr ".o" 35;
+	setAttr ".unw" 35;
 select -ne :hardwareRenderingGlobals;
-	setAttr ".vac" 2;
-	setAttr ".etmr" no;
-	setAttr ".tmr" 4096;
-	setAttr ".dli" 1;
+	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
+	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
+		 1 1 1 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 ;
+	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
@@ -29386,9 +29405,7 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -s 2 ".u";
 select -ne :defaultRenderingList1;
 select -ne :standardSurface1;
-	setAttr ".b" 0.80000001192092896;
-	setAttr ".bc" -type "float3" 1 1 1 ;
-	setAttr ".s" 0.20000000298023224;
+	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
@@ -29398,6 +29415,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
+	setAttr -s 2 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -29421,25 +29439,22 @@ select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
-	setAttr ".ep" 1;
-	setAttr ".dss" -type "string" "lambert1";
-select -ne :defaultRenderQuality;
-	setAttr ".rfl" 10;
-	setAttr ".rfr" 10;
-	setAttr ".sl" 10;
-	setAttr ".eaa" 0;
-	setAttr ".ufil" yes;
-	setAttr ".ss" 2;
+	setAttr ".ren" -type "string" "arnold";
+	setAttr ".outf" 51;
+	setAttr ".imfkey" -type "string" "exr";
+	setAttr ".an" yes;
+	setAttr ".pff" yes;
+	setAttr ".dss" -type "string" "openPBR_shader1";
 select -ne :defaultResolution;
 	setAttr -av -k on ".cch";
 	setAttr -k on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -k on ".bnm";
-	setAttr -av ".w" 1024;
-	setAttr -av ".h" 768;
+	setAttr -av ".w";
+	setAttr -av ".h";
 	setAttr -av ".pa" 1;
 	setAttr -av -k on ".al";
-	setAttr -av ".dar" 1.3329999446868896;
+	setAttr -av ".dar";
 	setAttr -av -k on ".ldar";
 	setAttr -k on ".dpi";
 	setAttr -av -k on ".off";
@@ -29447,23 +29462,7 @@ select -ne :defaultResolution;
 	setAttr -av -k on ".zsl";
 	setAttr -k on ".isu";
 	setAttr -k on ".pdu";
-select -ne :defaultLightSet;
-	setAttr -k on ".cch";
-	setAttr -k on ".ihi";
-	setAttr -k on ".nds";
-	setAttr -k on ".bnm";
-	setAttr -k on ".mwc";
-	setAttr -k on ".an";
-	setAttr -k on ".il";
-	setAttr -k on ".vo";
-	setAttr -k on ".eo";
-	setAttr -k on ".fo";
-	setAttr -k on ".epo";
-	setAttr ".ro" yes;
-select -ne :defaultObjectSet;
-	setAttr ".ro" yes;
 select -ne :defaultColorMgtGlobals;
-	setAttr ".cme" no;
 	setAttr ".cfe" yes;
 	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
 	setAttr ".vtn" -type "string" "ACES 1.0 SDR-video (sRGB)";
@@ -29473,7 +29472,6 @@ select -ne :defaultColorMgtGlobals;
 	setAttr ".otn" -type "string" "ACES 1.0 SDR-video (sRGB)";
 	setAttr ".potn" -type "string" "ACES 1.0 SDR-video (sRGB)";
 select -ne :hardwareRenderGlobals;
-	addAttr -ci true -sn "ani" -ln "animation" -min 0 -max 1 -at "bool";
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
@@ -29491,2860 +29489,3814 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k off -cb on ".mbs";
 	setAttr -k off -cb on ".trm";
 	setAttr -k off -cb on ".tshc";
-	setAttr ".enpt" no;
 	setAttr -k off -cb on ".clmt";
 	setAttr -k off -cb on ".tcov";
 	setAttr -k off -cb on ".lith";
 	setAttr -k off -cb on ".sobc";
 	setAttr -k off -cb on ".cuth";
-	setAttr -k off -cb on ".hgcd" no;
-	setAttr -k off -cb on ".hgci" no;
+	setAttr -k off -cb on ".hgcd";
+	setAttr -k off -cb on ".hgci";
 	setAttr -k off -cb on ".mgcs";
 	setAttr -k off -cb on ".twa";
 	setAttr -k off -cb on ".twz";
 	setAttr -k on ".hwcc";
 	setAttr -k on ".hwdp";
 	setAttr -k on ".hwql";
-	setAttr -k on ".ani";
 select -ne :ikSystem;
-connectAttr "CTRL_Root.Global_Scale" "CTRL_Root.sx" -l on;
-connectAttr "CTRL_Root.Global_Scale" "CTRL_Root.sy" -l on;
-connectAttr "CTRL_Root.Global_Scale" "CTRL_Root.sz" -l on;
-connectAttr "Rig_Leg_grp_parentConstraint1.ctx" "Rig_Leg_grp.tx" -l on;
-connectAttr "Rig_Leg_grp_parentConstraint1.cty" "Rig_Leg_grp.ty" -l on;
-connectAttr "Rig_Leg_grp_parentConstraint1.ctz" "Rig_Leg_grp.tz" -l on;
-connectAttr "Rig_Leg_grp_parentConstraint1.crx" "Rig_Leg_grp.rx" -l on;
-connectAttr "Rig_Leg_grp_parentConstraint1.cry" "Rig_Leg_grp.ry" -l on;
-connectAttr "Rig_Leg_grp_parentConstraint1.crz" "Rig_Leg_grp.rz" -l on;
-connectAttr "CTRL_Root.Global_Scale" "Rig_Leg_grp.sx" -l on;
-connectAttr "CTRL_Root.Global_Scale" "Rig_Leg_grp.sy" -l on;
-connectAttr "CTRL_Root.Global_Scale" "Rig_Leg_grp.sz" -l on;
-connectAttr "walker_lf_reverseFoot_rig_grp_parentConstraint1.ctx" "walker_lf_reverseFoot_rig_grp.tx"
-		;
-connectAttr "walker_lf_reverseFoot_rig_grp_parentConstraint1.cty" "walker_lf_reverseFoot_rig_grp.ty"
-		;
-connectAttr "walker_lf_reverseFoot_rig_grp_parentConstraint1.ctz" "walker_lf_reverseFoot_rig_grp.tz"
-		;
-connectAttr "walker_lf_reverseFoot_rig_grp_parentConstraint1.crx" "walker_lf_reverseFoot_rig_grp.rx"
-		;
-connectAttr "walker_lf_reverseFoot_rig_grp_parentConstraint1.cry" "walker_lf_reverseFoot_rig_grp.ry"
-		;
-connectAttr "walker_lf_reverseFoot_rig_grp_parentConstraint1.crz" "walker_lf_reverseFoot_rig_grp.rz"
-		;
-connectAttr "unitConversion6.o" "walker_lf_heel_rev_rig_jnt.ry";
-connectAttr "unitConversion7.o" "walker_lf_heel_rev_rig_jnt.rz";
-connectAttr "walker_lf_foot_ctrl.ikVis" "walker_lf_heel_rev_rig_jnt.v";
-connectAttr "walker_lf_heel_rev_rig_jnt.s" "walker_lf_toe_rev_rig_jnt.is";
-connectAttr "unitConversion3.o" "walker_lf_toe_rev_rig_jnt.ry";
-connectAttr "unitConversion9.o" "walker_lf_toe_rev_rig_jnt.rx";
-connectAttr "unitConversion4.o" "walker_lf_ball_rev_rig_jnt.ry";
-connectAttr "unitConversion8.o" "walker_lf_ball_rev_rig_jnt.rz";
-connectAttr "unitConversion2.o" "walker_lf_ball_ik_jnt.rz";
-connectAttr "unitConversion5.o" "walker_lf_ball_ik_jnt.ry";
-connectAttr "walker_lf_reverseFoot_rig_grp.ro" "walker_lf_reverseFoot_rig_grp_parentConstraint1.cro"
-		;
-connectAttr "walker_lf_reverseFoot_rig_grp.pim" "walker_lf_reverseFoot_rig_grp_parentConstraint1.cpim"
-		;
-connectAttr "walker_lf_reverseFoot_rig_grp.rp" "walker_lf_reverseFoot_rig_grp_parentConstraint1.crp"
-		;
-connectAttr "walker_lf_reverseFoot_rig_grp.rpt" "walker_lf_reverseFoot_rig_grp_parentConstraint1.crt"
-		;
-connectAttr "walker_lf_heel_ik_ctrl.t" "walker_lf_reverseFoot_rig_grp_parentConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_heel_ik_ctrl.rp" "walker_lf_reverseFoot_rig_grp_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_heel_ik_ctrl.rpt" "walker_lf_reverseFoot_rig_grp_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_heel_ik_ctrl.r" "walker_lf_reverseFoot_rig_grp_parentConstraint1.tg[0].tr"
-		;
-connectAttr "walker_lf_heel_ik_ctrl.ro" "walker_lf_reverseFoot_rig_grp_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_lf_heel_ik_ctrl.s" "walker_lf_reverseFoot_rig_grp_parentConstraint1.tg[0].ts"
-		;
-connectAttr "walker_lf_heel_ik_ctrl.pm" "walker_lf_reverseFoot_rig_grp_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_reverseFoot_rig_grp_parentConstraint1.w0" "walker_lf_reverseFoot_rig_grp_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_legFK_Grp_parentConstraint1.ctx" "walker_lf_legFK_Grp.tx"
-		;
-connectAttr "walker_lf_legFK_Grp_parentConstraint1.cty" "walker_lf_legFK_Grp.ty"
-		;
-connectAttr "walker_lf_legFK_Grp_parentConstraint1.ctz" "walker_lf_legFK_Grp.tz"
-		;
-connectAttr "walker_lf_legFK_Grp_parentConstraint1.crx" "walker_lf_legFK_Grp.rx"
-		;
-connectAttr "walker_lf_legFK_Grp_parentConstraint1.cry" "walker_lf_legFK_Grp.ry"
-		;
-connectAttr "walker_lf_legFK_Grp_parentConstraint1.crz" "walker_lf_legFK_Grp.rz"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt_parentConstraint1.ctx" "walker_lf_upLeg_fk_jnt.tx"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt_parentConstraint1.cty" "walker_lf_upLeg_fk_jnt.ty"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt_parentConstraint1.ctz" "walker_lf_upLeg_fk_jnt.tz"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt_parentConstraint1.crx" "walker_lf_upLeg_fk_jnt.rx"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt_parentConstraint1.cry" "walker_lf_upLeg_fk_jnt.ry"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt_parentConstraint1.crz" "walker_lf_upLeg_fk_jnt.rz"
-		;
-connectAttr "walker_lf_foot_ctrl.fkVis" "walker_lf_upLeg_fk_jnt.v";
-connectAttr "walker_lf_legUpStr_plsMns.o1" "walker_lf_knee_fk_jnt.tx";
-connectAttr "walker_lf_kneeCtrl_fk_or_cons.crx" "walker_lf_knee_fk_jnt.rx";
-connectAttr "walker_lf_kneeCtrl_fk_or_cons.cry" "walker_lf_knee_fk_jnt.ry";
-connectAttr "walker_lf_kneeCtrl_fk_or_cons.crz" "walker_lf_knee_fk_jnt.rz";
-connectAttr "walker_lf_legLowStr_plsMns.o1" "walker_lf_ankle_fk_jnt.tx";
-connectAttr "walker_lf_ankleCtrl_fk_or_cons.crx" "walker_lf_ankle_fk_jnt.rx";
-connectAttr "walker_lf_ankleCtrl_fk_or_cons.cry" "walker_lf_ankle_fk_jnt.ry";
-connectAttr "walker_lf_ankleCtrl_fk_or_cons.crz" "walker_lf_ankle_fk_jnt.rz";
-connectAttr "walker_lf_ballCtrl_fk_or_cons.crx" "walker_lf_ball_fk_jnt.rx";
-connectAttr "walker_lf_ballCtrl_fk_or_cons.cry" "walker_lf_ball_fk_jnt.ry";
-connectAttr "walker_lf_ballCtrl_fk_or_cons.crz" "walker_lf_ball_fk_jnt.rz";
-connectAttr "walker_lf_ball_fk_jnt.ro" "walker_lf_ballCtrl_fk_or_cons.cro";
-connectAttr "walker_lf_ball_fk_jnt.pim" "walker_lf_ballCtrl_fk_or_cons.cpim";
-connectAttr "walker_lf_ball_fk_jnt.jo" "walker_lf_ballCtrl_fk_or_cons.cjo";
-connectAttr "walker_lf_ball_fk_ctrl.r" "walker_lf_ballCtrl_fk_or_cons.tg[0].tr";
-connectAttr "walker_lf_ball_fk_ctrl.ro" "walker_lf_ballCtrl_fk_or_cons.tg[0].tro"
-		;
-connectAttr "walker_lf_ball_fk_ctrl.pm" "walker_lf_ballCtrl_fk_or_cons.tg[0].tpm"
-		;
-connectAttr "walker_lf_ballCtrl_fk_or_cons.w0" "walker_lf_ballCtrl_fk_or_cons.tg[0].tw"
-		;
-connectAttr "walker_lf_ankle_fk_jnt.ro" "walker_lf_ankleCtrl_fk_or_cons.cro";
-connectAttr "walker_lf_ankle_fk_jnt.pim" "walker_lf_ankleCtrl_fk_or_cons.cpim";
-connectAttr "walker_lf_ankle_fk_jnt.jo" "walker_lf_ankleCtrl_fk_or_cons.cjo";
-connectAttr "walker_lf_ankle_fk_ctrl.r" "walker_lf_ankleCtrl_fk_or_cons.tg[0].tr"
-		;
-connectAttr "walker_lf_ankle_fk_ctrl.ro" "walker_lf_ankleCtrl_fk_or_cons.tg[0].tro"
-		;
-connectAttr "walker_lf_ankle_fk_ctrl.pm" "walker_lf_ankleCtrl_fk_or_cons.tg[0].tpm"
-		;
-connectAttr "walker_lf_ankleCtrl_fk_or_cons.w0" "walker_lf_ankleCtrl_fk_or_cons.tg[0].tw"
-		;
-connectAttr "walker_lf_knee_fk_jnt.ro" "walker_lf_kneeCtrl_fk_or_cons.cro";
-connectAttr "walker_lf_knee_fk_jnt.pim" "walker_lf_kneeCtrl_fk_or_cons.cpim";
-connectAttr "walker_lf_knee_fk_jnt.jo" "walker_lf_kneeCtrl_fk_or_cons.cjo";
-connectAttr "walker_lf_knee_fk_ctrl.r" "walker_lf_kneeCtrl_fk_or_cons.tg[0].tr";
-connectAttr "walker_lf_knee_fk_ctrl.ro" "walker_lf_kneeCtrl_fk_or_cons.tg[0].tro"
-		;
-connectAttr "walker_lf_knee_fk_ctrl.pm" "walker_lf_kneeCtrl_fk_or_cons.tg[0].tpm"
-		;
-connectAttr "walker_lf_kneeCtrl_fk_or_cons.w0" "walker_lf_kneeCtrl_fk_or_cons.tg[0].tw"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt.ro" "walker_lf_upLeg_fk_jnt_parentConstraint1.cro"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt.pim" "walker_lf_upLeg_fk_jnt_parentConstraint1.cpim"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt.rp" "walker_lf_upLeg_fk_jnt_parentConstraint1.crp"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt.rpt" "walker_lf_upLeg_fk_jnt_parentConstraint1.crt"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt.jo" "walker_lf_upLeg_fk_jnt_parentConstraint1.cjo"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl.t" "walker_lf_upLeg_fk_jnt_parentConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl.rp" "walker_lf_upLeg_fk_jnt_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl.rpt" "walker_lf_upLeg_fk_jnt_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl.r" "walker_lf_upLeg_fk_jnt_parentConstraint1.tg[0].tr"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl.ro" "walker_lf_upLeg_fk_jnt_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl.s" "walker_lf_upLeg_fk_jnt_parentConstraint1.tg[0].ts"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl.pm" "walker_lf_upLeg_fk_jnt_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt_parentConstraint1.w0" "walker_lf_upLeg_fk_jnt_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_legFK_Grp.ro" "walker_lf_legFK_Grp_parentConstraint1.cro"
-		;
-connectAttr "walker_lf_legFK_Grp.pim" "walker_lf_legFK_Grp_parentConstraint1.cpim"
-		;
-connectAttr "walker_lf_legFK_Grp.rp" "walker_lf_legFK_Grp_parentConstraint1.crp"
-		;
-connectAttr "walker_lf_legFK_Grp.rpt" "walker_lf_legFK_Grp_parentConstraint1.crt"
-		;
-connectAttr "walker_hip_jnt.t" "walker_lf_legFK_Grp_parentConstraint1.tg[0].tt";
-connectAttr "walker_hip_jnt.rp" "walker_lf_legFK_Grp_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_hip_jnt.rpt" "walker_lf_legFK_Grp_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_hip_jnt.r" "walker_lf_legFK_Grp_parentConstraint1.tg[0].tr";
-connectAttr "walker_hip_jnt.ro" "walker_lf_legFK_Grp_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_hip_jnt.s" "walker_lf_legFK_Grp_parentConstraint1.tg[0].ts";
-connectAttr "walker_hip_jnt.pm" "walker_lf_legFK_Grp_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_hip_jnt.jo" "walker_lf_legFK_Grp_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_lf_legFK_Grp_parentConstraint1.w0" "walker_lf_legFK_Grp_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.ctx" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp.tx"
-		;
-connectAttr "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.cty" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp.ty"
-		;
-connectAttr "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.ctz" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp.tz"
-		;
-connectAttr "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.crx" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp.rx"
-		;
-connectAttr "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.cry" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp.ry"
-		;
-connectAttr "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.crz" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp.rz"
-		;
-connectAttr "walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.ctx" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp|walker_lf_ball_fk_ctrl_frzGrp.tx"
-		;
-connectAttr "walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.cty" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp|walker_lf_ball_fk_ctrl_frzGrp.ty"
-		;
-connectAttr "walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.ctz" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp|walker_lf_ball_fk_ctrl_frzGrp.tz"
-		;
-connectAttr "walker_lf_legFkVis_cond.ocr" "walker_lf_ball_fk_ctrl.v";
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp|walker_lf_ball_fk_ctrl_frzGrp.pim" "walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.cpim"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp|walker_lf_ball_fk_ctrl_frzGrp.rp" "walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.crp"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp|walker_lf_ball_fk_ctrl_frzGrp.rpt" "walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.crt"
-		;
-connectAttr "walker_lf_ball_fk_jnt.t" "walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_ball_fk_jnt.rp" "walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_ball_fk_jnt.rpt" "walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_ball_fk_jnt.pm" "walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.w0" "walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].tw"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp.ro" "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.cro"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp.pim" "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.cpim"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp.rp" "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.crp"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ball_fk_ctrl_frzGrp.rpt" "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.crt"
-		;
-connectAttr "walker_lf_ankle_fk_jnt.t" "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_ankle_fk_jnt.rp" "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_ankle_fk_jnt.rpt" "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_ankle_fk_jnt.r" "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tr"
-		;
-connectAttr "walker_lf_ankle_fk_jnt.ro" "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_lf_ankle_fk_jnt.s" "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].ts"
-		;
-connectAttr "walker_lf_ankle_fk_jnt.pm" "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_ankle_fk_jnt.jo" "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.w0" "walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.ctx" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp.tx"
-		;
-connectAttr "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.cty" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp.ty"
-		;
-connectAttr "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.ctz" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp.tz"
-		;
-connectAttr "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.crx" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp.rx"
-		;
-connectAttr "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.cry" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp.ry"
-		;
-connectAttr "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.crz" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp.rz"
-		;
-connectAttr "walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.ctx" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp|walker_lf_ankle_fk_ctrl_frzGrp.tx"
-		;
-connectAttr "walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.cty" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp|walker_lf_ankle_fk_ctrl_frzGrp.ty"
-		;
-connectAttr "walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.ctz" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp|walker_lf_ankle_fk_ctrl_frzGrp.tz"
-		;
-connectAttr "walker_lf_legFkVis_cond.ocr" "walker_lf_ankle_fk_ctrl.v";
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp|walker_lf_ankle_fk_ctrl_frzGrp.pim" "walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.cpim"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp|walker_lf_ankle_fk_ctrl_frzGrp.rp" "walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.crp"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp|walker_lf_ankle_fk_ctrl_frzGrp.rpt" "walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.crt"
-		;
-connectAttr "walker_lf_ankle_fk_jnt.t" "walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_ankle_fk_jnt.rp" "walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_ankle_fk_jnt.rpt" "walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_ankle_fk_jnt.pm" "walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.w0" "walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].tw"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp.ro" "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.cro"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp.pim" "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.cpim"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp.rp" "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.crp"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_ankle_fk_ctrl_frzGrp.rpt" "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.crt"
-		;
-connectAttr "walker_lf_knee_fk_jnt.t" "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_knee_fk_jnt.rp" "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_knee_fk_jnt.rpt" "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_knee_fk_jnt.r" "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tr"
-		;
-connectAttr "walker_lf_knee_fk_jnt.ro" "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_lf_knee_fk_jnt.s" "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].ts"
-		;
-connectAttr "walker_lf_knee_fk_jnt.pm" "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_knee_fk_jnt.jo" "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.w0" "walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.ctx" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp.tx"
-		;
-connectAttr "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.cty" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp.ty"
-		;
-connectAttr "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.ctz" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp.tz"
-		;
-connectAttr "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.crx" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp.rx"
-		;
-connectAttr "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.cry" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp.ry"
-		;
-connectAttr "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.crz" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp.rz"
-		;
-connectAttr "walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.ctx" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp|walker_lf_knee_fk_ctrl_frzGrp.tx"
-		;
-connectAttr "walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.cty" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp|walker_lf_knee_fk_ctrl_frzGrp.ty"
-		;
-connectAttr "walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.ctz" "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp|walker_lf_knee_fk_ctrl_frzGrp.tz"
-		;
-connectAttr "walker_lf_legFkVis_cond.ocr" "walker_lf_knee_fk_ctrl.v";
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp|walker_lf_knee_fk_ctrl_frzGrp.pim" "walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.cpim"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp|walker_lf_knee_fk_ctrl_frzGrp.rp" "walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.crp"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp|walker_lf_knee_fk_ctrl_frzGrp.rpt" "walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.crt"
-		;
-connectAttr "walker_lf_knee_fk_jnt.t" "walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_knee_fk_jnt.rp" "walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_knee_fk_jnt.rpt" "walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_knee_fk_jnt.pm" "walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.w0" "walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].tw"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp.ro" "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.cro"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp.pim" "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.cpim"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp.rp" "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.crp"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_lf_leg_rig_grp|walker_lf_knee_fk_ctrl_frzGrp.rpt" "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.crt"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt.t" "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt.rp" "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt.rpt" "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt.r" "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tr"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt.ro" "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt.s" "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].ts"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt.pm" "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_upLeg_fk_jnt.jo" "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.w0" "walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.ctx" "walker_lf_upLegupJntFkCtrl_grp.tx"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.cty" "walker_lf_upLegupJntFkCtrl_grp.ty"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.ctz" "walker_lf_upLegupJntFkCtrl_grp.tz"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.crx" "walker_lf_upLegupJntFkCtrl_grp.rx"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.cry" "walker_lf_upLegupJntFkCtrl_grp.ry"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.crz" "walker_lf_upLegupJntFkCtrl_grp.rz"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp.ro" "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.cro"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp.pim" "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.cpim"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp.rp" "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.crp"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp.rpt" "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.crt"
-		;
-connectAttr "walker_hip_jnt.t" "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tt"
-		;
-connectAttr "walker_hip_jnt.rp" "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_hip_jnt.rpt" "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_hip_jnt.r" "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tr"
-		;
-connectAttr "walker_hip_jnt.ro" "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_hip_jnt.s" "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].ts"
-		;
-connectAttr "walker_hip_jnt.pm" "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_hip_jnt.jo" "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.w0" "walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.ctx" "walker_lf_upLeg_fk_ctrl_frzGrp.tx"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.cty" "walker_lf_upLeg_fk_ctrl_frzGrp.ty"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.ctz" "walker_lf_upLeg_fk_ctrl_frzGrp.tz"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.crx" "walker_lf_upLeg_fk_ctrl_frzGrp.rx"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.cry" "walker_lf_upLeg_fk_ctrl_frzGrp.ry"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.crz" "walker_lf_upLeg_fk_ctrl_frzGrp.rz"
-		;
-connectAttr "walker_lf_legFkVis_cond.ocr" "walker_lf_upLeg_fk_ctrl.v";
-connectAttr "walker_lf_upLeg_fk_ctrl_frzGrp.pim" "walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.cpim"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl_frzGrp.rp" "walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.crp"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl_frzGrp.rpt" "walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.crt"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp.t" "walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp.rp" "walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp.rpt" "walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp.pm" "walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.w0" "walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl_frzGrp.ro" "walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.cro"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl_frzGrp.pim" "walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.cpim"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp.r" "walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.tg[0].tr"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp.ro" "walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.tg[0].tro"
-		;
-connectAttr "walker_lf_upLegupJntFkCtrl_grp.pm" "walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.w0" "walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_upLeg_plsMns.o1" "walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.w0"
-		;
-connectAttr "walker_lf_legIK_Grp_parentConstraint1.ctx" "walker_lf_legIK_Grp.tx"
-		;
-connectAttr "walker_lf_legIK_Grp_parentConstraint1.cty" "walker_lf_legIK_Grp.ty"
-		;
-connectAttr "walker_lf_legIK_Grp_parentConstraint1.ctz" "walker_lf_legIK_Grp.tz"
-		;
-connectAttr "walker_lf_legIK_Grp_parentConstraint1.crx" "walker_lf_legIK_Grp.rx"
-		;
-connectAttr "walker_lf_legIK_Grp_parentConstraint1.cry" "walker_lf_legIK_Grp.ry"
-		;
-connectAttr "walker_lf_legIK_Grp_parentConstraint1.crz" "walker_lf_legIK_Grp.rz"
-		;
-connectAttr "walker_lf_foot_ctrl.ikVis" "walker_lf_upLeg_ik_jnt.v";
-connectAttr "walker_lf_upLegSnapSplice_blend.opr" "walker_lf_knee_ik_jnt.tx";
-connectAttr "walker_lf_kneeSnapSplice_blend.opr" "walker_lf_ankle_ik_jnt.tx";
-connectAttr "walker_lf_ankle_ik_jnt.tx" "effector2.tx";
-connectAttr "walker_lf_ankle_ik_jnt.ty" "effector2.ty";
-connectAttr "walker_lf_ankle_ik_jnt.tz" "effector2.tz";
-connectAttr "walker_lf_legIK_Grp.ro" "walker_lf_legIK_Grp_parentConstraint1.cro"
-		;
-connectAttr "walker_lf_legIK_Grp.pim" "walker_lf_legIK_Grp_parentConstraint1.cpim"
-		;
-connectAttr "walker_lf_legIK_Grp.rp" "walker_lf_legIK_Grp_parentConstraint1.crp"
-		;
-connectAttr "walker_lf_legIK_Grp.rpt" "walker_lf_legIK_Grp_parentConstraint1.crt"
-		;
-connectAttr "walker_hip_jnt.t" "walker_lf_legIK_Grp_parentConstraint1.tg[0].tt";
-connectAttr "walker_hip_jnt.rp" "walker_lf_legIK_Grp_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_hip_jnt.rpt" "walker_lf_legIK_Grp_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_hip_jnt.r" "walker_lf_legIK_Grp_parentConstraint1.tg[0].tr";
-connectAttr "walker_hip_jnt.ro" "walker_lf_legIK_Grp_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_hip_jnt.s" "walker_lf_legIK_Grp_parentConstraint1.tg[0].ts";
-connectAttr "walker_hip_jnt.pm" "walker_lf_legIK_Grp_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_hip_jnt.jo" "walker_lf_legIK_Grp_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_lf_legIK_Grp_parentConstraint1.w0" "walker_lf_legIK_Grp_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_legIkVis_cond.ocr" "walker_lf_heel_ik_ctrl.v";
-connectAttr "walker_lf_heel_ik_ctrl_pvControl.o" "walker_lf_heel_ik_ctrl.pvControl"
-		;
-connectAttr "walker_lf_heel_ik_ctrl_legTwist.o" "walker_lf_heel_ik_ctrl.legTwist"
-		;
-connectAttr "walker_lf_heel_ik_ctrl_heelTwist.o" "walker_lf_heel_ik_ctrl.heelTwist"
-		;
-connectAttr "walker_lf_heel_ik_ctrl_ballTwist.o" "walker_lf_heel_ik_ctrl.ballTwist"
-		;
-connectAttr "walker_lf_heel_ik_ctrl_toeTwist.o" "walker_lf_heel_ik_ctrl.toeTwist"
-		;
-connectAttr "walker_lf_heel_ik_ctrl_translateX.o" "walker_lf_heel_ik_ctrl.tx";
-connectAttr "walker_lf_heel_ik_ctrl_translateY.o" "walker_lf_heel_ik_ctrl.ty";
-connectAttr "walker_lf_heel_ik_ctrl_translateZ.o" "walker_lf_heel_ik_ctrl.tz";
-connectAttr "walker_lf_heel_ik_ctrl_rotateX.o" "walker_lf_heel_ik_ctrl.rx";
-connectAttr "walker_lf_heel_ik_ctrl_rotateY.o" "walker_lf_heel_ik_ctrl.ry";
-connectAttr "walker_lf_heel_ik_ctrl_rotateZ.o" "walker_lf_heel_ik_ctrl.rz";
-connectAttr "walker_lf_legStr_clamp.opr" "walker_lf_heel_ik_ctrl.stretchValue" -l
-		 on;
-connectAttr "walker_lf_heel_ik_ctrl_footRoll.o" "walker_lf_heel_ik_ctrl.footRoll"
-		;
-connectAttr "walker_lf_heel_ik_ctrl_footBreak.o" "walker_lf_heel_ik_ctrl.footBreak"
-		;
-connectAttr "walker_lf_heel_ik_ctrl_toeRoll.o" "walker_lf_heel_ik_ctrl.toeRoll";
-connectAttr "walker_lf_upLeg_ik_jnt.msg" "walker_lf_leg_ikHandle.hsj";
-connectAttr "effector2.hp" "walker_lf_leg_ikHandle.hee";
-connectAttr "ikRPsolver.msg" "walker_lf_leg_ikHandle.hsv";
-connectAttr "walker_lf_leg_ikHandle_parentConstraint1.ctx" "walker_lf_leg_ikHandle.tx"
-		;
-connectAttr "walker_lf_leg_ikHandle_parentConstraint1.cty" "walker_lf_leg_ikHandle.ty"
-		;
-connectAttr "walker_lf_leg_ikHandle_parentConstraint1.ctz" "walker_lf_leg_ikHandle.tz"
-		;
-connectAttr "walker_lf_leg_ikHandle_parentConstraint1.crx" "walker_lf_leg_ikHandle.rx"
-		;
-connectAttr "walker_lf_leg_ikHandle_parentConstraint1.cry" "walker_lf_leg_ikHandle.ry"
-		;
-connectAttr "walker_lf_leg_ikHandle_parentConstraint1.crz" "walker_lf_leg_ikHandle.rz"
-		;
-connectAttr "unitConversion1.o" "walker_lf_leg_ikHandle.twi";
-connectAttr "walker_lf_legPvCtrl_blend.opr" "walker_lf_leg_ikHandle.pvx";
-connectAttr "walker_lf_legPvCtrl_blend.opg" "walker_lf_leg_ikHandle.pvy";
-connectAttr "walker_lf_legPvCtrl_blend.opb" "walker_lf_leg_ikHandle.pvz";
-connectAttr "walker_lf_leg_ikHandle.ro" "walker_lf_leg_ikHandle_parentConstraint1.cro"
-		;
-connectAttr "walker_lf_leg_ikHandle.pim" "walker_lf_leg_ikHandle_parentConstraint1.cpim"
-		;
-connectAttr "walker_lf_leg_ikHandle.rp" "walker_lf_leg_ikHandle_parentConstraint1.crp"
-		;
-connectAttr "walker_lf_leg_ikHandle.rpt" "walker_lf_leg_ikHandle_parentConstraint1.crt"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.t" "walker_lf_leg_ikHandle_parentConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.rp" "walker_lf_leg_ikHandle_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.rpt" "walker_lf_leg_ikHandle_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.r" "walker_lf_leg_ikHandle_parentConstraint1.tg[0].tr"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.ro" "walker_lf_leg_ikHandle_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.s" "walker_lf_leg_ikHandle_parentConstraint1.tg[0].ts"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.pm" "walker_lf_leg_ikHandle_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.jo" "walker_lf_leg_ikHandle_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_lf_leg_ikHandle_parentConstraint1.w0" "walker_lf_leg_ikHandle_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_leg_ikHandle.pim" "walker_lf_knee_pv_cons.cpim";
-connectAttr "walker_lf_upLeg_ik_jnt.pm" "walker_lf_knee_pv_cons.ps";
-connectAttr "walker_lf_upLeg_ik_jnt.t" "walker_lf_knee_pv_cons.crp";
-connectAttr "walker_lf_knee_pv_ctrl.t" "walker_lf_knee_pv_cons.tg[0].tt";
-connectAttr "walker_lf_knee_pv_ctrl.rp" "walker_lf_knee_pv_cons.tg[0].trp";
-connectAttr "walker_lf_knee_pv_ctrl.rpt" "walker_lf_knee_pv_cons.tg[0].trt";
-connectAttr "walker_lf_knee_pv_ctrl.pm" "walker_lf_knee_pv_cons.tg[0].tpm";
-connectAttr "walker_lf_knee_pv_cons.w0" "walker_lf_knee_pv_cons.tg[0].tw";
-connectAttr "walker_lf_heel_ik_ctrl.pvControl" "walker_lf_knee_pv_cons.w0";
-connectAttr "walker_lf_foot_ctrl_parentConstraint1.ctx" "walker_lf_foot_ctrl.tx"
+	setAttr -s 4 ".sol";
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.Global_Scale" "Ultimate_Walker_v1_0_1:CTRL_Root.sx"
 		 -l on;
-connectAttr "walker_lf_foot_ctrl_parentConstraint1.cty" "walker_lf_foot_ctrl.ty"
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.Global_Scale" "Ultimate_Walker_v1_0_1:CTRL_Root.sy"
 		 -l on;
-connectAttr "walker_lf_foot_ctrl_parentConstraint1.ctz" "walker_lf_foot_ctrl.tz"
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.Global_Scale" "Ultimate_Walker_v1_0_1:CTRL_Root.sz"
 		 -l on;
-connectAttr "walker_lf_foot_ctrl_parentConstraint1.crx" "walker_lf_foot_ctrl.rx"
+connectAttr "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:Rig_Leg_grp.tx"
 		 -l on;
-connectAttr "walker_lf_foot_ctrl_parentConstraint1.cry" "walker_lf_foot_ctrl.ry"
+connectAttr "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:Rig_Leg_grp.ty"
 		 -l on;
-connectAttr "walker_lf_foot_ctrl_parentConstraint1.crz" "walker_lf_foot_ctrl.rz"
+connectAttr "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:Rig_Leg_grp.tz"
 		 -l on;
-connectAttr "walker_lf_foot_ctrl.ro" "walker_lf_foot_ctrl_parentConstraint1.cro"
-		;
-connectAttr "walker_lf_foot_ctrl.pim" "walker_lf_foot_ctrl_parentConstraint1.cpim"
-		;
-connectAttr "walker_lf_foot_ctrl.rp" "walker_lf_foot_ctrl_parentConstraint1.crp"
-		;
-connectAttr "walker_lf_foot_ctrl.rpt" "walker_lf_foot_ctrl_parentConstraint1.crt"
-		;
-connectAttr "walker_lf_ankle_jnt.t" "walker_lf_foot_ctrl_parentConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_ankle_jnt.rp" "walker_lf_foot_ctrl_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_ankle_jnt.rpt" "walker_lf_foot_ctrl_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_ankle_jnt.r" "walker_lf_foot_ctrl_parentConstraint1.tg[0].tr"
-		;
-connectAttr "walker_lf_ankle_jnt.ro" "walker_lf_foot_ctrl_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_lf_ankle_jnt.s" "walker_lf_foot_ctrl_parentConstraint1.tg[0].ts"
-		;
-connectAttr "walker_lf_ankle_jnt.pm" "walker_lf_foot_ctrl_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_ankle_jnt.jo" "walker_lf_foot_ctrl_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_lf_foot_ctrl_parentConstraint1.w0" "walker_lf_foot_ctrl_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_legIkVis_cond.ocr" "walker_lf_knee_pv_ctrl_frzGrp.v";
-connectAttr "walker_lf_knee_line_loc_pointConstraint1.ctx" "walker_lf_knee_line_loc.tx"
+connectAttr "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:Rig_Leg_grp.rx"
 		 -l on;
-connectAttr "walker_lf_knee_line_loc_pointConstraint1.cty" "walker_lf_knee_line_loc.ty"
+connectAttr "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:Rig_Leg_grp.ry"
 		 -l on;
-connectAttr "walker_lf_knee_line_loc_pointConstraint1.ctz" "walker_lf_knee_line_loc.tz"
+connectAttr "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:Rig_Leg_grp.rz"
 		 -l on;
-connectAttr "walker_lf_knee_line_loc.pim" "walker_lf_knee_line_loc_pointConstraint1.cpim"
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.Global_Scale" "Ultimate_Walker_v1_0_1:Rig_Leg_grp.sx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.Global_Scale" "Ultimate_Walker_v1_0_1:Rig_Leg_grp.sy"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.Global_Scale" "Ultimate_Walker_v1_0_1:Rig_Leg_grp.sz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp.tx"
 		;
-connectAttr "walker_lf_knee_line_loc.rp" "walker_lf_knee_line_loc_pointConstraint1.crp"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp.ty"
 		;
-connectAttr "walker_lf_knee_line_loc.rpt" "walker_lf_knee_line_loc_pointConstraint1.crt"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp.tz"
 		;
-connectAttr "walker_lf_knee_jnt.t" "walker_lf_knee_line_loc_pointConstraint1.tg[0].tt"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp.rx"
 		;
-connectAttr "walker_lf_knee_jnt.rp" "walker_lf_knee_line_loc_pointConstraint1.tg[0].trp"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp.ry"
 		;
-connectAttr "walker_lf_knee_jnt.rpt" "walker_lf_knee_line_loc_pointConstraint1.tg[0].trt"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp.rz"
 		;
-connectAttr "walker_lf_knee_jnt.pm" "walker_lf_knee_line_loc_pointConstraint1.tg[0].tpm"
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion6.o" "Ultimate_Walker_v1_0_1:walker_lf_heel_rev_rig_jnt.ry"
 		;
-connectAttr "walker_lf_knee_line_loc_pointConstraint1.w0" "walker_lf_knee_line_loc_pointConstraint1.tg[0].tw"
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion7.o" "Ultimate_Walker_v1_0_1:walker_lf_heel_rev_rig_jnt.rz"
 		;
-connectAttr "walker_lf_heel_ik_ctrl.pvControl" "abRTLine_walker_lf_knee_line_loc.v"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.ikVis" "Ultimate_Walker_v1_0_1:walker_lf_heel_rev_rig_jnt.v"
 		;
-connectAttr "walker_lf_knee_pv_ctrl_annLocShape.wm" "abRTLine_walker_lf_knee_line_locShape.dom"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_rev_rig_jnt.s" "Ultimate_Walker_v1_0_1:walker_lf_toe_rev_rig_jnt.is"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion3.o" "Ultimate_Walker_v1_0_1:walker_lf_toe_rev_rig_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion9.o" "Ultimate_Walker_v1_0_1:walker_lf_toe_rev_rig_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion4.o" "Ultimate_Walker_v1_0_1:walker_lf_ball_rev_rig_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion8.o" "Ultimate_Walker_v1_0_1:walker_lf_ball_rev_rig_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion2.o" "Ultimate_Walker_v1_0_1:walker_lf_ball_ik_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion5.o" "Ultimate_Walker_v1_0_1:walker_lf_ball_ik_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp.ro" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp.pim" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp.rp" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.t" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.rp" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.rpt" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.r" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.ro" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.s" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_reverseFoot_rig_grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.fkVis" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.v"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legUpStr_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_kneeCtrl_fk_or_cons.crx" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_kneeCtrl_fk_or_cons.cry" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_kneeCtrl_fk_or_cons.crz" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legLowStr_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleCtrl_fk_or_cons.crx" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleCtrl_fk_or_cons.cry" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleCtrl_fk_or_cons.crz" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ballCtrl_fk_or_cons.crx" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ballCtrl_fk_or_cons.cry" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ballCtrl_fk_or_cons.crz" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ballCtrl_fk_or_cons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt.pim" "Ultimate_Walker_v1_0_1:walker_lf_ballCtrl_fk_or_cons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ballCtrl_fk_or_cons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl.r" "Ultimate_Walker_v1_0_1:walker_lf_ballCtrl_fk_or_cons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl.ro" "Ultimate_Walker_v1_0_1:walker_lf_ballCtrl_fk_or_cons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_lf_ballCtrl_fk_or_cons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ballCtrl_fk_or_cons.w0" "Ultimate_Walker_v1_0_1:walker_lf_ballCtrl_fk_or_cons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ankleCtrl_fk_or_cons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.pim" "Ultimate_Walker_v1_0_1:walker_lf_ankleCtrl_fk_or_cons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ankleCtrl_fk_or_cons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl.r" "Ultimate_Walker_v1_0_1:walker_lf_ankleCtrl_fk_or_cons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl.ro" "Ultimate_Walker_v1_0_1:walker_lf_ankleCtrl_fk_or_cons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_lf_ankleCtrl_fk_or_cons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleCtrl_fk_or_cons.w0" "Ultimate_Walker_v1_0_1:walker_lf_ankleCtrl_fk_or_cons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_kneeCtrl_fk_or_cons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.pim" "Ultimate_Walker_v1_0_1:walker_lf_kneeCtrl_fk_or_cons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_kneeCtrl_fk_or_cons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl.r" "Ultimate_Walker_v1_0_1:walker_lf_kneeCtrl_fk_or_cons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl.ro" "Ultimate_Walker_v1_0_1:walker_lf_kneeCtrl_fk_or_cons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_lf_kneeCtrl_fk_or_cons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_kneeCtrl_fk_or_cons.w0" "Ultimate_Walker_v1_0_1:walker_lf_kneeCtrl_fk_or_cons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.pim" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl.t" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl.rp" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl.rpt" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl.r" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl.ro" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl.s" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp.ro" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp.pim" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp.rp" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.s" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_legFK_Grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.ctx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.cty" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.ctz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.crx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.cry" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.crz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.ctx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.cty" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.ctz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legFkVis_cond.ocr" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl.v"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp.pim" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.cpim"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp.rp" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.crp"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].tw"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp.ro" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.cro"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp.pim" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.cpim"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp.rp" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.crp"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.s" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.ctx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.cty" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.ctz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.crx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.cry" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.crz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.ctx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.cty" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.ctz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legFkVis_cond.ocr" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl.v"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp.pim" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.cpim"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp.rp" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.crp"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].tw"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp.ro" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.cro"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp.pim" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.cpim"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp.rp" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.crp"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.s" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.ctx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.cty" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.ctz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.crx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.cry" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.crz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.ctx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.cty" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.ctz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legFkVis_cond.ocr" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl.v"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp.pim" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.cpim"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp.rp" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.crp"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].tw"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp.ro" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.cro"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp.pim" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.cpim"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp.rp" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.crp"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_lf_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.s" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.ro" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.pim" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.rp" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.s" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legFkVis_cond.ocr" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl.v"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp.pim" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp.rp" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.t" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.rp" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.pm" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp.ro" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp.pim" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.r" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.ro" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegupJntFkCtrl_grp.pm" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl_frzGrp_orientConstraint1.w0"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.ikVis" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt.v"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegSnapSplice_blend.opr" "Ultimate_Walker_v1_0_1:walker_lf_knee_ik_jnt.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_kneeSnapSplice_blend.opr" "Ultimate_Walker_v1_0_1:walker_lf_ankle_ik_jnt.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_ik_jnt.tx" "Ultimate_Walker_v1_0_1:effector2.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_ik_jnt.ty" "Ultimate_Walker_v1_0_1:effector2.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_ik_jnt.tz" "Ultimate_Walker_v1_0_1:effector2.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp.ro" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp.pim" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp.rp" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.s" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_legIK_Grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIkVis_cond.ocr" "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.v"
+		;
+connectAttr "walker_lf_heel_ik_ctrl_pvControl.o" "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.pvControl"
+		;
+connectAttr "walker_lf_heel_ik_ctrl_legTwist.o" "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.legTwist"
+		;
+connectAttr "walker_lf_heel_ik_ctrl_heelTwist.o" "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.heelTwist"
+		;
+connectAttr "walker_lf_heel_ik_ctrl_ballTwist.o" "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.ballTwist"
+		;
+connectAttr "walker_lf_heel_ik_ctrl_toeTwist.o" "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.toeTwist"
+		;
+connectAttr "walker_lf_heel_ik_ctrl_translateX.o" "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.tx"
+		;
+connectAttr "walker_lf_heel_ik_ctrl_translateY.o" "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.ty"
+		;
+connectAttr "walker_lf_heel_ik_ctrl_translateZ.o" "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.tz"
+		;
+connectAttr "walker_lf_heel_ik_ctrl_rotateX.o" "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.rx"
+		;
+connectAttr "walker_lf_heel_ik_ctrl_rotateY.o" "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.ry"
+		;
+connectAttr "walker_lf_heel_ik_ctrl_rotateZ.o" "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStr_clamp.opr" "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.stretchValue"
+		 -l on;
+connectAttr "walker_lf_heel_ik_ctrl_footRoll.o" "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.footRoll"
+		;
+connectAttr "walker_lf_heel_ik_ctrl_footBreak.o" "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.footBreak"
+		;
+connectAttr "walker_lf_heel_ik_ctrl_toeRoll.o" "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.toeRoll"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt.msg" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.hsj"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:effector2.hp" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.hee"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:ikRPsolver.msg" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.hsv"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion1.o" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.twi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrl_blend.opr" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.pvx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrl_blend.opg" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.pvy"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrl_blend.opb" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.pvz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.ro" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.pim" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.rp" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.rpt" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.s" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_leg_ikHandle.pim" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_cons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_cons.ps"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_cons.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.t" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_cons.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.rp" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_cons.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.rpt" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_cons.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_cons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_cons.w0" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_cons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.pvControl" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_cons.w0"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.ro" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.pim" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.rp" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.rpt" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.s" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIkVis_cond.ocr" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_frzGrp.v"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc.pim" "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc.rp" "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc.rpt" "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_knee_line_loc_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.pvControl" "Ultimate_Walker_v1_0_1:abRTLine_walker_lf_knee_line_loc.v"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLocShape.wm" "Ultimate_Walker_v1_0_1:abRTLine_walker_lf_knee_line_locShape.dom"
 		 -na;
-connectAttr "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.ctx" "walker_lf_legPvCtrlGrp_space_grp.tx"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.ctx" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_space_grp.tx"
 		;
-connectAttr "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.cty" "walker_lf_legPvCtrlGrp_space_grp.ty"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.cty" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_space_grp.ty"
 		;
-connectAttr "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.ctz" "walker_lf_legPvCtrlGrp_space_grp.tz"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.ctz" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_space_grp.tz"
 		;
-connectAttr "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.crx" "walker_lf_legPvCtrlGrp_space_grp.rx"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.crx" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_space_grp.rx"
 		;
-connectAttr "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.cry" "walker_lf_legPvCtrlGrp_space_grp.ry"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.cry" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_space_grp.ry"
 		;
-connectAttr "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.crz" "walker_lf_legPvCtrlGrp_space_grp.rz"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.crz" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_space_grp.rz"
 		;
-connectAttr "walker_lf_legPvCtrlGrp_space_grp.ro" "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.cro"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_space_grp.ro" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.cro"
 		;
-connectAttr "walker_lf_legPvCtrlGrp_space_grp.pim" "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.cpim"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_space_grp.pim" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.cpim"
 		;
-connectAttr "walker_lf_legPvCtrlGrp_space_grp.rp" "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.crp"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_space_grp.rp" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.crp"
 		;
-connectAttr "walker_lf_legPvCtrlGrp_space_grp.rpt" "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.crt"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_space_grp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.crt"
 		;
-connectAttr "walker_lfLegIkCtrl_space_switch_grp.t" "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.tg[0].tt"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.t" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.tg[0].tt"
 		;
-connectAttr "walker_lfLegIkCtrl_space_switch_grp.rp" "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.tg[0].trp"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.rp" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.tg[0].trp"
 		;
-connectAttr "walker_lfLegIkCtrl_space_switch_grp.rpt" "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.tg[0].trt"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.tg[0].trt"
 		;
-connectAttr "walker_lfLegIkCtrl_space_switch_grp.r" "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.tg[0].tr"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.r" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.tg[0].tr"
 		;
-connectAttr "walker_lfLegIkCtrl_space_switch_grp.ro" "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.tg[0].tro"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.ro" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.tg[0].tro"
 		;
-connectAttr "walker_lfLegIkCtrl_space_switch_grp.s" "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.tg[0].ts"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.s" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.tg[0].ts"
 		;
-connectAttr "walker_lfLegIkCtrl_space_switch_grp.pm" "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.tg[0].tpm"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.pm" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.tg[0].tpm"
 		;
-connectAttr "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.w0" "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.tg[0].tw"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.w0" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.tg[0].tw"
 		;
-connectAttr "walker_lf_knee_pv_ctrl.lfLegIkCtrl" "walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.w0"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.lfLegIkCtrl" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrlGrp_lfLegIkCtrlSpcParCon.w0"
 		;
-connectAttr "walker_lf_heel_ik_ctrl.pvControl" "walker_lf_knee_pv_ctrl.v" -l on;
-connectAttr "walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.ctx" "walker_lf_knee_pv_ctrl_annLoc.tx"
-		;
-connectAttr "walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.cty" "walker_lf_knee_pv_ctrl_annLoc.ty"
-		;
-connectAttr "walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.ctz" "walker_lf_knee_pv_ctrl_annLoc.tz"
-		;
-connectAttr "walker_lf_knee_pv_ctrl_annLoc.pim" "walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.cpim"
-		;
-connectAttr "walker_lf_knee_pv_ctrl_annLoc.rp" "walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.crp"
-		;
-connectAttr "walker_lf_knee_pv_ctrl_annLoc.rpt" "walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.crt"
-		;
-connectAttr "walker_lf_knee_pv_ctrl.t" "walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_knee_pv_ctrl.rp" "walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_knee_pv_ctrl.rpt" "walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_knee_pv_ctrl.pm" "walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.w0" "walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_legStrDist_dist_spShape.wp" "walker_lf_legStrDist_distShape.sp"
-		;
-connectAttr "walker_lf_legStrDist_dist_epShape.wp" "walker_lf_legStrDist_distShape.ep"
-		;
-connectAttr "walker_lf_legStrDist_dist_sp_pointConstraint1.ctx" "walker_lf_legStrDist_dist_sp.tx"
-		;
-connectAttr "walker_lf_legStrDist_dist_sp_pointConstraint1.cty" "walker_lf_legStrDist_dist_sp.ty"
-		;
-connectAttr "walker_lf_legStrDist_dist_sp_pointConstraint1.ctz" "walker_lf_legStrDist_dist_sp.tz"
-		;
-connectAttr "walker_lf_legStrDist_dist_sp.pim" "walker_lf_legStrDist_dist_sp_pointConstraint1.cpim"
-		;
-connectAttr "walker_lf_legStrDist_dist_sp.rp" "walker_lf_legStrDist_dist_sp_pointConstraint1.crp"
-		;
-connectAttr "walker_lf_legStrDist_dist_sp.rpt" "walker_lf_legStrDist_dist_sp_pointConstraint1.crt"
-		;
-connectAttr "walker_lf_upLeg_ik_jnt.t" "walker_lf_legStrDist_dist_sp_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_upLeg_ik_jnt.rp" "walker_lf_legStrDist_dist_sp_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_upLeg_ik_jnt.rpt" "walker_lf_legStrDist_dist_sp_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_upLeg_ik_jnt.pm" "walker_lf_legStrDist_dist_sp_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_legStrDist_dist_sp_pointConstraint1.w0" "walker_lf_legStrDist_dist_sp_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_legStrDist_dist_ep_pointConstraint1.ctx" "walker_lf_legStrDist_dist_ep.tx"
-		;
-connectAttr "walker_lf_legStrDist_dist_ep_pointConstraint1.cty" "walker_lf_legStrDist_dist_ep.ty"
-		;
-connectAttr "walker_lf_legStrDist_dist_ep_pointConstraint1.ctz" "walker_lf_legStrDist_dist_ep.tz"
-		;
-connectAttr "walker_lf_legStrDist_dist_ep.pim" "walker_lf_legStrDist_dist_ep_pointConstraint1.cpim"
-		;
-connectAttr "walker_lf_legStrDist_dist_ep.rp" "walker_lf_legStrDist_dist_ep_pointConstraint1.crp"
-		;
-connectAttr "walker_lf_legStrDist_dist_ep.rpt" "walker_lf_legStrDist_dist_ep_pointConstraint1.crt"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.t" "walker_lf_legStrDist_dist_ep_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.rp" "walker_lf_legStrDist_dist_ep_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.rpt" "walker_lf_legStrDist_dist_ep_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.pm" "walker_lf_legStrDist_dist_ep_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_legStrDist_dist_ep_pointConstraint1.w0" "walker_lf_legStrDist_dist_ep_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_upLegPvCtrl_dist_spShape.wp" "walker_lf_upLegPvCtrl_distShape.sp"
-		;
-connectAttr "walker_lf_upLegPvCtrl_dist_epShape.wp" "walker_lf_upLegPvCtrl_distShape.ep"
-		;
-connectAttr "walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.ctx" "walker_lf_upLegPvCtrl_dist_sp.tx"
-		;
-connectAttr "walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.cty" "walker_lf_upLegPvCtrl_dist_sp.ty"
-		;
-connectAttr "walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.ctz" "walker_lf_upLegPvCtrl_dist_sp.tz"
-		;
-connectAttr "walker_lf_upLegPvCtrl_dist_sp.pim" "walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.cpim"
-		;
-connectAttr "walker_lf_upLegPvCtrl_dist_sp.rp" "walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.crp"
-		;
-connectAttr "walker_lf_upLegPvCtrl_dist_sp.rpt" "walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.crt"
-		;
-connectAttr "walker_lf_upLeg_ik_jnt.t" "walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_upLeg_ik_jnt.rp" "walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_upLeg_ik_jnt.rpt" "walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_upLeg_ik_jnt.pm" "walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.w0" "walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.ctx" "walker_lf_upLegPvCtrl_dist_ep.tx"
-		;
-connectAttr "walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.cty" "walker_lf_upLegPvCtrl_dist_ep.ty"
-		;
-connectAttr "walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.ctz" "walker_lf_upLegPvCtrl_dist_ep.tz"
-		;
-connectAttr "walker_lf_upLegPvCtrl_dist_ep.pim" "walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.cpim"
-		;
-connectAttr "walker_lf_upLegPvCtrl_dist_ep.rp" "walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.crp"
-		;
-connectAttr "walker_lf_upLegPvCtrl_dist_ep.rpt" "walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.crt"
-		;
-connectAttr "walker_lf_knee_pv_ctrl.t" "walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_knee_pv_ctrl.rp" "walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_knee_pv_ctrl.rpt" "walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_knee_pv_ctrl.pm" "walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.w0" "walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_legPvIkCtrl_dist_spShape.wp" "walker_lf_legPvIkCtrl_distShape.sp"
-		;
-connectAttr "walker_lf_legPvIkCtrl_dist_epShape.wp" "walker_lf_legPvIkCtrl_distShape.ep"
-		;
-connectAttr "walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.ctx" "walker_lf_legPvIkCtrl_dist_sp.tx"
-		;
-connectAttr "walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.cty" "walker_lf_legPvIkCtrl_dist_sp.ty"
-		;
-connectAttr "walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.ctz" "walker_lf_legPvIkCtrl_dist_sp.tz"
-		;
-connectAttr "walker_lf_legPvIkCtrl_dist_sp.pim" "walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.cpim"
-		;
-connectAttr "walker_lf_legPvIkCtrl_dist_sp.rp" "walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.crp"
-		;
-connectAttr "walker_lf_legPvIkCtrl_dist_sp.rpt" "walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.crt"
-		;
-connectAttr "walker_lf_knee_pv_ctrl.t" "walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_knee_pv_ctrl.rp" "walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_knee_pv_ctrl.rpt" "walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_knee_pv_ctrl.pm" "walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.w0" "walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.ctx" "walker_lf_legPvIkCtrl_dist_ep.tx"
-		;
-connectAttr "walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.cty" "walker_lf_legPvIkCtrl_dist_ep.ty"
-		;
-connectAttr "walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.ctz" "walker_lf_legPvIkCtrl_dist_ep.tz"
-		;
-connectAttr "walker_lf_legPvIkCtrl_dist_ep.pim" "walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.cpim"
-		;
-connectAttr "walker_lf_legPvIkCtrl_dist_ep.rp" "walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.crp"
-		;
-connectAttr "walker_lf_legPvIkCtrl_dist_ep.rpt" "walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.crt"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.t" "walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.rp" "walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.rpt" "walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.pm" "walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.w0" "walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.ctx" "walker_lf_ankleBallReader_UpLeg_jnt.tx"
-		;
-connectAttr "walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.cty" "walker_lf_ankleBallReader_UpLeg_jnt.ty"
-		;
-connectAttr "walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.ctz" "walker_lf_ankleBallReader_UpLeg_jnt.tz"
-		;
-connectAttr "walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.crx" "walker_lf_ankleBallReader_UpLeg_jnt.rx"
-		;
-connectAttr "walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.cry" "walker_lf_ankleBallReader_UpLeg_jnt.ry"
-		;
-connectAttr "walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.crz" "walker_lf_ankleBallReader_UpLeg_jnt.rz"
-		;
-connectAttr "walker_lf_ankleReader_knee_or_cons.crx" "walker_lf_ankleBallReader_Knee_jnt.rx"
-		;
-connectAttr "walker_lf_ankleReader_knee_or_cons.cry" "walker_lf_ankleBallReader_Knee_jnt.ry"
-		;
-connectAttr "walker_lf_ankleReader_knee_or_cons.crz" "walker_lf_ankleBallReader_Knee_jnt.rz"
-		;
-connectAttr "walker_lf_ankleReader_ankle_or_cons.crx" "walker_lf_ankleBallReader_Ankle_jnt.rx"
-		;
-connectAttr "walker_lf_ankleReader_ankle_or_cons.cry" "walker_lf_ankleBallReader_Ankle_jnt.ry"
-		;
-connectAttr "walker_lf_ankleReader_ankle_or_cons.crz" "walker_lf_ankleBallReader_Ankle_jnt.rz"
-		;
-connectAttr "walker_lf_ankleReader_ball_or_cons.crx" "walker_lf_ankleBallReader_Ball_jnt.rx"
-		;
-connectAttr "walker_lf_ankleReader_ball_or_cons.cry" "walker_lf_ankleBallReader_Ball_jnt.ry"
-		;
-connectAttr "walker_lf_ankleReader_ball_or_cons.crz" "walker_lf_ankleBallReader_Ball_jnt.rz"
-		;
-connectAttr "walker_lf_ankleBallReader_Ball_jnt.ro" "walker_lf_ankleReader_ball_or_cons.cro"
-		;
-connectAttr "walker_lf_ankleBallReader_Ball_jnt.pim" "walker_lf_ankleReader_ball_or_cons.cpim"
-		;
-connectAttr "walker_lf_ankleBallReader_Ball_jnt.jo" "walker_lf_ankleReader_ball_or_cons.cjo"
-		;
-connectAttr "walker_lf_ball_ik_jnt.r" "walker_lf_ankleReader_ball_or_cons.tg[0].tr"
-		;
-connectAttr "walker_lf_ball_ik_jnt.ro" "walker_lf_ankleReader_ball_or_cons.tg[0].tro"
-		;
-connectAttr "walker_lf_ball_ik_jnt.pm" "walker_lf_ankleReader_ball_or_cons.tg[0].tpm"
-		;
-connectAttr "walker_lf_ball_ik_jnt.jo" "walker_lf_ankleReader_ball_or_cons.tg[0].tjo"
-		;
-connectAttr "walker_lf_ankleReader_ball_or_cons.w0" "walker_lf_ankleReader_ball_or_cons.tg[0].tw"
-		;
-connectAttr "walker_lf_ankleBallReader_Ankle_jnt.ro" "walker_lf_ankleReader_ankle_or_cons.cro"
-		;
-connectAttr "walker_lf_ankleBallReader_Ankle_jnt.pim" "walker_lf_ankleReader_ankle_or_cons.cpim"
-		;
-connectAttr "walker_lf_ankleBallReader_Ankle_jnt.jo" "walker_lf_ankleReader_ankle_or_cons.cjo"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.r" "walker_lf_ankleReader_ankle_or_cons.tg[0].tr"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.ro" "walker_lf_ankleReader_ankle_or_cons.tg[0].tro"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.pm" "walker_lf_ankleReader_ankle_or_cons.tg[0].tpm"
-		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.jo" "walker_lf_ankleReader_ankle_or_cons.tg[0].tjo"
-		;
-connectAttr "walker_lf_ankleReader_ankle_or_cons.w0" "walker_lf_ankleReader_ankle_or_cons.tg[0].tw"
-		;
-connectAttr "walker_lf_ankleBallReader_Knee_jnt.ro" "walker_lf_ankleReader_knee_or_cons.cro"
-		;
-connectAttr "walker_lf_ankleBallReader_Knee_jnt.pim" "walker_lf_ankleReader_knee_or_cons.cpim"
-		;
-connectAttr "walker_lf_ankleBallReader_Knee_jnt.jo" "walker_lf_ankleReader_knee_or_cons.cjo"
-		;
-connectAttr "walker_lf_knee_jnt.r" "walker_lf_ankleReader_knee_or_cons.tg[0].tr"
-		;
-connectAttr "walker_lf_knee_jnt.ro" "walker_lf_ankleReader_knee_or_cons.tg[0].tro"
-		;
-connectAttr "walker_lf_knee_jnt.pm" "walker_lf_ankleReader_knee_or_cons.tg[0].tpm"
-		;
-connectAttr "walker_lf_knee_jnt.jo" "walker_lf_ankleReader_knee_or_cons.tg[0].tjo"
-		;
-connectAttr "walker_lf_ankleReader_knee_or_cons.w0" "walker_lf_ankleReader_knee_or_cons.tg[0].tw"
-		;
-connectAttr "walker_lf_ankleBallReader_UpLeg_jnt.pim" "walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.cpim"
-		;
-connectAttr "walker_lf_ankleBallReader_UpLeg_jnt.rp" "walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.crp"
-		;
-connectAttr "walker_lf_ankleBallReader_UpLeg_jnt.rpt" "walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.crt"
-		;
-connectAttr "walker_lf_upLeg_jnt.t" "walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_lf_upLeg_jnt.rp" "walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_lf_upLeg_jnt.rpt" "walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_lf_upLeg_jnt.pm" "walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.w0" "walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lf_ankleBallReader_UpLeg_jnt.ro" "walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.cro"
-		;
-connectAttr "walker_lf_ankleBallReader_UpLeg_jnt.pim" "walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.cpim"
-		;
-connectAttr "walker_lf_ankleBallReader_UpLeg_jnt.jo" "walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.cjo"
-		;
-connectAttr "walker_lf_upLeg_jnt.r" "walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tr"
-		;
-connectAttr "walker_lf_upLeg_jnt.ro" "walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tro"
-		;
-connectAttr "walker_lf_upLeg_jnt.pm" "walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_lf_upLeg_jnt.jo" "walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.w0" "walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "walker_lfLegIkCtrlSpace_par_cons.ctx" "walker_lfLegIkCtrl_space_switch_grp.tx"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.pvControl" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.v"
 		 -l on;
-connectAttr "walker_lfLegIkCtrlSpace_par_cons.cty" "walker_lfLegIkCtrl_space_switch_grp.ty"
+connectAttr "walker_lf_knee_pv_ctrl_translateX.o" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.tx"
+		;
+connectAttr "walker_lf_knee_pv_ctrl_translateY.o" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.ty"
+		;
+connectAttr "walker_lf_knee_pv_ctrl_translateZ.o" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.tz"
+		;
+connectAttr "walker_lf_knee_pv_ctrl_lfLegIkCtrl.o" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.lfLegIkCtrl"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc.pim" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc.rp" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc.rpt" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.t" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.rp" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.rpt" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_spShape.wp" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_distShape.sp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_epShape.wp" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_distShape.ep"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp.pim" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp.rp" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_sp_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep.pim" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep.rp" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep.rpt" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_dist_ep_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_spShape.wp" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_distShape.sp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_epShape.wp" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_distShape.ep"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp.pim" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp.rp" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep.pim" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep.rp" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep.rpt" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.t" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.rp" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.rpt" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_spShape.wp" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_distShape.sp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_epShape.wp" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_distShape.ep"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp.pim" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp.rp" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp.rpt" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.t" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.rp" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.rpt" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep.pim" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep.rp" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep.rpt" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_knee_or_cons.crx" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Knee_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_knee_or_cons.cry" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Knee_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_knee_or_cons.crz" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Knee_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ankle_or_cons.crx" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ankle_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ankle_or_cons.cry" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ankle_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ankle_or_cons.crz" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ankle_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ball_or_cons.crx" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ball_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ball_or_cons.cry" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ball_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ball_or_cons.crz" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ball_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ball_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ball_or_cons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ball_jnt.pim" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ball_or_cons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ball_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ball_or_cons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_ik_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ball_or_cons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_ik_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ball_or_cons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_ik_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ball_or_cons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_ik_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ball_or_cons.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ball_or_cons.w0" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ball_or_cons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ankle_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ankle_or_cons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ankle_jnt.pim" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ankle_or_cons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Ankle_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ankle_or_cons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ankle_or_cons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ankle_or_cons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ankle_or_cons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ankle_or_cons.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ankle_or_cons.w0" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_ankle_or_cons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Knee_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_knee_or_cons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Knee_jnt.pim" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_knee_or_cons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_Knee_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_knee_or_cons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_knee_or_cons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_knee_or_cons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_knee_or_cons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_knee_or_cons.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_knee_or_cons.w0" "Ultimate_Walker_v1_0_1:walker_lf_ankleReader_knee_or_cons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt.pim" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.t" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.rp" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt.pim" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_lf_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.ctx" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.tx"
 		 -l on;
-connectAttr "walker_lfLegIkCtrlSpace_par_cons.ctz" "walker_lfLegIkCtrl_space_switch_grp.tz"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.cty" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.ty"
 		 -l on;
-connectAttr "walker_lfLegIkCtrlSpace_par_cons.crx" "walker_lfLegIkCtrl_space_switch_grp.rx"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.ctz" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.tz"
 		 -l on;
-connectAttr "walker_lfLegIkCtrlSpace_par_cons.cry" "walker_lfLegIkCtrl_space_switch_grp.ry"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.crx" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.rx"
 		 -l on;
-connectAttr "walker_lfLegIkCtrlSpace_par_cons.crz" "walker_lfLegIkCtrl_space_switch_grp.rz"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.cry" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.ry"
 		 -l on;
-connectAttr "walker_lfLegIkCtrl_space_switch_grp.ro" "walker_lfLegIkCtrlSpace_par_cons.cro"
-		;
-connectAttr "walker_lfLegIkCtrl_space_switch_grp.pim" "walker_lfLegIkCtrlSpace_par_cons.cpim"
-		;
-connectAttr "walker_lfLegIkCtrl_space_switch_grp.rp" "walker_lfLegIkCtrlSpace_par_cons.crp"
-		;
-connectAttr "walker_lfLegIkCtrl_space_switch_grp.rpt" "walker_lfLegIkCtrlSpace_par_cons.crt"
-		;
-connectAttr "walker_lf_heel_ik_ctrl.t" "walker_lfLegIkCtrlSpace_par_cons.tg[0].tt"
-		;
-connectAttr "walker_lf_heel_ik_ctrl.rp" "walker_lfLegIkCtrlSpace_par_cons.tg[0].trp"
-		;
-connectAttr "walker_lf_heel_ik_ctrl.rpt" "walker_lfLegIkCtrlSpace_par_cons.tg[0].trt"
-		;
-connectAttr "walker_lf_heel_ik_ctrl.r" "walker_lfLegIkCtrlSpace_par_cons.tg[0].tr"
-		;
-connectAttr "walker_lf_heel_ik_ctrl.ro" "walker_lfLegIkCtrlSpace_par_cons.tg[0].tro"
-		;
-connectAttr "walker_lf_heel_ik_ctrl.s" "walker_lfLegIkCtrlSpace_par_cons.tg[0].ts"
-		;
-connectAttr "walker_lf_heel_ik_ctrl.pm" "walker_lfLegIkCtrlSpace_par_cons.tg[0].tpm"
-		;
-connectAttr "walker_lfLegIkCtrlSpace_par_cons.w0" "walker_lfLegIkCtrlSpace_par_cons.tg[0].tw"
-		;
-connectAttr "walker_rt_reverseFoot_rig_grp_parentConstraint1.ctx" "walker_rt_reverseFoot_rig_grp.tx"
-		;
-connectAttr "walker_rt_reverseFoot_rig_grp_parentConstraint1.cty" "walker_rt_reverseFoot_rig_grp.ty"
-		;
-connectAttr "walker_rt_reverseFoot_rig_grp_parentConstraint1.ctz" "walker_rt_reverseFoot_rig_grp.tz"
-		;
-connectAttr "walker_rt_reverseFoot_rig_grp_parentConstraint1.crx" "walker_rt_reverseFoot_rig_grp.rx"
-		;
-connectAttr "walker_rt_reverseFoot_rig_grp_parentConstraint1.cry" "walker_rt_reverseFoot_rig_grp.ry"
-		;
-connectAttr "walker_rt_reverseFoot_rig_grp_parentConstraint1.crz" "walker_rt_reverseFoot_rig_grp.rz"
-		;
-connectAttr "unitConversion15.o" "walker_rt_heel_rev_rig_jnt.ry";
-connectAttr "unitConversion16.o" "walker_rt_heel_rev_rig_jnt.rz";
-connectAttr "walker_rt_foot_ctrl.ikVis" "walker_rt_heel_rev_rig_jnt.v";
-connectAttr "walker_rt_heel_rev_rig_jnt.s" "walker_rt_toe_rev_rig_jnt.is";
-connectAttr "unitConversion12.o" "walker_rt_toe_rev_rig_jnt.ry";
-connectAttr "unitConversion18.o" "walker_rt_toe_rev_rig_jnt.rx";
-connectAttr "unitConversion13.o" "walker_rt_ball_rev_rig_jnt.ry";
-connectAttr "unitConversion17.o" "walker_rt_ball_rev_rig_jnt.rz";
-connectAttr "unitConversion11.o" "walker_rt_ball_ik_jnt.rz";
-connectAttr "unitConversion14.o" "walker_rt_ball_ik_jnt.ry";
-connectAttr "walker_rt_reverseFoot_rig_grp.ro" "walker_rt_reverseFoot_rig_grp_parentConstraint1.cro"
-		;
-connectAttr "walker_rt_reverseFoot_rig_grp.pim" "walker_rt_reverseFoot_rig_grp_parentConstraint1.cpim"
-		;
-connectAttr "walker_rt_reverseFoot_rig_grp.rp" "walker_rt_reverseFoot_rig_grp_parentConstraint1.crp"
-		;
-connectAttr "walker_rt_reverseFoot_rig_grp.rpt" "walker_rt_reverseFoot_rig_grp_parentConstraint1.crt"
-		;
-connectAttr "walker_rt_heel_ik_ctrl.t" "walker_rt_reverseFoot_rig_grp_parentConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_heel_ik_ctrl.rp" "walker_rt_reverseFoot_rig_grp_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_heel_ik_ctrl.rpt" "walker_rt_reverseFoot_rig_grp_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_heel_ik_ctrl.r" "walker_rt_reverseFoot_rig_grp_parentConstraint1.tg[0].tr"
-		;
-connectAttr "walker_rt_heel_ik_ctrl.ro" "walker_rt_reverseFoot_rig_grp_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_rt_heel_ik_ctrl.s" "walker_rt_reverseFoot_rig_grp_parentConstraint1.tg[0].ts"
-		;
-connectAttr "walker_rt_heel_ik_ctrl.pm" "walker_rt_reverseFoot_rig_grp_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_reverseFoot_rig_grp_parentConstraint1.w0" "walker_rt_reverseFoot_rig_grp_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_legFK_Grp_parentConstraint1.ctx" "walker_rt_legFK_Grp.tx"
-		;
-connectAttr "walker_rt_legFK_Grp_parentConstraint1.cty" "walker_rt_legFK_Grp.ty"
-		;
-connectAttr "walker_rt_legFK_Grp_parentConstraint1.ctz" "walker_rt_legFK_Grp.tz"
-		;
-connectAttr "walker_rt_legFK_Grp_parentConstraint1.crx" "walker_rt_legFK_Grp.rx"
-		;
-connectAttr "walker_rt_legFK_Grp_parentConstraint1.cry" "walker_rt_legFK_Grp.ry"
-		;
-connectAttr "walker_rt_legFK_Grp_parentConstraint1.crz" "walker_rt_legFK_Grp.rz"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt_parentConstraint1.ctx" "walker_rt_upLeg_fk_jnt.tx"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt_parentConstraint1.cty" "walker_rt_upLeg_fk_jnt.ty"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt_parentConstraint1.ctz" "walker_rt_upLeg_fk_jnt.tz"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt_parentConstraint1.crx" "walker_rt_upLeg_fk_jnt.rx"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt_parentConstraint1.cry" "walker_rt_upLeg_fk_jnt.ry"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt_parentConstraint1.crz" "walker_rt_upLeg_fk_jnt.rz"
-		;
-connectAttr "walker_rt_foot_ctrl.fkVis" "walker_rt_upLeg_fk_jnt.v";
-connectAttr "walker_rt_legUpStr_plsMns.o1" "walker_rt_knee_fk_jnt.tx";
-connectAttr "walker_rt_kneeCtrl_fk_or_cons.crx" "walker_rt_knee_fk_jnt.rx";
-connectAttr "walker_rt_kneeCtrl_fk_or_cons.cry" "walker_rt_knee_fk_jnt.ry";
-connectAttr "walker_rt_kneeCtrl_fk_or_cons.crz" "walker_rt_knee_fk_jnt.rz";
-connectAttr "walker_rt_legLowStr_plsMns.o1" "walker_rt_ankle_fk_jnt.tx";
-connectAttr "walker_rt_ankleCtrl_fk_or_cons.crx" "walker_rt_ankle_fk_jnt.rx";
-connectAttr "walker_rt_ankleCtrl_fk_or_cons.cry" "walker_rt_ankle_fk_jnt.ry";
-connectAttr "walker_rt_ankleCtrl_fk_or_cons.crz" "walker_rt_ankle_fk_jnt.rz";
-connectAttr "walker_rt_ballCtrl_fk_or_cons.crx" "walker_rt_ball_fk_jnt.rx";
-connectAttr "walker_rt_ballCtrl_fk_or_cons.cry" "walker_rt_ball_fk_jnt.ry";
-connectAttr "walker_rt_ballCtrl_fk_or_cons.crz" "walker_rt_ball_fk_jnt.rz";
-connectAttr "walker_rt_ball_fk_jnt.ro" "walker_rt_ballCtrl_fk_or_cons.cro";
-connectAttr "walker_rt_ball_fk_jnt.pim" "walker_rt_ballCtrl_fk_or_cons.cpim";
-connectAttr "walker_rt_ball_fk_jnt.jo" "walker_rt_ballCtrl_fk_or_cons.cjo";
-connectAttr "walker_rt_ball_fk_ctrl.r" "walker_rt_ballCtrl_fk_or_cons.tg[0].tr";
-connectAttr "walker_rt_ball_fk_ctrl.ro" "walker_rt_ballCtrl_fk_or_cons.tg[0].tro"
-		;
-connectAttr "walker_rt_ball_fk_ctrl.pm" "walker_rt_ballCtrl_fk_or_cons.tg[0].tpm"
-		;
-connectAttr "walker_rt_ballCtrl_fk_or_cons.w0" "walker_rt_ballCtrl_fk_or_cons.tg[0].tw"
-		;
-connectAttr "walker_rt_ankle_fk_jnt.ro" "walker_rt_ankleCtrl_fk_or_cons.cro";
-connectAttr "walker_rt_ankle_fk_jnt.pim" "walker_rt_ankleCtrl_fk_or_cons.cpim";
-connectAttr "walker_rt_ankle_fk_jnt.jo" "walker_rt_ankleCtrl_fk_or_cons.cjo";
-connectAttr "walker_rt_ankle_fk_ctrl.r" "walker_rt_ankleCtrl_fk_or_cons.tg[0].tr"
-		;
-connectAttr "walker_rt_ankle_fk_ctrl.ro" "walker_rt_ankleCtrl_fk_or_cons.tg[0].tro"
-		;
-connectAttr "walker_rt_ankle_fk_ctrl.pm" "walker_rt_ankleCtrl_fk_or_cons.tg[0].tpm"
-		;
-connectAttr "walker_rt_ankleCtrl_fk_or_cons.w0" "walker_rt_ankleCtrl_fk_or_cons.tg[0].tw"
-		;
-connectAttr "walker_rt_knee_fk_jnt.ro" "walker_rt_kneeCtrl_fk_or_cons.cro";
-connectAttr "walker_rt_knee_fk_jnt.pim" "walker_rt_kneeCtrl_fk_or_cons.cpim";
-connectAttr "walker_rt_knee_fk_jnt.jo" "walker_rt_kneeCtrl_fk_or_cons.cjo";
-connectAttr "walker_rt_knee_fk_ctrl.r" "walker_rt_kneeCtrl_fk_or_cons.tg[0].tr";
-connectAttr "walker_rt_knee_fk_ctrl.ro" "walker_rt_kneeCtrl_fk_or_cons.tg[0].tro"
-		;
-connectAttr "walker_rt_knee_fk_ctrl.pm" "walker_rt_kneeCtrl_fk_or_cons.tg[0].tpm"
-		;
-connectAttr "walker_rt_kneeCtrl_fk_or_cons.w0" "walker_rt_kneeCtrl_fk_or_cons.tg[0].tw"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt.ro" "walker_rt_upLeg_fk_jnt_parentConstraint1.cro"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt.pim" "walker_rt_upLeg_fk_jnt_parentConstraint1.cpim"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt.rp" "walker_rt_upLeg_fk_jnt_parentConstraint1.crp"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt.rpt" "walker_rt_upLeg_fk_jnt_parentConstraint1.crt"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt.jo" "walker_rt_upLeg_fk_jnt_parentConstraint1.cjo"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl.t" "walker_rt_upLeg_fk_jnt_parentConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl.rp" "walker_rt_upLeg_fk_jnt_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl.rpt" "walker_rt_upLeg_fk_jnt_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl.r" "walker_rt_upLeg_fk_jnt_parentConstraint1.tg[0].tr"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl.ro" "walker_rt_upLeg_fk_jnt_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl.s" "walker_rt_upLeg_fk_jnt_parentConstraint1.tg[0].ts"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl.pm" "walker_rt_upLeg_fk_jnt_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt_parentConstraint1.w0" "walker_rt_upLeg_fk_jnt_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_legFK_Grp.ro" "walker_rt_legFK_Grp_parentConstraint1.cro"
-		;
-connectAttr "walker_rt_legFK_Grp.pim" "walker_rt_legFK_Grp_parentConstraint1.cpim"
-		;
-connectAttr "walker_rt_legFK_Grp.rp" "walker_rt_legFK_Grp_parentConstraint1.crp"
-		;
-connectAttr "walker_rt_legFK_Grp.rpt" "walker_rt_legFK_Grp_parentConstraint1.crt"
-		;
-connectAttr "walker_hip_jnt.t" "walker_rt_legFK_Grp_parentConstraint1.tg[0].tt";
-connectAttr "walker_hip_jnt.rp" "walker_rt_legFK_Grp_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_hip_jnt.rpt" "walker_rt_legFK_Grp_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_hip_jnt.r" "walker_rt_legFK_Grp_parentConstraint1.tg[0].tr";
-connectAttr "walker_hip_jnt.ro" "walker_rt_legFK_Grp_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_hip_jnt.s" "walker_rt_legFK_Grp_parentConstraint1.tg[0].ts";
-connectAttr "walker_hip_jnt.pm" "walker_rt_legFK_Grp_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_hip_jnt.jo" "walker_rt_legFK_Grp_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_rt_legFK_Grp_parentConstraint1.w0" "walker_rt_legFK_Grp_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.ctx" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp.tx"
-		;
-connectAttr "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.cty" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp.ty"
-		;
-connectAttr "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.ctz" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp.tz"
-		;
-connectAttr "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.crx" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp.rx"
-		;
-connectAttr "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.cry" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp.ry"
-		;
-connectAttr "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.crz" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp.rz"
-		;
-connectAttr "walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.ctx" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp|walker_rt_ball_fk_ctrl_frzGrp.tx"
-		;
-connectAttr "walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.cty" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp|walker_rt_ball_fk_ctrl_frzGrp.ty"
-		;
-connectAttr "walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.ctz" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp|walker_rt_ball_fk_ctrl_frzGrp.tz"
-		;
-connectAttr "walker_rt_legFkVis_cond.ocr" "walker_rt_ball_fk_ctrl.v";
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp|walker_rt_ball_fk_ctrl_frzGrp.pim" "walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.cpim"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp|walker_rt_ball_fk_ctrl_frzGrp.rp" "walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.crp"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp|walker_rt_ball_fk_ctrl_frzGrp.rpt" "walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.crt"
-		;
-connectAttr "walker_rt_ball_fk_jnt.t" "walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_ball_fk_jnt.rp" "walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_ball_fk_jnt.rpt" "walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_ball_fk_jnt.pm" "walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.w0" "walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].tw"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp.ro" "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.cro"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp.pim" "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.cpim"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp.rp" "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.crp"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ball_fk_ctrl_frzGrp.rpt" "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.crt"
-		;
-connectAttr "walker_rt_ankle_fk_jnt.t" "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_ankle_fk_jnt.rp" "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_ankle_fk_jnt.rpt" "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_ankle_fk_jnt.r" "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tr"
-		;
-connectAttr "walker_rt_ankle_fk_jnt.ro" "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_rt_ankle_fk_jnt.s" "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].ts"
-		;
-connectAttr "walker_rt_ankle_fk_jnt.pm" "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_ankle_fk_jnt.jo" "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.w0" "walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.ctx" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp.tx"
-		;
-connectAttr "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.cty" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp.ty"
-		;
-connectAttr "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.ctz" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp.tz"
-		;
-connectAttr "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.crx" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp.rx"
-		;
-connectAttr "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.cry" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp.ry"
-		;
-connectAttr "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.crz" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp.rz"
-		;
-connectAttr "walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.ctx" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp|walker_rt_ankle_fk_ctrl_frzGrp.tx"
-		;
-connectAttr "walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.cty" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp|walker_rt_ankle_fk_ctrl_frzGrp.ty"
-		;
-connectAttr "walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.ctz" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp|walker_rt_ankle_fk_ctrl_frzGrp.tz"
-		;
-connectAttr "walker_rt_legFkVis_cond.ocr" "walker_rt_ankle_fk_ctrl.v";
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp|walker_rt_ankle_fk_ctrl_frzGrp.pim" "walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.cpim"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp|walker_rt_ankle_fk_ctrl_frzGrp.rp" "walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.crp"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp|walker_rt_ankle_fk_ctrl_frzGrp.rpt" "walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.crt"
-		;
-connectAttr "walker_rt_ankle_fk_jnt.t" "walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_ankle_fk_jnt.rp" "walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_ankle_fk_jnt.rpt" "walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_ankle_fk_jnt.pm" "walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.w0" "walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].tw"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp.ro" "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.cro"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp.pim" "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.cpim"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp.rp" "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.crp"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_ankle_fk_ctrl_frzGrp.rpt" "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.crt"
-		;
-connectAttr "walker_rt_knee_fk_jnt.t" "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_knee_fk_jnt.rp" "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_knee_fk_jnt.rpt" "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_knee_fk_jnt.r" "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tr"
-		;
-connectAttr "walker_rt_knee_fk_jnt.ro" "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_rt_knee_fk_jnt.s" "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].ts"
-		;
-connectAttr "walker_rt_knee_fk_jnt.pm" "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_knee_fk_jnt.jo" "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.w0" "walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.ctx" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp.tx"
-		;
-connectAttr "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.cty" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp.ty"
-		;
-connectAttr "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.ctz" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp.tz"
-		;
-connectAttr "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.crx" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp.rx"
-		;
-connectAttr "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.cry" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp.ry"
-		;
-connectAttr "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.crz" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp.rz"
-		;
-connectAttr "walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.ctx" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp|walker_rt_knee_fk_ctrl_frzGrp.tx"
-		;
-connectAttr "walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.cty" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp|walker_rt_knee_fk_ctrl_frzGrp.ty"
-		;
-connectAttr "walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.ctz" "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp|walker_rt_knee_fk_ctrl_frzGrp.tz"
-		;
-connectAttr "walker_rt_legFkVis_cond.ocr" "walker_rt_knee_fk_ctrl.v";
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp|walker_rt_knee_fk_ctrl_frzGrp.pim" "walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.cpim"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp|walker_rt_knee_fk_ctrl_frzGrp.rp" "walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.crp"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp|walker_rt_knee_fk_ctrl_frzGrp.rpt" "walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.crt"
-		;
-connectAttr "walker_rt_knee_fk_jnt.t" "walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_knee_fk_jnt.rp" "walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_knee_fk_jnt.rpt" "walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_knee_fk_jnt.pm" "walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.w0" "walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].tw"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp.ro" "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.cro"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp.pim" "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.cpim"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp.rp" "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.crp"
-		;
-connectAttr "|AniM_walker_Main|Rig_Leg_grp|walker_rt_leg_rig_grp|walker_rt_knee_fk_ctrl_frzGrp.rpt" "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.crt"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt.t" "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt.rp" "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt.rpt" "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt.r" "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tr"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt.ro" "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt.s" "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].ts"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt.pm" "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_upLeg_fk_jnt.jo" "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.w0" "walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.ctx" "walker_rt_upLegupJntFkCtrl_grp.tx"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.cty" "walker_rt_upLegupJntFkCtrl_grp.ty"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.ctz" "walker_rt_upLegupJntFkCtrl_grp.tz"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.crx" "walker_rt_upLegupJntFkCtrl_grp.rx"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.cry" "walker_rt_upLegupJntFkCtrl_grp.ry"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.crz" "walker_rt_upLegupJntFkCtrl_grp.rz"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp.ro" "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.cro"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp.pim" "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.cpim"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp.rp" "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.crp"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp.rpt" "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.crt"
-		;
-connectAttr "walker_hip_jnt.t" "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tt"
-		;
-connectAttr "walker_hip_jnt.rp" "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_hip_jnt.rpt" "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_hip_jnt.r" "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tr"
-		;
-connectAttr "walker_hip_jnt.ro" "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_hip_jnt.s" "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].ts"
-		;
-connectAttr "walker_hip_jnt.pm" "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_hip_jnt.jo" "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.w0" "walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.ctx" "walker_rt_upLeg_fk_ctrl_frzGrp.tx"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.cty" "walker_rt_upLeg_fk_ctrl_frzGrp.ty"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.ctz" "walker_rt_upLeg_fk_ctrl_frzGrp.tz"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.crx" "walker_rt_upLeg_fk_ctrl_frzGrp.rx"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.cry" "walker_rt_upLeg_fk_ctrl_frzGrp.ry"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.crz" "walker_rt_upLeg_fk_ctrl_frzGrp.rz"
-		;
-connectAttr "walker_rt_legFkVis_cond.ocr" "walker_rt_upLeg_fk_ctrl.v";
-connectAttr "walker_rt_upLeg_fk_ctrl_frzGrp.pim" "walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.cpim"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl_frzGrp.rp" "walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.crp"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl_frzGrp.rpt" "walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.crt"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp.t" "walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp.rp" "walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp.rpt" "walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp.pm" "walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.w0" "walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl_frzGrp.ro" "walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.cro"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl_frzGrp.pim" "walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.cpim"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp.r" "walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.tg[0].tr"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp.ro" "walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.tg[0].tro"
-		;
-connectAttr "walker_rt_upLegupJntFkCtrl_grp.pm" "walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.w0" "walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_upLeg_plsMns.o1" "walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.w0"
-		;
-connectAttr "walker_rt_legIK_Grp_parentConstraint1.ctx" "walker_rt_legIK_Grp.tx"
-		;
-connectAttr "walker_rt_legIK_Grp_parentConstraint1.cty" "walker_rt_legIK_Grp.ty"
-		;
-connectAttr "walker_rt_legIK_Grp_parentConstraint1.ctz" "walker_rt_legIK_Grp.tz"
-		;
-connectAttr "walker_rt_legIK_Grp_parentConstraint1.crx" "walker_rt_legIK_Grp.rx"
-		;
-connectAttr "walker_rt_legIK_Grp_parentConstraint1.cry" "walker_rt_legIK_Grp.ry"
-		;
-connectAttr "walker_rt_legIK_Grp_parentConstraint1.crz" "walker_rt_legIK_Grp.rz"
-		;
-connectAttr "walker_rt_foot_ctrl.ikVis" "walker_rt_upLeg_ik_jnt.v";
-connectAttr "walker_rt_upLegSnapSplice_blend.opr" "walker_rt_knee_ik_jnt.tx";
-connectAttr "walker_rt_kneeSnapSplice_blend.opr" "walker_rt_ankle_ik_jnt.tx";
-connectAttr "walker_rt_ankle_ik_jnt.tx" "effector3.tx";
-connectAttr "walker_rt_ankle_ik_jnt.ty" "effector3.ty";
-connectAttr "walker_rt_ankle_ik_jnt.tz" "effector3.tz";
-connectAttr "walker_rt_legIK_Grp.ro" "walker_rt_legIK_Grp_parentConstraint1.cro"
-		;
-connectAttr "walker_rt_legIK_Grp.pim" "walker_rt_legIK_Grp_parentConstraint1.cpim"
-		;
-connectAttr "walker_rt_legIK_Grp.rp" "walker_rt_legIK_Grp_parentConstraint1.crp"
-		;
-connectAttr "walker_rt_legIK_Grp.rpt" "walker_rt_legIK_Grp_parentConstraint1.crt"
-		;
-connectAttr "walker_hip_jnt.t" "walker_rt_legIK_Grp_parentConstraint1.tg[0].tt";
-connectAttr "walker_hip_jnt.rp" "walker_rt_legIK_Grp_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_hip_jnt.rpt" "walker_rt_legIK_Grp_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_hip_jnt.r" "walker_rt_legIK_Grp_parentConstraint1.tg[0].tr";
-connectAttr "walker_hip_jnt.ro" "walker_rt_legIK_Grp_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_hip_jnt.s" "walker_rt_legIK_Grp_parentConstraint1.tg[0].ts";
-connectAttr "walker_hip_jnt.pm" "walker_rt_legIK_Grp_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_hip_jnt.jo" "walker_rt_legIK_Grp_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_rt_legIK_Grp_parentConstraint1.w0" "walker_rt_legIK_Grp_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_legIkVis_cond.ocr" "walker_rt_heel_ik_ctrl.v";
-connectAttr "walker_rt_heel_ik_ctrl_pvControl.o" "walker_rt_heel_ik_ctrl.pvControl"
-		;
-connectAttr "walker_rt_heel_ik_ctrl_legTwist.o" "walker_rt_heel_ik_ctrl.legTwist"
-		;
-connectAttr "walker_rt_heel_ik_ctrl_heelTwist.o" "walker_rt_heel_ik_ctrl.heelTwist"
-		;
-connectAttr "walker_rt_heel_ik_ctrl_ballTwist.o" "walker_rt_heel_ik_ctrl.ballTwist"
-		;
-connectAttr "walker_rt_heel_ik_ctrl_toeTwist.o" "walker_rt_heel_ik_ctrl.toeTwist"
-		;
-connectAttr "walker_rt_heel_ik_ctrl_translateX.o" "walker_rt_heel_ik_ctrl.tx";
-connectAttr "walker_rt_heel_ik_ctrl_translateY.o" "walker_rt_heel_ik_ctrl.ty";
-connectAttr "walker_rt_heel_ik_ctrl_translateZ.o" "walker_rt_heel_ik_ctrl.tz";
-connectAttr "walker_rt_heel_ik_ctrl_rotateX.o" "walker_rt_heel_ik_ctrl.rx";
-connectAttr "walker_rt_heel_ik_ctrl_rotateY.o" "walker_rt_heel_ik_ctrl.ry";
-connectAttr "walker_rt_heel_ik_ctrl_rotateZ.o" "walker_rt_heel_ik_ctrl.rz";
-connectAttr "walker_rt_legStr_clamp.opr" "walker_rt_heel_ik_ctrl.stretchValue" -l
-		 on;
-connectAttr "walker_rt_heel_ik_ctrl_footRoll.o" "walker_rt_heel_ik_ctrl.footRoll"
-		;
-connectAttr "walker_rt_heel_ik_ctrl_footBreak.o" "walker_rt_heel_ik_ctrl.footBreak"
-		;
-connectAttr "walker_rt_heel_ik_ctrl_toeRoll.o" "walker_rt_heel_ik_ctrl.toeRoll";
-connectAttr "walker_rt_upLeg_ik_jnt.msg" "walker_rt_leg_ikHandle.hsj";
-connectAttr "effector3.hp" "walker_rt_leg_ikHandle.hee";
-connectAttr "ikRPsolver.msg" "walker_rt_leg_ikHandle.hsv";
-connectAttr "walker_rt_leg_ikHandle_parentConstraint1.ctx" "walker_rt_leg_ikHandle.tx"
-		;
-connectAttr "walker_rt_leg_ikHandle_parentConstraint1.cty" "walker_rt_leg_ikHandle.ty"
-		;
-connectAttr "walker_rt_leg_ikHandle_parentConstraint1.ctz" "walker_rt_leg_ikHandle.tz"
-		;
-connectAttr "walker_rt_leg_ikHandle_parentConstraint1.crx" "walker_rt_leg_ikHandle.rx"
-		;
-connectAttr "walker_rt_leg_ikHandle_parentConstraint1.cry" "walker_rt_leg_ikHandle.ry"
-		;
-connectAttr "walker_rt_leg_ikHandle_parentConstraint1.crz" "walker_rt_leg_ikHandle.rz"
-		;
-connectAttr "unitConversion10.o" "walker_rt_leg_ikHandle.twi";
-connectAttr "walker_rt_legPvCtrl_blend.opr" "walker_rt_leg_ikHandle.pvx";
-connectAttr "walker_rt_legPvCtrl_blend.opg" "walker_rt_leg_ikHandle.pvy";
-connectAttr "walker_rt_legPvCtrl_blend.opb" "walker_rt_leg_ikHandle.pvz";
-connectAttr "walker_rt_leg_ikHandle.ro" "walker_rt_leg_ikHandle_parentConstraint1.cro"
-		;
-connectAttr "walker_rt_leg_ikHandle.pim" "walker_rt_leg_ikHandle_parentConstraint1.cpim"
-		;
-connectAttr "walker_rt_leg_ikHandle.rp" "walker_rt_leg_ikHandle_parentConstraint1.crp"
-		;
-connectAttr "walker_rt_leg_ikHandle.rpt" "walker_rt_leg_ikHandle_parentConstraint1.crt"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.t" "walker_rt_leg_ikHandle_parentConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.rp" "walker_rt_leg_ikHandle_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.rpt" "walker_rt_leg_ikHandle_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.r" "walker_rt_leg_ikHandle_parentConstraint1.tg[0].tr"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.ro" "walker_rt_leg_ikHandle_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.s" "walker_rt_leg_ikHandle_parentConstraint1.tg[0].ts"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.pm" "walker_rt_leg_ikHandle_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.jo" "walker_rt_leg_ikHandle_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_rt_leg_ikHandle_parentConstraint1.w0" "walker_rt_leg_ikHandle_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_leg_ikHandle.pim" "walker_rt_knee_pv_cons.cpim";
-connectAttr "walker_rt_upLeg_ik_jnt.pm" "walker_rt_knee_pv_cons.ps";
-connectAttr "walker_rt_upLeg_ik_jnt.t" "walker_rt_knee_pv_cons.crp";
-connectAttr "walker_rt_knee_pv_ctrl.t" "walker_rt_knee_pv_cons.tg[0].tt";
-connectAttr "walker_rt_knee_pv_ctrl.rp" "walker_rt_knee_pv_cons.tg[0].trp";
-connectAttr "walker_rt_knee_pv_ctrl.rpt" "walker_rt_knee_pv_cons.tg[0].trt";
-connectAttr "walker_rt_knee_pv_ctrl.pm" "walker_rt_knee_pv_cons.tg[0].tpm";
-connectAttr "walker_rt_knee_pv_cons.w0" "walker_rt_knee_pv_cons.tg[0].tw";
-connectAttr "walker_rt_heel_ik_ctrl.pvControl" "walker_rt_knee_pv_cons.w0";
-connectAttr "walker_rt_foot_ctrl_parentConstraint1.ctx" "walker_rt_foot_ctrl.tx"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.crz" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.rz"
 		 -l on;
-connectAttr "walker_rt_foot_ctrl_parentConstraint1.cty" "walker_rt_foot_ctrl.ty"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.ro" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.pim" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.rp" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrl_space_switch_grp.rpt" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.t" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.rp" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.rpt" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.r" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.ro" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.s" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.w0" "Ultimate_Walker_v1_0_1:walker_lfLegIkCtrlSpace_par_cons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion15.o" "Ultimate_Walker_v1_0_1:walker_rt_heel_rev_rig_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion16.o" "Ultimate_Walker_v1_0_1:walker_rt_heel_rev_rig_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.ikVis" "Ultimate_Walker_v1_0_1:walker_rt_heel_rev_rig_jnt.v"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_rev_rig_jnt.s" "Ultimate_Walker_v1_0_1:walker_rt_toe_rev_rig_jnt.is"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion12.o" "Ultimate_Walker_v1_0_1:walker_rt_toe_rev_rig_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion18.o" "Ultimate_Walker_v1_0_1:walker_rt_toe_rev_rig_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion13.o" "Ultimate_Walker_v1_0_1:walker_rt_ball_rev_rig_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion17.o" "Ultimate_Walker_v1_0_1:walker_rt_ball_rev_rig_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion11.o" "Ultimate_Walker_v1_0_1:walker_rt_ball_ik_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion14.o" "Ultimate_Walker_v1_0_1:walker_rt_ball_ik_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp.ro" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp.pim" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp.rp" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.t" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.rp" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.rpt" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.r" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.ro" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.s" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_reverseFoot_rig_grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.fkVis" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.v"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legUpStr_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_kneeCtrl_fk_or_cons.crx" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_kneeCtrl_fk_or_cons.cry" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_kneeCtrl_fk_or_cons.crz" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legLowStr_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleCtrl_fk_or_cons.crx" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleCtrl_fk_or_cons.cry" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleCtrl_fk_or_cons.crz" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ballCtrl_fk_or_cons.crx" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ballCtrl_fk_or_cons.cry" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ballCtrl_fk_or_cons.crz" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ballCtrl_fk_or_cons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt.pim" "Ultimate_Walker_v1_0_1:walker_rt_ballCtrl_fk_or_cons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ballCtrl_fk_or_cons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl.r" "Ultimate_Walker_v1_0_1:walker_rt_ballCtrl_fk_or_cons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl.ro" "Ultimate_Walker_v1_0_1:walker_rt_ballCtrl_fk_or_cons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_rt_ballCtrl_fk_or_cons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ballCtrl_fk_or_cons.w0" "Ultimate_Walker_v1_0_1:walker_rt_ballCtrl_fk_or_cons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ankleCtrl_fk_or_cons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.pim" "Ultimate_Walker_v1_0_1:walker_rt_ankleCtrl_fk_or_cons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ankleCtrl_fk_or_cons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl.r" "Ultimate_Walker_v1_0_1:walker_rt_ankleCtrl_fk_or_cons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl.ro" "Ultimate_Walker_v1_0_1:walker_rt_ankleCtrl_fk_or_cons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_rt_ankleCtrl_fk_or_cons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleCtrl_fk_or_cons.w0" "Ultimate_Walker_v1_0_1:walker_rt_ankleCtrl_fk_or_cons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_kneeCtrl_fk_or_cons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.pim" "Ultimate_Walker_v1_0_1:walker_rt_kneeCtrl_fk_or_cons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_kneeCtrl_fk_or_cons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl.r" "Ultimate_Walker_v1_0_1:walker_rt_kneeCtrl_fk_or_cons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl.ro" "Ultimate_Walker_v1_0_1:walker_rt_kneeCtrl_fk_or_cons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_rt_kneeCtrl_fk_or_cons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_kneeCtrl_fk_or_cons.w0" "Ultimate_Walker_v1_0_1:walker_rt_kneeCtrl_fk_or_cons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.pim" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl.t" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl.rp" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl.rpt" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl.r" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl.ro" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl.s" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp.ro" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp.pim" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp.rp" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.s" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_legFK_Grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.ctx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.cty" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.ctz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.crx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.cry" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.crz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.ctx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.cty" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.ctz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legFkVis_cond.ocr" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl.v"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp.pim" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.cpim"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp.rp" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.crp"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_pointConstraint1.tg[0].tw"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp.ro" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.cro"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp.pim" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.cpim"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp.rp" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.crp"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.s" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_ctrl_frzGrp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.ctx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.cty" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.ctz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.crx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.cry" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.crz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.ctx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.cty" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.ctz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legFkVis_cond.ocr" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl.v"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp.pim" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.cpim"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp.rp" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.crp"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_pointConstraint1.tg[0].tw"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp.ro" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.cro"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp.pim" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.cpim"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp.rp" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.crp"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.s" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_ctrl_frzGrp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.ctx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.cty" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.ctz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.crx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.cry" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.crz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.ctx" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.cty" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.ctz" "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legFkVis_cond.ocr" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl.v"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp.pim" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.cpim"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp.rp" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.crp"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_pointConstraint1.tg[0].tw"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp.ro" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.cro"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp.pim" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.cpim"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp.rp" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.crp"
+		;
+connectAttr "|Ultimate_Walker_v1_0_1:AniM_walker_Main|Ultimate_Walker_v1_0_1:Rig_Leg_grp|Ultimate_Walker_v1_0_1:walker_rt_leg_rig_grp|Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.s" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_ctrl_frzGrp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.ro" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.pim" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.rp" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.s" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legFkVis_cond.ocr" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl.v"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp.pim" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp.rp" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.t" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.rp" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.pm" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp.ro" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp.pim" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.r" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.ro" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegupJntFkCtrl_grp.pm" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl_frzGrp_orientConstraint1.w0"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.ikVis" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt.v"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegSnapSplice_blend.opr" "Ultimate_Walker_v1_0_1:walker_rt_knee_ik_jnt.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_kneeSnapSplice_blend.opr" "Ultimate_Walker_v1_0_1:walker_rt_ankle_ik_jnt.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_ik_jnt.tx" "Ultimate_Walker_v1_0_1:effector3.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_ik_jnt.ty" "Ultimate_Walker_v1_0_1:effector3.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_ik_jnt.tz" "Ultimate_Walker_v1_0_1:effector3.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp.ro" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp.pim" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp.rp" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.s" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_legIK_Grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIkVis_cond.ocr" "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.v"
+		;
+connectAttr "walker_rt_heel_ik_ctrl_pvControl.o" "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.pvControl"
+		;
+connectAttr "walker_rt_heel_ik_ctrl_legTwist.o" "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.legTwist"
+		;
+connectAttr "walker_rt_heel_ik_ctrl_heelTwist.o" "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.heelTwist"
+		;
+connectAttr "walker_rt_heel_ik_ctrl_ballTwist.o" "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.ballTwist"
+		;
+connectAttr "walker_rt_heel_ik_ctrl_toeTwist.o" "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.toeTwist"
+		;
+connectAttr "walker_rt_heel_ik_ctrl_translateX.o" "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.tx"
+		;
+connectAttr "walker_rt_heel_ik_ctrl_translateY.o" "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.ty"
+		;
+connectAttr "walker_rt_heel_ik_ctrl_translateZ.o" "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.tz"
+		;
+connectAttr "walker_rt_heel_ik_ctrl_rotateX.o" "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.rx"
+		;
+connectAttr "walker_rt_heel_ik_ctrl_rotateY.o" "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.ry"
+		;
+connectAttr "walker_rt_heel_ik_ctrl_rotateZ.o" "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStr_clamp.opr" "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.stretchValue"
 		 -l on;
-connectAttr "walker_rt_foot_ctrl_parentConstraint1.ctz" "walker_rt_foot_ctrl.tz"
+connectAttr "walker_rt_heel_ik_ctrl_footRoll.o" "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.footRoll"
+		;
+connectAttr "walker_rt_heel_ik_ctrl_footBreak.o" "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.footBreak"
+		;
+connectAttr "walker_rt_heel_ik_ctrl_toeRoll.o" "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.toeRoll"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt.msg" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.hsj"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:effector3.hp" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.hee"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:ikRPsolver.msg" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.hsv"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:unitConversion10.o" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.twi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrl_blend.opr" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.pvx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrl_blend.opg" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.pvy"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrl_blend.opb" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.pvz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.ro" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.pim" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.rp" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.rpt" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.s" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_leg_ikHandle.pim" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_cons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_cons.ps"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_cons.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.t" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_cons.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.rp" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_cons.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.rpt" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_cons.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_cons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_cons.w0" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_cons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.pvControl" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_cons.w0"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.tx"
 		 -l on;
-connectAttr "walker_rt_foot_ctrl_parentConstraint1.crx" "walker_rt_foot_ctrl.rx"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.ty"
 		 -l on;
-connectAttr "walker_rt_foot_ctrl_parentConstraint1.cry" "walker_rt_foot_ctrl.ry"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.tz"
 		 -l on;
-connectAttr "walker_rt_foot_ctrl_parentConstraint1.crz" "walker_rt_foot_ctrl.rz"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.rx"
 		 -l on;
-connectAttr "walker_rt_foot_ctrl.ro" "walker_rt_foot_ctrl_parentConstraint1.cro"
-		;
-connectAttr "walker_rt_foot_ctrl.pim" "walker_rt_foot_ctrl_parentConstraint1.cpim"
-		;
-connectAttr "walker_rt_foot_ctrl.rp" "walker_rt_foot_ctrl_parentConstraint1.crp"
-		;
-connectAttr "walker_rt_foot_ctrl.rpt" "walker_rt_foot_ctrl_parentConstraint1.crt"
-		;
-connectAttr "walker_rt_ankle_jnt.t" "walker_rt_foot_ctrl_parentConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_ankle_jnt.rp" "walker_rt_foot_ctrl_parentConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_ankle_jnt.rpt" "walker_rt_foot_ctrl_parentConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_ankle_jnt.r" "walker_rt_foot_ctrl_parentConstraint1.tg[0].tr"
-		;
-connectAttr "walker_rt_ankle_jnt.ro" "walker_rt_foot_ctrl_parentConstraint1.tg[0].tro"
-		;
-connectAttr "walker_rt_ankle_jnt.s" "walker_rt_foot_ctrl_parentConstraint1.tg[0].ts"
-		;
-connectAttr "walker_rt_ankle_jnt.pm" "walker_rt_foot_ctrl_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_ankle_jnt.jo" "walker_rt_foot_ctrl_parentConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_rt_foot_ctrl_parentConstraint1.w0" "walker_rt_foot_ctrl_parentConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_legIkVis_cond.ocr" "walker_rt_knee_pv_ctrl_frzGrp.v";
-connectAttr "walker_rt_knee_line_loc_pointConstraint1.ctx" "walker_rt_knee_line_loc.tx"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.ry"
 		 -l on;
-connectAttr "walker_rt_knee_line_loc_pointConstraint1.cty" "walker_rt_knee_line_loc.ty"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.rz"
 		 -l on;
-connectAttr "walker_rt_knee_line_loc_pointConstraint1.ctz" "walker_rt_knee_line_loc.tz"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.ro" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.pim" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.rp" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.rpt" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.s" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIkVis_cond.ocr" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_frzGrp.v"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc.tx"
 		 -l on;
-connectAttr "walker_rt_knee_line_loc.pim" "walker_rt_knee_line_loc_pointConstraint1.cpim"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc.pim" "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc_pointConstraint1.cpim"
 		;
-connectAttr "walker_rt_knee_line_loc.rp" "walker_rt_knee_line_loc_pointConstraint1.crp"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc.rp" "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc_pointConstraint1.crp"
 		;
-connectAttr "walker_rt_knee_line_loc.rpt" "walker_rt_knee_line_loc_pointConstraint1.crt"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc.rpt" "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc_pointConstraint1.crt"
 		;
-connectAttr "walker_rt_knee_jnt.t" "walker_rt_knee_line_loc_pointConstraint1.tg[0].tt"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc_pointConstraint1.tg[0].tt"
 		;
-connectAttr "walker_rt_knee_jnt.rp" "walker_rt_knee_line_loc_pointConstraint1.tg[0].trp"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc_pointConstraint1.tg[0].trp"
 		;
-connectAttr "walker_rt_knee_jnt.rpt" "walker_rt_knee_line_loc_pointConstraint1.tg[0].trt"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc_pointConstraint1.tg[0].trt"
 		;
-connectAttr "walker_rt_knee_jnt.pm" "walker_rt_knee_line_loc_pointConstraint1.tg[0].tpm"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc_pointConstraint1.tg[0].tpm"
 		;
-connectAttr "walker_rt_knee_line_loc_pointConstraint1.w0" "walker_rt_knee_line_loc_pointConstraint1.tg[0].tw"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_knee_line_loc_pointConstraint1.tg[0].tw"
 		;
-connectAttr "walker_rt_heel_ik_ctrl.pvControl" "abRTLine_walker_rt_knee_line_loc.v"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.pvControl" "Ultimate_Walker_v1_0_1:abRTLine_walker_rt_knee_line_loc.v"
 		;
-connectAttr "walker_rt_knee_pv_ctrl_annLocShape.wm" "abRTLine_walker_rt_knee_line_locShape.dom"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLocShape.wm" "Ultimate_Walker_v1_0_1:abRTLine_walker_rt_knee_line_locShape.dom"
 		 -na;
-connectAttr "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.ctx" "walker_rt_legPvCtrlGrp_space_grp.tx"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.ctx" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_space_grp.tx"
 		;
-connectAttr "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.cty" "walker_rt_legPvCtrlGrp_space_grp.ty"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.cty" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_space_grp.ty"
 		;
-connectAttr "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.ctz" "walker_rt_legPvCtrlGrp_space_grp.tz"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.ctz" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_space_grp.tz"
 		;
-connectAttr "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.crx" "walker_rt_legPvCtrlGrp_space_grp.rx"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.crx" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_space_grp.rx"
 		;
-connectAttr "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.cry" "walker_rt_legPvCtrlGrp_space_grp.ry"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.cry" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_space_grp.ry"
 		;
-connectAttr "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.crz" "walker_rt_legPvCtrlGrp_space_grp.rz"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.crz" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_space_grp.rz"
 		;
-connectAttr "walker_rt_legPvCtrlGrp_space_grp.ro" "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.cro"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_space_grp.ro" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.cro"
 		;
-connectAttr "walker_rt_legPvCtrlGrp_space_grp.pim" "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.cpim"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_space_grp.pim" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.cpim"
 		;
-connectAttr "walker_rt_legPvCtrlGrp_space_grp.rp" "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.crp"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_space_grp.rp" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.crp"
 		;
-connectAttr "walker_rt_legPvCtrlGrp_space_grp.rpt" "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.crt"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_space_grp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.crt"
 		;
-connectAttr "walker_rtLegIkCtrl_space_switch_grp.t" "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.tg[0].tt"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.t" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.tg[0].tt"
 		;
-connectAttr "walker_rtLegIkCtrl_space_switch_grp.rp" "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.tg[0].trp"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.rp" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.tg[0].trp"
 		;
-connectAttr "walker_rtLegIkCtrl_space_switch_grp.rpt" "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.tg[0].trt"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.tg[0].trt"
 		;
-connectAttr "walker_rtLegIkCtrl_space_switch_grp.r" "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.tg[0].tr"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.r" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.tg[0].tr"
 		;
-connectAttr "walker_rtLegIkCtrl_space_switch_grp.ro" "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.tg[0].tro"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.ro" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.tg[0].tro"
 		;
-connectAttr "walker_rtLegIkCtrl_space_switch_grp.s" "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.tg[0].ts"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.s" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.tg[0].ts"
 		;
-connectAttr "walker_rtLegIkCtrl_space_switch_grp.pm" "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.tg[0].tpm"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.pm" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.tg[0].tpm"
 		;
-connectAttr "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.w0" "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.tg[0].tw"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.w0" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.tg[0].tw"
 		;
-connectAttr "walker_rt_knee_pv_ctrl.rtLegIkCtrl" "walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.w0"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.rtLegIkCtrl" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrlGrp_rtLegIkCtrlSpcParCon.w0"
 		;
-connectAttr "walker_rt_heel_ik_ctrl.pvControl" "walker_rt_knee_pv_ctrl.v" -l on;
-connectAttr "walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.ctx" "walker_rt_knee_pv_ctrl_annLoc.tx"
-		;
-connectAttr "walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.cty" "walker_rt_knee_pv_ctrl_annLoc.ty"
-		;
-connectAttr "walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.ctz" "walker_rt_knee_pv_ctrl_annLoc.tz"
-		;
-connectAttr "walker_rt_knee_pv_ctrl_annLoc.pim" "walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.cpim"
-		;
-connectAttr "walker_rt_knee_pv_ctrl_annLoc.rp" "walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.crp"
-		;
-connectAttr "walker_rt_knee_pv_ctrl_annLoc.rpt" "walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.crt"
-		;
-connectAttr "walker_rt_knee_pv_ctrl.t" "walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_knee_pv_ctrl.rp" "walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_knee_pv_ctrl.rpt" "walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_knee_pv_ctrl.pm" "walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.w0" "walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_legStrDist_dist_spShape.wp" "walker_rt_legStrDist_distShape.sp"
-		;
-connectAttr "walker_rt_legStrDist_dist_epShape.wp" "walker_rt_legStrDist_distShape.ep"
-		;
-connectAttr "walker_rt_legStrDist_dist_sp_pointConstraint1.ctx" "walker_rt_legStrDist_dist_sp.tx"
-		;
-connectAttr "walker_rt_legStrDist_dist_sp_pointConstraint1.cty" "walker_rt_legStrDist_dist_sp.ty"
-		;
-connectAttr "walker_rt_legStrDist_dist_sp_pointConstraint1.ctz" "walker_rt_legStrDist_dist_sp.tz"
-		;
-connectAttr "walker_rt_legStrDist_dist_sp.pim" "walker_rt_legStrDist_dist_sp_pointConstraint1.cpim"
-		;
-connectAttr "walker_rt_legStrDist_dist_sp.rp" "walker_rt_legStrDist_dist_sp_pointConstraint1.crp"
-		;
-connectAttr "walker_rt_legStrDist_dist_sp.rpt" "walker_rt_legStrDist_dist_sp_pointConstraint1.crt"
-		;
-connectAttr "walker_rt_upLeg_ik_jnt.t" "walker_rt_legStrDist_dist_sp_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_upLeg_ik_jnt.rp" "walker_rt_legStrDist_dist_sp_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_upLeg_ik_jnt.rpt" "walker_rt_legStrDist_dist_sp_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_upLeg_ik_jnt.pm" "walker_rt_legStrDist_dist_sp_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_legStrDist_dist_sp_pointConstraint1.w0" "walker_rt_legStrDist_dist_sp_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_legStrDist_dist_ep_pointConstraint1.ctx" "walker_rt_legStrDist_dist_ep.tx"
-		;
-connectAttr "walker_rt_legStrDist_dist_ep_pointConstraint1.cty" "walker_rt_legStrDist_dist_ep.ty"
-		;
-connectAttr "walker_rt_legStrDist_dist_ep_pointConstraint1.ctz" "walker_rt_legStrDist_dist_ep.tz"
-		;
-connectAttr "walker_rt_legStrDist_dist_ep.pim" "walker_rt_legStrDist_dist_ep_pointConstraint1.cpim"
-		;
-connectAttr "walker_rt_legStrDist_dist_ep.rp" "walker_rt_legStrDist_dist_ep_pointConstraint1.crp"
-		;
-connectAttr "walker_rt_legStrDist_dist_ep.rpt" "walker_rt_legStrDist_dist_ep_pointConstraint1.crt"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.t" "walker_rt_legStrDist_dist_ep_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.rp" "walker_rt_legStrDist_dist_ep_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.rpt" "walker_rt_legStrDist_dist_ep_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.pm" "walker_rt_legStrDist_dist_ep_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_legStrDist_dist_ep_pointConstraint1.w0" "walker_rt_legStrDist_dist_ep_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_upLegPvCtrl_dist_spShape.wp" "walker_rt_upLegPvCtrl_distShape.sp"
-		;
-connectAttr "walker_rt_upLegPvCtrl_dist_epShape.wp" "walker_rt_upLegPvCtrl_distShape.ep"
-		;
-connectAttr "walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.ctx" "walker_rt_upLegPvCtrl_dist_sp.tx"
-		;
-connectAttr "walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.cty" "walker_rt_upLegPvCtrl_dist_sp.ty"
-		;
-connectAttr "walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.ctz" "walker_rt_upLegPvCtrl_dist_sp.tz"
-		;
-connectAttr "walker_rt_upLegPvCtrl_dist_sp.pim" "walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.cpim"
-		;
-connectAttr "walker_rt_upLegPvCtrl_dist_sp.rp" "walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.crp"
-		;
-connectAttr "walker_rt_upLegPvCtrl_dist_sp.rpt" "walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.crt"
-		;
-connectAttr "walker_rt_upLeg_ik_jnt.t" "walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_upLeg_ik_jnt.rp" "walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_upLeg_ik_jnt.rpt" "walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_upLeg_ik_jnt.pm" "walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.w0" "walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.ctx" "walker_rt_upLegPvCtrl_dist_ep.tx"
-		;
-connectAttr "walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.cty" "walker_rt_upLegPvCtrl_dist_ep.ty"
-		;
-connectAttr "walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.ctz" "walker_rt_upLegPvCtrl_dist_ep.tz"
-		;
-connectAttr "walker_rt_upLegPvCtrl_dist_ep.pim" "walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.cpim"
-		;
-connectAttr "walker_rt_upLegPvCtrl_dist_ep.rp" "walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.crp"
-		;
-connectAttr "walker_rt_upLegPvCtrl_dist_ep.rpt" "walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.crt"
-		;
-connectAttr "walker_rt_knee_pv_ctrl.t" "walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_knee_pv_ctrl.rp" "walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_knee_pv_ctrl.rpt" "walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_knee_pv_ctrl.pm" "walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.w0" "walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_legPvIkCtrl_dist_spShape.wp" "walker_rt_legPvIkCtrl_distShape.sp"
-		;
-connectAttr "walker_rt_legPvIkCtrl_dist_epShape.wp" "walker_rt_legPvIkCtrl_distShape.ep"
-		;
-connectAttr "walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.ctx" "walker_rt_legPvIkCtrl_dist_sp.tx"
-		;
-connectAttr "walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.cty" "walker_rt_legPvIkCtrl_dist_sp.ty"
-		;
-connectAttr "walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.ctz" "walker_rt_legPvIkCtrl_dist_sp.tz"
-		;
-connectAttr "walker_rt_legPvIkCtrl_dist_sp.pim" "walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.cpim"
-		;
-connectAttr "walker_rt_legPvIkCtrl_dist_sp.rp" "walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.crp"
-		;
-connectAttr "walker_rt_legPvIkCtrl_dist_sp.rpt" "walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.crt"
-		;
-connectAttr "walker_rt_knee_pv_ctrl.t" "walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_knee_pv_ctrl.rp" "walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_knee_pv_ctrl.rpt" "walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_knee_pv_ctrl.pm" "walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.w0" "walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.ctx" "walker_rt_legPvIkCtrl_dist_ep.tx"
-		;
-connectAttr "walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.cty" "walker_rt_legPvIkCtrl_dist_ep.ty"
-		;
-connectAttr "walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.ctz" "walker_rt_legPvIkCtrl_dist_ep.tz"
-		;
-connectAttr "walker_rt_legPvIkCtrl_dist_ep.pim" "walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.cpim"
-		;
-connectAttr "walker_rt_legPvIkCtrl_dist_ep.rp" "walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.crp"
-		;
-connectAttr "walker_rt_legPvIkCtrl_dist_ep.rpt" "walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.crt"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.t" "walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.rp" "walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.rpt" "walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.pm" "walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.w0" "walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.ctx" "walker_rt_ankleBallReader_UpLeg_jnt.tx"
-		;
-connectAttr "walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.cty" "walker_rt_ankleBallReader_UpLeg_jnt.ty"
-		;
-connectAttr "walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.ctz" "walker_rt_ankleBallReader_UpLeg_jnt.tz"
-		;
-connectAttr "walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.crx" "walker_rt_ankleBallReader_UpLeg_jnt.rx"
-		;
-connectAttr "walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.cry" "walker_rt_ankleBallReader_UpLeg_jnt.ry"
-		;
-connectAttr "walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.crz" "walker_rt_ankleBallReader_UpLeg_jnt.rz"
-		;
-connectAttr "walker_rt_ankleReader_knee_or_cons.crx" "walker_rt_ankleBallReader_Knee_jnt.rx"
-		;
-connectAttr "walker_rt_ankleReader_knee_or_cons.cry" "walker_rt_ankleBallReader_Knee_jnt.ry"
-		;
-connectAttr "walker_rt_ankleReader_knee_or_cons.crz" "walker_rt_ankleBallReader_Knee_jnt.rz"
-		;
-connectAttr "walker_rt_ankleReader_ankle_or_cons.crx" "walker_rt_ankleBallReader_Ankle_jnt.rx"
-		;
-connectAttr "walker_rt_ankleReader_ankle_or_cons.cry" "walker_rt_ankleBallReader_Ankle_jnt.ry"
-		;
-connectAttr "walker_rt_ankleReader_ankle_or_cons.crz" "walker_rt_ankleBallReader_Ankle_jnt.rz"
-		;
-connectAttr "walker_rt_ankleReader_ball_or_cons.crx" "walker_rt_ankleBallReader_Ball_jnt.rx"
-		;
-connectAttr "walker_rt_ankleReader_ball_or_cons.cry" "walker_rt_ankleBallReader_Ball_jnt.ry"
-		;
-connectAttr "walker_rt_ankleReader_ball_or_cons.crz" "walker_rt_ankleBallReader_Ball_jnt.rz"
-		;
-connectAttr "walker_rt_ankleBallReader_Ball_jnt.ro" "walker_rt_ankleReader_ball_or_cons.cro"
-		;
-connectAttr "walker_rt_ankleBallReader_Ball_jnt.pim" "walker_rt_ankleReader_ball_or_cons.cpim"
-		;
-connectAttr "walker_rt_ankleBallReader_Ball_jnt.jo" "walker_rt_ankleReader_ball_or_cons.cjo"
-		;
-connectAttr "walker_rt_ball_ik_jnt.r" "walker_rt_ankleReader_ball_or_cons.tg[0].tr"
-		;
-connectAttr "walker_rt_ball_ik_jnt.ro" "walker_rt_ankleReader_ball_or_cons.tg[0].tro"
-		;
-connectAttr "walker_rt_ball_ik_jnt.pm" "walker_rt_ankleReader_ball_or_cons.tg[0].tpm"
-		;
-connectAttr "walker_rt_ball_ik_jnt.jo" "walker_rt_ankleReader_ball_or_cons.tg[0].tjo"
-		;
-connectAttr "walker_rt_ankleReader_ball_or_cons.w0" "walker_rt_ankleReader_ball_or_cons.tg[0].tw"
-		;
-connectAttr "walker_rt_ankleBallReader_Ankle_jnt.ro" "walker_rt_ankleReader_ankle_or_cons.cro"
-		;
-connectAttr "walker_rt_ankleBallReader_Ankle_jnt.pim" "walker_rt_ankleReader_ankle_or_cons.cpim"
-		;
-connectAttr "walker_rt_ankleBallReader_Ankle_jnt.jo" "walker_rt_ankleReader_ankle_or_cons.cjo"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.r" "walker_rt_ankleReader_ankle_or_cons.tg[0].tr"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.ro" "walker_rt_ankleReader_ankle_or_cons.tg[0].tro"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.pm" "walker_rt_ankleReader_ankle_or_cons.tg[0].tpm"
-		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.jo" "walker_rt_ankleReader_ankle_or_cons.tg[0].tjo"
-		;
-connectAttr "walker_rt_ankleReader_ankle_or_cons.w0" "walker_rt_ankleReader_ankle_or_cons.tg[0].tw"
-		;
-connectAttr "walker_rt_ankleBallReader_Knee_jnt.ro" "walker_rt_ankleReader_knee_or_cons.cro"
-		;
-connectAttr "walker_rt_ankleBallReader_Knee_jnt.pim" "walker_rt_ankleReader_knee_or_cons.cpim"
-		;
-connectAttr "walker_rt_ankleBallReader_Knee_jnt.jo" "walker_rt_ankleReader_knee_or_cons.cjo"
-		;
-connectAttr "walker_rt_knee_jnt.r" "walker_rt_ankleReader_knee_or_cons.tg[0].tr"
-		;
-connectAttr "walker_rt_knee_jnt.ro" "walker_rt_ankleReader_knee_or_cons.tg[0].tro"
-		;
-connectAttr "walker_rt_knee_jnt.pm" "walker_rt_ankleReader_knee_or_cons.tg[0].tpm"
-		;
-connectAttr "walker_rt_knee_jnt.jo" "walker_rt_ankleReader_knee_or_cons.tg[0].tjo"
-		;
-connectAttr "walker_rt_ankleReader_knee_or_cons.w0" "walker_rt_ankleReader_knee_or_cons.tg[0].tw"
-		;
-connectAttr "walker_rt_ankleBallReader_UpLeg_jnt.pim" "walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.cpim"
-		;
-connectAttr "walker_rt_ankleBallReader_UpLeg_jnt.rp" "walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.crp"
-		;
-connectAttr "walker_rt_ankleBallReader_UpLeg_jnt.rpt" "walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.crt"
-		;
-connectAttr "walker_rt_upLeg_jnt.t" "walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].tt"
-		;
-connectAttr "walker_rt_upLeg_jnt.rp" "walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].trp"
-		;
-connectAttr "walker_rt_upLeg_jnt.rpt" "walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].trt"
-		;
-connectAttr "walker_rt_upLeg_jnt.pm" "walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.w0" "walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rt_ankleBallReader_UpLeg_jnt.ro" "walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.cro"
-		;
-connectAttr "walker_rt_ankleBallReader_UpLeg_jnt.pim" "walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.cpim"
-		;
-connectAttr "walker_rt_ankleBallReader_UpLeg_jnt.jo" "walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.cjo"
-		;
-connectAttr "walker_rt_upLeg_jnt.r" "walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tr"
-		;
-connectAttr "walker_rt_upLeg_jnt.ro" "walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tro"
-		;
-connectAttr "walker_rt_upLeg_jnt.pm" "walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tpm"
-		;
-connectAttr "walker_rt_upLeg_jnt.jo" "walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tjo"
-		;
-connectAttr "walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.w0" "walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tw"
-		;
-connectAttr "walker_rtLegIkCtrlSpace_par_cons.ctx" "walker_rtLegIkCtrl_space_switch_grp.tx"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.pvControl" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.v"
 		 -l on;
-connectAttr "walker_rtLegIkCtrlSpace_par_cons.cty" "walker_rtLegIkCtrl_space_switch_grp.ty"
+connectAttr "walker_rt_knee_pv_ctrl_translateX.o" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.tx"
+		;
+connectAttr "walker_rt_knee_pv_ctrl_translateY.o" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.ty"
+		;
+connectAttr "walker_rt_knee_pv_ctrl_translateZ.o" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.tz"
+		;
+connectAttr "walker_rt_knee_pv_ctrl_rtLegIkCtrl.o" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.rtLegIkCtrl"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc.pim" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc.rp" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc.rpt" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.t" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.rp" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.rpt" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl_annLoc_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_spShape.wp" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_distShape.sp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_epShape.wp" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_distShape.ep"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp.pim" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp.rp" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_sp_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep.pim" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep.rp" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep.rpt" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_dist_ep_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_spShape.wp" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_distShape.sp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_epShape.wp" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_distShape.ep"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp.pim" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp.rp" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_sp_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep.pim" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep.rp" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep.rpt" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.t" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.rp" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.rpt" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_dist_ep_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_spShape.wp" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_distShape.sp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_epShape.wp" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_distShape.ep"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp.pim" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp.rp" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp.rpt" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.t" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.rp" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.rpt" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_sp_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep.pim" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep.rp" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep.rpt" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_dist_ep_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt.tx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt.ty"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt.tz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_knee_or_cons.crx" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Knee_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_knee_or_cons.cry" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Knee_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_knee_or_cons.crz" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Knee_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ankle_or_cons.crx" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ankle_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ankle_or_cons.cry" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ankle_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ankle_or_cons.crz" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ankle_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ball_or_cons.crx" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ball_jnt.rx"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ball_or_cons.cry" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ball_jnt.ry"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ball_or_cons.crz" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ball_jnt.rz"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ball_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ball_or_cons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ball_jnt.pim" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ball_or_cons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ball_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ball_or_cons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_ik_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ball_or_cons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_ik_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ball_or_cons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_ik_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ball_or_cons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_ik_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ball_or_cons.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ball_or_cons.w0" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ball_or_cons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ankle_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ankle_or_cons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ankle_jnt.pim" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ankle_or_cons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Ankle_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ankle_or_cons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ankle_or_cons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ankle_or_cons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ankle_or_cons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ankle_or_cons.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ankle_or_cons.w0" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_ankle_or_cons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Knee_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_knee_or_cons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Knee_jnt.pim" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_knee_or_cons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_Knee_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_knee_or_cons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_knee_or_cons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_knee_or_cons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_knee_or_cons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_knee_or_cons.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_knee_or_cons.w0" "Ultimate_Walker_v1_0_1:walker_rt_ankleReader_knee_or_cons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt.pim" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.t" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.rp" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_pointConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt.pim" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_rt_ankleBallReader_UpLeg_jnt_orientConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.ctx" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.tx"
 		 -l on;
-connectAttr "walker_rtLegIkCtrlSpace_par_cons.ctz" "walker_rtLegIkCtrl_space_switch_grp.tz"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.cty" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.ty"
 		 -l on;
-connectAttr "walker_rtLegIkCtrlSpace_par_cons.crx" "walker_rtLegIkCtrl_space_switch_grp.rx"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.ctz" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.tz"
 		 -l on;
-connectAttr "walker_rtLegIkCtrlSpace_par_cons.cry" "walker_rtLegIkCtrl_space_switch_grp.ry"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.crx" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.rx"
 		 -l on;
-connectAttr "walker_rtLegIkCtrlSpace_par_cons.crz" "walker_rtLegIkCtrl_space_switch_grp.rz"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.cry" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.ry"
 		 -l on;
-connectAttr "walker_rtLegIkCtrl_space_switch_grp.ro" "walker_rtLegIkCtrlSpace_par_cons.cro"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.crz" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.ro" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.cro"
 		;
-connectAttr "walker_rtLegIkCtrl_space_switch_grp.pim" "walker_rtLegIkCtrlSpace_par_cons.cpim"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.pim" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.cpim"
 		;
-connectAttr "walker_rtLegIkCtrl_space_switch_grp.rp" "walker_rtLegIkCtrlSpace_par_cons.crp"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.rp" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.crp"
 		;
-connectAttr "walker_rtLegIkCtrl_space_switch_grp.rpt" "walker_rtLegIkCtrlSpace_par_cons.crt"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrl_space_switch_grp.rpt" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.crt"
 		;
-connectAttr "walker_rt_heel_ik_ctrl.t" "walker_rtLegIkCtrlSpace_par_cons.tg[0].tt"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.t" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.tg[0].tt"
 		;
-connectAttr "walker_rt_heel_ik_ctrl.rp" "walker_rtLegIkCtrlSpace_par_cons.tg[0].trp"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.rp" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.tg[0].trp"
 		;
-connectAttr "walker_rt_heel_ik_ctrl.rpt" "walker_rtLegIkCtrlSpace_par_cons.tg[0].trt"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.rpt" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.tg[0].trt"
 		;
-connectAttr "walker_rt_heel_ik_ctrl.r" "walker_rtLegIkCtrlSpace_par_cons.tg[0].tr"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.r" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.tg[0].tr"
 		;
-connectAttr "walker_rt_heel_ik_ctrl.ro" "walker_rtLegIkCtrlSpace_par_cons.tg[0].tro"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.ro" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.tg[0].tro"
 		;
-connectAttr "walker_rt_heel_ik_ctrl.s" "walker_rtLegIkCtrlSpace_par_cons.tg[0].ts"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.s" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.tg[0].ts"
 		;
-connectAttr "walker_rt_heel_ik_ctrl.pm" "walker_rtLegIkCtrlSpace_par_cons.tg[0].tpm"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.pm" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.tg[0].tpm"
 		;
-connectAttr "walker_rtLegIkCtrlSpace_par_cons.w0" "walker_rtLegIkCtrlSpace_par_cons.tg[0].tw"
+connectAttr "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.w0" "Ultimate_Walker_v1_0_1:walker_rtLegIkCtrlSpace_par_cons.tg[0].tw"
 		;
-connectAttr "Rig_Leg_grp.ro" "Rig_Leg_grp_parentConstraint1.cro";
-connectAttr "Rig_Leg_grp.pim" "Rig_Leg_grp_parentConstraint1.cpim";
-connectAttr "Rig_Leg_grp.rp" "Rig_Leg_grp_parentConstraint1.crp";
-connectAttr "Rig_Leg_grp.rpt" "Rig_Leg_grp_parentConstraint1.crt";
-connectAttr "CTRL_Root.t" "Rig_Leg_grp_parentConstraint1.tg[0].tt";
-connectAttr "CTRL_Root.rp" "Rig_Leg_grp_parentConstraint1.tg[0].trp";
-connectAttr "CTRL_Root.rpt" "Rig_Leg_grp_parentConstraint1.tg[0].trt";
-connectAttr "CTRL_Root.r" "Rig_Leg_grp_parentConstraint1.tg[0].tr";
-connectAttr "CTRL_Root.ro" "Rig_Leg_grp_parentConstraint1.tg[0].tro";
-connectAttr "CTRL_Root.s" "Rig_Leg_grp_parentConstraint1.tg[0].ts";
-connectAttr "CTRL_Root.pm" "Rig_Leg_grp_parentConstraint1.tg[0].tpm";
-connectAttr "Rig_Leg_grp_parentConstraint1.w0" "Rig_Leg_grp_parentConstraint1.tg[0].tw"
+connectAttr "Ultimate_Walker_v1_0_1:Rig_Leg_grp.ro" "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.cro"
 		;
-connectAttr "CTRL_Root.Global_Scale" "Skeleton_grp.sx" -l on;
-connectAttr "CTRL_Root.Global_Scale" "Skeleton_grp.sy" -l on;
-connectAttr "CTRL_Root.Global_Scale" "Skeleton_grp.sz" -l on;
-connectAttr "walker_hip_jnt_parentConstraint1.ctx" "walker_hip_jnt.tx" -l on;
-connectAttr "walker_hip_jnt_parentConstraint1.cty" "walker_hip_jnt.ty" -l on;
-connectAttr "walker_hip_jnt_parentConstraint1.ctz" "walker_hip_jnt.tz" -l on;
-connectAttr "walker_hip_jnt_parentConstraint1.crx" "walker_hip_jnt.rx" -l on;
-connectAttr "walker_hip_jnt_parentConstraint1.cry" "walker_hip_jnt.ry" -l on;
-connectAttr "walker_hip_jnt_parentConstraint1.crz" "walker_hip_jnt.rz" -l on;
-connectAttr "walker_lf_upLeg_ikFkCons.crx" "walker_lf_upLeg_jnt.rx" -l on;
-connectAttr "walker_lf_upLeg_ikFkCons.cry" "walker_lf_upLeg_jnt.ry" -l on;
-connectAttr "walker_lf_upLeg_ikFkCons.crz" "walker_lf_upLeg_jnt.rz" -l on;
-connectAttr "walker_hip_jnt.s" "walker_lf_upLeg_jnt.is";
-connectAttr "walker_lf_legTrans_blend.opr" "walker_lf_knee_jnt.tx" -l on;
-connectAttr "walker_lf_knee_ikFkCons.crx" "walker_lf_knee_jnt.rx" -l on;
-connectAttr "walker_lf_knee_ikFkCons.cry" "walker_lf_knee_jnt.ry" -l on;
-connectAttr "walker_lf_knee_ikFkCons.crz" "walker_lf_knee_jnt.rz" -l on;
-connectAttr "walker_lf_upLeg_jnt.s" "walker_lf_knee_jnt.is";
-connectAttr "walker_lf_legTrans_blend.opg" "walker_lf_ankle_jnt.tx" -l on;
-connectAttr "walker_lf_ankle_ikFkCons.crx" "walker_lf_ankle_jnt.rx" -l on;
-connectAttr "walker_lf_ankle_ikFkCons.cry" "walker_lf_ankle_jnt.ry" -l on;
-connectAttr "walker_lf_ankle_ikFkCons.crz" "walker_lf_ankle_jnt.rz" -l on;
-connectAttr "walker_lf_knee_jnt.s" "walker_lf_ankle_jnt.is";
-connectAttr "walker_lf_ball_ikFkCons.crx" "walker_lf_ball_jnt.rx" -l on;
-connectAttr "walker_lf_ball_ikFkCons.cry" "walker_lf_ball_jnt.ry" -l on;
-connectAttr "walker_lf_ball_ikFkCons.crz" "walker_lf_ball_jnt.rz" -l on;
-connectAttr "walker_lf_ankle_jnt.s" "walker_lf_ball_jnt.is";
-connectAttr "walker_lf_toe_ikFkCons.crx" "walker_lf_toe_jnt.rx" -l on;
-connectAttr "walker_lf_toe_ikFkCons.cry" "walker_lf_toe_jnt.ry" -l on;
-connectAttr "walker_lf_toe_ikFkCons.crz" "walker_lf_toe_jnt.rz" -l on;
-connectAttr "walker_lf_ball_jnt.s" "walker_lf_toe_jnt.is";
-connectAttr "walker_lf_toe_jnt.ro" "walker_lf_toe_ikFkCons.cro";
-connectAttr "walker_lf_toe_jnt.pim" "walker_lf_toe_ikFkCons.cpim";
-connectAttr "walker_lf_toe_jnt.jo" "walker_lf_toe_ikFkCons.cjo";
-connectAttr "walker_lf_toe_ik_jnt.r" "walker_lf_toe_ikFkCons.tg[0].tr";
-connectAttr "walker_lf_toe_ik_jnt.ro" "walker_lf_toe_ikFkCons.tg[0].tro";
-connectAttr "walker_lf_toe_ik_jnt.pm" "walker_lf_toe_ikFkCons.tg[0].tpm";
-connectAttr "walker_lf_toe_ik_jnt.jo" "walker_lf_toe_ikFkCons.tg[0].tjo";
-connectAttr "walker_lf_toe_ikFkCons.w0" "walker_lf_toe_ikFkCons.tg[0].tw";
-connectAttr "walker_lf_foot_ctrl.ikFkBlend" "walker_lf_toe_ikFkCons.w0" -l on;
-connectAttr "walker_lf_ball_jnt.ro" "walker_lf_ball_ikFkCons.cro";
-connectAttr "walker_lf_ball_jnt.pim" "walker_lf_ball_ikFkCons.cpim";
-connectAttr "walker_lf_ball_jnt.jo" "walker_lf_ball_ikFkCons.cjo";
-connectAttr "walker_lf_ball_ik_jnt.r" "walker_lf_ball_ikFkCons.tg[0].tr";
-connectAttr "walker_lf_ball_ik_jnt.ro" "walker_lf_ball_ikFkCons.tg[0].tro";
-connectAttr "walker_lf_ball_ik_jnt.pm" "walker_lf_ball_ikFkCons.tg[0].tpm";
-connectAttr "walker_lf_ball_ik_jnt.jo" "walker_lf_ball_ikFkCons.tg[0].tjo";
-connectAttr "walker_lf_ball_ikFkCons.w0" "walker_lf_ball_ikFkCons.tg[0].tw";
-connectAttr "walker_lf_ball_fk_jnt.r" "walker_lf_ball_ikFkCons.tg[1].tr";
-connectAttr "walker_lf_ball_fk_jnt.ro" "walker_lf_ball_ikFkCons.tg[1].tro";
-connectAttr "walker_lf_ball_fk_jnt.pm" "walker_lf_ball_ikFkCons.tg[1].tpm";
-connectAttr "walker_lf_ball_fk_jnt.jo" "walker_lf_ball_ikFkCons.tg[1].tjo";
-connectAttr "walker_lf_ball_ikFkCons.w1" "walker_lf_ball_ikFkCons.tg[1].tw";
-connectAttr "walker_lf_foot_ctrl.ikFkBlend" "walker_lf_ball_ikFkCons.w0" -l on;
-connectAttr "walker_lf_legIkFkSwitch_reverse.ox" "walker_lf_ball_ikFkCons.w1" -l
-		 on;
-connectAttr "walker_lf_ankle_jnt.ro" "walker_lf_ankle_ikFkCons.cro";
-connectAttr "walker_lf_ankle_jnt.pim" "walker_lf_ankle_ikFkCons.cpim";
-connectAttr "walker_lf_ankle_jnt.jo" "walker_lf_ankle_ikFkCons.cjo";
-connectAttr "walker_lf_ankle_rev_rig_jnt.r" "walker_lf_ankle_ikFkCons.tg[0].tr";
-connectAttr "walker_lf_ankle_rev_rig_jnt.ro" "walker_lf_ankle_ikFkCons.tg[0].tro"
+connectAttr "Ultimate_Walker_v1_0_1:Rig_Leg_grp.pim" "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.cpim"
 		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.pm" "walker_lf_ankle_ikFkCons.tg[0].tpm"
+connectAttr "Ultimate_Walker_v1_0_1:Rig_Leg_grp.rp" "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.crp"
 		;
-connectAttr "walker_lf_ankle_rev_rig_jnt.jo" "walker_lf_ankle_ikFkCons.tg[0].tjo"
+connectAttr "Ultimate_Walker_v1_0_1:Rig_Leg_grp.rpt" "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.crt"
 		;
-connectAttr "walker_lf_ankle_ikFkCons.w0" "walker_lf_ankle_ikFkCons.tg[0].tw";
-connectAttr "walker_lf_ankle_fk_jnt.r" "walker_lf_ankle_ikFkCons.tg[1].tr";
-connectAttr "walker_lf_ankle_fk_jnt.ro" "walker_lf_ankle_ikFkCons.tg[1].tro";
-connectAttr "walker_lf_ankle_fk_jnt.pm" "walker_lf_ankle_ikFkCons.tg[1].tpm";
-connectAttr "walker_lf_ankle_fk_jnt.jo" "walker_lf_ankle_ikFkCons.tg[1].tjo";
-connectAttr "walker_lf_ankle_ikFkCons.w1" "walker_lf_ankle_ikFkCons.tg[1].tw";
-connectAttr "walker_lf_foot_ctrl.ikFkBlend" "walker_lf_ankle_ikFkCons.w0" -l on;
-connectAttr "walker_lf_legIkFkSwitch_reverse.ox" "walker_lf_ankle_ikFkCons.w1" -l
-		 on;
-connectAttr "walker_lf_knee_jnt.ro" "walker_lf_knee_ikFkCons.cro";
-connectAttr "walker_lf_knee_jnt.pim" "walker_lf_knee_ikFkCons.cpim";
-connectAttr "walker_lf_knee_jnt.jo" "walker_lf_knee_ikFkCons.cjo";
-connectAttr "walker_lf_knee_ik_jnt.r" "walker_lf_knee_ikFkCons.tg[0].tr";
-connectAttr "walker_lf_knee_ik_jnt.ro" "walker_lf_knee_ikFkCons.tg[0].tro";
-connectAttr "walker_lf_knee_ik_jnt.pm" "walker_lf_knee_ikFkCons.tg[0].tpm";
-connectAttr "walker_lf_knee_ik_jnt.jo" "walker_lf_knee_ikFkCons.tg[0].tjo";
-connectAttr "walker_lf_knee_ikFkCons.w0" "walker_lf_knee_ikFkCons.tg[0].tw";
-connectAttr "walker_lf_knee_fk_jnt.r" "walker_lf_knee_ikFkCons.tg[1].tr";
-connectAttr "walker_lf_knee_fk_jnt.ro" "walker_lf_knee_ikFkCons.tg[1].tro";
-connectAttr "walker_lf_knee_fk_jnt.pm" "walker_lf_knee_ikFkCons.tg[1].tpm";
-connectAttr "walker_lf_knee_fk_jnt.jo" "walker_lf_knee_ikFkCons.tg[1].tjo";
-connectAttr "walker_lf_knee_ikFkCons.w1" "walker_lf_knee_ikFkCons.tg[1].tw";
-connectAttr "walker_lf_foot_ctrl.ikFkBlend" "walker_lf_knee_ikFkCons.w0" -l on;
-connectAttr "walker_lf_legIkFkSwitch_reverse.ox" "walker_lf_knee_ikFkCons.w1" -l
-		 on;
-connectAttr "walker_lf_upLeg_jnt.ro" "walker_lf_upLeg_ikFkCons.cro";
-connectAttr "walker_lf_upLeg_jnt.pim" "walker_lf_upLeg_ikFkCons.cpim";
-connectAttr "walker_lf_upLeg_jnt.jo" "walker_lf_upLeg_ikFkCons.cjo";
-connectAttr "walker_lf_upLeg_ik_jnt.r" "walker_lf_upLeg_ikFkCons.tg[0].tr";
-connectAttr "walker_lf_upLeg_ik_jnt.ro" "walker_lf_upLeg_ikFkCons.tg[0].tro";
-connectAttr "walker_lf_upLeg_ik_jnt.pm" "walker_lf_upLeg_ikFkCons.tg[0].tpm";
-connectAttr "walker_lf_upLeg_ik_jnt.jo" "walker_lf_upLeg_ikFkCons.tg[0].tjo";
-connectAttr "walker_lf_upLeg_ikFkCons.w0" "walker_lf_upLeg_ikFkCons.tg[0].tw";
-connectAttr "walker_lf_upLeg_fk_jnt.r" "walker_lf_upLeg_ikFkCons.tg[1].tr";
-connectAttr "walker_lf_upLeg_fk_jnt.ro" "walker_lf_upLeg_ikFkCons.tg[1].tro";
-connectAttr "walker_lf_upLeg_fk_jnt.pm" "walker_lf_upLeg_ikFkCons.tg[1].tpm";
-connectAttr "walker_lf_upLeg_fk_jnt.jo" "walker_lf_upLeg_ikFkCons.tg[1].tjo";
-connectAttr "walker_lf_upLeg_ikFkCons.w1" "walker_lf_upLeg_ikFkCons.tg[1].tw";
-connectAttr "walker_lf_foot_ctrl.ikFkBlend" "walker_lf_upLeg_ikFkCons.w0" -l on;
-connectAttr "walker_lf_legIkFkSwitch_reverse.ox" "walker_lf_upLeg_ikFkCons.w1" -l
-		 on;
-connectAttr "walker_rt_upLeg_ikFkCons.crx" "walker_rt_upLeg_jnt.rx" -l on;
-connectAttr "walker_rt_upLeg_ikFkCons.cry" "walker_rt_upLeg_jnt.ry" -l on;
-connectAttr "walker_rt_upLeg_ikFkCons.crz" "walker_rt_upLeg_jnt.rz" -l on;
-connectAttr "walker_hip_jnt.s" "walker_rt_upLeg_jnt.is";
-connectAttr "walker_rt_legTrans_blend.opr" "walker_rt_knee_jnt.tx" -l on;
-connectAttr "walker_rt_knee_ikFkCons.crx" "walker_rt_knee_jnt.rx" -l on;
-connectAttr "walker_rt_knee_ikFkCons.cry" "walker_rt_knee_jnt.ry" -l on;
-connectAttr "walker_rt_knee_ikFkCons.crz" "walker_rt_knee_jnt.rz" -l on;
-connectAttr "walker_rt_upLeg_jnt.s" "walker_rt_knee_jnt.is";
-connectAttr "walker_rt_legTrans_blend.opg" "walker_rt_ankle_jnt.tx" -l on;
-connectAttr "walker_rt_ankle_ikFkCons.crx" "walker_rt_ankle_jnt.rx" -l on;
-connectAttr "walker_rt_ankle_ikFkCons.cry" "walker_rt_ankle_jnt.ry" -l on;
-connectAttr "walker_rt_ankle_ikFkCons.crz" "walker_rt_ankle_jnt.rz" -l on;
-connectAttr "walker_rt_knee_jnt.s" "walker_rt_ankle_jnt.is";
-connectAttr "walker_rt_ball_ikFkCons.crx" "walker_rt_ball_jnt.rx" -l on;
-connectAttr "walker_rt_ball_ikFkCons.cry" "walker_rt_ball_jnt.ry" -l on;
-connectAttr "walker_rt_ball_ikFkCons.crz" "walker_rt_ball_jnt.rz" -l on;
-connectAttr "walker_rt_ankle_jnt.s" "walker_rt_ball_jnt.is";
-connectAttr "walker_rt_toe_ikFkCons.crx" "walker_rt_toe_jnt.rx" -l on;
-connectAttr "walker_rt_toe_ikFkCons.cry" "walker_rt_toe_jnt.ry" -l on;
-connectAttr "walker_rt_toe_ikFkCons.crz" "walker_rt_toe_jnt.rz" -l on;
-connectAttr "walker_rt_ball_jnt.s" "walker_rt_toe_jnt.is";
-connectAttr "walker_rt_toe_jnt.ro" "walker_rt_toe_ikFkCons.cro";
-connectAttr "walker_rt_toe_jnt.pim" "walker_rt_toe_ikFkCons.cpim";
-connectAttr "walker_rt_toe_jnt.jo" "walker_rt_toe_ikFkCons.cjo";
-connectAttr "walker_rt_toe_ik_jnt.r" "walker_rt_toe_ikFkCons.tg[0].tr";
-connectAttr "walker_rt_toe_ik_jnt.ro" "walker_rt_toe_ikFkCons.tg[0].tro";
-connectAttr "walker_rt_toe_ik_jnt.pm" "walker_rt_toe_ikFkCons.tg[0].tpm";
-connectAttr "walker_rt_toe_ik_jnt.jo" "walker_rt_toe_ikFkCons.tg[0].tjo";
-connectAttr "walker_rt_toe_ikFkCons.w0" "walker_rt_toe_ikFkCons.tg[0].tw";
-connectAttr "walker_rt_foot_ctrl.ikFkBlend" "walker_rt_toe_ikFkCons.w0" -l on;
-connectAttr "walker_rt_ball_jnt.ro" "walker_rt_ball_ikFkCons.cro";
-connectAttr "walker_rt_ball_jnt.pim" "walker_rt_ball_ikFkCons.cpim";
-connectAttr "walker_rt_ball_jnt.jo" "walker_rt_ball_ikFkCons.cjo";
-connectAttr "walker_rt_ball_ik_jnt.r" "walker_rt_ball_ikFkCons.tg[0].tr";
-connectAttr "walker_rt_ball_ik_jnt.ro" "walker_rt_ball_ikFkCons.tg[0].tro";
-connectAttr "walker_rt_ball_ik_jnt.pm" "walker_rt_ball_ikFkCons.tg[0].tpm";
-connectAttr "walker_rt_ball_ik_jnt.jo" "walker_rt_ball_ikFkCons.tg[0].tjo";
-connectAttr "walker_rt_ball_ikFkCons.w0" "walker_rt_ball_ikFkCons.tg[0].tw";
-connectAttr "walker_rt_ball_fk_jnt.r" "walker_rt_ball_ikFkCons.tg[1].tr";
-connectAttr "walker_rt_ball_fk_jnt.ro" "walker_rt_ball_ikFkCons.tg[1].tro";
-connectAttr "walker_rt_ball_fk_jnt.pm" "walker_rt_ball_ikFkCons.tg[1].tpm";
-connectAttr "walker_rt_ball_fk_jnt.jo" "walker_rt_ball_ikFkCons.tg[1].tjo";
-connectAttr "walker_rt_ball_ikFkCons.w1" "walker_rt_ball_ikFkCons.tg[1].tw";
-connectAttr "walker_rt_foot_ctrl.ikFkBlend" "walker_rt_ball_ikFkCons.w0" -l on;
-connectAttr "walker_rt_legIkFkSwitch_reverse.ox" "walker_rt_ball_ikFkCons.w1" -l
-		 on;
-connectAttr "walker_rt_ankle_jnt.ro" "walker_rt_ankle_ikFkCons.cro";
-connectAttr "walker_rt_ankle_jnt.pim" "walker_rt_ankle_ikFkCons.cpim";
-connectAttr "walker_rt_ankle_jnt.jo" "walker_rt_ankle_ikFkCons.cjo";
-connectAttr "walker_rt_ankle_rev_rig_jnt.r" "walker_rt_ankle_ikFkCons.tg[0].tr";
-connectAttr "walker_rt_ankle_rev_rig_jnt.ro" "walker_rt_ankle_ikFkCons.tg[0].tro"
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.t" "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.tg[0].tt"
 		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.pm" "walker_rt_ankle_ikFkCons.tg[0].tpm"
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.rp" "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.tg[0].trp"
 		;
-connectAttr "walker_rt_ankle_rev_rig_jnt.jo" "walker_rt_ankle_ikFkCons.tg[0].tjo"
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.rpt" "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.tg[0].trt"
 		;
-connectAttr "walker_rt_ankle_ikFkCons.w0" "walker_rt_ankle_ikFkCons.tg[0].tw";
-connectAttr "walker_rt_ankle_fk_jnt.r" "walker_rt_ankle_ikFkCons.tg[1].tr";
-connectAttr "walker_rt_ankle_fk_jnt.ro" "walker_rt_ankle_ikFkCons.tg[1].tro";
-connectAttr "walker_rt_ankle_fk_jnt.pm" "walker_rt_ankle_ikFkCons.tg[1].tpm";
-connectAttr "walker_rt_ankle_fk_jnt.jo" "walker_rt_ankle_ikFkCons.tg[1].tjo";
-connectAttr "walker_rt_ankle_ikFkCons.w1" "walker_rt_ankle_ikFkCons.tg[1].tw";
-connectAttr "walker_rt_foot_ctrl.ikFkBlend" "walker_rt_ankle_ikFkCons.w0" -l on;
-connectAttr "walker_rt_legIkFkSwitch_reverse.ox" "walker_rt_ankle_ikFkCons.w1" -l
-		 on;
-connectAttr "walker_rt_knee_jnt.ro" "walker_rt_knee_ikFkCons.cro";
-connectAttr "walker_rt_knee_jnt.pim" "walker_rt_knee_ikFkCons.cpim";
-connectAttr "walker_rt_knee_jnt.jo" "walker_rt_knee_ikFkCons.cjo";
-connectAttr "walker_rt_knee_ik_jnt.r" "walker_rt_knee_ikFkCons.tg[0].tr";
-connectAttr "walker_rt_knee_ik_jnt.ro" "walker_rt_knee_ikFkCons.tg[0].tro";
-connectAttr "walker_rt_knee_ik_jnt.pm" "walker_rt_knee_ikFkCons.tg[0].tpm";
-connectAttr "walker_rt_knee_ik_jnt.jo" "walker_rt_knee_ikFkCons.tg[0].tjo";
-connectAttr "walker_rt_knee_ikFkCons.w0" "walker_rt_knee_ikFkCons.tg[0].tw";
-connectAttr "walker_rt_knee_fk_jnt.r" "walker_rt_knee_ikFkCons.tg[1].tr";
-connectAttr "walker_rt_knee_fk_jnt.ro" "walker_rt_knee_ikFkCons.tg[1].tro";
-connectAttr "walker_rt_knee_fk_jnt.pm" "walker_rt_knee_ikFkCons.tg[1].tpm";
-connectAttr "walker_rt_knee_fk_jnt.jo" "walker_rt_knee_ikFkCons.tg[1].tjo";
-connectAttr "walker_rt_knee_ikFkCons.w1" "walker_rt_knee_ikFkCons.tg[1].tw";
-connectAttr "walker_rt_foot_ctrl.ikFkBlend" "walker_rt_knee_ikFkCons.w0" -l on;
-connectAttr "walker_rt_legIkFkSwitch_reverse.ox" "walker_rt_knee_ikFkCons.w1" -l
-		 on;
-connectAttr "walker_rt_upLeg_jnt.ro" "walker_rt_upLeg_ikFkCons.cro";
-connectAttr "walker_rt_upLeg_jnt.pim" "walker_rt_upLeg_ikFkCons.cpim";
-connectAttr "walker_rt_upLeg_jnt.jo" "walker_rt_upLeg_ikFkCons.cjo";
-connectAttr "walker_rt_upLeg_ik_jnt.r" "walker_rt_upLeg_ikFkCons.tg[0].tr";
-connectAttr "walker_rt_upLeg_ik_jnt.ro" "walker_rt_upLeg_ikFkCons.tg[0].tro";
-connectAttr "walker_rt_upLeg_ik_jnt.pm" "walker_rt_upLeg_ikFkCons.tg[0].tpm";
-connectAttr "walker_rt_upLeg_ik_jnt.jo" "walker_rt_upLeg_ikFkCons.tg[0].tjo";
-connectAttr "walker_rt_upLeg_ikFkCons.w0" "walker_rt_upLeg_ikFkCons.tg[0].tw";
-connectAttr "walker_rt_upLeg_fk_jnt.r" "walker_rt_upLeg_ikFkCons.tg[1].tr";
-connectAttr "walker_rt_upLeg_fk_jnt.ro" "walker_rt_upLeg_ikFkCons.tg[1].tro";
-connectAttr "walker_rt_upLeg_fk_jnt.pm" "walker_rt_upLeg_ikFkCons.tg[1].tpm";
-connectAttr "walker_rt_upLeg_fk_jnt.jo" "walker_rt_upLeg_ikFkCons.tg[1].tjo";
-connectAttr "walker_rt_upLeg_ikFkCons.w1" "walker_rt_upLeg_ikFkCons.tg[1].tw";
-connectAttr "walker_rt_foot_ctrl.ikFkBlend" "walker_rt_upLeg_ikFkCons.w0" -l on;
-connectAttr "walker_rt_legIkFkSwitch_reverse.ox" "walker_rt_upLeg_ikFkCons.w1" -l
-		 on;
-connectAttr "walker_hip_jnt.ro" "walker_hip_jnt_parentConstraint1.cro";
-connectAttr "walker_hip_jnt.pim" "walker_hip_jnt_parentConstraint1.cpim";
-connectAttr "walker_hip_jnt.rp" "walker_hip_jnt_parentConstraint1.crp";
-connectAttr "walker_hip_jnt.rpt" "walker_hip_jnt_parentConstraint1.crt";
-connectAttr "walker_hip_jnt.jo" "walker_hip_jnt_parentConstraint1.cjo";
-connectAttr "CTRL_Main.t" "walker_hip_jnt_parentConstraint1.tg[0].tt";
-connectAttr "CTRL_Main.rp" "walker_hip_jnt_parentConstraint1.tg[0].trp";
-connectAttr "CTRL_Main.rpt" "walker_hip_jnt_parentConstraint1.tg[0].trt";
-connectAttr "CTRL_Main.r" "walker_hip_jnt_parentConstraint1.tg[0].tr";
-connectAttr "CTRL_Main.ro" "walker_hip_jnt_parentConstraint1.tg[0].tro";
-connectAttr "CTRL_Main.s" "walker_hip_jnt_parentConstraint1.tg[0].ts";
-connectAttr "CTRL_Main.pm" "walker_hip_jnt_parentConstraint1.tg[0].tpm";
-connectAttr "walker_hip_jnt_parentConstraint1.w0" "walker_hip_jnt_parentConstraint1.tg[0].tw"
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.r" "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.tg[0].tr"
 		;
-connectAttr "CTRL_Root.Global_Scale" "Body_Rig_Grp.sx" -l on;
-connectAttr "CTRL_Root.Global_Scale" "Body_Rig_Grp.sz" -l on;
-connectAttr "CTRL_Root.Global_Scale" "Body_Rig_Grp.sy" -l on;
-connectAttr "ballTypes_pConst.ctx" "Mesh_Flex_Grp.tx" -l on;
-connectAttr "ballTypes_pConst.cty" "Mesh_Flex_Grp.ty" -l on;
-connectAttr "ballTypes_pConst.ctz" "Mesh_Flex_Grp.tz" -l on;
-connectAttr "ballTypes_pConst.crx" "Mesh_Flex_Grp.rx" -l on;
-connectAttr "ballTypes_pConst.cry" "Mesh_Flex_Grp.ry" -l on;
-connectAttr "ballTypes_pConst.crz" "Mesh_Flex_Grp.rz" -l on;
-connectAttr "multiplyDivide1.ox" "Mesh_Flex_Grp.sy" -l on;
-connectAttr "multiplyDivide1.oy" "Mesh_Flex_Grp.sx" -l on;
-connectAttr "multiplyDivide1.oy" "Mesh_Flex_Grp.sz" -l on;
-connectAttr "Mesh_Flex_Grp.ro" "ballTypes_pConst.cro";
-connectAttr "Mesh_Flex_Grp.pim" "ballTypes_pConst.cpim";
-connectAttr "Mesh_Flex_Grp.rp" "ballTypes_pConst.crp";
-connectAttr "Mesh_Flex_Grp.rpt" "ballTypes_pConst.crt";
-connectAttr "Jnt_main.t" "ballTypes_pConst.tg[0].tt";
-connectAttr "Jnt_main.rp" "ballTypes_pConst.tg[0].trp";
-connectAttr "Jnt_main.rpt" "ballTypes_pConst.tg[0].trt";
-connectAttr "Jnt_main.r" "ballTypes_pConst.tg[0].tr";
-connectAttr "Jnt_main.ro" "ballTypes_pConst.tg[0].tro";
-connectAttr "Jnt_main.s" "ballTypes_pConst.tg[0].ts";
-connectAttr "Jnt_main.pm" "ballTypes_pConst.tg[0].tpm";
-connectAttr "Jnt_main.jo" "ballTypes_pConst.tg[0].tjo";
-connectAttr "ballTypes_pConst.w0" "ballTypes_pConst.tg[0].tw";
-connectAttr "locator_Bottom.wp" "ballTypes_olcekShape.sp";
-connectAttr "locator_Top.wp" "ballTypes_olcekShape.ep";
-connectAttr "Mesh_body_Grp_visibility.o" "Mesh_body_Grp.v" -l on;
-connectAttr "L_Objects.di" "simple_body.do";
-connectAttr "L_Objects.di" "simple_body_line.do";
-connectAttr "CNT_Grp_visibility.o" "CNT_Grp.v" -l on;
-connectAttr "CTRL_Top_Grp_pConst.ctx" "CTRL_Top_Grp.tx" -l on;
-connectAttr "CTRL_Top_Grp_pConst.cty" "CTRL_Top_Grp.ty" -l on;
-connectAttr "CTRL_Top_Grp_pConst.ctz" "CTRL_Top_Grp.tz" -l on;
-connectAttr "CTRL_Top_Grp_pConst.crx" "CTRL_Top_Grp.rx" -l on;
-connectAttr "CTRL_Top_Grp_pConst.cry" "CTRL_Top_Grp.ry" -l on;
-connectAttr "CTRL_Top_Grp_pConst.crz" "CTRL_Top_Grp.rz" -l on;
-connectAttr "Jnt_main.msg" "ikHandle1.hsj";
-connectAttr "effector1.hp" "ikHandle1.hee";
-connectAttr "ikRPsolver.msg" "ikHandle1.hsv";
-connectAttr "CTRL_Top_Grp.ro" "CTRL_Top_Grp_pConst.cro";
-connectAttr "CTRL_Top_Grp.pim" "CTRL_Top_Grp_pConst.cpim";
-connectAttr "CTRL_Top_Grp.rp" "CTRL_Top_Grp_pConst.crp";
-connectAttr "CTRL_Top_Grp.rpt" "CTRL_Top_Grp_pConst.crt";
-connectAttr "CTRL_Main.t" "CTRL_Top_Grp_pConst.tg[0].tt";
-connectAttr "CTRL_Main.rp" "CTRL_Top_Grp_pConst.tg[0].trp";
-connectAttr "CTRL_Main.rpt" "CTRL_Top_Grp_pConst.tg[0].trt";
-connectAttr "CTRL_Main.r" "CTRL_Top_Grp_pConst.tg[0].tr";
-connectAttr "CTRL_Main.ro" "CTRL_Top_Grp_pConst.tg[0].tro";
-connectAttr "CTRL_Main.s" "CTRL_Top_Grp_pConst.tg[0].ts";
-connectAttr "CTRL_Main.pm" "CTRL_Top_Grp_pConst.tg[0].tpm";
-connectAttr "CTRL_Top_Grp_pConst.w0" "CTRL_Top_Grp_pConst.tg[0].tw";
-connectAttr "CTRL_Bottom_Grp_visibility.o" "CTRL_Bottom_Grp.v";
-connectAttr "CTRL_Bottom_Grp_pConst.ctx" "CTRL_Bottom_Grp.tx" -l on;
-connectAttr "CTRL_Bottom_Grp_pConst.cty" "CTRL_Bottom_Grp.ty" -l on;
-connectAttr "CTRL_Bottom_Grp_pConst.ctz" "CTRL_Bottom_Grp.tz" -l on;
-connectAttr "CTRL_Bottom_Grp_pConst.crx" "CTRL_Bottom_Grp.rx" -l on;
-connectAttr "CTRL_Bottom_Grp_pConst.cry" "CTRL_Bottom_Grp.ry" -l on;
-connectAttr "CTRL_Bottom_Grp_pConst.crz" "CTRL_Bottom_Grp.rz" -l on;
-connectAttr "ballTypes_olcekShape.dist" "joint2.ty" -l on;
-connectAttr "Jnt_main.s" "joint2.is";
-connectAttr "joint2.tx" "effector1.tx" -l on;
-connectAttr "joint2.ty" "effector1.ty" -l on;
-connectAttr "joint2.tz" "effector1.tz" -l on;
-connectAttr "CTRL_Bottom_Grp.ro" "CTRL_Bottom_Grp_pConst.cro";
-connectAttr "CTRL_Bottom_Grp.pim" "CTRL_Bottom_Grp_pConst.cpim";
-connectAttr "CTRL_Bottom_Grp.rp" "CTRL_Bottom_Grp_pConst.crp";
-connectAttr "CTRL_Bottom_Grp.rpt" "CTRL_Bottom_Grp_pConst.crt";
-connectAttr "CTRL_Main.t" "CTRL_Bottom_Grp_pConst.tg[0].tt";
-connectAttr "CTRL_Main.rp" "CTRL_Bottom_Grp_pConst.tg[0].trp";
-connectAttr "CTRL_Main.rpt" "CTRL_Bottom_Grp_pConst.tg[0].trt";
-connectAttr "CTRL_Main.r" "CTRL_Bottom_Grp_pConst.tg[0].tr";
-connectAttr "CTRL_Main.ro" "CTRL_Bottom_Grp_pConst.tg[0].tro";
-connectAttr "CTRL_Main.s" "CTRL_Bottom_Grp_pConst.tg[0].ts";
-connectAttr "CTRL_Main.pm" "CTRL_Bottom_Grp_pConst.tg[0].tpm";
-connectAttr "CTRL_Bottom_Grp_pConst.w0" "CTRL_Bottom_Grp_pConst.tg[0].tw";
-connectAttr "CTRL_Main_Grp_pConst.ctx" "CTRL_Main_Grp.tx" -l on;
-connectAttr "CTRL_Main_Grp_pConst.cty" "CTRL_Main_Grp.ty" -l on;
-connectAttr "CTRL_Main_Grp_pConst.ctz" "CTRL_Main_Grp.tz" -l on;
-connectAttr "CTRL_Main_Grp_pConst.crx" "CTRL_Main_Grp.rx" -l on;
-connectAttr "CTRL_Main_Grp_pConst.cry" "CTRL_Main_Grp.ry" -l on;
-connectAttr "CTRL_Main_Grp_pConst.crz" "CTRL_Main_Grp.rz" -l on;
-connectAttr "CTRL_Main_translateX.o" "CTRL_Main.tx";
-connectAttr "CTRL_Main_translateY.o" "CTRL_Main.ty";
-connectAttr "CTRL_Main_translateZ.o" "CTRL_Main.tz";
-connectAttr "CTRL_Main_rotateX.o" "CTRL_Main.rx";
-connectAttr "CTRL_Main_rotateY.o" "CTRL_Main.ry";
-connectAttr "CTRL_Main_rotateZ.o" "CTRL_Main.rz";
-connectAttr "CTRL_Main_Grp.ro" "CTRL_Main_Grp_pConst.cro";
-connectAttr "CTRL_Main_Grp.pim" "CTRL_Main_Grp_pConst.cpim";
-connectAttr "CTRL_Main_Grp.rp" "CTRL_Main_Grp_pConst.crp";
-connectAttr "CTRL_Main_Grp.rpt" "CTRL_Main_Grp_pConst.crt";
-connectAttr "CTRL_Root.t" "CTRL_Main_Grp_pConst.tg[0].tt";
-connectAttr "CTRL_Root.rp" "CTRL_Main_Grp_pConst.tg[0].trp";
-connectAttr "CTRL_Root.rpt" "CTRL_Main_Grp_pConst.tg[0].trt";
-connectAttr "CTRL_Root.r" "CTRL_Main_Grp_pConst.tg[0].tr";
-connectAttr "CTRL_Root.ro" "CTRL_Main_Grp_pConst.tg[0].tro";
-connectAttr "CTRL_Root.s" "CTRL_Main_Grp_pConst.tg[0].ts";
-connectAttr "CTRL_Root.pm" "CTRL_Main_Grp_pConst.tg[0].tpm";
-connectAttr "CTRL_Main_Grp_pConst.w0" "CTRL_Main_Grp_pConst.tg[0].tw";
-connectAttr "JNT_kuyruk_01.s" "JNT_kuyruk_02.is";
-connectAttr "JNT_kuyruk_02.s" "JNT_kuyruk_03.is";
-connectAttr "JNT_kuyruk_03.s" "JNT_kuyruk_04.is";
-connectAttr "JNT_kuyruk_04.s" "JNT_kuyruk_05.is";
-connectAttr "L_Objects.di" "R_upperleg.do";
-connectAttr "skinCluster1GroupId.id" "R_upperlegShape.iog.og[2].gid";
-connectAttr "skinCluster1Set.mwc" "R_upperlegShape.iog.og[2].gco";
-connectAttr "groupId2.id" "R_upperlegShape.iog.og[3].gid";
-connectAttr "tweakSet1.mwc" "R_upperlegShape.iog.og[3].gco";
-connectAttr "skinCluster1.og[0]" "R_upperlegShape.i";
-connectAttr "tweak1.vl[0].vt[0]" "R_upperlegShape.twl";
-connectAttr "L_Objects.di" "R_leg.do";
-connectAttr "skinCluster2GroupId.id" "R_legShape.iog.og[0].gid";
-connectAttr "skinCluster2Set.mwc" "R_legShape.iog.og[0].gco";
-connectAttr "groupId4.id" "R_legShape.iog.og[1].gid";
-connectAttr "tweakSet2.mwc" "R_legShape.iog.og[1].gco";
-connectAttr "skinCluster2.og[0]" "R_legShape.i";
-connectAttr "tweak2.vl[0].vt[0]" "R_legShape.twl";
-connectAttr "L_Objects.di" "R_legShape.do";
-connectAttr "L_Objects.di" "L_upperleg.do";
-connectAttr "skinCluster3GroupId.id" "L_upperlegShape.iog.og[0].gid";
-connectAttr "skinCluster3Set.mwc" "L_upperlegShape.iog.og[0].gco";
-connectAttr "groupId6.id" "L_upperlegShape.iog.og[1].gid";
-connectAttr "tweakSet3.mwc" "L_upperlegShape.iog.og[1].gco";
-connectAttr "skinCluster3.og[0]" "L_upperlegShape.i";
-connectAttr "tweak3.vl[0].vt[0]" "L_upperlegShape.twl";
-connectAttr "L_Objects.di" "L_leg.do";
-connectAttr "skinCluster4GroupId.id" "L_legShape.iog.og[0].gid";
-connectAttr "skinCluster4Set.mwc" "L_legShape.iog.og[0].gco";
-connectAttr "groupId8.id" "L_legShape.iog.og[1].gid";
-connectAttr "tweakSet4.mwc" "L_legShape.iog.og[1].gco";
-connectAttr "skinCluster4.og[0]" "L_legShape.i";
-connectAttr "tweak4.vl[0].vt[0]" "L_legShape.twl";
-connectAttr "L_Objects.di" "L_legShape.do";
-connectAttr "CTRL_Root.Global_Scale" "leg_scale_Const.sx" -l on;
-connectAttr "CTRL_Root.Global_Scale" "leg_scale_Const.sy" -l on;
-connectAttr "CTRL_Root.Global_Scale" "leg_scale_Const.sz" -l on;
-connectAttr "R_but_parentConstraint1.ctx" "R_but.tx" -l on;
-connectAttr "R_but_parentConstraint1.cty" "R_but.ty" -l on;
-connectAttr "R_but_parentConstraint1.ctz" "R_but.tz" -l on;
-connectAttr "R_but_parentConstraint1.crx" "R_but.rx" -l on;
-connectAttr "R_but_parentConstraint1.cry" "R_but.ry" -l on;
-connectAttr "R_but_parentConstraint1.crz" "R_but.rz" -l on;
-connectAttr "L_Objects.di" "R_but.do";
-connectAttr "L_Objects.di" "R_butShape.do";
-connectAttr "R_but.ro" "R_but_parentConstraint1.cro";
-connectAttr "R_but.pim" "R_but_parentConstraint1.cpim";
-connectAttr "R_but.rp" "R_but_parentConstraint1.crp";
-connectAttr "R_but.rpt" "R_but_parentConstraint1.crt";
-connectAttr "walker_rt_upLeg_jnt.t" "R_but_parentConstraint1.tg[0].tt";
-connectAttr "walker_rt_upLeg_jnt.rp" "R_but_parentConstraint1.tg[0].trp";
-connectAttr "walker_rt_upLeg_jnt.rpt" "R_but_parentConstraint1.tg[0].trt";
-connectAttr "walker_rt_upLeg_jnt.r" "R_but_parentConstraint1.tg[0].tr";
-connectAttr "walker_rt_upLeg_jnt.ro" "R_but_parentConstraint1.tg[0].tro";
-connectAttr "walker_rt_upLeg_jnt.s" "R_but_parentConstraint1.tg[0].ts";
-connectAttr "walker_rt_upLeg_jnt.pm" "R_but_parentConstraint1.tg[0].tpm";
-connectAttr "walker_rt_upLeg_jnt.jo" "R_but_parentConstraint1.tg[0].tjo";
-connectAttr "R_but_parentConstraint1.w0" "R_but_parentConstraint1.tg[0].tw";
-connectAttr "L_but_parentConstraint1.ctx" "L_but.tx" -l on;
-connectAttr "L_but_parentConstraint1.cty" "L_but.ty" -l on;
-connectAttr "L_but_parentConstraint1.ctz" "L_but.tz" -l on;
-connectAttr "L_but_parentConstraint1.crx" "L_but.rx" -l on;
-connectAttr "L_but_parentConstraint1.cry" "L_but.ry" -l on;
-connectAttr "L_but_parentConstraint1.crz" "L_but.rz" -l on;
-connectAttr "L_Objects.di" "L_but.do";
-connectAttr "L_Objects.di" "L_butShape.do";
-connectAttr "L_but.ro" "L_but_parentConstraint1.cro";
-connectAttr "L_but.pim" "L_but_parentConstraint1.cpim";
-connectAttr "L_but.rp" "L_but_parentConstraint1.crp";
-connectAttr "L_but.rpt" "L_but_parentConstraint1.crt";
-connectAttr "walker_lf_upLeg_jnt.t" "L_but_parentConstraint1.tg[0].tt";
-connectAttr "walker_lf_upLeg_jnt.rp" "L_but_parentConstraint1.tg[0].trp";
-connectAttr "walker_lf_upLeg_jnt.rpt" "L_but_parentConstraint1.tg[0].trt";
-connectAttr "walker_lf_upLeg_jnt.r" "L_but_parentConstraint1.tg[0].tr";
-connectAttr "walker_lf_upLeg_jnt.ro" "L_but_parentConstraint1.tg[0].tro";
-connectAttr "walker_lf_upLeg_jnt.s" "L_but_parentConstraint1.tg[0].ts";
-connectAttr "walker_lf_upLeg_jnt.pm" "L_but_parentConstraint1.tg[0].tpm";
-connectAttr "walker_lf_upLeg_jnt.jo" "L_but_parentConstraint1.tg[0].tjo";
-connectAttr "L_but_parentConstraint1.w0" "L_but_parentConstraint1.tg[0].tw";
-connectAttr "R_knee_parentConstraint1.ctx" "R_knee.tx" -l on;
-connectAttr "R_knee_parentConstraint1.cty" "R_knee.ty" -l on;
-connectAttr "R_knee_parentConstraint1.ctz" "R_knee.tz" -l on;
-connectAttr "R_knee_parentConstraint1.crx" "R_knee.rx" -l on;
-connectAttr "R_knee_parentConstraint1.cry" "R_knee.ry" -l on;
-connectAttr "R_knee_parentConstraint1.crz" "R_knee.rz" -l on;
-connectAttr "L_Objects.di" "R_knee.do";
-connectAttr "L_Objects.di" "R_kneeShape.do";
-connectAttr "R_knee.ro" "R_knee_parentConstraint1.cro";
-connectAttr "R_knee.pim" "R_knee_parentConstraint1.cpim";
-connectAttr "R_knee.rp" "R_knee_parentConstraint1.crp";
-connectAttr "R_knee.rpt" "R_knee_parentConstraint1.crt";
-connectAttr "walker_rt_knee_jnt.t" "R_knee_parentConstraint1.tg[0].tt";
-connectAttr "walker_rt_knee_jnt.rp" "R_knee_parentConstraint1.tg[0].trp";
-connectAttr "walker_rt_knee_jnt.rpt" "R_knee_parentConstraint1.tg[0].trt";
-connectAttr "walker_rt_knee_jnt.r" "R_knee_parentConstraint1.tg[0].tr";
-connectAttr "walker_rt_knee_jnt.ro" "R_knee_parentConstraint1.tg[0].tro";
-connectAttr "walker_rt_knee_jnt.s" "R_knee_parentConstraint1.tg[0].ts";
-connectAttr "walker_rt_knee_jnt.pm" "R_knee_parentConstraint1.tg[0].tpm";
-connectAttr "walker_rt_knee_jnt.jo" "R_knee_parentConstraint1.tg[0].tjo";
-connectAttr "R_knee_parentConstraint1.w0" "R_knee_parentConstraint1.tg[0].tw";
-connectAttr "L_knee_parentConstraint1.ctx" "L_knee.tx" -l on;
-connectAttr "L_knee_parentConstraint1.cty" "L_knee.ty" -l on;
-connectAttr "L_knee_parentConstraint1.ctz" "L_knee.tz" -l on;
-connectAttr "L_knee_parentConstraint1.crx" "L_knee.rx" -l on;
-connectAttr "L_knee_parentConstraint1.cry" "L_knee.ry" -l on;
-connectAttr "L_knee_parentConstraint1.crz" "L_knee.rz" -l on;
-connectAttr "L_Objects.di" "L_knee.do";
-connectAttr "L_Objects.di" "L_kneeShape.do";
-connectAttr "L_knee.ro" "L_knee_parentConstraint1.cro";
-connectAttr "L_knee.pim" "L_knee_parentConstraint1.cpim";
-connectAttr "L_knee.rp" "L_knee_parentConstraint1.crp";
-connectAttr "L_knee.rpt" "L_knee_parentConstraint1.crt";
-connectAttr "walker_lf_knee_jnt.t" "L_knee_parentConstraint1.tg[0].tt";
-connectAttr "walker_lf_knee_jnt.rp" "L_knee_parentConstraint1.tg[0].trp";
-connectAttr "walker_lf_knee_jnt.rpt" "L_knee_parentConstraint1.tg[0].trt";
-connectAttr "walker_lf_knee_jnt.r" "L_knee_parentConstraint1.tg[0].tr";
-connectAttr "walker_lf_knee_jnt.ro" "L_knee_parentConstraint1.tg[0].tro";
-connectAttr "walker_lf_knee_jnt.s" "L_knee_parentConstraint1.tg[0].ts";
-connectAttr "walker_lf_knee_jnt.pm" "L_knee_parentConstraint1.tg[0].tpm";
-connectAttr "walker_lf_knee_jnt.jo" "L_knee_parentConstraint1.tg[0].tjo";
-connectAttr "L_knee_parentConstraint1.w0" "L_knee_parentConstraint1.tg[0].tw";
-connectAttr "R_ankle_parentConstraint1.ctx" "R_ankle.tx" -l on;
-connectAttr "R_ankle_parentConstraint1.cty" "R_ankle.ty" -l on;
-connectAttr "R_ankle_parentConstraint1.ctz" "R_ankle.tz" -l on;
-connectAttr "R_ankle_parentConstraint1.crx" "R_ankle.rx" -l on;
-connectAttr "R_ankle_parentConstraint1.cry" "R_ankle.ry" -l on;
-connectAttr "R_ankle_parentConstraint1.crz" "R_ankle.rz" -l on;
-connectAttr "L_Objects.di" "R_ankle.do";
-connectAttr "L_Objects.di" "R_ankleShape.do";
-connectAttr "R_ankle.ro" "R_ankle_parentConstraint1.cro";
-connectAttr "R_ankle.pim" "R_ankle_parentConstraint1.cpim";
-connectAttr "R_ankle.rp" "R_ankle_parentConstraint1.crp";
-connectAttr "R_ankle.rpt" "R_ankle_parentConstraint1.crt";
-connectAttr "walker_rt_ankle_jnt.t" "R_ankle_parentConstraint1.tg[0].tt";
-connectAttr "walker_rt_ankle_jnt.rp" "R_ankle_parentConstraint1.tg[0].trp";
-connectAttr "walker_rt_ankle_jnt.rpt" "R_ankle_parentConstraint1.tg[0].trt";
-connectAttr "walker_rt_ankle_jnt.r" "R_ankle_parentConstraint1.tg[0].tr";
-connectAttr "walker_rt_ankle_jnt.ro" "R_ankle_parentConstraint1.tg[0].tro";
-connectAttr "walker_rt_ankle_jnt.s" "R_ankle_parentConstraint1.tg[0].ts";
-connectAttr "walker_rt_ankle_jnt.pm" "R_ankle_parentConstraint1.tg[0].tpm";
-connectAttr "walker_rt_ankle_jnt.jo" "R_ankle_parentConstraint1.tg[0].tjo";
-connectAttr "R_ankle_parentConstraint1.w0" "R_ankle_parentConstraint1.tg[0].tw";
-connectAttr "L_ankle_parentConstraint1.ctx" "L_ankle.tx" -l on;
-connectAttr "L_ankle_parentConstraint1.cty" "L_ankle.ty" -l on;
-connectAttr "L_ankle_parentConstraint1.ctz" "L_ankle.tz" -l on;
-connectAttr "L_ankle_parentConstraint1.crx" "L_ankle.rx" -l on;
-connectAttr "L_ankle_parentConstraint1.cry" "L_ankle.ry" -l on;
-connectAttr "L_ankle_parentConstraint1.crz" "L_ankle.rz" -l on;
-connectAttr "L_Objects.di" "L_ankle.do";
-connectAttr "L_Objects.di" "L_ankleShape.do";
-connectAttr "L_ankle.ro" "L_ankle_parentConstraint1.cro";
-connectAttr "L_ankle.pim" "L_ankle_parentConstraint1.cpim";
-connectAttr "L_ankle.rp" "L_ankle_parentConstraint1.crp";
-connectAttr "L_ankle.rpt" "L_ankle_parentConstraint1.crt";
-connectAttr "walker_lf_ankle_jnt.t" "L_ankle_parentConstraint1.tg[0].tt";
-connectAttr "walker_lf_ankle_jnt.rp" "L_ankle_parentConstraint1.tg[0].trp";
-connectAttr "walker_lf_ankle_jnt.rpt" "L_ankle_parentConstraint1.tg[0].trt";
-connectAttr "walker_lf_ankle_jnt.r" "L_ankle_parentConstraint1.tg[0].tr";
-connectAttr "walker_lf_ankle_jnt.ro" "L_ankle_parentConstraint1.tg[0].tro";
-connectAttr "walker_lf_ankle_jnt.s" "L_ankle_parentConstraint1.tg[0].ts";
-connectAttr "walker_lf_ankle_jnt.pm" "L_ankle_parentConstraint1.tg[0].tpm";
-connectAttr "walker_lf_ankle_jnt.jo" "L_ankle_parentConstraint1.tg[0].tjo";
-connectAttr "L_ankle_parentConstraint1.w0" "L_ankle_parentConstraint1.tg[0].tw";
-connectAttr "R_foot_parentConstraint1.ctx" "R_foot.tx" -l on;
-connectAttr "R_foot_parentConstraint1.cty" "R_foot.ty" -l on;
-connectAttr "R_foot_parentConstraint1.ctz" "R_foot.tz" -l on;
-connectAttr "R_foot_parentConstraint1.crx" "R_foot.rx" -l on;
-connectAttr "R_foot_parentConstraint1.cry" "R_foot.ry" -l on;
-connectAttr "R_foot_parentConstraint1.crz" "R_foot.rz" -l on;
-connectAttr "L_Objects.di" "R_foot.do";
-connectAttr "R_foot.ro" "R_foot_parentConstraint1.cro";
-connectAttr "R_foot.pim" "R_foot_parentConstraint1.cpim";
-connectAttr "R_foot.rp" "R_foot_parentConstraint1.crp";
-connectAttr "R_foot.rpt" "R_foot_parentConstraint1.crt";
-connectAttr "walker_rt_ankle_jnt.t" "R_foot_parentConstraint1.tg[0].tt";
-connectAttr "walker_rt_ankle_jnt.rp" "R_foot_parentConstraint1.tg[0].trp";
-connectAttr "walker_rt_ankle_jnt.rpt" "R_foot_parentConstraint1.tg[0].trt";
-connectAttr "walker_rt_ankle_jnt.r" "R_foot_parentConstraint1.tg[0].tr";
-connectAttr "walker_rt_ankle_jnt.ro" "R_foot_parentConstraint1.tg[0].tro";
-connectAttr "walker_rt_ankle_jnt.s" "R_foot_parentConstraint1.tg[0].ts";
-connectAttr "walker_rt_ankle_jnt.pm" "R_foot_parentConstraint1.tg[0].tpm";
-connectAttr "walker_rt_ankle_jnt.jo" "R_foot_parentConstraint1.tg[0].tjo";
-connectAttr "R_foot_parentConstraint1.w0" "R_foot_parentConstraint1.tg[0].tw";
-connectAttr "L_foot_parentConstraint1.ctx" "L_foot.tx" -l on;
-connectAttr "L_foot_parentConstraint1.cty" "L_foot.ty" -l on;
-connectAttr "L_foot_parentConstraint1.ctz" "L_foot.tz" -l on;
-connectAttr "L_foot_parentConstraint1.crx" "L_foot.rx" -l on;
-connectAttr "L_foot_parentConstraint1.cry" "L_foot.ry" -l on;
-connectAttr "L_foot_parentConstraint1.crz" "L_foot.rz" -l on;
-connectAttr "L_Objects.di" "L_foot.do";
-connectAttr "L_foot.ro" "L_foot_parentConstraint1.cro";
-connectAttr "L_foot.pim" "L_foot_parentConstraint1.cpim";
-connectAttr "L_foot.rp" "L_foot_parentConstraint1.crp";
-connectAttr "L_foot.rpt" "L_foot_parentConstraint1.crt";
-connectAttr "walker_lf_ankle_jnt.t" "L_foot_parentConstraint1.tg[0].tt";
-connectAttr "walker_lf_ankle_jnt.rp" "L_foot_parentConstraint1.tg[0].trp";
-connectAttr "walker_lf_ankle_jnt.rpt" "L_foot_parentConstraint1.tg[0].trt";
-connectAttr "walker_lf_ankle_jnt.r" "L_foot_parentConstraint1.tg[0].tr";
-connectAttr "walker_lf_ankle_jnt.ro" "L_foot_parentConstraint1.tg[0].tro";
-connectAttr "walker_lf_ankle_jnt.s" "L_foot_parentConstraint1.tg[0].ts";
-connectAttr "walker_lf_ankle_jnt.pm" "L_foot_parentConstraint1.tg[0].tpm";
-connectAttr "walker_lf_ankle_jnt.jo" "L_foot_parentConstraint1.tg[0].tjo";
-connectAttr "L_foot_parentConstraint1.w0" "L_foot_parentConstraint1.tg[0].tw";
-connectAttr "R_toe_parentConstraint1.ctx" "R_toe.tx" -l on;
-connectAttr "R_toe_parentConstraint1.cty" "R_toe.ty" -l on;
-connectAttr "R_toe_parentConstraint1.ctz" "R_toe.tz" -l on;
-connectAttr "R_toe_parentConstraint1.crx" "R_toe.rx" -l on;
-connectAttr "R_toe_parentConstraint1.cry" "R_toe.ry" -l on;
-connectAttr "R_toe_parentConstraint1.crz" "R_toe.rz" -l on;
-connectAttr "L_Objects.di" "R_toe.do";
-connectAttr "R_toe.ro" "R_toe_parentConstraint1.cro";
-connectAttr "R_toe.pim" "R_toe_parentConstraint1.cpim";
-connectAttr "R_toe.rp" "R_toe_parentConstraint1.crp";
-connectAttr "R_toe.rpt" "R_toe_parentConstraint1.crt";
-connectAttr "walker_rt_ball_jnt.t" "R_toe_parentConstraint1.tg[0].tt";
-connectAttr "walker_rt_ball_jnt.rp" "R_toe_parentConstraint1.tg[0].trp";
-connectAttr "walker_rt_ball_jnt.rpt" "R_toe_parentConstraint1.tg[0].trt";
-connectAttr "walker_rt_ball_jnt.r" "R_toe_parentConstraint1.tg[0].tr";
-connectAttr "walker_rt_ball_jnt.ro" "R_toe_parentConstraint1.tg[0].tro";
-connectAttr "walker_rt_ball_jnt.s" "R_toe_parentConstraint1.tg[0].ts";
-connectAttr "walker_rt_ball_jnt.pm" "R_toe_parentConstraint1.tg[0].tpm";
-connectAttr "walker_rt_ball_jnt.jo" "R_toe_parentConstraint1.tg[0].tjo";
-connectAttr "R_toe_parentConstraint1.w0" "R_toe_parentConstraint1.tg[0].tw";
-connectAttr "L_toe_parentConstraint1.ctx" "L_toe.tx" -l on;
-connectAttr "L_toe_parentConstraint1.cty" "L_toe.ty" -l on;
-connectAttr "L_toe_parentConstraint1.ctz" "L_toe.tz" -l on;
-connectAttr "L_toe_parentConstraint1.crx" "L_toe.rx" -l on;
-connectAttr "L_toe_parentConstraint1.cry" "L_toe.ry" -l on;
-connectAttr "L_toe_parentConstraint1.crz" "L_toe.rz" -l on;
-connectAttr "L_Objects.di" "L_toe.do";
-connectAttr "L_toe.ro" "L_toe_parentConstraint1.cro";
-connectAttr "L_toe.pim" "L_toe_parentConstraint1.cpim";
-connectAttr "L_toe.rp" "L_toe_parentConstraint1.crp";
-connectAttr "L_toe.rpt" "L_toe_parentConstraint1.crt";
-connectAttr "walker_lf_ball_jnt.t" "L_toe_parentConstraint1.tg[0].tt";
-connectAttr "walker_lf_ball_jnt.rp" "L_toe_parentConstraint1.tg[0].trp";
-connectAttr "walker_lf_ball_jnt.rpt" "L_toe_parentConstraint1.tg[0].trt";
-connectAttr "walker_lf_ball_jnt.r" "L_toe_parentConstraint1.tg[0].tr";
-connectAttr "walker_lf_ball_jnt.ro" "L_toe_parentConstraint1.tg[0].tro";
-connectAttr "walker_lf_ball_jnt.s" "L_toe_parentConstraint1.tg[0].ts";
-connectAttr "walker_lf_ball_jnt.pm" "L_toe_parentConstraint1.tg[0].tpm";
-connectAttr "walker_lf_ball_jnt.jo" "L_toe_parentConstraint1.tg[0].tjo";
-connectAttr "L_toe_parentConstraint1.w0" "L_toe_parentConstraint1.tg[0].tw";
-connectAttr "walker_lf_heel_ik_ctrl.heelTwist" "unitConversion6.i";
-connectAttr "walker_lf_heel_plsMns.o1" "unitConversion7.i";
-connectAttr "walker_lf_heel_clamp.opr" "walker_lf_heel_plsMns.i1[1]";
-connectAttr "walker_lf_heel_ik_ctrl.footRoll" "walker_lf_heel_clamp.ipr";
-connectAttr "walker_lf_heel_ik_ctrl.toeTwist" "unitConversion3.i";
-connectAttr "walker_lf_toe2_plsMns.o1" "unitConversion9.i";
-connectAttr "walker_lf_toe_clamp.opr" "walker_lf_toe2_plsMns.i1[0]";
-connectAttr "walker_lf_heel_ik_ctrl.toeRaise" "walker_lf_toe2_plsMns.i1[1]";
-connectAttr "walker_lf_toe_plsMns.o1" "walker_lf_toe_clamp.ipr";
-connectAttr "walker_lf_heel_ik_ctrl.footRoll" "walker_lf_toe_plsMns.i1[0]";
-connectAttr "walker_lf_heel_ik_ctrl.footBreak" "walker_lf_toe_plsMns.i1[1]";
-connectAttr "walker_lf_heel_ik_ctrl.ballTwist" "unitConversion4.i";
-connectAttr "walker_lf_ball_plsMns.o1" "unitConversion8.i";
-connectAttr "walker_lf_ball_clamp.opr" "walker_lf_ball_plsMns.i1[0]";
-connectAttr "walker_lf_heel_ik_ctrl.ballRaise" "walker_lf_ball_plsMns.i1[1]";
-connectAttr "walker_lf_heel_ik_ctrl.footRoll" "walker_lf_ball_clamp.ipr";
-connectAttr "walker_lf_heel_ik_ctrl.footBreak" "walker_lf_ball_clamp.mxr";
-connectAttr "walker_lf_heel_ik_ctrl.toeRoll" "unitConversion2.i";
-connectAttr "walker_lf_heel_ik_ctrl.ballTwist" "unitConversion5.i";
-connectAttr "walker_lf_legRefStr_multDiv.ox" "walker_lf_legUpStr_plsMns.i1[0]";
-connectAttr "walker_lf_legTotStrAmt_plsMns.o2x" "walker_lf_legRefStr_multDiv.i1x"
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.ro" "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.tg[0].tro"
 		;
-connectAttr "walker_lf_legTotStrAmt_plsMns.o2y" "walker_lf_legRefStr_multDiv.i1y"
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.s" "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.tg[0].ts"
 		;
-connectAttr "walker_lf_legStrAtt_multDiv.ox" "walker_lf_legTotStrAmt_plsMns.i2[0].i2x"
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.pm" "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "walker_lf_legStrAtt_multDiv.ox" "walker_lf_legTotStrAmt_plsMns.i2[0].i2y"
+connectAttr "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:Rig_Leg_grp_parentConstraint1.tg[0].tw"
 		;
-connectAttr "walker_lf_legStrAtt_multDiv.oy" "walker_lf_legTotStrAmt_plsMns.i2[1].i2x"
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.Global_Scale" "Ultimate_Walker_v1_0_1:Skeleton_grp.sx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.Global_Scale" "Ultimate_Walker_v1_0_1:Skeleton_grp.sy"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.Global_Scale" "Ultimate_Walker_v1_0_1:Skeleton_grp.sz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:walker_hip_jnt.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:walker_hip_jnt.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:walker_hip_jnt.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:walker_hip_jnt.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:walker_hip_jnt.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:walker_hip_jnt.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.crx" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.cry" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.crz" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.s" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.is"
 		;
-connectAttr "walker_lf_legStrAtt_multDiv.oz" "walker_lf_legTotStrAmt_plsMns.i2[1].i2y"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legTrans_blend.opr" "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.crx" "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.cry" "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.crz" "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.s" "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.is"
 		;
-connectAttr "walker_lf_foot_ctrl.legStretch" "walker_lf_legStrAtt_multDiv.i1x";
-connectAttr "walker_lf_foot_ctrl.kneeStretch" "walker_lf_legStrAtt_multDiv.i1y";
-connectAttr "walker_lf_foot_ctrl.ankleStretch" "walker_lf_legStrAtt_multDiv.i1z"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legTrans_blend.opg" "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.crx" "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.cry" "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.crz" "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.s" "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.is"
 		;
-connectAttr "walker_lf_legRefStr_multDiv.oy" "walker_lf_legLowStr_plsMns.i1[0]";
-connectAttr "walker_lf_foot_ctrl.ikFkBlend" "walker_lf_legFkVis_cond.ft";
-connectAttr "walker_lf_upLeg_fk_ctrl.align" "walker_lf_upLeg_plsMns.i1[1]";
-connectAttr "walker_lf_knee_pv_ctrl.snapKnee" "walker_lf_upLegSnapSplice_blend.b"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.crx" "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.cry" "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.crz" "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.s" "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.is"
 		;
-connectAttr "walker_lf_upLegPvCtrl_distShape.dist" "walker_lf_upLegSnapSplice_blend.c1r"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_toe_ikFkCons.crx" "Ultimate_Walker_v1_0_1:walker_lf_toe_jnt.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_toe_ikFkCons.cry" "Ultimate_Walker_v1_0_1:walker_lf_toe_jnt.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_toe_ikFkCons.crz" "Ultimate_Walker_v1_0_1:walker_lf_toe_jnt.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.s" "Ultimate_Walker_v1_0_1:walker_lf_toe_jnt.is"
 		;
-connectAttr "walker_lf_legStr_multDiv.ox" "walker_lf_upLegSnapSplice_blend.c2r";
-connectAttr "walker_lf_legLowStr_plsMns.o1" "walker_lf_legStr_multDiv.i1y";
-connectAttr "walker_lf_legUpStr_plsMns.o1" "walker_lf_legStr_multDiv.i1x";
-connectAttr "walker_lf_legStr_clamp.opr" "walker_lf_legStr_multDiv.i2x";
-connectAttr "walker_lf_legStr_clamp.opr" "walker_lf_legStr_multDiv.i2y";
-connectAttr "walker_lf_heel_ik_ctrl.maxStretch" "walker_lf_legStr_clamp.mxr";
-connectAttr "walker_lf_legStrScalar_multDiv.ox" "walker_lf_legStr_clamp.ipr";
-connectAttr "walker_lf_legStrNum_multDiv.ox" "walker_lf_legStrScalar_multDiv.i1x"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_toe_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_toe_ikFkCons.cro"
 		;
-connectAttr "walker_lf_legStrDenom_plsMns.o1" "walker_lf_legStrScalar_multDiv.i2x"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_toe_jnt.pim" "Ultimate_Walker_v1_0_1:walker_lf_toe_ikFkCons.cpim"
 		;
-connectAttr "walker_lf_legStrDist_distShape.dist" "walker_lf_legStrNum_multDiv.i1x"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_toe_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_toe_ikFkCons.cjo"
 		;
-connectAttr "walker_lf_heel_ik_ctrl.stretchyLeg" "walker_lf_legStrNum_multDiv.i2x"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_toe_ik_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_toe_ikFkCons.tg[0].tr"
 		;
-connectAttr "walker_lf_legLowStr_plsMns.o1" "walker_lf_legStrDenom_plsMns.i1[0]"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_toe_ik_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_toe_ikFkCons.tg[0].tro"
 		;
-connectAttr "walker_lf_legUpStr_plsMns.o1" "walker_lf_legStrDenom_plsMns.i1[1]";
-connectAttr "walker_lf_knee_pv_ctrl.snapKnee" "walker_lf_kneeSnapSplice_blend.b"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_toe_ik_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_toe_ikFkCons.tg[0].tpm"
 		;
-connectAttr "walker_lf_legPvIkCtrl_distShape.dist" "walker_lf_kneeSnapSplice_blend.c1r"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_toe_ik_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_toe_ikFkCons.tg[0].tjo"
 		;
-connectAttr "walker_lf_legStr_multDiv.oy" "walker_lf_kneeSnapSplice_blend.c2r";
-connectAttr "walker_lf_foot_ctrl.ikFkBlend" "walker_lf_legIkVis_cond.ft";
-connectAttr "walker_lf_heel_ik_ctrl.legTwist" "unitConversion1.i";
-connectAttr "walker_lf_heel_ik_ctrl.pvControl" "walker_lf_legPvCtrl_blend.b";
-connectAttr "walker_lf_knee_pv_cons.ctx" "walker_lf_legPvCtrl_blend.c1r";
-connectAttr "walker_lf_knee_pv_cons.cty" "walker_lf_legPvCtrl_blend.c1g";
-connectAttr "walker_lf_knee_pv_cons.ctz" "walker_lf_legPvCtrl_blend.c1b";
-connectAttr "walker_rt_heel_ik_ctrl.heelTwist" "unitConversion15.i";
-connectAttr "walker_rt_heel_plsMns.o1" "unitConversion16.i";
-connectAttr "walker_rt_heel_clamp.opr" "walker_rt_heel_plsMns.i1[1]";
-connectAttr "walker_rt_heel_ik_ctrl.footRoll" "walker_rt_heel_clamp.ipr";
-connectAttr "walker_rt_heel_ik_ctrl.toeTwist" "unitConversion12.i";
-connectAttr "walker_rt_toe2_plsMns.o1" "unitConversion18.i";
-connectAttr "walker_rt_toe_clamp.opr" "walker_rt_toe2_plsMns.i1[0]";
-connectAttr "walker_rt_heel_ik_ctrl.toeRaise" "walker_rt_toe2_plsMns.i1[1]";
-connectAttr "walker_rt_toe_plsMns.o1" "walker_rt_toe_clamp.ipr";
-connectAttr "walker_rt_heel_ik_ctrl.footRoll" "walker_rt_toe_plsMns.i1[0]";
-connectAttr "walker_rt_heel_ik_ctrl.footBreak" "walker_rt_toe_plsMns.i1[1]";
-connectAttr "walker_rt_heel_ik_ctrl.ballTwist" "unitConversion13.i";
-connectAttr "walker_rt_ball_plsMns.o1" "unitConversion17.i";
-connectAttr "walker_rt_ball_clamp.opr" "walker_rt_ball_plsMns.i1[0]";
-connectAttr "walker_rt_heel_ik_ctrl.ballRaise" "walker_rt_ball_plsMns.i1[1]";
-connectAttr "walker_rt_heel_ik_ctrl.footRoll" "walker_rt_ball_clamp.ipr";
-connectAttr "walker_rt_heel_ik_ctrl.footBreak" "walker_rt_ball_clamp.mxr";
-connectAttr "walker_rt_heel_ik_ctrl.toeRoll" "unitConversion11.i";
-connectAttr "walker_rt_heel_ik_ctrl.ballTwist" "unitConversion14.i";
-connectAttr "walker_rt_legRefStr_multDiv.ox" "walker_rt_legUpStr_plsMns.i1[0]";
-connectAttr "walker_rt_legTotStrAmt_plsMns.o2x" "walker_rt_legRefStr_multDiv.i1x"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_toe_ikFkCons.w0" "Ultimate_Walker_v1_0_1:walker_lf_toe_ikFkCons.tg[0].tw"
 		;
-connectAttr "walker_rt_legTotStrAmt_plsMns.o2y" "walker_rt_legRefStr_multDiv.i1y"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_lf_toe_ikFkCons.w0"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.cro"
 		;
-connectAttr "walker_rt_legStrAtt_multDiv.ox" "walker_rt_legTotStrAmt_plsMns.i2[0].i2x"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.pim" "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.cpim"
 		;
-connectAttr "walker_rt_legStrAtt_multDiv.ox" "walker_rt_legTotStrAmt_plsMns.i2[0].i2y"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.cjo"
 		;
-connectAttr "walker_rt_legStrAtt_multDiv.oy" "walker_rt_legTotStrAmt_plsMns.i2[1].i2x"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_ik_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.tg[0].tr"
 		;
-connectAttr "walker_rt_legStrAtt_multDiv.oz" "walker_rt_legTotStrAmt_plsMns.i2[1].i2y"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_ik_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.tg[0].tro"
 		;
-connectAttr "walker_rt_foot_ctrl.legStretch" "walker_rt_legStrAtt_multDiv.i1x";
-connectAttr "walker_rt_foot_ctrl.kneeStretch" "walker_rt_legStrAtt_multDiv.i1y";
-connectAttr "walker_rt_foot_ctrl.ankleStretch" "walker_rt_legStrAtt_multDiv.i1z"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_ik_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.tg[0].tpm"
 		;
-connectAttr "walker_rt_legRefStr_multDiv.oy" "walker_rt_legLowStr_plsMns.i1[0]";
-connectAttr "walker_rt_foot_ctrl.ikFkBlend" "walker_rt_legFkVis_cond.ft";
-connectAttr "walker_rt_upLeg_fk_ctrl.align" "walker_rt_upLeg_plsMns.i1[1]";
-connectAttr "walker_rt_knee_pv_ctrl.snapKnee" "walker_rt_upLegSnapSplice_blend.b"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_ik_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.tg[0].tjo"
 		;
-connectAttr "walker_rt_armPvNegate_multDiv.ox" "walker_rt_upLegSnapSplice_blend.c1r"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.w0" "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.tg[0].tw"
 		;
-connectAttr "walker_rt_legStr_multDiv.ox" "walker_rt_upLegSnapSplice_blend.c2r";
-connectAttr "walker_rt_upLegPvCtrl_distShape.dist" "walker_rt_armPvNegate_multDiv.i1x"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.tg[1].tr"
 		;
-connectAttr "walker_rt_legPvIkCtrl_distShape.dist" "walker_rt_armPvNegate_multDiv.i1y"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.tg[1].tro"
 		;
-connectAttr "walker_rt_legLowStr_plsMns.o1" "walker_rt_legStr_multDiv.i1y";
-connectAttr "walker_rt_legUpStr_plsMns.o1" "walker_rt_legStr_multDiv.i1x";
-connectAttr "walker_rt_legStr_clamp.opr" "walker_rt_legStr_multDiv.i2x";
-connectAttr "walker_rt_legStr_clamp.opr" "walker_rt_legStr_multDiv.i2y";
-connectAttr "walker_rt_heel_ik_ctrl.maxStretch" "walker_rt_legStr_clamp.mxr";
-connectAttr "walker_rt_legNegateTx_multDiv.ox" "walker_rt_legStr_clamp.ipr";
-connectAttr "walker_rt_legStrScalar_multDiv.ox" "walker_rt_legNegateTx_multDiv.i1x"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.tg[1].tpm"
 		;
-connectAttr "walker_rt_legStrNum_multDiv.ox" "walker_rt_legStrScalar_multDiv.i1x"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.tg[1].tjo"
 		;
-connectAttr "walker_rt_legStrDenom_plsMns.o1" "walker_rt_legStrScalar_multDiv.i2x"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.w1" "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.tg[1].tw"
 		;
-connectAttr "walker_rt_legStrDist_distShape.dist" "walker_rt_legStrNum_multDiv.i1x"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.w0"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIkFkSwitch_reverse.ox" "Ultimate_Walker_v1_0_1:walker_lf_ball_ikFkCons.w1"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.cro"
 		;
-connectAttr "walker_rt_heel_ik_ctrl.stretchyLeg" "walker_rt_legStrNum_multDiv.i2x"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.pim" "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.cpim"
 		;
-connectAttr "walker_rt_legLowStr_plsMns.o1" "walker_rt_legStrDenom_plsMns.i1[0]"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.cjo"
 		;
-connectAttr "walker_rt_legUpStr_plsMns.o1" "walker_rt_legStrDenom_plsMns.i1[1]";
-connectAttr "walker_rt_knee_pv_ctrl.snapKnee" "walker_rt_kneeSnapSplice_blend.b"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.tg[0].tr"
 		;
-connectAttr "walker_rt_armPvNegate_multDiv.oy" "walker_rt_kneeSnapSplice_blend.c1r"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.tg[0].tro"
 		;
-connectAttr "walker_rt_legStr_multDiv.oy" "walker_rt_kneeSnapSplice_blend.c2r";
-connectAttr "walker_rt_foot_ctrl.ikFkBlend" "walker_rt_legIkVis_cond.ft";
-connectAttr "walker_rt_heel_ik_ctrl.legTwist" "unitConversion10.i";
-connectAttr "walker_rt_heel_ik_ctrl.pvControl" "walker_rt_legPvCtrl_blend.b";
-connectAttr "walker_rt_knee_pv_cons.ctx" "walker_rt_legPvCtrl_blend.c1r";
-connectAttr "walker_rt_knee_pv_cons.cty" "walker_rt_legPvCtrl_blend.c1g";
-connectAttr "walker_rt_knee_pv_cons.ctz" "walker_rt_legPvCtrl_blend.c1b";
-connectAttr "walker_lf_foot_ctrl.ikFkBlend" "walker_lf_legTrans_blend.b";
-connectAttr "walker_lf_knee_ik_jnt.tx" "walker_lf_legTrans_blend.c1r";
-connectAttr "walker_lf_ankle_ik_jnt.tx" "walker_lf_legTrans_blend.c1g";
-connectAttr "walker_lf_knee_fk_jnt.tx" "walker_lf_legTrans_blend.c2r";
-connectAttr "walker_lf_ankle_fk_jnt.tx" "walker_lf_legTrans_blend.c2g";
-connectAttr "walker_lf_foot_ctrl.ikFkBlend" "walker_lf_legIkFkSwitch_reverse.ix"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.tg[0].tpm"
 		;
-connectAttr "walker_rt_foot_ctrl.ikFkBlend" "walker_rt_legTrans_blend.b";
-connectAttr "walker_rt_knee_ik_jnt.tx" "walker_rt_legTrans_blend.c1r";
-connectAttr "walker_rt_ankle_ik_jnt.tx" "walker_rt_legTrans_blend.c1g";
-connectAttr "walker_rt_knee_fk_jnt.tx" "walker_rt_legTrans_blend.c2r";
-connectAttr "walker_rt_ankle_fk_jnt.tx" "walker_rt_legTrans_blend.c2g";
-connectAttr "walker_rt_foot_ctrl.ikFkBlend" "walker_rt_legIkFkSwitch_reverse.ix"
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_rev_rig_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.tg[0].tjo"
 		;
-connectAttr "ballTypes_olcekShape.dist" "multiplyDivide1.i1x";
-connectAttr "multiplyDivide2.ox" "multiplyDivide1.i1y";
-connectAttr "ballTypes_olcekShape.dist" "multiplyDivide1.i2y";
-connectAttr "multiplyDivide2.ox" "multiplyDivide1.i2x";
-connectAttr "Body_Rig_Grp.sx" "multiplyDivide2.i1x";
-connectAttr "layerManager.dli[2]" "L_Objects.id";
-connectAttr "Shdr_ball_turuncuSG.msg" "materialInfo4.sg";
-connectAttr "Shdr_ball_turuncu.msg" "materialInfo4.m";
-connectAttr "Shdr_ball_turuncu.oc" "Shdr_ball_turuncuSG.ss";
-connectAttr "simple_bodyShape.iog" "Shdr_ball_turuncuSG.dsm" -na;
-connectAttr "R_upperlegShape.iog" "Shdr_ball_turuncuSG.dsm" -na;
-connectAttr "R_footShape.iog" "Shdr_ball_turuncuSG.dsm" -na;
-connectAttr "R_legShape.iog" "Shdr_ball_turuncuSG.dsm" -na;
-connectAttr "R_toeShape.iog" "Shdr_ball_turuncuSG.dsm" -na;
-connectAttr "L_legShape.iog" "Shdr_ball_turuncuSG.dsm" -na;
-connectAttr "L_upperlegShape.iog" "Shdr_ball_turuncuSG.dsm" -na;
-connectAttr "L_footShape.iog" "Shdr_ball_turuncuSG.dsm" -na;
-connectAttr "L_toeShape.iog" "Shdr_ball_turuncuSG.dsm" -na;
-connectAttr "Shdr_ball_turuncu2SG.msg" "materialInfo9.sg";
-connectAttr "Shdr_ball_turuncu2.msg" "materialInfo9.m";
-connectAttr "Shdr_ball_turuncu2.oc" "Shdr_ball_turuncu2SG.ss";
-connectAttr "simple_body_lineShape.iog" "Shdr_ball_turuncu2SG.dsm" -na;
-connectAttr "R_ankleShape.iog" "Shdr_ball_turuncu2SG.dsm" -na;
-connectAttr "R_kneeShape.iog" "Shdr_ball_turuncu2SG.dsm" -na;
-connectAttr "R_butShape.iog" "Shdr_ball_turuncu2SG.dsm" -na;
-connectAttr "L_butShape.iog" "Shdr_ball_turuncu2SG.dsm" -na;
-connectAttr "L_kneeShape.iog" "Shdr_ball_turuncu2SG.dsm" -na;
-connectAttr "L_ankleShape.iog" "Shdr_ball_turuncu2SG.dsm" -na;
-connectAttr "skinCluster1GroupId.msg" "skinCluster1Set.gn" -na;
-connectAttr "R_upperlegShape.iog.og[2]" "skinCluster1Set.dsm" -na;
-connectAttr "skinCluster1.msg" "skinCluster1Set.ub[0]";
-connectAttr "skinCluster1GroupParts.og" "skinCluster1.ip[0].ig";
-connectAttr "skinCluster1GroupId.id" "skinCluster1.ip[0].gi";
-connectAttr "bindPose1.msg" "skinCluster1.bp";
-connectAttr "walker_hip_jnt.wm" "skinCluster1.ma[0]";
-connectAttr "walker_rt_upLeg_jnt.wm" "skinCluster1.ma[6]";
-connectAttr "walker_rt_knee_jnt.wm" "skinCluster1.ma[7]";
-connectAttr "walker_hip_jnt.liw" "skinCluster1.lw[0]";
-connectAttr "walker_rt_upLeg_jnt.liw" "skinCluster1.lw[6]";
-connectAttr "walker_rt_knee_jnt.liw" "skinCluster1.lw[7]";
-connectAttr "AniM_walker_Main.msg" "bindPose1.m[0]";
-connectAttr "Skeleton_grp.msg" "bindPose1.m[1]";
-connectAttr "walker_hip_jnt.msg" "bindPose1.m[2]";
-connectAttr "walker_lf_upLeg_jnt.msg" "bindPose1.m[3]";
-connectAttr "walker_lf_knee_jnt.msg" "bindPose1.m[4]";
-connectAttr "walker_lf_ankle_jnt.msg" "bindPose1.m[5]";
-connectAttr "walker_lf_ball_jnt.msg" "bindPose1.m[6]";
-connectAttr "walker_rt_upLeg_jnt.msg" "bindPose1.m[8]";
-connectAttr "walker_rt_knee_jnt.msg" "bindPose1.m[9]";
-connectAttr "walker_rt_ankle_jnt.msg" "bindPose1.m[10]";
-connectAttr "walker_rt_ball_jnt.msg" "bindPose1.m[11]";
-connectAttr "bindPose1.w" "bindPose1.p[0]";
-connectAttr "bindPose1.m[0]" "bindPose1.p[1]";
-connectAttr "bindPose1.m[1]" "bindPose1.p[2]";
-connectAttr "bindPose1.m[2]" "bindPose1.p[3]";
-connectAttr "bindPose1.m[3]" "bindPose1.p[4]";
-connectAttr "bindPose1.m[4]" "bindPose1.p[5]";
-connectAttr "bindPose1.m[5]" "bindPose1.p[6]";
-connectAttr "bindPose1.m[2]" "bindPose1.p[8]";
-connectAttr "bindPose1.m[8]" "bindPose1.p[9]";
-connectAttr "bindPose1.m[9]" "bindPose1.p[10]";
-connectAttr "bindPose1.m[10]" "bindPose1.p[11]";
-connectAttr "walker_hip_jnt.bps" "bindPose1.wm[2]";
-connectAttr "walker_lf_upLeg_jnt.bps" "bindPose1.wm[3]";
-connectAttr "walker_lf_knee_jnt.bps" "bindPose1.wm[4]";
-connectAttr "walker_lf_ankle_jnt.bps" "bindPose1.wm[5]";
-connectAttr "walker_lf_ball_jnt.bps" "bindPose1.wm[6]";
-connectAttr "walker_rt_upLeg_jnt.bps" "bindPose1.wm[8]";
-connectAttr "walker_rt_knee_jnt.bps" "bindPose1.wm[9]";
-connectAttr "walker_rt_ankle_jnt.bps" "bindPose1.wm[10]";
-connectAttr "walker_rt_ball_jnt.bps" "bindPose1.wm[11]";
-connectAttr "tweak1.og[0]" "skinCluster1GroupParts.ig";
-connectAttr "skinCluster1GroupId.id" "skinCluster1GroupParts.gi";
-connectAttr "groupParts2.og" "tweak1.ip[0].ig";
-connectAttr "groupId2.id" "tweak1.ip[0].gi";
-connectAttr "groupId2.msg" "tweakSet1.gn" -na;
-connectAttr "R_upperlegShape.iog.og[3]" "tweakSet1.dsm" -na;
-connectAttr "tweak1.msg" "tweakSet1.ub[0]";
-connectAttr "R_upperlegShapeOrig.w" "groupParts2.ig";
-connectAttr "groupId2.id" "groupParts2.gi";
-connectAttr "skinCluster2GroupId.msg" "skinCluster2Set.gn" -na;
-connectAttr "R_legShape.iog.og[0]" "skinCluster2Set.dsm" -na;
-connectAttr "skinCluster2.msg" "skinCluster2Set.ub[0]";
-connectAttr "skinCluster2GroupParts.og" "skinCluster2.ip[0].ig";
-connectAttr "skinCluster2GroupId.id" "skinCluster2.ip[0].gi";
-connectAttr "walker_rt_upLeg_jnt.wm" "skinCluster2.ma[6]";
-connectAttr "walker_rt_knee_jnt.wm" "skinCluster2.ma[7]";
-connectAttr "walker_rt_ankle_jnt.wm" "skinCluster2.ma[8]";
-connectAttr "walker_rt_upLeg_jnt.liw" "skinCluster2.lw[6]";
-connectAttr "walker_rt_knee_jnt.liw" "skinCluster2.lw[7]";
-connectAttr "walker_rt_ankle_jnt.liw" "skinCluster2.lw[8]";
-connectAttr "bindPose1.msg" "skinCluster2.bp";
-connectAttr "tweak2.og[0]" "skinCluster2GroupParts.ig";
-connectAttr "skinCluster2GroupId.id" "skinCluster2GroupParts.gi";
-connectAttr "groupParts4.og" "tweak2.ip[0].ig";
-connectAttr "groupId4.id" "tweak2.ip[0].gi";
-connectAttr "groupId4.msg" "tweakSet2.gn" -na;
-connectAttr "R_legShape.iog.og[1]" "tweakSet2.dsm" -na;
-connectAttr "tweak2.msg" "tweakSet2.ub[0]";
-connectAttr "R_legShapeOrig1.w" "groupParts4.ig";
-connectAttr "groupId4.id" "groupParts4.gi";
-connectAttr "skinCluster3GroupId.msg" "skinCluster3Set.gn" -na;
-connectAttr "L_upperlegShape.iog.og[0]" "skinCluster3Set.dsm" -na;
-connectAttr "skinCluster3.msg" "skinCluster3Set.ub[0]";
-connectAttr "skinCluster3GroupParts.og" "skinCluster3.ip[0].ig";
-connectAttr "skinCluster3GroupId.id" "skinCluster3.ip[0].gi";
-connectAttr "walker_hip_jnt.wm" "skinCluster3.ma[0]";
-connectAttr "walker_lf_upLeg_jnt.wm" "skinCluster3.ma[1]";
-connectAttr "walker_lf_knee_jnt.wm" "skinCluster3.ma[2]";
-connectAttr "walker_hip_jnt.liw" "skinCluster3.lw[0]";
-connectAttr "walker_lf_upLeg_jnt.liw" "skinCluster3.lw[1]";
-connectAttr "walker_lf_knee_jnt.liw" "skinCluster3.lw[2]";
-connectAttr "bindPose1.msg" "skinCluster3.bp";
-connectAttr "tweak3.og[0]" "skinCluster3GroupParts.ig";
-connectAttr "skinCluster3GroupId.id" "skinCluster3GroupParts.gi";
-connectAttr "groupParts6.og" "tweak3.ip[0].ig";
-connectAttr "groupId6.id" "tweak3.ip[0].gi";
-connectAttr "groupId6.msg" "tweakSet3.gn" -na;
-connectAttr "L_upperlegShape.iog.og[1]" "tweakSet3.dsm" -na;
-connectAttr "tweak3.msg" "tweakSet3.ub[0]";
-connectAttr "L_upperlegShapeOrig.w" "groupParts6.ig";
-connectAttr "groupId6.id" "groupParts6.gi";
-connectAttr "skinCluster4GroupId.msg" "skinCluster4Set.gn" -na;
-connectAttr "L_legShape.iog.og[0]" "skinCluster4Set.dsm" -na;
-connectAttr "skinCluster4.msg" "skinCluster4Set.ub[0]";
-connectAttr "skinCluster4GroupParts.og" "skinCluster4.ip[0].ig";
-connectAttr "skinCluster4GroupId.id" "skinCluster4.ip[0].gi";
-connectAttr "walker_lf_upLeg_jnt.wm" "skinCluster4.ma[1]";
-connectAttr "walker_lf_knee_jnt.wm" "skinCluster4.ma[2]";
-connectAttr "walker_lf_ankle_jnt.wm" "skinCluster4.ma[3]";
-connectAttr "walker_lf_upLeg_jnt.liw" "skinCluster4.lw[1]";
-connectAttr "walker_lf_knee_jnt.liw" "skinCluster4.lw[2]";
-connectAttr "walker_lf_ankle_jnt.liw" "skinCluster4.lw[3]";
-connectAttr "bindPose1.msg" "skinCluster4.bp";
-connectAttr "tweak4.og[0]" "skinCluster4GroupParts.ig";
-connectAttr "skinCluster4GroupId.id" "skinCluster4GroupParts.gi";
-connectAttr "groupParts8.og" "tweak4.ip[0].ig";
-connectAttr "groupId8.id" "tweak4.ip[0].gi";
-connectAttr "groupId8.msg" "tweakSet4.gn" -na;
-connectAttr "L_legShape.iog.og[1]" "tweakSet4.dsm" -na;
-connectAttr "tweak4.msg" "tweakSet4.ub[0]";
-connectAttr "L_legShapeOrig1.w" "groupParts8.ig";
-connectAttr "groupId8.id" "groupParts8.gi";
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.w0" "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.tg[1].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.tg[1].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.tg[1].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.tg[1].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.w1" "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.tg[1].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.w0"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIkFkSwitch_reverse.ox" "Ultimate_Walker_v1_0_1:walker_lf_ankle_ikFkCons.w1"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.pim" "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_ik_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_ik_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_ik_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_ik_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.w0" "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.tg[1].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.tg[1].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.tg[1].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.tg[1].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.w1" "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.tg[1].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.w0"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIkFkSwitch_reverse.ox" "Ultimate_Walker_v1_0_1:walker_lf_knee_ikFkCons.w1"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.pim" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ik_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.w0" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.r" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.tg[1].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.tg[1].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.tg[1].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.tg[1].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.w1" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.tg[1].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.w0"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legIkFkSwitch_reverse.ox" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_ikFkCons.w1"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.crx" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.cry" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.crz" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.s" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.is"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legTrans_blend.opr" "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.crx" "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.cry" "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.crz" "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.s" "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.is"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legTrans_blend.opg" "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.crx" "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.cry" "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.crz" "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.s" "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.is"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.crx" "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.cry" "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.crz" "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.s" "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.is"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_toe_ikFkCons.crx" "Ultimate_Walker_v1_0_1:walker_rt_toe_jnt.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_toe_ikFkCons.cry" "Ultimate_Walker_v1_0_1:walker_rt_toe_jnt.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_toe_ikFkCons.crz" "Ultimate_Walker_v1_0_1:walker_rt_toe_jnt.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.s" "Ultimate_Walker_v1_0_1:walker_rt_toe_jnt.is"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_toe_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_toe_ikFkCons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_toe_jnt.pim" "Ultimate_Walker_v1_0_1:walker_rt_toe_ikFkCons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_toe_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_toe_ikFkCons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_toe_ik_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_toe_ikFkCons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_toe_ik_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_toe_ikFkCons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_toe_ik_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_toe_ikFkCons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_toe_ik_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_toe_ikFkCons.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_toe_ikFkCons.w0" "Ultimate_Walker_v1_0_1:walker_rt_toe_ikFkCons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_rt_toe_ikFkCons.w0"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.pim" "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_ik_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_ik_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_ik_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_ik_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.w0" "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.tg[1].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.tg[1].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.tg[1].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.tg[1].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.w1" "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.tg[1].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.w0"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIkFkSwitch_reverse.ox" "Ultimate_Walker_v1_0_1:walker_rt_ball_ikFkCons.w1"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.pim" "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_rev_rig_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.w0" "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.tg[1].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.tg[1].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.tg[1].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.tg[1].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.w1" "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.tg[1].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.w0"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIkFkSwitch_reverse.ox" "Ultimate_Walker_v1_0_1:walker_rt_ankle_ikFkCons.w1"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.pim" "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_ik_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_ik_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_ik_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_ik_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.w0" "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.tg[1].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.tg[1].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.tg[1].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.tg[1].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.w1" "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.tg[1].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.w0"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIkFkSwitch_reverse.ox" "Ultimate_Walker_v1_0_1:walker_rt_knee_ikFkCons.w1"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.pim" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ik_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.w0" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.r" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.tg[1].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.ro" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.tg[1].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.pm" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.tg[1].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_jnt.jo" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.tg[1].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.w1" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.tg[1].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.w0"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legIkFkSwitch_reverse.ox" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_ikFkCons.w1"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.ro" "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.pim" "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.rp" "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.rpt" "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.jo" "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.cjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.t" "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.rp" "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.rpt" "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.r" "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.ro" "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.s" "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.pm" "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:walker_hip_jnt_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.Global_Scale" "Ultimate_Walker_v1_0_1:Body_Rig_Grp.sx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.Global_Scale" "Ultimate_Walker_v1_0_1:Body_Rig_Grp.sz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.Global_Scale" "Ultimate_Walker_v1_0_1:Body_Rig_Grp.sy"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:ballTypes_pConst.ctx" "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:ballTypes_pConst.cty" "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:ballTypes_pConst.ctz" "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:ballTypes_pConst.crx" "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:ballTypes_pConst.cry" "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:ballTypes_pConst.crz" "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:multiplyDivide1.ox" "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp.sy"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:multiplyDivide1.oy" "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp.sx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:multiplyDivide1.oy" "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp.sz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp.ro" "Ultimate_Walker_v1_0_1:ballTypes_pConst.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp.pim" "Ultimate_Walker_v1_0_1:ballTypes_pConst.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp.rp" "Ultimate_Walker_v1_0_1:ballTypes_pConst.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Mesh_Flex_Grp.rpt" "Ultimate_Walker_v1_0_1:ballTypes_pConst.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Jnt_main.t" "Ultimate_Walker_v1_0_1:ballTypes_pConst.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Jnt_main.rp" "Ultimate_Walker_v1_0_1:ballTypes_pConst.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Jnt_main.rpt" "Ultimate_Walker_v1_0_1:ballTypes_pConst.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Jnt_main.r" "Ultimate_Walker_v1_0_1:ballTypes_pConst.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Jnt_main.ro" "Ultimate_Walker_v1_0_1:ballTypes_pConst.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Jnt_main.s" "Ultimate_Walker_v1_0_1:ballTypes_pConst.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Jnt_main.pm" "Ultimate_Walker_v1_0_1:ballTypes_pConst.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Jnt_main.jo" "Ultimate_Walker_v1_0_1:ballTypes_pConst.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:ballTypes_pConst.w0" "Ultimate_Walker_v1_0_1:ballTypes_pConst.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:locator_Bottom.wp" "Ultimate_Walker_v1_0_1:ballTypes_olcekShape.sp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:locator_Top.wp" "Ultimate_Walker_v1_0_1:ballTypes_olcekShape.ep"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Mesh_body_Grp_visibility.o" "Ultimate_Walker_v1_0_1:Mesh_body_Grp.v"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:simple_body.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:simple_body_line.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CNT_Grp_visibility.o" "Ultimate_Walker_v1_0_1:CNT_Grp.v"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.ctx" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.cty" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.ctz" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.crx" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.cry" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.crz" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:Jnt_main.msg" "Ultimate_Walker_v1_0_1:ikHandle1.hsj"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:effector1.hp" "Ultimate_Walker_v1_0_1:ikHandle1.hee"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:ikRPsolver.msg" "Ultimate_Walker_v1_0_1:ikHandle1.hsv"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Top_Grp.ro" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Top_Grp.pim" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Top_Grp.rp" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Top_Grp.rpt" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.t" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.rp" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.rpt" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.r" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.ro" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.s" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.pm" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.w0" "Ultimate_Walker_v1_0_1:CTRL_Top_Grp_pConst.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_visibility.o" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp.v"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.ctx" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.cty" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.ctz" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.crx" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.cry" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.crz" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:ballTypes_olcekShape.dist" "Ultimate_Walker_v1_0_1:joint2.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:Jnt_main.s" "Ultimate_Walker_v1_0_1:joint2.is"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:joint2.tx" "Ultimate_Walker_v1_0_1:effector1.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:joint2.ty" "Ultimate_Walker_v1_0_1:effector1.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:joint2.tz" "Ultimate_Walker_v1_0_1:effector1.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp.ro" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp.pim" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp.rp" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp.rpt" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.t" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.rp" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.rpt" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.r" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.ro" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.s" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main.pm" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.w0" "Ultimate_Walker_v1_0_1:CTRL_Bottom_Grp_pConst.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.ctx" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.cty" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.ctz" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.crx" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.cry" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.crz" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp.rz"
+		 -l on;
+connectAttr "CTRL_Main_translateX.o" "Ultimate_Walker_v1_0_1:CTRL_Main.tx";
+connectAttr "CTRL_Main_translateY.o" "Ultimate_Walker_v1_0_1:CTRL_Main.ty";
+connectAttr "CTRL_Main_translateZ.o" "Ultimate_Walker_v1_0_1:CTRL_Main.tz";
+connectAttr "CTRL_Main_rotateX.o" "Ultimate_Walker_v1_0_1:CTRL_Main.rx";
+connectAttr "CTRL_Main_rotateY.o" "Ultimate_Walker_v1_0_1:CTRL_Main.ry";
+connectAttr "CTRL_Main_rotateZ.o" "Ultimate_Walker_v1_0_1:CTRL_Main.rz";
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main_Grp.ro" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main_Grp.pim" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main_Grp.rp" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main_Grp.rpt" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.t" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.rp" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.rpt" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.r" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.ro" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.s" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.pm" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.w0" "Ultimate_Walker_v1_0_1:CTRL_Main_Grp_pConst.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:JNT_kuyruk_01.s" "Ultimate_Walker_v1_0_1:JNT_kuyruk_02.is"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:JNT_kuyruk_02.s" "Ultimate_Walker_v1_0_1:JNT_kuyruk_03.is"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:JNT_kuyruk_03.s" "Ultimate_Walker_v1_0_1:JNT_kuyruk_04.is"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:JNT_kuyruk_04.s" "Ultimate_Walker_v1_0_1:JNT_kuyruk_05.is"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:R_upperleg.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster1GroupId.id" "Ultimate_Walker_v1_0_1:R_upperlegShape.iog.og[2].gid"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster1Set.mwc" "Ultimate_Walker_v1_0_1:R_upperlegShape.iog.og[2].gco"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupId2.id" "Ultimate_Walker_v1_0_1:R_upperlegShape.iog.og[3].gid"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:tweakSet1.mwc" "Ultimate_Walker_v1_0_1:R_upperlegShape.iog.og[3].gco"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster1.og[0]" "Ultimate_Walker_v1_0_1:R_upperlegShape.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:tweak1.vl[0].vt[0]" "Ultimate_Walker_v1_0_1:R_upperlegShape.twl"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:R_leg.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster2GroupId.id" "Ultimate_Walker_v1_0_1:R_legShape.iog.og[0].gid"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster2Set.mwc" "Ultimate_Walker_v1_0_1:R_legShape.iog.og[0].gco"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupId4.id" "Ultimate_Walker_v1_0_1:R_legShape.iog.og[1].gid"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:tweakSet2.mwc" "Ultimate_Walker_v1_0_1:R_legShape.iog.og[1].gco"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster2.og[0]" "Ultimate_Walker_v1_0_1:R_legShape.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:tweak2.vl[0].vt[0]" "Ultimate_Walker_v1_0_1:R_legShape.twl"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:R_legShape.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:L_upperleg.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster3GroupId.id" "Ultimate_Walker_v1_0_1:L_upperlegShape.iog.og[0].gid"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster3Set.mwc" "Ultimate_Walker_v1_0_1:L_upperlegShape.iog.og[0].gco"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupId6.id" "Ultimate_Walker_v1_0_1:L_upperlegShape.iog.og[1].gid"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:tweakSet3.mwc" "Ultimate_Walker_v1_0_1:L_upperlegShape.iog.og[1].gco"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster3.og[0]" "Ultimate_Walker_v1_0_1:L_upperlegShape.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:tweak3.vl[0].vt[0]" "Ultimate_Walker_v1_0_1:L_upperlegShape.twl"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:L_leg.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster4GroupId.id" "Ultimate_Walker_v1_0_1:L_legShape.iog.og[0].gid"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster4Set.mwc" "Ultimate_Walker_v1_0_1:L_legShape.iog.og[0].gco"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupId8.id" "Ultimate_Walker_v1_0_1:L_legShape.iog.og[1].gid"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:tweakSet4.mwc" "Ultimate_Walker_v1_0_1:L_legShape.iog.og[1].gco"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster4.og[0]" "Ultimate_Walker_v1_0_1:L_legShape.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:tweak4.vl[0].vt[0]" "Ultimate_Walker_v1_0_1:L_legShape.twl"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:L_legShape.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.Global_Scale" "Ultimate_Walker_v1_0_1:leg_scale_Const.sx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.Global_Scale" "Ultimate_Walker_v1_0_1:leg_scale_Const.sy"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:CTRL_Root.Global_Scale" "Ultimate_Walker_v1_0_1:leg_scale_Const.sz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:R_but.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:R_but.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:R_but.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:R_but.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:R_but.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:R_but.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:R_but.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:R_butShape.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_but.ro" "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_but.pim" "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_but.rp" "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_but.rpt" "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.t" "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.rp" "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.rpt" "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.r" "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.ro" "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.s" "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.pm" "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.jo" "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:R_but_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:L_but.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:L_but.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:L_but.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:L_but.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:L_but.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:L_but.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:L_but.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:L_butShape.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_but.ro" "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_but.pim" "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_but.rp" "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_but.rpt" "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.t" "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.rp" "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.rpt" "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.r" "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.ro" "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.s" "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.pm" "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.jo" "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:L_but_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:R_knee.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:R_knee.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:R_knee.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:R_knee.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:R_knee.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:R_knee.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:R_knee.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:R_kneeShape.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_knee.ro" "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_knee.pim" "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_knee.rp" "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_knee.rpt" "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.t" "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.rp" "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.rpt" "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.r" "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.ro" "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.s" "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.pm" "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.jo" "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:R_knee_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:L_knee.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:L_knee.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:L_knee.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:L_knee.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:L_knee.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:L_knee.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:L_knee.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:L_kneeShape.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_knee.ro" "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_knee.pim" "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_knee.rp" "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_knee.rpt" "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.t" "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.rp" "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.rpt" "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.r" "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.ro" "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.s" "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.pm" "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.jo" "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:L_knee_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:R_ankle.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:R_ankle.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:R_ankle.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:R_ankle.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:R_ankle.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:R_ankle.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:R_ankle.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:R_ankleShape.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_ankle.ro" "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_ankle.pim" "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_ankle.rp" "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_ankle.rpt" "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.t" "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.rp" "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.rpt" "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.r" "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.ro" "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.s" "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.pm" "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.jo" "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:R_ankle_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:L_ankle.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:L_ankle.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:L_ankle.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:L_ankle.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:L_ankle.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:L_ankle.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:L_ankle.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:L_ankleShape.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_ankle.ro" "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_ankle.pim" "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_ankle.rp" "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_ankle.rpt" "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.t" "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.rp" "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.rpt" "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.r" "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.ro" "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.s" "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.pm" "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.jo" "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:L_ankle_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:R_foot.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:R_foot.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:R_foot.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:R_foot.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:R_foot.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:R_foot.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:R_foot.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_foot.ro" "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_foot.pim" "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_foot.rp" "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_foot.rpt" "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.t" "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.rp" "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.rpt" "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.r" "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.ro" "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.s" "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.pm" "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.jo" "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:R_foot_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:L_foot.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:L_foot.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:L_foot.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:L_foot.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:L_foot.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:L_foot.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:L_foot.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_foot.ro" "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_foot.pim" "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_foot.rp" "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_foot.rpt" "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.t" "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.rp" "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.rpt" "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.r" "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.ro" "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.s" "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.pm" "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.jo" "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:L_foot_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:R_toe.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:R_toe.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:R_toe.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:R_toe.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:R_toe.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:R_toe.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:R_toe.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_toe.ro" "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_toe.pim" "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_toe.rp" "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_toe.rpt" "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.t" "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.rp" "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.rpt" "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.r" "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.ro" "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.s" "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.pm" "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.jo" "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:R_toe_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.ctx" "Ultimate_Walker_v1_0_1:L_toe.tx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.cty" "Ultimate_Walker_v1_0_1:L_toe.ty"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.ctz" "Ultimate_Walker_v1_0_1:L_toe.tz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.crx" "Ultimate_Walker_v1_0_1:L_toe.rx"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.cry" "Ultimate_Walker_v1_0_1:L_toe.ry"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.crz" "Ultimate_Walker_v1_0_1:L_toe.rz"
+		 -l on;
+connectAttr "Ultimate_Walker_v1_0_1:L_Objects.di" "Ultimate_Walker_v1_0_1:L_toe.do"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_toe.ro" "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.cro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_toe.pim" "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.cpim"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_toe.rp" "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.crp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_toe.rpt" "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.crt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.t" "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.rp" "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.rpt" "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.r" "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.ro" "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.s" "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.pm" "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.jo" "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.w0" "Ultimate_Walker_v1_0_1:L_toe_parentConstraint1.tg[0].tw"
+		;
+connectAttr "polyPlane1.out" "pPlaneShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "Shdr_ball_turuncuSG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "Shdr_ball_turuncu2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncuSG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "Shdr_ball_turuncuSG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "Shdr_ball_turuncu2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncuSG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.heelTwist" "Ultimate_Walker_v1_0_1:unitConversion6.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_plsMns.o1" "Ultimate_Walker_v1_0_1:unitConversion7.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_clamp.opr" "Ultimate_Walker_v1_0_1:walker_lf_heel_plsMns.i1[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.footRoll" "Ultimate_Walker_v1_0_1:walker_lf_heel_clamp.ipr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.toeTwist" "Ultimate_Walker_v1_0_1:unitConversion3.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_toe2_plsMns.o1" "Ultimate_Walker_v1_0_1:unitConversion9.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_toe_clamp.opr" "Ultimate_Walker_v1_0_1:walker_lf_toe2_plsMns.i1[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.toeRaise" "Ultimate_Walker_v1_0_1:walker_lf_toe2_plsMns.i1[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_toe_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_lf_toe_clamp.ipr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.footRoll" "Ultimate_Walker_v1_0_1:walker_lf_toe_plsMns.i1[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.footBreak" "Ultimate_Walker_v1_0_1:walker_lf_toe_plsMns.i1[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.ballTwist" "Ultimate_Walker_v1_0_1:unitConversion4.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_plsMns.o1" "Ultimate_Walker_v1_0_1:unitConversion8.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_clamp.opr" "Ultimate_Walker_v1_0_1:walker_lf_ball_plsMns.i1[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.ballRaise" "Ultimate_Walker_v1_0_1:walker_lf_ball_plsMns.i1[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.footRoll" "Ultimate_Walker_v1_0_1:walker_lf_ball_clamp.ipr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.footBreak" "Ultimate_Walker_v1_0_1:walker_lf_ball_clamp.mxr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.toeRoll" "Ultimate_Walker_v1_0_1:unitConversion2.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.ballTwist" "Ultimate_Walker_v1_0_1:unitConversion5.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legRefStr_multDiv.ox" "Ultimate_Walker_v1_0_1:walker_lf_legUpStr_plsMns.i1[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legTotStrAmt_plsMns.o2x" "Ultimate_Walker_v1_0_1:walker_lf_legRefStr_multDiv.i1x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legTotStrAmt_plsMns.o2y" "Ultimate_Walker_v1_0_1:walker_lf_legRefStr_multDiv.i1y"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrAtt_multDiv.ox" "Ultimate_Walker_v1_0_1:walker_lf_legTotStrAmt_plsMns.i2[0].i2x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrAtt_multDiv.ox" "Ultimate_Walker_v1_0_1:walker_lf_legTotStrAmt_plsMns.i2[0].i2y"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrAtt_multDiv.oy" "Ultimate_Walker_v1_0_1:walker_lf_legTotStrAmt_plsMns.i2[1].i2x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrAtt_multDiv.oz" "Ultimate_Walker_v1_0_1:walker_lf_legTotStrAmt_plsMns.i2[1].i2y"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.legStretch" "Ultimate_Walker_v1_0_1:walker_lf_legStrAtt_multDiv.i1x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.kneeStretch" "Ultimate_Walker_v1_0_1:walker_lf_legStrAtt_multDiv.i1y"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.ankleStretch" "Ultimate_Walker_v1_0_1:walker_lf_legStrAtt_multDiv.i1z"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legRefStr_multDiv.oy" "Ultimate_Walker_v1_0_1:walker_lf_legLowStr_plsMns.i1[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_lf_legFkVis_cond.ft"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_fk_ctrl.align" "Ultimate_Walker_v1_0_1:walker_lf_upLeg_plsMns.i1[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.snapKnee" "Ultimate_Walker_v1_0_1:walker_lf_upLegSnapSplice_blend.b"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLegPvCtrl_distShape.dist" "Ultimate_Walker_v1_0_1:walker_lf_upLegSnapSplice_blend.c1r"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStr_multDiv.ox" "Ultimate_Walker_v1_0_1:walker_lf_upLegSnapSplice_blend.c2r"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legLowStr_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_lf_legStr_multDiv.i1y"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legUpStr_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_lf_legStr_multDiv.i1x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStr_clamp.opr" "Ultimate_Walker_v1_0_1:walker_lf_legStr_multDiv.i2x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStr_clamp.opr" "Ultimate_Walker_v1_0_1:walker_lf_legStr_multDiv.i2y"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.maxStretch" "Ultimate_Walker_v1_0_1:walker_lf_legStr_clamp.mxr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrScalar_multDiv.ox" "Ultimate_Walker_v1_0_1:walker_lf_legStr_clamp.ipr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrNum_multDiv.ox" "Ultimate_Walker_v1_0_1:walker_lf_legStrScalar_multDiv.i1x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDenom_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_lf_legStrScalar_multDiv.i2x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStrDist_distShape.dist" "Ultimate_Walker_v1_0_1:walker_lf_legStrNum_multDiv.i1x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.stretchyLeg" "Ultimate_Walker_v1_0_1:walker_lf_legStrNum_multDiv.i2x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legLowStr_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_lf_legStrDenom_plsMns.i1[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legUpStr_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_lf_legStrDenom_plsMns.i1[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_ctrl.snapKnee" "Ultimate_Walker_v1_0_1:walker_lf_kneeSnapSplice_blend.b"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legPvIkCtrl_distShape.dist" "Ultimate_Walker_v1_0_1:walker_lf_kneeSnapSplice_blend.c1r"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_legStr_multDiv.oy" "Ultimate_Walker_v1_0_1:walker_lf_kneeSnapSplice_blend.c2r"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_lf_legIkVis_cond.ft"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.legTwist" "Ultimate_Walker_v1_0_1:unitConversion1.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_heel_ik_ctrl.pvControl" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrl_blend.b"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_cons.ctx" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrl_blend.c1r"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_cons.cty" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrl_blend.c1g"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_pv_cons.ctz" "Ultimate_Walker_v1_0_1:walker_lf_legPvCtrl_blend.c1b"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.heelTwist" "Ultimate_Walker_v1_0_1:unitConversion15.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_plsMns.o1" "Ultimate_Walker_v1_0_1:unitConversion16.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_clamp.opr" "Ultimate_Walker_v1_0_1:walker_rt_heel_plsMns.i1[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.footRoll" "Ultimate_Walker_v1_0_1:walker_rt_heel_clamp.ipr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.toeTwist" "Ultimate_Walker_v1_0_1:unitConversion12.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_toe2_plsMns.o1" "Ultimate_Walker_v1_0_1:unitConversion18.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_toe_clamp.opr" "Ultimate_Walker_v1_0_1:walker_rt_toe2_plsMns.i1[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.toeRaise" "Ultimate_Walker_v1_0_1:walker_rt_toe2_plsMns.i1[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_toe_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_rt_toe_clamp.ipr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.footRoll" "Ultimate_Walker_v1_0_1:walker_rt_toe_plsMns.i1[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.footBreak" "Ultimate_Walker_v1_0_1:walker_rt_toe_plsMns.i1[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.ballTwist" "Ultimate_Walker_v1_0_1:unitConversion13.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_plsMns.o1" "Ultimate_Walker_v1_0_1:unitConversion17.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_clamp.opr" "Ultimate_Walker_v1_0_1:walker_rt_ball_plsMns.i1[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.ballRaise" "Ultimate_Walker_v1_0_1:walker_rt_ball_plsMns.i1[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.footRoll" "Ultimate_Walker_v1_0_1:walker_rt_ball_clamp.ipr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.footBreak" "Ultimate_Walker_v1_0_1:walker_rt_ball_clamp.mxr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.toeRoll" "Ultimate_Walker_v1_0_1:unitConversion11.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.ballTwist" "Ultimate_Walker_v1_0_1:unitConversion14.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legRefStr_multDiv.ox" "Ultimate_Walker_v1_0_1:walker_rt_legUpStr_plsMns.i1[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legTotStrAmt_plsMns.o2x" "Ultimate_Walker_v1_0_1:walker_rt_legRefStr_multDiv.i1x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legTotStrAmt_plsMns.o2y" "Ultimate_Walker_v1_0_1:walker_rt_legRefStr_multDiv.i1y"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrAtt_multDiv.ox" "Ultimate_Walker_v1_0_1:walker_rt_legTotStrAmt_plsMns.i2[0].i2x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrAtt_multDiv.ox" "Ultimate_Walker_v1_0_1:walker_rt_legTotStrAmt_plsMns.i2[0].i2y"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrAtt_multDiv.oy" "Ultimate_Walker_v1_0_1:walker_rt_legTotStrAmt_plsMns.i2[1].i2x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrAtt_multDiv.oz" "Ultimate_Walker_v1_0_1:walker_rt_legTotStrAmt_plsMns.i2[1].i2y"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.legStretch" "Ultimate_Walker_v1_0_1:walker_rt_legStrAtt_multDiv.i1x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.kneeStretch" "Ultimate_Walker_v1_0_1:walker_rt_legStrAtt_multDiv.i1y"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.ankleStretch" "Ultimate_Walker_v1_0_1:walker_rt_legStrAtt_multDiv.i1z"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legRefStr_multDiv.oy" "Ultimate_Walker_v1_0_1:walker_rt_legLowStr_plsMns.i1[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_rt_legFkVis_cond.ft"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_fk_ctrl.align" "Ultimate_Walker_v1_0_1:walker_rt_upLeg_plsMns.i1[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.snapKnee" "Ultimate_Walker_v1_0_1:walker_rt_upLegSnapSplice_blend.b"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_armPvNegate_multDiv.ox" "Ultimate_Walker_v1_0_1:walker_rt_upLegSnapSplice_blend.c1r"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStr_multDiv.ox" "Ultimate_Walker_v1_0_1:walker_rt_upLegSnapSplice_blend.c2r"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLegPvCtrl_distShape.dist" "Ultimate_Walker_v1_0_1:walker_rt_armPvNegate_multDiv.i1x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legPvIkCtrl_distShape.dist" "Ultimate_Walker_v1_0_1:walker_rt_armPvNegate_multDiv.i1y"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legLowStr_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_rt_legStr_multDiv.i1y"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legUpStr_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_rt_legStr_multDiv.i1x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStr_clamp.opr" "Ultimate_Walker_v1_0_1:walker_rt_legStr_multDiv.i2x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStr_clamp.opr" "Ultimate_Walker_v1_0_1:walker_rt_legStr_multDiv.i2y"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.maxStretch" "Ultimate_Walker_v1_0_1:walker_rt_legStr_clamp.mxr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legNegateTx_multDiv.ox" "Ultimate_Walker_v1_0_1:walker_rt_legStr_clamp.ipr"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrScalar_multDiv.ox" "Ultimate_Walker_v1_0_1:walker_rt_legNegateTx_multDiv.i1x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrNum_multDiv.ox" "Ultimate_Walker_v1_0_1:walker_rt_legStrScalar_multDiv.i1x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDenom_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_rt_legStrScalar_multDiv.i2x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStrDist_distShape.dist" "Ultimate_Walker_v1_0_1:walker_rt_legStrNum_multDiv.i1x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.stretchyLeg" "Ultimate_Walker_v1_0_1:walker_rt_legStrNum_multDiv.i2x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legLowStr_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_rt_legStrDenom_plsMns.i1[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legUpStr_plsMns.o1" "Ultimate_Walker_v1_0_1:walker_rt_legStrDenom_plsMns.i1[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_ctrl.snapKnee" "Ultimate_Walker_v1_0_1:walker_rt_kneeSnapSplice_blend.b"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_armPvNegate_multDiv.oy" "Ultimate_Walker_v1_0_1:walker_rt_kneeSnapSplice_blend.c1r"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_legStr_multDiv.oy" "Ultimate_Walker_v1_0_1:walker_rt_kneeSnapSplice_blend.c2r"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_rt_legIkVis_cond.ft"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.legTwist" "Ultimate_Walker_v1_0_1:unitConversion10.i"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_heel_ik_ctrl.pvControl" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrl_blend.b"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_cons.ctx" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrl_blend.c1r"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_cons.cty" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrl_blend.c1g"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_pv_cons.ctz" "Ultimate_Walker_v1_0_1:walker_rt_legPvCtrl_blend.c1b"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_lf_legTrans_blend.b"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_ik_jnt.tx" "Ultimate_Walker_v1_0_1:walker_lf_legTrans_blend.c1r"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_ik_jnt.tx" "Ultimate_Walker_v1_0_1:walker_lf_legTrans_blend.c1g"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_fk_jnt.tx" "Ultimate_Walker_v1_0_1:walker_lf_legTrans_blend.c2r"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_fk_jnt.tx" "Ultimate_Walker_v1_0_1:walker_lf_legTrans_blend.c2g"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_lf_legIkFkSwitch_reverse.ix"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_rt_legTrans_blend.b"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_ik_jnt.tx" "Ultimate_Walker_v1_0_1:walker_rt_legTrans_blend.c1r"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_ik_jnt.tx" "Ultimate_Walker_v1_0_1:walker_rt_legTrans_blend.c1g"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_fk_jnt.tx" "Ultimate_Walker_v1_0_1:walker_rt_legTrans_blend.c2r"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_fk_jnt.tx" "Ultimate_Walker_v1_0_1:walker_rt_legTrans_blend.c2g"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_foot_ctrl.ikFkBlend" "Ultimate_Walker_v1_0_1:walker_rt_legIkFkSwitch_reverse.ix"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:ballTypes_olcekShape.dist" "Ultimate_Walker_v1_0_1:multiplyDivide1.i1x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:multiplyDivide2.ox" "Ultimate_Walker_v1_0_1:multiplyDivide1.i1y"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:ballTypes_olcekShape.dist" "Ultimate_Walker_v1_0_1:multiplyDivide1.i2y"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:multiplyDivide2.ox" "Ultimate_Walker_v1_0_1:multiplyDivide1.i2x"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Body_Rig_Grp.sx" "Ultimate_Walker_v1_0_1:multiplyDivide2.i1x"
+		;
+connectAttr "layerManager.dli[1]" "Ultimate_Walker_v1_0_1:L_Objects.id";
+connectAttr "Ultimate_Walker_v1_0_1:Shdr_ball_turuncuSG.msg" "Ultimate_Walker_v1_0_1:materialInfo4.sg"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu.msg" "Ultimate_Walker_v1_0_1:materialInfo4.m"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu.oc" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncuSG.ss"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:simple_bodyShape.iog" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncuSG.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:R_upperlegShape.iog" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncuSG.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:R_footShape.iog" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncuSG.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:R_legShape.iog" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncuSG.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:R_toeShape.iog" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncuSG.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:L_legShape.iog" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncuSG.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:L_upperlegShape.iog" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncuSG.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:L_footShape.iog" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncuSG.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:L_toeShape.iog" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncuSG.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2SG.msg" "Ultimate_Walker_v1_0_1:materialInfo9.sg"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2.msg" "Ultimate_Walker_v1_0_1:materialInfo9.m"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2.oc" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2SG.ss"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:simple_body_lineShape.iog" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2SG.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:R_ankleShape.iog" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2SG.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:R_kneeShape.iog" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2SG.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:R_butShape.iog" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2SG.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:L_butShape.iog" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2SG.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:L_kneeShape.iog" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2SG.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:L_ankleShape.iog" "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2SG.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster1GroupId.msg" "Ultimate_Walker_v1_0_1:skinCluster1Set.gn"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:R_upperlegShape.iog.og[2]" "Ultimate_Walker_v1_0_1:skinCluster1Set.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster1.msg" "Ultimate_Walker_v1_0_1:skinCluster1Set.ub[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster1GroupParts.og" "Ultimate_Walker_v1_0_1:skinCluster1.ip[0].ig"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster1GroupId.id" "Ultimate_Walker_v1_0_1:skinCluster1.ip[0].gi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:bindPose1.msg" "Ultimate_Walker_v1_0_1:skinCluster1.bp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.wm" "Ultimate_Walker_v1_0_1:skinCluster1.ma[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.wm" "Ultimate_Walker_v1_0_1:skinCluster1.ma[6]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.wm" "Ultimate_Walker_v1_0_1:skinCluster1.ma[7]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.liw" "Ultimate_Walker_v1_0_1:skinCluster1.lw[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.liw" "Ultimate_Walker_v1_0_1:skinCluster1.lw[6]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.liw" "Ultimate_Walker_v1_0_1:skinCluster1.lw[7]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:AniM_walker_Main.msg" "Ultimate_Walker_v1_0_1:bindPose1.m[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:Skeleton_grp.msg" "Ultimate_Walker_v1_0_1:bindPose1.m[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.msg" "Ultimate_Walker_v1_0_1:bindPose1.m[2]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.msg" "Ultimate_Walker_v1_0_1:bindPose1.m[3]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.msg" "Ultimate_Walker_v1_0_1:bindPose1.m[4]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.msg" "Ultimate_Walker_v1_0_1:bindPose1.m[5]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.msg" "Ultimate_Walker_v1_0_1:bindPose1.m[6]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.msg" "Ultimate_Walker_v1_0_1:bindPose1.m[8]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.msg" "Ultimate_Walker_v1_0_1:bindPose1.m[9]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.msg" "Ultimate_Walker_v1_0_1:bindPose1.m[10]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.msg" "Ultimate_Walker_v1_0_1:bindPose1.m[11]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:bindPose1.w" "Ultimate_Walker_v1_0_1:bindPose1.p[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:bindPose1.m[0]" "Ultimate_Walker_v1_0_1:bindPose1.p[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:bindPose1.m[1]" "Ultimate_Walker_v1_0_1:bindPose1.p[2]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:bindPose1.m[2]" "Ultimate_Walker_v1_0_1:bindPose1.p[3]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:bindPose1.m[3]" "Ultimate_Walker_v1_0_1:bindPose1.p[4]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:bindPose1.m[4]" "Ultimate_Walker_v1_0_1:bindPose1.p[5]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:bindPose1.m[5]" "Ultimate_Walker_v1_0_1:bindPose1.p[6]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:bindPose1.m[2]" "Ultimate_Walker_v1_0_1:bindPose1.p[8]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:bindPose1.m[8]" "Ultimate_Walker_v1_0_1:bindPose1.p[9]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:bindPose1.m[9]" "Ultimate_Walker_v1_0_1:bindPose1.p[10]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:bindPose1.m[10]" "Ultimate_Walker_v1_0_1:bindPose1.p[11]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.bps" "Ultimate_Walker_v1_0_1:bindPose1.wm[2]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.bps" "Ultimate_Walker_v1_0_1:bindPose1.wm[3]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.bps" "Ultimate_Walker_v1_0_1:bindPose1.wm[4]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.bps" "Ultimate_Walker_v1_0_1:bindPose1.wm[5]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ball_jnt.bps" "Ultimate_Walker_v1_0_1:bindPose1.wm[6]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.bps" "Ultimate_Walker_v1_0_1:bindPose1.wm[8]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.bps" "Ultimate_Walker_v1_0_1:bindPose1.wm[9]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.bps" "Ultimate_Walker_v1_0_1:bindPose1.wm[10]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ball_jnt.bps" "Ultimate_Walker_v1_0_1:bindPose1.wm[11]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:tweak1.og[0]" "Ultimate_Walker_v1_0_1:skinCluster1GroupParts.ig"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster1GroupId.id" "Ultimate_Walker_v1_0_1:skinCluster1GroupParts.gi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupParts2.og" "Ultimate_Walker_v1_0_1:tweak1.ip[0].ig"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupId2.id" "Ultimate_Walker_v1_0_1:tweak1.ip[0].gi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupId2.msg" "Ultimate_Walker_v1_0_1:tweakSet1.gn"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:R_upperlegShape.iog.og[3]" "Ultimate_Walker_v1_0_1:tweakSet1.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:tweak1.msg" "Ultimate_Walker_v1_0_1:tweakSet1.ub[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_upperlegShapeOrig.w" "Ultimate_Walker_v1_0_1:groupParts2.ig"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupId2.id" "Ultimate_Walker_v1_0_1:groupParts2.gi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster2GroupId.msg" "Ultimate_Walker_v1_0_1:skinCluster2Set.gn"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:R_legShape.iog.og[0]" "Ultimate_Walker_v1_0_1:skinCluster2Set.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster2.msg" "Ultimate_Walker_v1_0_1:skinCluster2Set.ub[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster2GroupParts.og" "Ultimate_Walker_v1_0_1:skinCluster2.ip[0].ig"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster2GroupId.id" "Ultimate_Walker_v1_0_1:skinCluster2.ip[0].gi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.wm" "Ultimate_Walker_v1_0_1:skinCluster2.ma[6]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.wm" "Ultimate_Walker_v1_0_1:skinCluster2.ma[7]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.wm" "Ultimate_Walker_v1_0_1:skinCluster2.ma[8]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_upLeg_jnt.liw" "Ultimate_Walker_v1_0_1:skinCluster2.lw[6]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_knee_jnt.liw" "Ultimate_Walker_v1_0_1:skinCluster2.lw[7]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_rt_ankle_jnt.liw" "Ultimate_Walker_v1_0_1:skinCluster2.lw[8]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:bindPose1.msg" "Ultimate_Walker_v1_0_1:skinCluster2.bp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:tweak2.og[0]" "Ultimate_Walker_v1_0_1:skinCluster2GroupParts.ig"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster2GroupId.id" "Ultimate_Walker_v1_0_1:skinCluster2GroupParts.gi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupParts4.og" "Ultimate_Walker_v1_0_1:tweak2.ip[0].ig"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupId4.id" "Ultimate_Walker_v1_0_1:tweak2.ip[0].gi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupId4.msg" "Ultimate_Walker_v1_0_1:tweakSet2.gn"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:R_legShape.iog.og[1]" "Ultimate_Walker_v1_0_1:tweakSet2.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:tweak2.msg" "Ultimate_Walker_v1_0_1:tweakSet2.ub[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:R_legShapeOrig1.w" "Ultimate_Walker_v1_0_1:groupParts4.ig"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupId4.id" "Ultimate_Walker_v1_0_1:groupParts4.gi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster3GroupId.msg" "Ultimate_Walker_v1_0_1:skinCluster3Set.gn"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:L_upperlegShape.iog.og[0]" "Ultimate_Walker_v1_0_1:skinCluster3Set.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster3.msg" "Ultimate_Walker_v1_0_1:skinCluster3Set.ub[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster3GroupParts.og" "Ultimate_Walker_v1_0_1:skinCluster3.ip[0].ig"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster3GroupId.id" "Ultimate_Walker_v1_0_1:skinCluster3.ip[0].gi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.wm" "Ultimate_Walker_v1_0_1:skinCluster3.ma[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.wm" "Ultimate_Walker_v1_0_1:skinCluster3.ma[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.wm" "Ultimate_Walker_v1_0_1:skinCluster3.ma[2]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_hip_jnt.liw" "Ultimate_Walker_v1_0_1:skinCluster3.lw[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.liw" "Ultimate_Walker_v1_0_1:skinCluster3.lw[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.liw" "Ultimate_Walker_v1_0_1:skinCluster3.lw[2]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:bindPose1.msg" "Ultimate_Walker_v1_0_1:skinCluster3.bp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:tweak3.og[0]" "Ultimate_Walker_v1_0_1:skinCluster3GroupParts.ig"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster3GroupId.id" "Ultimate_Walker_v1_0_1:skinCluster3GroupParts.gi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupParts6.og" "Ultimate_Walker_v1_0_1:tweak3.ip[0].ig"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupId6.id" "Ultimate_Walker_v1_0_1:tweak3.ip[0].gi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupId6.msg" "Ultimate_Walker_v1_0_1:tweakSet3.gn"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:L_upperlegShape.iog.og[1]" "Ultimate_Walker_v1_0_1:tweakSet3.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:tweak3.msg" "Ultimate_Walker_v1_0_1:tweakSet3.ub[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_upperlegShapeOrig.w" "Ultimate_Walker_v1_0_1:groupParts6.ig"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupId6.id" "Ultimate_Walker_v1_0_1:groupParts6.gi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster4GroupId.msg" "Ultimate_Walker_v1_0_1:skinCluster4Set.gn"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:L_legShape.iog.og[0]" "Ultimate_Walker_v1_0_1:skinCluster4Set.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster4.msg" "Ultimate_Walker_v1_0_1:skinCluster4Set.ub[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster4GroupParts.og" "Ultimate_Walker_v1_0_1:skinCluster4.ip[0].ig"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster4GroupId.id" "Ultimate_Walker_v1_0_1:skinCluster4.ip[0].gi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.wm" "Ultimate_Walker_v1_0_1:skinCluster4.ma[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.wm" "Ultimate_Walker_v1_0_1:skinCluster4.ma[2]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.wm" "Ultimate_Walker_v1_0_1:skinCluster4.ma[3]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_upLeg_jnt.liw" "Ultimate_Walker_v1_0_1:skinCluster4.lw[1]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_knee_jnt.liw" "Ultimate_Walker_v1_0_1:skinCluster4.lw[2]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:walker_lf_ankle_jnt.liw" "Ultimate_Walker_v1_0_1:skinCluster4.lw[3]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:bindPose1.msg" "Ultimate_Walker_v1_0_1:skinCluster4.bp"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:tweak4.og[0]" "Ultimate_Walker_v1_0_1:skinCluster4GroupParts.ig"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:skinCluster4GroupId.id" "Ultimate_Walker_v1_0_1:skinCluster4GroupParts.gi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupParts8.og" "Ultimate_Walker_v1_0_1:tweak4.ip[0].ig"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupId8.id" "Ultimate_Walker_v1_0_1:tweak4.ip[0].gi"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupId8.msg" "Ultimate_Walker_v1_0_1:tweakSet4.gn"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:L_legShape.iog.og[1]" "Ultimate_Walker_v1_0_1:tweakSet4.dsm"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:tweak4.msg" "Ultimate_Walker_v1_0_1:tweakSet4.ub[0]"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:L_legShapeOrig1.w" "Ultimate_Walker_v1_0_1:groupParts8.ig"
+		;
+connectAttr "Ultimate_Walker_v1_0_1:groupId8.id" "Ultimate_Walker_v1_0_1:groupParts8.gi"
+		;
 connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
 		 -na;
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
-connectAttr "trackInfoManager1.msg" ":sequenceManager1.tim";
-connectAttr "Shdr_ball_turuncuSG.pa" ":renderPartition.st" -na;
-connectAttr "Shdr_ball_turuncu2SG.pa" ":renderPartition.st" -na;
-connectAttr "Shdr_ball_turuncu.msg" ":defaultShaderList1.s" -na;
-connectAttr "Shdr_ball_turuncu2.msg" ":defaultShaderList1.s" -na;
-connectAttr "multiplyDivide1.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "multiplyDivide2.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Ultimate_Walker_v1_0_1:Shdr_ball_turuncuSG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:Shdr_ball_turuncu2.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:multiplyDivide1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "Ultimate_Walker_v1_0_1:multiplyDivide2.msg" ":defaultRenderUtilityList1.u"
+		 -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "Mesh_Flex_GrpShapeOrig.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
-// End of Ball_With_Legs.ma
+connectAttr "Ultimate_Walker_v1_0_1:Mesh_Flex_GrpShapeOrig.iog" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "Ultimate_Walker_v1_0_1:ikRPsolver.msg" ":ikSystem.sol" -na;
+// End of Weight_Anticipation.ma
